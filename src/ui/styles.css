@@ -1,0 +1,26 @@
+.block-container {max-width: 1640px; padding-top: 4.4rem; padding-bottom: 2rem;}
+[data-testid="stSidebar"] {border-right: 1px solid #dce4e9;}
+[data-testid="stSidebar"] .block-container {padding-top: 2rem;}
+h1 {font-size: 2.25rem !important; letter-spacing: -.065rem; line-height: 1.12 !important; padding-bottom: .45rem !important;}
+h2 {font-size: 1.35rem !important; letter-spacing: -.025rem;}
+h3 {font-size: 1.05rem !important;}
+[data-testid="stMetric"] {background: #fff; border: 1px solid #dce4e9; border-radius: 10px; padding: 17px 20px; min-height: 108px;}
+[data-testid="stMetricLabel"] {color: #526878; font-size: .85rem;}
+[data-testid="stMetricValue"] {font-size: 1.9rem; font-weight: 650; letter-spacing: -.035rem;}
+[data-testid="stTabs"] [data-baseweb="tab-list"] {gap: 25px;}
+[data-testid="stTabs"] [data-baseweb="tab"] {font-size: .93rem; padding-left: 0; padding-right: 0;}
+.eyebrow {color: #087e84; font-size: .7rem; letter-spacing: .16rem; font-weight: 750; margin-bottom: 13px;}
+.brand {font-size: 1.35rem; font-weight: 750; letter-spacing: -.045rem; color: #182d43; margin-bottom: 0;}
+.brand-sub {font-size: .76rem; color: #607582; line-height: 1.5; margin-top: 5px; margin-bottom: 30px;}
+.lede {color: #607582; font-size: 1rem; margin: 0 0 22px; max-width: 850px;}
+.legend {display: flex; flex-wrap: wrap; gap: 10px 23px; font-size: .78rem; color: #526878; margin: 8px 0 12px;}
+.legend span {display: inline-flex; align-items: center; gap: 7px;}
+.dot {width: 9px; height: 9px; display: inline-block; border-radius: 2px;}
+.fact {font-size: .8rem; color: #607582; margin: 16px 0 4px;}
+.fact-value {font-size: .98rem; color: #182d43; line-height: 1.5; overflow-wrap: anywhere;}
+.distance {font-size: 2.1rem; font-weight: 700; letter-spacing: -.055rem; color: #182d43; margin-top: 8px;}
+.chip {display: inline-block; padding: 5px 9px; font-size: .72rem; font-weight: 650; border-radius: 5px; background: #e9eff3; color: #40586b;}
+.chip-amber {background: #fff0d4; color: #865707;}
+.note {font-size: .79rem; line-height: 1.55; color: #607582; background: #edf2f5; border-left: 3px solid #b5c6d0; padding: 11px 13px; margin-top: 16px;}
+.foot {font-size: .73rem; color: #738591; padding-top: 15px; border-top: 1px solid #dce4e9; margin-top: 28px;}
+iframe {border-radius: 9px;}

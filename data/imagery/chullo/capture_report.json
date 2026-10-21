@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-10-14T15:59:20.618677+00:00",
+  "application": "Google Earth Pro 7.3.7.1327",
+  "observed_at": "2026-03-04",
+  "date_evidence": "Google Earth Pro English status bar: Imagery Date: 3/4/2026 (MM/DD/YYYY).",
+  "attribution": "Google Earth; Image © 2026 Airbus",
+  "camera": "Reset r on focused viewport: north-up, vertical. Terrain and all primary layers unchecked. Camera unchanged between exports.",
+  "dimensions": [
+    8192,
+    6390
+  ],
+  "pair_alignment": {
+    "same_dimensions": true,
+    "median_max_channel_difference": 0,
+    "fraction_max_channel_difference_gt_5": 0.006306049185739436,
+    "explanation": "Difference concentrated in six KML markers, labels and rectangle; image pixels otherwise identical."
+  },
+  "control_points_method": "Four corners of known KML rectangle fitted; centre of two reserved pin tips picked visually on original pixels. Columns/rows zero-based pixel centres.",
+  "accuracy_limit": "Reference coordinates come from the same Google Earth view; residuals validate image transform only, not absolute positioning of Google imagery or OSM stream axis.",
+  "files": {
+    "chullo_google_earth_original.jpg": {
+      "sha256": "6fa66832ea1b31402016bc2c216baef61aee64803ca48e9b04afa04cda34c6a2",
+      "bytes": 21751825
+    },
+    "chullo_con_referencias.jpg": {
+      "sha256": "b274a957565b56c6ebb91812540076b415a2472df1dab370ff1df737fa313b7b",
+      "bytes": 21768212
+    },
+    "georeferencing_points.csv": {
+      "sha256": "c5c7107a25c7ff5677c010fd18acec3acc064967a57a34867a936c243ce93526",
+      "bytes": 271
+    }
+  },
+  "terms_urls": [
+    "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+    "https://www.google.com/intl/En-en/help/terms_maps-earth/"
+  ],
+  "usage": "One small static capture for local noncommercial academic prototype. Preserve original and Google/provider attribution; no bulk imagery collection or training corpus."
+}

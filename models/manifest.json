@@ -1,0 +1,17 @@
+{
+  "model_id": "giswqs/geoai/building_footprints_usa",
+  "architecture": "Mask R-CNN ResNet50-FPN",
+  "path": "models/building_footprints_usa.pth",
+  "filename": "building_footprints_usa.pth",
+  "revision": "43b6aa04156d7d9d2b90fe321096f15f03353cd2",
+  "sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "size_bytes": 176225905,
+  "url": "https://huggingface.co/giswqs/geoai/resolve/43b6aa04156d7d9d2b90fe321096f15f03353cd2/building_footprints_usa.pth",
+  "license": "MIT (as declared by giswqs/geoai repository)",
+  "pretrained": true,
+  "trained_locally": false,
+  "implementation": "torchvision; model construction equivalent to GeoAI BuildingFootprintExtractor",
+  "reference_source": "https://github.com/opengeos/geoai/blob/9e330c6fd0fe8f66ea4761707d753ef69b98ec37/geoai/extract.py",
+  "training_geography": "USA per published model name/example; full training corpus not documented in the model card",
+  "load_policy": "SHA256 verified, torch.load(weights_only=True), strict state_dict matching"
+}

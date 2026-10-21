@@ -1,0 +1,213 @@
+ARQUITECTURA DEL PROTOTIPO CHULLO
+Diseño y comprobación del código: 21 de octubre de 2026
+
+Los diagramas 01 y 02 describen funciones implementadas. El diagrama 03 es una
+propuesta de evolución, todavía no implementada. Cada diagrama se entrega en
+PNG de 2880 x 1620 y SVG editable. El generador es scripts/render_architecture.py.
+
+IDEA CENTRAL
+
+El sistema recibe una imagen georreferenciada, identifica posibles edificaciones
+con un modelo preentrenado y cruza sus contornos con la cartografía de torrenteras.
+Calcula distancias mínimas en metros y muestra bandas configurables en un mapa.
+Exporta resultados con procedencia y parámetros para poder revisar el análisis.
+La IA segmenta edificaciones. La torrentera procede de una capa geográfica y las
+distancias se calculan con geometría. Actualmente hay un modelo de IA, no dos.
+
+1. QUÉ MODELO USAMOS
+
+Mask R-CNN con ResNet-50 y Feature Pyramid Network (FPN), ejecutado con PyTorch
+y Torchvision. Es segmentación de instancias: intenta separar cada edificación
+y produce una máscara de píxeles por objeto, además de su puntuación y caja.
+
+ResNet-50 extrae características visuales de la imagen. FPN combina características
+a distintas escalas. La red RPN propone regiones candidatas. RoI Align obtiene
+características alineadas de cada región. Dos ramas producen, respectivamente,
+clase/caja/puntuación y máscara de la instancia. La huella geográfica se deriva
+de la máscara, no del rectángulo de detección.
+
+Checkpoint: giswqs/geoai, building_footprints_usa.pth.
+Revisión fijada: 43b6aa04156d7d9d2b90fe321096f15f03353cd2.
+El repositorio lo publica para edificios USA. Su ficha no detalla el corpus
+completo de entrenamiento; no corresponde atribuirle un dataset concreto.
+No usamos los pesos genéricos COCO ni entrenamos o ajustamos este modelo en Chullo.
+Se verifica el archivo mediante SHA256 y se cargan estrictamente sus parámetros.
+
+Fuente de pesos: https://huggingface.co/giswqs/geoai
+Ejemplo del autor: https://opengeoai.org/examples/building_footprints_usa/
+Arquitectura original: https://arxiv.org/abs/1703.06870
+
+2. DE DÓNDE SALEN LOS DATOS
+
+Imagen de entrada de Chullo: captura RGB de Google Earth Pro, crédito Google Earth
+e Image © 2026 Airbus, fecha mostrada 4 de marzo de 2026; exportada el 14 de octubre.
+Es una imagen para inferencia, no un dataset de entrenamiento ni una toma en vivo.
+El sensor específico y su resolución nativa no están verificados. La imagen
+conserva sus créditos y condiciones de uso; no se presenta como dataset abierto.
+
+Georreferencia: se guardaron una captura limpia y otra con controles KML, sin
+mover la cámara. Cuatro esquinas ajustan una transformación afín y dos puntos
+reservados comprueban el ajuste. El JPG se transforma a GeoTIFF RGB en UTM 19 Sur
+(EPSG:32719), con cuadrícula de trabajo de 0,5 m por píxel. La cuadrícula no prueba
+la resolución del sensor ni crea detalle. El RMSE interno de 0,227 m no demuestra
+precisión absoluta en campo ni alineación equivalente con el eje OSM.
+
+Torrentera: eje OpenStreetMap de cinco vías, ensamblado y contrastado documentalmente
+con referencias INGEMMET para identificar Chullo. La geometría no es una delimitación
+oficial del cauce ni una faja marginal. Su exactitud sobre el terreno no se midió.
+Ejemplo de vía fuente: https://www.openstreetmap.org/way/25980163
+
+Inventario alternativo: Microsoft Global ML Building Footprints. Es una capa de
+polígonos ya calculados por Microsoft; se puede elegir en la aplicación. No se
+utiliza como respuesta del modelo, ni como etiquetas de una validación independiente.
+Fuente: https://github.com/microsoft/GlobalMLBuildingFootprints
+
+También hay un caso adicional de Mariano Melgar con ortofoto de dron CENEPRED
+del 5 de junio de 2018: https://sigrid.cenepred.gob.pe/sigridv3/documento/6798
+La procedencia completa se conserva en data/sources.json y manifiestos por imagen.
+
+3. RECORRIDO DE UNA EJECUCIÓN
+
+1) Elegir el sector y una imagen incluida, o subir un GeoTIFF RGB con coordenadas.
+   La georreferenciación del JPG de Google Earth se preparó antes de abrir el flujo
+   de inferencia. La interfaz no georreferencia automáticamente cualquier fotografía.
+2) Validar formato, bandas, CRS, resolución y que la imagen intersecte el sector.
+3) Leer ventanas de 512 x 512, con 128 píxeles de solapamiento; en Chullo son 35.
+4) Convertir los píxeles a valores 0-1. El modelo normaliza y redimensiona internamente
+   las ventanas. Se ejecuta en modo evaluación sin actualizar los pesos.
+5) Conservar puntuaciones >= 0,50; binarizar máscaras con umbral 0,50. Convertirlas
+   a polígonos con coordenadas. Excluir áreas menores de 10 m² y píxeles sin datos.
+6) Suprimir duplicados del solapamiento (IoU >= 0,35 o intersección/área menor >= 0,70).
+7) Guardar contornos, vista previa y manifiesto. Seleccionar los que intersectan
+   el sector piloto, conservando cada geometría completa.
+8) Calcular distancias y bandas; mostrar el mapa, tabla y exportaciones.
+
+Cambiar la banda permite recalcular el análisis geométrico sin volver a ejecutar
+la red. Cambiar la imagen o querer nuevas detecciones requiere ejecutar el detector.
+El modelo puede devolver cero edificaciones: no se reemplazan por un inventario.
+
+Corrida guardada del 14 de octubre: 1591 candidatos tras filtros, 585 duplicados
+suprimidos y 1006 contornos en la imagen completa. De ellos, 237 intersectan el sector;
+27 están a 25 m o menos del eje; 56 a 50 m o menos. Son candidatos sin revisión manual.
+El último manifiesto registra 11,277 segundos del motor en CUDA, sin representar
+el tiempo completo de adquisición/preparación ni una garantía para otros equipos.
+
+4. CÓMO SE CALCULA LA DISTANCIA
+
+Se reproyectan las huellas y los cauces a WGS84 / UTM 19 Sur (EPSG:32719). Sus
+coordenadas están en metros. GeoPandas/Shapely calcula la menor separación plana
+entre cada polígono de edificación B y cada eje de torrentera R:
+
+    d(B,R) = mínimo de la distancia euclidiana entre puntos de B y de R
+    dentro_de_banda = d(B,R) <= ancho_elegido
+
+No se mide desde el centro de la casa. Si el polígono toca o cruza el eje, d=0.
+En Chullo medimos al eje cartografiado; no conocemos el borde real en cada tramo.
+Una banda de 25 m se extiende 25 m a cada lado del eje, con remates de buffer.
+No es una distancia de recorrido ni una distancia tridimensional sobre el relieve.
+
+Ejemplo ilustrativo: una huella a 18 m queda dentro de 25 m; otra a 42 m queda
+fuera de 25 m, pero dentro de 50 m. Exactamente 25 m también cuenta como dentro.
+
+Con varias torrenteras se calcula cada par edificio-cauce. El resumen muestra
+la más cercana y si la edificación entra en alguna banda; el detalle conserva
+todas las relaciones. El motor ya admite varios cauces y también polígonos de
+cauce, si se dispone de geometrías y referencias correctas.
+
+El resultado clasifica proximidad, no peligro. No estima caudal, lluvia, inundación,
+desnivel, ocupación residencial ni estabilidad. Una puntuación alta del detector
+tampoco significa que la edificación esté en peligro ni que esté validada.
+
+5. DESPLIEGUE ACTUAL
+
+Una sola PC Windows ejecuta dos procesos Python. El navegador muestra Streamlit
+y un mapa Folium/Leaflet servido en 127.0.0.1:8501. app.py coordina validaciones,
+selección de datos, análisis espacial y exportación en el entorno .venv.
+
+src/detection_client.py lanza scripts/run_detection.py mediante un subproceso
+del entorno .venv-ml. Este carga PyTorch/Torchvision/Rasterio y el checkpoint,
+usa GPU CUDA si está disponible (alternativa CPU), envía progreso JSON por stdout
+y guarda resultados. Un bloqueo evita dos ejecuciones en la misma carpeta.
+La aplicación espera el resultado: no existe todavía una cola distribuida.
+
+La persistencia actual usa archivos, no una base SQL: GeoTIFF para imágenes,
+GeoJSON para capas, .pth para pesos, JSON para configuración y manifiestos.
+Al cargar resultados se verifica estado completado, hash, conteo y geometrías.
+Los manifiestos registran imagen, fecha, modelo, versiones, parámetros y hashes.
+La inferencia no llama una API remota de Google ni de Hugging Face.
+
+6. ARQUITECTURA PROPUESTA PARA MULTIUSUARIO — NO IMPLEMENTADA
+
+Una VM inicialmente, con servicios desplegados mediante Docker Compose:
+- Entrada Nginx con HTTPS; interfaz Streamlit/Folium reutilizada.
+- API FastAPI para validar entradas, gestionar permisos, crear trabajos y consultar
+  progreso/resultados. Cada trabajo recibe un ID; el usuario no mantiene una petición
+  de inferencia abierta hasta que el cálculo termine.
+- Redis como cola y Celery como ejecutor. Concurrencia limitada según memoria y GPU.
+- Worker con el detector y motor GIS actuales; puede moverse a una segunda máquina.
+- PostgreSQL/PostGIS para sectores, cauces versionados, huellas, análisis y estados.
+- Almacenamiento de objetos compatible con S3 para imágenes, pesos y exportaciones.
+
+Estados propuestos: pendiente, ejecutando, completado y error. La API y el worker
+registran el estado en la base. La interfaz lo consulta y descarga el resultado.
+Separar carga y procesamiento pesado permite gestionar varios trabajos.
+FastAPI documenta este uso de herramientas como Celery para cómputo pesado:
+https://fastapi.tiangolo.com/tutorial/background-tasks/#caveat
+
+Entidades propuestas:
+Sector(id, nombre, geometría, CRS de análisis).
+Imagen(id, sector, ubicación del archivo, fecha, proveedor, CRS, hash).
+Modelo(id, versión, ubicación de pesos, hash).
+Ejecución(id, imagen, modelo, parámetros, estado, fechas).
+Edificación(id, ejecución, geometría, puntuación, revisión).
+Cauce(id, sector, geometría, tipo de referencia, fuente, versión).
+Análisis(id, ejecución, conjunto/versiones de cauces, banda, CRS).
+Proximidad(análisis, edificación, cauce, distancia_m, dentro_de_banda).
+
+Estos registros separan detección de análisis: varias bandas pueden utilizar la
+misma inferencia sin repetirla. En otra región se elige una proyección métrica
+apropiada; UTM 19 Sur es la seleccionada para Arequipa, no para todo el mundo.
+Para agregar zonas hace falta imagen adecuada, sector y cauces verificados.
+No hace falta entrenar un modelo nuevo por cada torrentera, pero sí evaluar
+si el detector mantiene suficiente calidad en las imágenes de la nueva zona.
+
+7. APORTE DEL PROYECTO Y SIGUIENTE ETAPA
+
+Se reutiliza un detector publicado. El desarrollo integra preparación geográfica,
+inferencia por ventanas, georreferencia de máscaras, análisis de varios cauces,
+bandas configurables, procedencia y exportación en una aplicación para Arequipa.
+Esto es un aporte de integración y aplicación; no implica una arquitectura de red
+novedosa ni una mejora de precisión demostrada.
+
+La siguiente etapa de IA es crear etiquetas manuales locales, separar sectores
+de entrenamiento/validación/prueba (evitando vecinos solapados entre particiones),
+medir precisión/recall/IoU y decidir si ajustar el modelo mejora esas métricas.
+Actualmente no existe esa validación cuantitativa independiente en Chullo.
+
+Para estudiar peligro haría falta otra etapa con relieve, cauce y escenarios
+hidrológicos/hidráulicos o capas oficiales verificadas. Esa etapa no está incluida
+en el detector de edificios ni puede reemplazarse por una banda de distancia.
+
+FRASE PARA EXPONER
+
+"Nuestro prototipo integra visión por computadora y análisis geoespacial. A partir
+de una imagen georreferenciada, un modelo Mask R-CNN preentrenado segmenta posibles
+edificaciones. Después calculamos la distancia mínima de cada contorno al eje
+cartografiado de las torrenteras y mostramos bandas configurables. El aporte es
+integrar este flujo para Arequipa con resultados trazables y exportables. Esta
+versión analiza proximidad y deja la evaluación de peligro para una etapa posterior."
+
+ARCHIVOS DEL CÓDIGO QUE RESPALDAN LA EXPLICACIÓN
+
+app.py: interfaz y coordinación.
+src/detection_client.py: validación, subproceso y selección de resultados.
+src/building_detection.py: arquitectura, inferencia y vectorización.
+src/spatial_analysis.py: distancias, relaciones y buffers.
+src/data_loader.py: capas, referencias y CRS.
+src/map_view.py: mapa Folium/Leaflet.
+src/export.py: CSV, GeoJSON y ZIP con metadatos.
+scripts/georeference_capture.py: preparación de la captura de Google Earth.
+models/manifest.json: modelo, revisión y hash.
+data/imagery/chullo/manifest.json: origen y georreferencia de imagen.
+data/sources.json: fuentes del proyecto.
+outputs/inference/chullo_demo/manifest.json: corrida real del detector.

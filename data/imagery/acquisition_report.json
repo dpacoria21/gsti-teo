@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-14T16:03:41.758735+00:00",
+  "requested_location": "Chullo, Arequipa",
+  "chullo_image_acquired": true,
+  "checks": [
+    {
+      "source": "IGN Ortofoto Arequipa",
+      "url": "https://www.idep.gob.pe/geoportal/rest/services/IMAGENES/ORTOFOTO_AREQUIPA/MapServer",
+      "status": "Metadata visible in cached web results; live TCP connections from local host timed out; server-side export through two public PrintingTools services also failed.",
+      "alternatives_checked": [
+        "www.idep.gob.pe",
+        "portalgeo.idep.gob.pe",
+        "idep.gob.pe"
+      ],
+      "dns_cross_checked": true,
+      "retry_script": "scripts/download_chullo_imagery.py"
+    },
+    {
+      "source": "OpenAerialMap",
+      "url": "https://api.openaerialmap.org/meta?bbox=-71.554,-16.403,-71.55,-16.397",
+      "found": 0,
+      "status": "No images returned for Chullo or expanded urban Arequipa bbox."
+    },
+    {
+      "source": "MINAM PeruSAT catalog",
+      "url": "https://geoservidorperu.minam.gob.pe/arcgis/rest/services/Catalogo_Imagenes/MapServer/2",
+      "status": "Spatial query for Chullo returned no features."
+    },
+    {
+      "source": "CENEPRED RPAS",
+      "url": "https://sig.cenepred.gob.pe/sigrid/rest/services/sigrid/Informacion_Complementaria/MapServer/6070000",
+      "status": "Urban Arequipa query returns three products: Paucarpata, Alto Selva Alegre, Mariano Melgar; none covers Chullo."
+    },
+    {
+      "source": "Esri World Imagery",
+      "url": "https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/imagery/learn-to-use-ai-to-extract-information-from-world-imagery",
+      "status": "Excluded as model input: published conditions require extraction/derived use within ArcGIS and an organizational account."
+    }
+  ],
+  "additional_demonstration": {
+    "location": "Mariano Melgar, Arequipa",
+    "different_from_chullo": true,
+    "image_kind": "UAV orthomosaic",
+    "capture_date": "2018-06-05",
+    "source": "CENEPRED SIGRID",
+    "manifest": "data/imagery/mariano_melgar/manifest.json",
+    "native_resolution_m": 0.1093,
+    "inference_resolution_m": 0.5,
+    "review": "Real image, native georeferencing conserved, visual roof/channel inspection completed; two OSM axes align with channel corridor; no survey accuracy claim."
+  },
+  "preparation_only_dependencies": "Portable GISInternals GDAL 3.12.1 with MrSID decoder in .runtime; license files retained, not bundled with the application.",
+  "chullo_demonstration": {
+    "source": "Google Earth Pro / Airbus",
+    "observed_at": "2026-03-04",
+    "manifest": "data/imagery/chullo/manifest.json",
+    "capture_report": "data/imagery/chullo/capture_report.json",
+    "status": "Real static capture exported via native Google Earth Pro UI; affine georeferencing checked; actual pretrained inference completed.",
+    "usage": "Local educational demonstration subject to Google terms; not an open imagery dataset.",
+    "absolute_accuracy": "Not measured"
+  }
+}

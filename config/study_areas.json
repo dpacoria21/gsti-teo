@@ -1,0 +1,38 @@
+{
+  "study_areas": [
+    {
+      "id": "chullo",
+      "name": "Chullo · sector piloto",
+      "path": "data/processed/chullo",
+      "analysis_crs": "EPSG:32719",
+      "bbox": [
+        -71.554,
+        -16.403,
+        -71.55,
+        -16.397
+      ],
+      "max_band_m": 100,
+      "description": "Sector de Chullo con inventario Microsoft y detección sobre imagen de Google Earth Pro del 4 de marzo de 2026. La imagen se georreferencia de forma aproximada; la fecha del inventario Microsoft sigue siendo desconocida.",
+      "coverage_notes": "Eje Chullo continuo de 2,1 km; área piloto de 0,284 km². No inventario de todos los cauces ni delimitación legal.",
+      "imagery_path": "data/imagery/chullo/chullo_rgb.tif",
+      "imagery_manifest": "data/imagery/chullo/manifest.json"
+    },
+    {
+      "id": "mariano_melgar",
+      "name": "Mariano Melgar · demostración IA (imagen 2018)",
+      "path": "data/processed/mariano_melgar",
+      "analysis_crs": "EPSG:32719",
+      "bbox": [
+        -71.49295916730627,
+        -16.40710637092164,
+        -71.48917048370645,
+        -16.403449391894352
+      ],
+      "max_band_m": 100,
+      "description": "Caso adicional de Arequipa con ortomosaico real CENEPRED de 2018; distinto de Chullo. Inventario Microsoft y detección IA se seleccionan por separado.",
+      "coverage_notes": "Recorte de 400 × 400m, ejes OSM locales sin nombre oficial verificado. No delimitación legal ni evaluación de peligro.",
+      "imagery_path": "data/imagery/mariano_melgar/mariano_melgar_rgb.tif",
+      "imagery_manifest": "data/imagery/mariano_melgar/manifest.json"
+    }
+  ]
+}

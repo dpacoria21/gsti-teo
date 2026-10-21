@@ -1,0 +1,7 @@
+﻿id,longitude,latitude,role,crs
+P1,-71.5538,-16.3972,ajuste,EPSG:4326
+P2,-71.5502,-16.3972,ajuste,EPSG:4326
+P3,-71.5502,-16.4028,ajuste,EPSG:4326
+P4,-71.5538,-16.4028,ajuste,EPSG:4326
+V1,-71.5528,-16.399,comprobacion,EPSG:4326
+V2,-71.5512,-16.401,comprobacion,EPSG:4326

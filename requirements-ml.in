@@ -1,0 +1,10 @@
+# Install torch / torchvision first from the matching CPU or CUDA index.
+torch==2.11.0
+torchvision==0.26.0
+rasterio>=1.4,<2
+geopandas>=1.0,<2
+pyproj>=3.6,<4
+shapely>=2.0,<3
+requests>=2.32,<3
+pillow>=11,<13
+pytest>=9,<10

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1125" viewBox="0 0 2000 1125" role="img">
+<title>Arquitectura de despliegue propuesta</title><desc>Interfaz web + API + trabajos en cola + procesamiento IA / GIS</desc>
+<defs>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#DEE6EC"/></pattern>
+<filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#17364A" flood-opacity="0.07"/></filter>
+
+<marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#169BC0"/></marker>
+<marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#20936B"/></marker>
+<marker id="purple" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#8B65BD"/></marker>
+<marker id="gray" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#8A9EAD"/></marker>
+</defs><rect width="2000" height="1125" fill="#FBFCFE"/><rect x="35" y="175" width="1930" height="855" fill="url(#dots)" opacity=".65"/>
+<text x="65" y="61" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="start" font-weight="700">CHULLO / AREQUIPA</text>
+<text x="65" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="42" fill="#18354A" text-anchor="start" font-weight="700">Arquitectura de despliegue propuesta</text>
+<text x="65" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#617384" text-anchor="start" font-weight="400">Interfaz web + API + trabajos en cola + procesamiento IA / GIS</text>
+<rect x="1570" y="35" width="365" height="43" rx="12" fill="#FFF1DB" stroke="none" stroke-width="1.8"/>
+<text x="1752" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#A36617" text-anchor="middle" font-weight="700">PROPUESTA · NO IMPLEMENTADO</text>
+<rect x="385" y="215" width="1550" height="805" rx="20" fill="#FAFCFF" stroke="#CCDDE8" stroke-width="1.8" stroke-dasharray="8 7"/>
+<g transform="translate(405 232) scale(1.25)" fill="#2496ED">
+<path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+</g>
+<text x="450" y="257" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="600">SERVIDOR / VM · DOCKER COMPOSE</text>
+<rect x="1210" y="365" width="690" height="345" rx="20" fill="#FFF9F5" stroke="#EEDAC7" stroke-width="1.8" stroke-dasharray="8 7"/>
+<text x="1234" y="407" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="600">PROCESAMIENTO</text>
+<path d="M 320 600 L 455 600" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)" marker-start="url(#blue)"/>
+<rect x="348.0" y="563" width="74" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="385" y="585" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">HTTPS</text>
+<path d="M 695 600 L 750 600 L 750 355 L 810 355" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<path d="M 945 445 L 945 540" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)" marker-start="url(#blue)"/>
+<rect x="970.0" y="479" width="64" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1002" y="501" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">HTTP</text>
+<path d="M 1080 630 L 1145 630 L 1145 515 L 1240 515" fill="none" stroke="#8B65BD" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#purple)" stroke-dasharray="8 7"/>
+<rect x="1106.0" y="560" width="94" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1153" y="582" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#8B65BD" text-anchor="middle" font-weight="400">Trabajo</text>
+<path d="M 1460 515 L 1560 515" fill="none" stroke="#8B65BD" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#purple)" stroke-dasharray="8 7"/>
+<rect x="1473.0" y="479" width="74" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1510" y="501" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#8B65BD" text-anchor="middle" font-weight="400">Tarea</text>
+<path d="M 1830 550 L 1868 550 L 1868 750 L 1695 750 L 1695 810" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)" marker-start="url(#green)"/>
+<rect x="1673.0" y="732" width="234" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1790" y="754" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Imágenes / resultados</text>
+<path d="M 945 720 L 945 810" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)" marker-start="url(#green)"/>
+<path d="M 1570 605 L 1570 765 L 1010 765 L 1010 810" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)"/>
+<rect x="1178.0" y="747" width="214" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1285" y="769" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Estado + geometrías</text>
+<path d="M 1080 670 L 1110 670 L 1110 900 L 1560 900" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)" stroke-dasharray="8 7"/>
+<rect x="1268.0" y="863" width="104" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1320" y="885" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">Archivos</text>
+<g filter="url(#shadow)">
+<rect x="50.0" y="510.0" width="270" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(151 528.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="9" width="74" height="54" rx="5" fill="#EEF6FB"/><path d="M3 23H77 M29 73H51 M40 63V73"/><circle cx="12" cy="16" r="1.6" fill="#4F89B4"/><circle cx="20" cy="16" r="1.6" fill="#4F89B4"/><path d="M30 35L23 43L30 51 M50 35L57 43L50 51"/>
+</g>
+<text x="185" y="642.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Usuarios</text>
+<text x="185" y="672.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Navegador</text>
+<g filter="url(#shadow)">
+<rect x="455.0" y="510.0" width="240" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(541 532.0) scale(2.8333333333333335)" fill="#009639">
+<path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-6-7.141v6.66c0 .721-.57 1.29-1.274 1.29H7.32c-.721 0-1.29-.6-1.29-1.29V7.41c0-.705.63-1.29 1.5-1.29.646 0 1.38.255 1.83.81l5.97 7.141V7.41c0-.721.6-1.29 1.29-1.29h.075c.72 0 1.29.6 1.29 1.29v9.18H18z"/>
+</g>
+<text x="575" y="642.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">NGINX</text>
+<text x="575" y="672.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Entrada HTTPS</text>
+<g filter="url(#shadow)">
+<rect x="810.0" y="265.0" width="270" height="180" rx="18" fill="#FFF7F7" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(911 287.0) scale(2.8333333333333335)" fill="#FF4B4B">
+<path d="M16.673 11.32l6.862-3.618c.233-.136.554.12.442.387L20.463 17.1zm-8.556-.229l3.473-5.187c.203-.328.578-.316.793-.028l7.886 11.75zm-3.375 7.25c-.28 0-.835-.284-.993-.716l-3.72-9.46c-.118-.331.139-.614.48-.464l19.474 10.306c-.149.147-.453.337-.72.334z"/>
+</g>
+<text x="945" y="397.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Interfaz web</text>
+<text x="945" y="427.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Streamlit · Folium</text>
+<g filter="url(#shadow)">
+<rect x="810.0" y="540.0" width="270" height="180" rx="18" fill="#EFFAF7" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(911 562.0) scale(2.8333333333333335)" fill="#009688">
+<path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896"/>
+</g>
+<text x="945" y="672.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">API</text>
+<text x="945" y="702.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">FastAPI</text>
+<g filter="url(#shadow)">
+<rect x="1240.0" y="425.0" width="220" height="180" rx="18" fill="#FFF5F4" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1316 447.0) scale(2.8333333333333335)" fill="#FF4438">
+<path d="M22.71 13.145c-1.66 2.092-3.452 4.483-7.038 4.483-3.203 0-4.397-2.825-4.48-5.12.701 1.484 2.073 2.685 4.214 2.63 4.117-.133 6.94-3.852 6.94-7.239 0-4.05-3.022-6.972-8.268-6.972-3.752 0-8.4 1.428-11.455 3.685C2.59 6.937 3.885 9.958 4.35 9.626c2.648-1.904 4.748-3.13 6.784-3.744C8.12 9.244.886 17.05 0 18.425c.1 1.261 1.66 4.648 2.424 4.648.232 0 .431-.133.664-.365a100.49 100.49 0 0 0 5.54-6.765c.222 3.104 1.748 6.898 6.014 6.898 3.819 0 7.604-2.756 9.33-8.965.2-.764-.73-1.361-1.261-.73zm-4.349-5.013c0 1.959-1.926 2.922-3.685 2.922-.941 0-1.664-.247-2.235-.568 1.051-1.592 2.092-3.225 3.21-4.973 1.972.334 2.71 1.43 2.71 2.619z"/>
+</g>
+<text x="1350" y="557.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Cola</text>
+<text x="1350" y="587.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Redis</text>
+<g filter="url(#shadow)">
+<rect x="1560.0" y="425.0" width="270" height="180" rx="18" fill="#F7FBF3" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1661 447.0) scale(2.8333333333333335)" fill="#37814A">
+<path d="M2.303 0A2.298 2.298 0 0 0 0 2.303v19.394A2.298 2.298 0 0 0 2.303 24h19.394A2.298 2.298 0 0 0 24 21.697V2.303A2.298 2.298 0 0 0 21.697 0zm8.177 3.072c4.098 0 7.028 1.438 7.68 1.764l-1.194 2.55c-2.442-1.057-4.993-1.41-5.672-1.41-1.574 0-2.17.922-2.17 1.763v8.494c0 .869.596 1.791 2.17 1.791.679 0 3.23-.38 5.672-1.41l1.194 2.496c-.435.271-3.637 1.818-7.68 1.818-1.112 0-4.64-.244-4.64-4.64V7.713c0-4.397 3.528-4.64 4.64-4.64z"/>
+</g>
+<text x="1695" y="557.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Worker</text>
+<text x="1695" y="587.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Celery</text>
+<g transform="translate(1608 627) scale(1.5416666666666667)" fill="#EE4C2C">
+<path d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z"/>
+</g>
+<g transform="translate(1675 627) scale(1.5416666666666667)" fill="#139C5A">
+<path d="M12.0043 0C5.3911 0 0 5.3805 0 12c0 6.6108 5.3825 12 12.0043 12C18.6263 24 24 18.6108 24 12c0-6.6195-5.3824-12-11.9957-12Zm9.8288 12a9.7343 9.7343 0 0 1-.8234 3.925v-7.85c.5288 1.1958.8235 2.53.8235 3.925zm-4.0996 7.9798v-1.8715h-2.0889v3.0152a9.7946 9.7946 0 0 1-3.6403.7018c-.3033 0-.6067-.0173-.91-.0433V9.1928H9.0054v12.1646c-3.961-1.2736-6.8385-4.9906-6.8385-9.366 0-5.4239 4.4117-9.834 9.8374-9.834 2.6956 0 5.1485 1.0917 6.9253 2.8592v13.8888h.0607c-.39.3986-.8148.7538-1.2568 1.0744zM15.6446 9.2014h2.0889v4.3322h-2.0889zm-3.2849 5.3372h2.0888v4.3322h-2.0888Zm0-8.9068h2.0888v4.3321h-2.0888Zm3.285 9.1668h2.0888v2.0447h-2.0889Zm-3.285-3.5697h2.0888v2.0448h-2.0888Z"/>
+</g>
+<g transform="translate(1742 624) scale(0.525)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="16" width="48" height="48" rx="5" fill="#EEF6FB"/><rect x="25" y="25" width="30" height="30" rx="3"/><path d="M25 6V16 M40 6V16 M55 6V16 M25 64V74 M40 64V74 M55 64V74 M6 25H16 M6 40H16 M6 55H16 M64 25H74 M64 40H74 M64 55H74"/>
+</g>
+<text x="1695" y="694" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#617384" text-anchor="middle" font-weight="400">PyTorch · GIS · GPU/CPU</text>
+<g filter="url(#shadow)">
+<rect x="810.0" y="810.0" width="270" height="180" rx="18" fill="#F3F6FF" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(911 832.0) scale(2.8333333333333335)" fill="#4169E1">
+<path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"/>
+</g>
+<text x="945" y="942.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Base geográfica</text>
+<text x="945" y="972.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">PostgreSQL · PostGIS</text>
+<g filter="url(#shadow)">
+<rect x="1545.0" y="810.0" width="300" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1661 828.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M8 18V64C8 79 72 79 72 64V18" fill="#DDECF8"/><ellipse cx="40" cy="18" rx="32" ry="12" fill="#B7D6EC"/><path d="M8 40C8 55 72 55 72 40 M8 59C8 74 72 74 72 59"/>
+</g>
+<text x="1695" y="942.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Archivos</text>
+<text x="1695" y="972.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Almacén compatible con S3</text>
+<g transform="translate(532 840) scale(3.5)" fill="#2496ED">
+<path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+</g>
+<text x="575" y="953" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#18354A" text-anchor="middle" font-weight="600">Contenedores</text>
+<text x="575" y="984" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Una VM al inicio</text>
+<text x="65" y="1072" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="400">La interfaz consulta el estado del trabajo · El worker procesa · La base guarda geometrías y el almacén guarda imágenes</text>
+<text x="65" y="1104" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#8998A5" text-anchor="start" font-weight="400">Logos: respectivos titulares · SVG de Simple Icons · Diseño técnico del proyecto</text>
+<text x="1935" y="1104" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#8998A5" text-anchor="end" font-weight="400">21 OCT 2026</text>
+</svg>

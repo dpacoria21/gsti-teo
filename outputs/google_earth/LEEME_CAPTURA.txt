@@ -1,0 +1,30 @@
+ESTADO: captura realizada e integrada el 14-10-2026. Originales, GeoTIFF y controles en data/imagery/chullo; resultados en outputs/inference/chullo_demo. Las siguientes instrucciones permiten repetir la adquisición.
+
+CAPTURA DEL SECTOR DE CHULLO PARA LA DEMOSTRACIÓN
+
+Este archivo KML sólo contiene geometrías y coordenadas de referencia. No contiene una imagen de Google ni prueba que ya se haya ejecutado el detector sobre Chullo.
+
+1. Abrir chullo_referencia.kml en Google Earth Pro y acercarse al documento para ver el rectángulo completo y sus seis marcadores.
+2. Usar una vista vertical, con norte arriba. Desactivar edificios 3D y relieve (Terrain) para evitar deformaciones de perspectiva. Mantener oculto el eje OSM durante la captura.
+3. Elegir Archivo > Guardar > Guardar imagen. Usar la mayor resolución disponible que mantenga visibles las cubiertas. Conservar los seis marcadores y todos los créditos de Google y de los proveedores. No recortar ni tapar los créditos.
+4. Guardar como chullo_con_referencias.jpg. Anotar por separado la fecha de las imágenes que muestre Google Earth; no usar la fecha de descarga como fecha de captura. Si no se conoce, dejarla como desconocida.
+5. Opcional: sin mover la cámara, cambiar el tamaño del visor ni modificar la resolución, ocultar la carpeta de marcadores y el rectángulo y guardar una segunda imagen chullo_limpio.jpg. Conservar también sus créditos. La primera imagen permite ubicar las coordenadas; la segunda evita que los marcadores interfieran con el detector.
+6. Entregar la imagen original o ambas imágenes junto con este KML y puntos_control_chullo.csv. La aplicación actual no acepta directamente un JPG: falta georreferenciarlo, verificar el ajuste y convertirlo en GeoTIFF.
+
+GEORREFERENCIACIÓN
+P1–P4 son referencias para ajustar la transformación; V1 y V2 permiten comprobarla en puntos que no se usaron en el ajuste. La coordenada corresponde a la punta del marcador. Son coordenadas de la vista de Google Earth, no puntos levantados en campo: el error residual del ajuste no mide la exactitud absoluta de la imagen. Verificar además la correspondencia con referencias independientes antes de interpretar distancias pequeñas.
+
+Se conservarán la atribución, la fecha disponible y el error de ajuste. El modelo ya instalado puede utilizar el GeoTIFF resultante, pero su calidad en Chullo debe revisarse y no está garantizada.
+
+CONDICIONES CONSULTADAS EL 14-10-2026
+Google contempla algunas imágenes estáticas para educación e investigación, con atribución y sujeción a sus condiciones. Esto no constituye una autorización general para extracción masiva, entrenamiento o redistribución de un banco de imágenes. La captura real se obtuvo posteriormente desde Google Earth Pro, preservando créditos, para esta demostración académica local.
+https://about.google/brand-resource-center/products-and-services/geo-guidelines/
+https://www.google.com/intl/En-en/help/terms_maps-earth/
+
+Exportación oficial:
+https://support.google.com/earth/answer/148146?hl=es
+Georreferenciación en QGIS:
+https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/georeferencer.html
+
+Eje de referencia: © OpenStreetMap contributors, ODbL 1.0.
+https://www.openstreetmap.org/copyright

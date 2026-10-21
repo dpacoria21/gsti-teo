@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "started_at": "2026-10-14T07:16:32.251972+00:00",
+  "completed_at": "2026-10-14T07:16:34.470379+00:00",
+  "elapsed_seconds": 2.219,
+  "count": 180,
+  "model_id": "giswqs/geoai/building_footprints_usa",
+  "image_id": "img_f90f882e7f80ed75",
+  "source_id": "geoai_building_inference",
+  "bounds_wgs84": [
+    -71.49295916730627,
+    -16.40710637092164,
+    -71.48917048370645,
+    -16.403449391894352
+  ],
+  "preview_bounds_wgs84": [
+    [
+      -16.407107905280466,
+      -71.49295916730627
+    ],
+    [
+      -16.403449391894352,
+      -71.48917196249451
+    ]
+  ],
+  "image": {
+    "path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\mariano_melgar\\mariano_melgar_rgb.tif",
+    "width": 800,
+    "height": 800,
+    "bands": 3,
+    "dtype": "uint8",
+    "crs": "EPSG:32719",
+    "transform": [
+      0.5,
+      0.0,
+      233750.0,
+      0.0,
+      -0.5,
+      8184800.0
+    ],
+    "resolution_m_approx": [
+      0.49976242030131096,
+      0.499762419718878
+    ],
+    "bounds_wgs84": [
+      -71.49295916730627,
+      -16.40710637092164,
+      -71.48917048370645,
+      -16.403449391894352
+    ],
+    "preview_bounds_wgs84": [
+      [
+        -16.40710637092164,
+        -71.49295916730627
+      ],
+      [
+        -16.403449391894352,
+        -71.48917048370645
+      ]
+    ],
+    "rgb_bands": [
+      1,
+      2,
+      3
+    ],
+    "size_bytes": 1792529,
+    "sha256": "f90f882e7f80ed75c920836dd78d8f16130e0d51506881462c69aa42ebc8ea14",
+    "source_id": "cenepred_mariano_imagery",
+    "observed_at": "2018-06-05",
+    "license": "Acceso público SIGRID para consultar, compartir, analizar y monitorear información, con crédito a los autores. Sin licencia Creative Commons específica declarada.",
+    "provenance": {
+      "schema_version": 1,
+      "image_id": "cenepred_mariano_melgar_20180605_crop",
+      "source_id": "cenepred_mariano_imagery",
+      "study_area_id": "mariano_melgar",
+      "title": "Ortomosaico real de Mariano Melgar · Arequipa · 2018",
+      "location_name": "Mariano Melgar, Arequipa (caso alternativo; no Chullo)",
+      "image_kind": "Ortomosaico aéreo de dron; no imagen satelital",
+      "raster_path": "data/imagery/mariano_melgar/mariano_melgar_rgb.tif",
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798",
+      "download_url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798/descargar",
+      "source": "CENEPRED · SIGRID",
+      "organization": "CENEPRED",
+      "observed_at": "2018-06-05",
+      "capture_date": "2018-06-05",
+      "published_at": "2019",
+      "downloaded_at": "2026-10-14T07:07:41.876218+00:00",
+      "license": "Acceso público SIGRID para consultar, compartir, analizar y monitorear información, con crédito a los autores. Sin licencia Creative Commons específica declarada.",
+      "license_url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798",
+      "attribution": "Imagen aérea: CENEPRED / SIGRID, Ortomosaico Sector de Mariano Melgar, vuelo 05/06/2018. Recorte y remuestreo propios.",
+      "platform": "DJI Inspire 2 copter",
+      "sensor": "RGB",
+      "camera": "Zenmuse X5S",
+      "ground_control_reported": true,
+      "native_resolution_m": 0.1093,
+      "resolution_m": [
+        0.5,
+        0.5
+      ],
+      "crs": "EPSG:32719",
+      "bbox": [
+        233750.0,
+        8184400.0,
+        234150.0,
+        8184800.0
+      ],
+      "bbox_wgs84": [
+        -71.49295916730627,
+        -16.40710637092164,
+        -71.48917048370645,
+        -16.403449391894352
+      ],
+      "width": 800,
+      "height": 800,
+      "bands": 3,
+      "dtype": "uint8",
+      "valid_pixel_fraction": 1.0,
+      "sha256": "f90f882e7f80ed75c920836dd78d8f16130e0d51506881462c69aa42ebc8ea14",
+      "source_zip_sha256": "a2a66a239fc70cd431db0a413eaee9a4f02f265c772b1932a756bcb6a5006a85",
+      "processing": "Recorte UTM [233750,8184400,234150,8184800]; promedio a 0.5m; RGB y máscara nativa. Sin superresolución.",
+      "processing_tool": "GDAL 3.12.1 GISInternals con MrSID (solo preparación local)",
+      "georeferencing": "Georreferencia nativa MrSID oficial conservada; no ajustada manualmente.",
+      "accuracy_notes": "El catálogo indica control GPS diferencial, sin precisión numérica. Imagen de 2018; no representa un inventario actual ni validación de campo."
+    }
+  },
+  "model": {
+    "id": "giswqs/geoai/building_footprints_usa",
+    "architecture": "Mask R-CNN ResNet50-FPN",
+    "pretrained": true,
+    "trained_locally": false,
+    "path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\models\\building_footprints_usa.pth",
+    "revision": "43b6aa04156d7d9d2b90fe321096f15f03353cd2",
+    "sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+    "url": "https://huggingface.co/giswqs/geoai/resolve/43b6aa04156d7d9d2b90fe321096f15f03353cd2/building_footprints_usa.pth",
+    "license": "MIT (model repository)",
+    "num_classes": 2,
+    "min_size": 800,
+    "max_size": 1333,
+    "normalization": {
+      "input": "RGB uint8 / 255",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "geography": "Publicado como modelo USA; no validado cuantitativamente en Arequipa."
+  },
+  "parameters": {
+    "confidence_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "tile_size": 512,
+    "overlap": 128,
+    "min_area_m2": 10.0,
+    "nms_iou": 0.35,
+    "nms_containment": 0.7,
+    "analysis_crs": "EPSG:32719"
+  },
+  "execution": {
+    "device": "cuda",
+    "device_requested": "auto",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "tiles": 4,
+    "raw_candidates": 263,
+    "duplicates_removed": 83
+  },
+  "outputs": {
+    "buildings": "buildings.geojson",
+    "preview": "preview.png",
+    "buildings_sha256": "ff969f6d8a908a8fdfccc0fb5c71c7bffba2bfcc3bfe52b1e75a735a1f7b4462"
+  },
+  "warnings": [],
+  "limitations": [
+    "Detecciones automáticas sin revisión; pueden existir omisiones y falsos positivos.",
+    "La confianza del modelo no es una probabilidad calibrada ni una medida de peligro.",
+    "Se detectan edificaciones, no uso residencial ni ocupación.",
+    "Los contornos corresponden a máscaras y pueden representar cubiertas; no sustituyen catastro ni levantamiento de campo.",
+    "Fecha de captura desconocida salvo declaración explícita de la fuente.",
+    "Las instancias que llegan al borde de la imagen pueden quedar incompletas."
+  ]
+}

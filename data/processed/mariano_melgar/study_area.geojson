@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "study_area",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "area_id": "mariano_melgar", "name": "Mariano Melgar · imagen aérea 2018" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -71.489216436348229, -16.407106370921639 ], [ -71.489170483706445, -16.403493775208684 ], [ -71.492913145745462, -16.403449391894352 ], [ -71.492959167306267, -16.40706197729747 ], [ -71.489216436348229, -16.407106370921639 ] ] ] } }
+]
+}

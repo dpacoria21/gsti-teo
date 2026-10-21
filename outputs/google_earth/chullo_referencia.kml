@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Chullo — referencia para captura académica</name>
+    <description>Sector piloto del prototipo. Los marcadores son coordenadas de referencia de la vista; no son puntos medidos en campo. No contiene imágenes de Google. Eje: © OpenStreetMap contributors, ODbL 1.0, https://www.openstreetmap.org/copyright</description>
+    <LookAt>
+      <longitude>-71.552</longitude>
+      <latitude>-16.4</latitude>
+      <altitude>0</altitude>
+      <heading>0</heading>
+      <tilt>0</tilt>
+      <range>1800</range>
+      <altitudeMode>clampToGround</altitudeMode>
+    </LookAt>
+    <Style id="sector">
+      <LineStyle>
+        <color>ff00ffff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <fill>0</fill>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Sector piloto Chullo</name>
+      <styleUrl>#sector</styleUrl>
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-71.554,-16.403,0 -71.55,-16.403,0 -71.55,-16.397,0 -71.554,-16.397,0 -71.554,-16.403,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Folder>
+      <name>Referencias de coordenadas — conservar en la primera exportación</name>
+      <Placemark>
+        <name>P1</name>
+        <description>ajuste: longitud -71.5538, latitud -16.3972, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5538,-16.3972,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>P2</name>
+        <description>ajuste: longitud -71.5502, latitud -16.3972, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5502,-16.3972,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>P3</name>
+        <description>ajuste: longitud -71.5502, latitud -16.4028, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5502,-16.4028,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>P4</name>
+        <description>ajuste: longitud -71.5538, latitud -16.4028, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5538,-16.4028,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>V1</name>
+        <description>comprobacion: longitud -71.5528, latitud -16.399, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5528,-16.399,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>V2</name>
+        <description>comprobacion: longitud -71.5512, latitud -16.401, EPSG:4326. La punta del marcador representa esta coordenada. No es control topográfico independiente.</description>
+        <Point>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>-71.5512,-16.401,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Referencia OSM del cauce — oculta para capturar</name>
+      <visibility>0</visibility>
+      <Placemark>
+        <name>Chullo · eje OpenStreetMap</name>
+        <visibility>0</visibility>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>-71.5516168,-16.3884251,0 -71.5513781,-16.3887519,0 -71.5510455,-16.3898172,0 -71.551071,-16.3900372,0 -71.551189,-16.3901942,0 -71.5512165,-16.39029,0 -71.5513217,-16.3910291,0 -71.5513949,-16.3911921,0 -71.5515558,-16.3917027,0 -71.5515276,-16.3919858,0 -71.5515142,-16.3925261,0 -71.5513312,-16.3933309,0 -71.5512748,-16.3937246,0 -71.5512695,-16.3953379,0 -71.5512024,-16.3955721,0 -71.5510889,-16.3958449,0 -71.5510095,-16.3961305,0 -71.5510066,-16.3964785,0 -71.5508785,-16.3968539,0 -71.5508783,-16.397166,0 -71.5507767,-16.3975643,0 -71.5507579,-16.3977702,0 -71.5507738,-16.3980647,0 -71.5507845,-16.3981468,0 -71.5508668,-16.3987634,0 -71.550933,-16.3992451,0 -71.5509991,-16.3994998,0 -71.5510977,-16.3997545,0 -71.5512917,-16.4003124,0 -71.5515089,-16.4008321,0 -71.5518376,-16.4015248,0 -71.5521929,-16.4024351,0 -71.5524235,-16.4028005,0 -71.5524599,-16.4028546,0 -71.552535,-16.4029899,0 -71.5525395,-16.4030333,0 -71.5524443,-16.403372,0 -71.552448,-16.4036943,0 -71.5522909,-16.404273,0 -71.5522652,-16.4043723,0 -71.5522547,-16.4044126,0 -71.5521824,-16.4046517,0 -71.5519965,-16.4052638,0 -71.552,-16.4052556,0 -71.5518337,-16.4058165,0 -71.5518003,-16.4059407,0 -71.551709,-16.4062809,0 -71.5517242,-16.4063172,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

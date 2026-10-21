@@ -1,0 +1,10 @@
+{
+  "area_id": "chullo",
+  "band_m": 25,
+  "buildings": 177,
+  "within_band": 31,
+  "outside_band": 146,
+  "minimum_distance_m": 0.0,
+  "maximum_distance_m": 331.04400922939874,
+  "map": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\outputs\\presentacion\\mapa_chullo_25m.png"
+}

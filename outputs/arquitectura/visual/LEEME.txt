@@ -1,0 +1,16 @@
+ARQUITECTURA VISUAL CHULLO
+
+01: arquitectura implementada del prototipo local.
+02: propuesta de despliegue multiusuario, aún no implementada.
+
+PNG: 4000 x 2250, listos para diapositivas 16:9.
+SVG: diagramas vectoriales editables, con logos incorporados; no necesitan Internet.
+
+Azul = datos o solicitudes; verde = geometrías/resultados; violeta discontinuo = ejecución de tareas. Las etiquetas especifican cada conexión. Los pictogramas genéricos representan usuario, archivos, contornos y GPU; no son logos de proveedores.
+
+Logos obtenidos de Simple Icons; pertenecen a sus respectivos titulares y no implican patrocinio. Fuentes y hashes en fuentes-logos.json.
+
+El mapa base y la adquisición de imágenes pueden requerir Internet. El procesamiento actual usa datos locales. Google Earth Pro se usó en la preparación; no se llama su API durante cada inferencia. No hay base SQL, API FastAPI ni cola Celery en la versión actual.
+
+Generador: scripts/render_architecture_logos.py
+Comando: uv run --with resvg-py python scripts/render_architecture_logos.py

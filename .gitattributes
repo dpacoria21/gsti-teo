@@ -1,0 +1,22 @@
+# Código y documentación con finales de línea definidos.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.css text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+# Los manifiestos verifican hashes de datos: Git debe conservar sus bytes exactos.
+*.json -text whitespace=cr-at-eol
+*.geojson -text whitespace=cr-at-eol
+*.geojsonl -text whitespace=cr-at-eol
+*.csv -text whitespace=cr-at-eol
+
+# Imágenes y pesos no deben recibir conversión de finales de línea.
+*.tif binary
+*.tiff binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pth binary

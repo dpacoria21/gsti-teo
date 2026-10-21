@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-14T07:07:41.876218+00:00",
+  "buildings": {
+    "tile_features_scanned": 280614,
+    "intersecting": 394,
+    "duplicates_removed": 0,
+    "crosses_study_boundary": 34,
+    "selected_unique": 394
+  },
+  "image_sha256": "f90f882e7f80ed75c920836dd78d8f16130e0d51506881462c69aa42ebc8ea14",
+  "area_m2": 160000,
+  "river_lengths_m": [
+    2713.8943713690337,
+    437.25804994550106
+  ]
+}

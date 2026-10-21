@@ -1,0 +1,12 @@
+{
+  "run_directory": "outputs\\inference\\chullo_demo",
+  "buildings": 237,
+  "within_band": 27,
+  "outside_band": 210,
+  "band_m": 25,
+  "minimum_distance_m": 0.0,
+  "maximum_distance_m": 330.14017213036726,
+  "image_sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+  "model_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "map": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\outputs\\presentacion\\mapa_ia_chullo_25m.png"
+}

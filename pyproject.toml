@@ -1,0 +1,16 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+extend-exclude = [".venv", ".venv-ml", "data", "models", "outputs", "tmp"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_app.py" = ["E402"]
+"tests/test_building_detection.py" = ["E402"]
+"tests/test_georeference_capture.py" = ["E402"]

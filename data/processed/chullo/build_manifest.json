@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-14T06:29:55+00:00",
+  "script": "scripts/prepare_data.py",
+  "bbox": [
+    -71.554,
+    -16.403,
+    -71.55,
+    -16.397
+  ],
+  "sources": {
+    "microsoft_peru_210031232_2026-08-13.geojsonl.gz": {
+      "url": "https://bfppub.z5.web.core.windows.net/2026-08-13/global-buildings.geojsonl/RegionName=Peru/quadkey=210031232/part-00104-110f5303-ff85-4c71-a2bf-c6070024fec8.c000.csv.gz",
+      "sha256": "50d3382c6225820a0da2a7553239f60e00df3b011108e252f4e1070bfcf814ad",
+      "bytes": 23812027,
+      "downloaded_at": "2026-10-14T06:24:05+00:00"
+    },
+    "osm_way_570369893_full.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/570369893/full",
+      "sha256": "e5bd93978f61b0007529ab60d6837260ba8112e2be6790d79424ac9973d4a82a",
+      "bytes": 3687,
+      "downloaded_at": "2026-10-14T06:29:27+00:00"
+    },
+    "osm_way_25980163_full.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/25980163/full",
+      "sha256": "e26fc20a4ca6d903c28f50e1ba0e575a13af85a0e13351612b13cd62cdd591ed",
+      "bytes": 2269,
+      "downloaded_at": "2026-10-14T06:24:02+00:00"
+    },
+    "osm_way_535091453_full.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/535091453/full",
+      "sha256": "91bc6a887e5d45dfe7147b2fdeddbee3fb0ee4f02a92715e6d36adf92b02d599",
+      "bytes": 901,
+      "downloaded_at": "2026-10-14T06:24:02+00:00"
+    },
+    "osm_way_535091454_full.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/535091454/full",
+      "sha256": "188bd0af42532b9e905be79cd3e348c608b7fdba4bb0fdf37fdd8883ee3f95ea",
+      "bytes": 2325,
+      "downloaded_at": "2026-10-14T06:24:03+00:00"
+    },
+    "osm_way_781522545_full.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/781522545/full",
+      "sha256": "3bd9c94725296e608e8eaaf27a0439a4ecc6cbfc48fdca2790a63da4a0801d8b",
+      "bytes": 3626,
+      "downloaded_at": "2026-10-14T06:24:03+00:00"
+    },
+    "ingemmet_A7406.pdf": {
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/16497/descargar",
+      "sha256": "fbc3fc238a14c1995dca4d3d3b2d1ae757af927d054791b89462e0010a40a435",
+      "bytes": 5973122,
+      "downloaded_at": "2026-10-14T06:24:02+00:00"
+    },
+    "ingemmet_OT006_2020.pdf": {
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/10009/descargar",
+      "sha256": "d03844d0b0980826dec257aaf2104560a7ee67b16386dce8931f2c64debe1629",
+      "bytes": 978980,
+      "downloaded_at": "2026-10-14T06:24:01+00:00"
+    },
+    "osm_north_node_1862680670_ways.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/node/1862680670/ways",
+      "sha256": "c812abceb1a97e6979db3b10017f22afe3a00e392771c44214901c012f594dee",
+      "bytes": 1387,
+      "downloaded_at": "2026-10-14T06:29:20+00:00"
+    }
+  },
+  "outputs": {
+    "buildings.geojson": "5fc79073447bd893edb3f02cf87a496e578e6f70012bee5edd66ede668b6e8b9",
+    "rivers.geojson": "8f653eaf1019697d0daa6b56c659fd62aa7b7012678e0152fd3259e8994808be",
+    "study_area.geojson": "d980c4b2295df7824faffbc5e2eb5cc35a70a00314d9bcddded223b90cbf5f7b"
+  }
+}

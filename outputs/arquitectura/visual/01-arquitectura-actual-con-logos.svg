@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1125" viewBox="0 0 2000 1125" role="img">
+<title>Arquitectura del prototipo</title><desc>Una imagen real → detección de edificaciones → distancias a la torrentera</desc>
+<defs>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#DEE6EC"/></pattern>
+<filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#17364A" flood-opacity="0.07"/></filter>
+
+<marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#169BC0"/></marker>
+<marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#20936B"/></marker>
+<marker id="purple" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#8B65BD"/></marker>
+<marker id="gray" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#8A9EAD"/></marker>
+</defs><rect width="2000" height="1125" fill="#FBFCFE"/><rect x="35" y="175" width="1930" height="855" fill="url(#dots)" opacity=".65"/>
+<text x="65" y="61" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="start" font-weight="700">CHULLO / AREQUIPA</text>
+<text x="65" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="42" fill="#18354A" text-anchor="start" font-weight="700">Arquitectura del prototipo</text>
+<text x="65" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#617384" text-anchor="start" font-weight="400">Una imagen real → detección de edificaciones → distancias a la torrentera</text>
+<rect x="1570" y="35" width="365" height="43" rx="12" fill="#E6F5EF" stroke="none" stroke-width="1.8"/>
+<text x="1752" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#20936B" text-anchor="middle" font-weight="700">IMPLEMENTADO · LOCAL</text>
+<rect x="430" y="215" width="1505" height="805" rx="20" fill="#F9FBFF" stroke="#CCDDE8" stroke-width="1.8" stroke-dasharray="8 7"/>
+<g transform="translate(450 232) scale(1.25)" fill="#3776AB">
+<path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+</g>
+<text x="495" y="257" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="600">PC DEL PROYECTO · PYTHON</text>
+<text x="205" y="249" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="600">FUENTES</text>
+<path d="M 340 360 L 490 360" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<rect x="388.0" y="324" width="54" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="415" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">RGB</text>
+<path d="M 760 360 L 910 360" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<rect x="788.0" y="324" width="94" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="835" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">GeoTIFF</text>
+<path d="M 1180 360 L 1340 360" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)"/>
+<rect x="1208.0" y="324" width="104" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1260" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Máscaras</text>
+<path d="M 1475 450 L 1475 595" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)"/>
+<rect x="1495.0" y="507" width="114" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1552" y="529" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Polígonos</text>
+<path d="M 340 685 L 490 685" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<rect x="369.0" y="649" width="94" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="416" y="671" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">Eje OSM</text>
+<path d="M 625 595 L 625 525 L 1430 525 L 1430 595" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)"/>
+<rect x="773.0" y="507" width="84" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="815" y="529" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Cauces</text>
+<path d="M 1340 685 L 1180 685" fill="none" stroke="#20936B" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#green)"/>
+<rect x="1198.0" y="649" width="124" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1260" y="671" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#20936B" text-anchor="middle" font-weight="400">Distancias</text>
+<path d="M 1045 595 L 1045 450" fill="none" stroke="#8B65BD" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#purple)" stroke-dasharray="8 7"/>
+<rect x="926.0" y="470" width="104" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="978" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#8B65BD" text-anchor="middle" font-weight="400">Ejecutar</text>
+<path d="M 340 935 L 820 935 L 820 685 L 910 685" fill="none" stroke="#8B65BD" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#purple)" stroke-dasharray="8 7"/>
+<rect x="498.0" y="917" width="124" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="560" y="939" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#8B65BD" text-anchor="middle" font-weight="400">HTTP local</text>
+<path d="M 1110 775 L 1110 880 L 1215 880" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<rect x="1101.0" y="812" width="64" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1133" y="834" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">Mapa</text>
+<path d="M 1045 775 L 1045 990 L 1725 990 L 1725 960" fill="none" stroke="#169BC0" stroke-width="2.6" stroke-linejoin="round" marker-end="url(#blue)"/>
+<rect x="1368.0" y="972" width="104" height="30" rx="6" fill="#FBFCFE" stroke="none" stroke-width="1.8"/>
+<text x="1420" y="994" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#169BC0" text-anchor="middle" font-weight="400">Exportar</text>
+<g filter="url(#shadow)">
+<rect x="70.0" y="270.0" width="270" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(171 292.0) scale(2.8333333333333335)" fill="#4285F4">
+<path d="M12 0c-1.326 0-2.597.22-3.787.613 4.94-1.243 8.575 1.72 11.096 5.606 1.725 2.695 2.813 2.83 4.207 2.412A11.956 11.956 0 0012 0zM7.658 2.156c-1.644.019-3.295.775-4.931 2.207A11.967 11.967 0 000 12c.184-2.823 2.163-5.128 4.87-5.07 2.104.044 4.648 1.518 7.13 5.289 4.87 7.468 10.917 5.483 11.863 1.51.081-.566.137-1.14.137-1.729 0-.176-.02-.347-.027-.521-1.645 1.725-4.899 2.35-8.264-2.97-2.59-4.363-5.31-6.383-8.05-6.353zM3.33 13.236c-1.675.13-2.657 1.804-2.242 3.756A11.955 11.955 0 0012 24c4.215 0 7.898-2.149 10.037-5.412v-.043c-2.836 3.49-8.946 4.255-13.855-2.182-1.814-2.386-3.544-3.228-4.852-3.127Z"/>
+</g>
+<text x="205" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Google Earth Pro</text>
+<text x="205" y="432.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Imagen de Chullo</text>
+<g filter="url(#shadow)">
+<rect x="70.0" y="595.0" width="270" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(171 617.0) scale(2.8333333333333335)" fill="#7EBC6F">
+<path d="M2.672 23.969c-.352-.089-.534-.234-1.471-1.168C.085 21.688.014 21.579.018 20.999c0-.645-.196-.414 3.368-3.986 3.6-3.608 3.415-3.451 4.064-3.449.302 0 .378.016.62.14l.277.14 1.744-1.744-.218-.343c-.425-.662-.825-1.629-1.006-2.429a7.657 7.657 0 0 1 1.479-6.44c2.49-3.12 6.959-3.812 10.26-1.588 1.812 1.218 2.99 3.099 3.328 5.314.07.467.07 1.579 0 2.074a7.554 7.554 0 0 1-2.205 4.402 6.712 6.712 0 0 1-1.943 1.401c-.959.483-1.775.71-2.881.803-1.573.131-3.32-.305-4.656-1.163l-.343-.218-1.744 1.744.14.28c.125.241.14.316.14.617.003.651.156.467-3.426 4.049-2.761 2.756-3.186 3.164-3.398 3.261-.271.125-.69.171-.945.106zM17.485 13.95a6.425 6.425 0 0 0 4.603-3.51c1.391-2.899.455-6.306-2.227-8.108-.638-.43-1.529-.794-2.367-.962-.581-.117-1.809-.104-2.414.025a6.593 6.593 0 0 0-2.452 1.064c-.444.315-1.177 1.048-1.487 1.487a6.384 6.384 0 0 0 .38 7.907 6.406 6.406 0 0 0 3.901 2.136c.509.078 1.542.058 2.065-.037zm-3.738 7.376a80.97 80.97 0 0 1-2.196-.651c-.025-.028 1.207-4.396 1.257-4.449.023-.026 4.242 1.152 4.414 1.236.062.026-.003.288-.525 2.102a398.513 398.513 0 0 0-.635 2.236c-.025.087-.069.156-.097.156-.028-.003-1.028-.287-2.219-.631zm2.912.524c0-.053 1.227-4.333 1.246-4.347.047-.034 4.324-1.23 4.341-1.211.019.019-1.199 4.337-1.23 4.36-.02.019-4.126 1.191-4.259 1.218-.054.011-.098 0-.098-.019zm-7.105-1.911c.846-.852 1.599-1.627 1.674-1.728.171-.218.405-.732.472-1.015.026-.118.053-.352.058-.522l.011-.307.182-.051c.103-.028.193-.044.202-.034.023.025-1.207 4.321-1.246 4.36-.02.016-.677.213-1.464.436l-1.425.405 1.537-1.542zm8.289-3.06a1.371 1.371 0 0 1-.059-.187l-.044-.156.156-.028c1.339-.227 2.776-.856 3.908-1.713.16-.125.252-.171.265-.134.054.165.272.95.265.959-.034.034-4.48 1.282-4.492 1.261zm-15.083-1.3c-.05-.039-1.179-3.866-1.264-4.29-.016-.084.146-.044 2.174.536 2.121.604 2.192.629 2.222.74.028.098.011.129-.125.223-.084.059-.769.724-1.523 1.479a63.877 63.877 0 0 1-1.39 1.367c-.016 0-.056-.025-.093-.054zm.821-4.378c-1.188-.343-2.164-.623-2.167-.626-.016-.012 1.261-4.433 1.285-4.46.022-.022 4.422 1.211 4.469 1.252.009.009-.269 1.017-.618 2.239-.576 2.02-.643 2.224-.723 2.22-.05-.003-1.059-.285-2.247-.626zm2.959.538c.012-.031.212-.723.444-1.534l.42-1.476.056.321c.093.556.265 1.188.464 1.741.106.296.187.539.181.545-.008.006-.332.101-.719.212-.389.109-.741.21-.786.224-.058.016-.075.006-.059-.034zM4.905 6.112c-1.187-.339-2.167-.635-2.18-.654-.04-.062-1.246-4.321-1.23-4.338.026-.025 4.31 1.204 4.351 1.246.047.051 1.28 4.379 1.246 4.376L4.91 6.113zm2.148-1.713l-.519-1.806-.078-.28 1.693-.483c.934-.265 1.724-.495 1.76-.508.034-.016-.083.14-.26.336A8.729 8.729 0 0 0 7.69 5.23a4.348 4.348 0 0 0-.132.561c0 .293-.115-.025-.505-1.39z"/>
+</g>
+<text x="205" y="727.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">OpenStreetMap</text>
+<text x="205" y="757.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Eje de la torrentera</text>
+<g filter="url(#shadow)">
+<rect x="70.0" y="855.0" width="270" height="160" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(171 873.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="9" width="74" height="54" rx="5" fill="#EEF6FB"/><path d="M3 23H77 M29 73H51 M40 63V73"/><circle cx="12" cy="16" r="1.6" fill="#4F89B4"/><circle cx="20" cy="16" r="1.6" fill="#4F89B4"/><path d="M30 35L23 43L30 51 M50 35L57 43L50 51"/>
+</g>
+<text x="205" y="967.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Usuario</text>
+<text x="205" y="997.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Navegador</text>
+<g filter="url(#shadow)">
+<rect x="490.0" y="270.0" width="270" height="180" rx="18" fill="#F5F9FF" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(591 292.0) scale(2.8333333333333335)" fill="#3776AB">
+<path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+</g>
+<text x="625" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Georreferenciación</text>
+<text x="625" y="432.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Python · Rasterio</text>
+<g filter="url(#shadow)">
+<rect x="910.0" y="270.0" width="270" height="180" rx="18" fill="#FFF7F4" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1011 292.0) scale(2.8333333333333335)" fill="#EE4C2C">
+<path d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z"/>
+</g>
+<text x="1045" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Detector de edificios</text>
+<text x="1045" y="432.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">PyTorch · Mask R-CNN</text>
+<g filter="url(#shadow)">
+<rect x="1340.0" y="270.0" width="270" height="180" rx="18" fill="#F1FBF6" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1441 288.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M6 13L31 5L37 31L10 34Z M47 12L71 20L65 42L43 35Z M16 48L43 42L51 69L23 75Z M59 53L74 58L70 74L55 70Z" fill="#DBF4E9" stroke="#20936B"/>
+</g>
+<text x="1475" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Contornos</text>
+<text x="1475" y="432.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Máscaras → GeoJSON</text>
+<g filter="url(#shadow)">
+<rect x="490.0" y="595.0" width="270" height="180" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(591 613.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 4H49L66 21V75H16Z" fill="#EEF6FB"/><path d="M49 4V21H66 M26 35H55 M26 46H55 M26 57H47"/>
+</g>
+<text x="625" y="727.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Capa de cauces</text>
+<text x="625" y="757.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">GeoJSON local</text>
+<g filter="url(#shadow)">
+<rect x="910.0" y="595.0" width="270" height="180" rx="18" fill="#FFF7F7" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1011 617.0) scale(2.8333333333333335)" fill="#FF4B4B">
+<path d="M16.673 11.32l6.862-3.618c.233-.136.554.12.442.387L20.463 17.1zm-8.556-.229l3.473-5.187c.203-.328.578-.316.793-.028l7.886 11.75zm-3.375 7.25c-.28 0-.835-.284-.993-.716l-3.72-9.46c-.118-.331.139-.614.48-.464l19.474 10.306c-.149.147-.453.337-.72.334z"/>
+</g>
+<text x="1045" y="727.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Aplicación</text>
+<text x="1045" y="757.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Streamlit</text>
+<g filter="url(#shadow)">
+<rect x="1340.0" y="595.0" width="270" height="180" rx="18" fill="#F1FBF6" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1441 617.0) scale(2.8333333333333335)" fill="#139C5A">
+<path d="M12.0043 0C5.3911 0 0 5.3805 0 12c0 6.6108 5.3825 12 12.0043 12C18.6263 24 24 18.6108 24 12c0-6.6195-5.3824-12-11.9957-12Zm9.8288 12a9.7343 9.7343 0 0 1-.8234 3.925v-7.85c.5288 1.1958.8235 2.53.8235 3.925zm-4.0996 7.9798v-1.8715h-2.0889v3.0152a9.7946 9.7946 0 0 1-3.6403.7018c-.3033 0-.6067-.0173-.91-.0433V9.1928H9.0054v12.1646c-3.961-1.2736-6.8385-4.9906-6.8385-9.366 0-5.4239 4.4117-9.834 9.8374-9.834 2.6956 0 5.1485 1.0917 6.9253 2.8592v13.8888h.0607c-.39.3986-.8148.7538-1.2568 1.0744zM15.6446 9.2014h2.0889v4.3322h-2.0889zm-3.2849 5.3372h2.0888v4.3322h-2.0888Zm0-8.9068h2.0888v4.3321h-2.0888Zm3.285 9.1668h2.0888v2.0447h-2.0889Zm-3.285-3.5697h2.0888v2.0448h-2.0888Z"/>
+</g>
+<text x="1475" y="727.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Motor geográfico</text>
+<text x="1475" y="757.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">GeoPandas · Shapely</text>
+<g filter="url(#shadow)">
+<rect x="1215.0" y="800.0" width="270" height="160" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1316 822.0) scale(2.8333333333333335)" fill="#199900">
+<path d="M17.69 0c-.355.574-8.432 4.74-10.856 8.649-2.424 3.91-3.116 6.988-2.237 9.882.879 2.893 2.559 2.763 3.516 3.717.958.954 2.257 2.113 4.332 1.645 2.717-.613 5.335-2.426 6.638-7.508 1.302-5.082.448-9.533-.103-11.99A35.395 35.395 0 0 0 17.69 0zm-.138.858l-9.22 21.585-.574-.577Z"/>
+</g>
+<text x="1350" y="912.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Mapa interactivo</text>
+<text x="1350" y="942.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">Folium · Leaflet</text>
+<g filter="url(#shadow)">
+<rect x="1590.0" y="800.0" width="270" height="160" rx="18" fill="white" stroke="#D9E4EA" stroke-width="1.8"/>
+</g>
+<g transform="translate(1691 818.0) scale(0.85)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 6V48 M25 33L40 48L55 33 M10 48V70H70V48 M22 59H58"/>
+</g>
+<text x="1725" y="912.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#18354A" text-anchor="middle" font-weight="600">Exportación</text>
+<text x="1725" y="942.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="middle" font-weight="400">CSV · GeoJSON · ZIP</text>
+<g transform="translate(1740 305) scale(1.4166666666666667)" fill="#3776AB">
+<path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+</g>
+<text x="1700" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="400">.venv-ml</text>
+<g transform="translate(1738 398) scale(0.5)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="16" width="48" height="48" rx="5" fill="#EEF6FB"/><rect x="25" y="25" width="30" height="30" rx="3"/><path d="M25 6V16 M40 6V16 M55 6V16 M25 64V74 M40 64V74 M55 64V74 M6 25H16 M6 40H16 M6 55H16 M64 25H74 M64 40H74 M64 55H74"/>
+</g>
+<text x="1700" y="474" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="400">GPU / CPU</text>
+<g transform="translate(1728 590) scale(0.7)" stroke="#4F89B4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M8 18V64C8 79 72 79 72 64V18" fill="#DDECF8"/><ellipse cx="40" cy="18" rx="32" ry="12" fill="#B7D6EC"/><path d="M8 40C8 55 72 55 72 40 M8 59C8 74 72 74 72 59"/>
+</g>
+<text x="1755" y="682" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#18354A" text-anchor="middle" font-weight="600">Archivos locales</text>
+<text x="1755" y="711" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#617384" text-anchor="middle" font-weight="400">Imágenes · pesos · resultados</text>
+<text x="65" y="1072" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#617384" text-anchor="start" font-weight="400">Cálculo local · UTM 19S · Distancia a eje cartografiado · Proximidad, no evaluación de peligro</text>
+<text x="65" y="1104" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#8998A5" text-anchor="start" font-weight="400">Logos: respectivos titulares · SVG de Simple Icons · Diseño técnico del proyecto</text>
+<text x="1935" y="1104" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#8998A5" text-anchor="end" font-weight="400">21 OCT 2026</text>
+</svg>

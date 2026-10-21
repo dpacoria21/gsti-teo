@@ -1,0 +1,163 @@
+{
+  "created_at": "2026-10-14T06:29:55+00:00",
+  "analysis_crs": "EPSG:32719",
+  "bbox": [
+    -71.554,
+    -16.403,
+    -71.55,
+    -16.397
+  ],
+  "buildings": {
+    "tile_features_scanned": 280614,
+    "intersecting": 177,
+    "duplicates_removed": 0,
+    "crosses_study_boundary": 43,
+    "selected_unique": 177
+  },
+  "river": {
+    "ways": [
+      {
+        "way_id": 570369893,
+        "way_version": 1,
+        "way_edited_at": "2018-03-16T20:56:19Z",
+        "latest_node_edit_at": "2017-10-30T00:39:46Z",
+        "tags": {
+          "intermittent": "yes",
+          "layer": "-1",
+          "source": "Mapbox",
+          "waterway": "stream"
+        }
+      },
+      {
+        "way_id": 25980163,
+        "way_version": 8,
+        "way_edited_at": "2020-07-19T04:20:04Z",
+        "latest_node_edit_at": "2020-07-19T04:20:04Z",
+        "tags": {
+          "layer": "-1",
+          "waterway": "stream"
+        }
+      },
+      {
+        "way_id": 535091453,
+        "way_version": 2,
+        "way_edited_at": "2020-07-19T04:19:12Z",
+        "latest_node_edit_at": "2017-10-25T04:01:32Z",
+        "tags": {
+          "layer": "-1",
+          "waterway": "stream"
+        }
+      },
+      {
+        "way_id": 535091454,
+        "way_version": 1,
+        "way_edited_at": "2017-10-25T04:01:31Z",
+        "latest_node_edit_at": "2017-10-25T04:01:32Z",
+        "tags": {
+          "layer": "-1",
+          "waterway": "stream"
+        }
+      },
+      {
+        "way_id": 781522545,
+        "way_version": 1,
+        "way_edited_at": "2020-03-15T11:47:32Z",
+        "latest_node_edit_at": "2023-04-20T17:38:18Z",
+        "tags": {
+          "waterway": "stream"
+        }
+      }
+    ],
+    "unique_node_count": 48
+  },
+  "axis_length_m": 2065.533310855018,
+  "axis_endpoint_distance_from_study_area_m": [
+    949.4153323224396,
+    367.28028901719404
+  ],
+  "axis_endpoint_distance_from_complete_buildings_m": [
+    850.8691817169721,
+    325.7525576435165
+  ],
+  "supported_max_band_m": 100,
+  "reference_checks": [
+    {
+      "id": "A7406_cruce_1",
+      "easting_m": 227534.8,
+      "northing_m": 8185486.6,
+      "longitude": -71.5509843269433,
+      "latitude": -16.39655048945294,
+      "crs": "EPSG:32719",
+      "source_id": "ingemmet_a7406",
+      "reference": "Cuadro 9, p.21; figura 18, p.23",
+      "distance_to_osm_axis_m": 0.23269439451923468,
+      "inside_pilot": false
+    },
+    {
+      "id": "A7406_cruce_2",
+      "easting_m": 227552.8,
+      "northing_m": 8185248.9,
+      "longitude": -71.5508438901633,
+      "latitude": -16.398699218173398,
+      "crs": "EPSG:32719",
+      "source_id": "ingemmet_a7406",
+      "reference": "Cuadro 9, p.21",
+      "distance_to_osm_axis_m": 1.5203613086557928,
+      "inside_pilot": true
+    },
+    {
+      "id": "A7406_cruce_3",
+      "easting_m": 227498.5,
+      "northing_m": 8185057.9,
+      "longitude": -71.55137440231341,
+      "latitude": -16.40041798225724,
+      "crs": "EPSG:32719",
+      "source_id": "ingemmet_a7406",
+      "reference": "Cuadro 9, p.21",
+      "distance_to_osm_axis_m": 3.823386666101658,
+      "inside_pilot": true
+    },
+    {
+      "id": "OT006_extremo_sur",
+      "easting_m": 227384.0,
+      "northing_m": 8184790.0,
+      "longitude": -71.55247722322561,
+      "latitude": -16.402824388184158,
+      "crs": "EPSG:32719",
+      "source_id": "ingemmet_ot006",
+      "reference": "Cuadro 1, p.3",
+      "distance_to_osm_axis_m": 3.3746001726464523,
+      "inside_pilot": true
+    },
+    {
+      "id": "OT006_extremo_norte",
+      "easting_m": 227488.0,
+      "northing_m": 8186090.0,
+      "longitude": -71.5513511846597,
+      "latitude": -16.391095828738038,
+      "crs": "EPSG:32719",
+      "source_id": "ingemmet_ot006",
+      "reference": "Cuadro 1, p.3",
+      "distance_to_osm_axis_m": 0.047250593661443664,
+      "inside_pilot": false
+    }
+  ],
+  "counts_by_band_m": {
+    "10": 21,
+    "25": 31,
+    "50": 60,
+    "100": 93
+  },
+  "distance_range_m": [
+    0.0,
+    331.04400922939874
+  ],
+  "minimum_building_area_m2": 13.467569569061679,
+  "maximum_building_area_m2": 4898.301615140937,
+  "limits": [
+    "Reference points identify the channel; they do not estimate positional accuracy.",
+    "Only the mapped Chullo axis is evaluated, not every potential drainage.",
+    "No official hazard or marginal-strip polygon is included.",
+    "Building image dates and residential uses are unknown."
+  ]
+}

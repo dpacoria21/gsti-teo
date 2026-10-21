@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "original_crs": "EPSG:4326",
+      "observed_at": null,
+      "study_area_id": "chullo",
+      "source_id": "microsoft",
+      "title": "Microsoft Global ML Building Footprints · Perú",
+      "organization": "Microsoft",
+      "url": "https://github.com/microsoft/GlobalMLBuildingFootprints",
+      "download_url": "https://bfppub.z5.web.core.windows.net/2026-08-13/global-buildings.geojsonl/RegionName=Peru/quadkey=210031232/part-00104-110f5303-ff85-4c71-a2bf-c6070024fec8.c000.csv.gz",
+      "published_at": "2026-08-13",
+      "downloaded_at": "2026-10-14T06:24:05+00:00",
+      "license": "CDLA-Permissive-2.0",
+      "license_url": "https://cdla.dev/permissive-2-0/",
+      "attribution": "Edificaciones: Microsoft Global ML Building Footprints (CDLA Permissive 2.0).",
+      "review_status": "Controles geométricos; no validación de campo ni fecha de captura local.",
+      "notes": "Fecha de publicación no equivale a captura. Selección por intersección conserva huellas completas. Altura/confianza -1 se convierten en null.",
+      "raw_files": [
+        "microsoft_peru_210031232_2026-08-13.geojsonl.gz"
+      ],
+      "sha256": "50d3382c6225820a0da2a7553239f60e00df3b011108e252f4e1070bfcf814ad"
+    },
+    {
+      "original_crs": "EPSG:4326",
+      "observed_at": null,
+      "study_area_id": "chullo",
+      "source_id": "osm",
+      "title": "OpenStreetMap · eje referencial de Chullo",
+      "organization": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/25980163",
+      "published_at": null,
+      "downloaded_at": "2026-10-14T06:29:27+00:00",
+      "license": "ODbL-1.0",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; datos bajo ODbL 1.0.",
+      "review_status": "Identificación de Chullo contrastada con 5 referencias INGEMMET; exactitud del eje no medida.",
+      "notes": "Vías sin etiqueta name; denominación asignada por correspondencia documental. Eje, no borde del cauce. Fechas de edición no equivalen a observación. No validación de campo.",
+      "raw_files": [
+        "osm_way_570369893_full.xml",
+        "osm_way_25980163_full.xml",
+        "osm_way_535091453_full.xml",
+        "osm_way_535091454_full.xml",
+        "osm_way_781522545_full.xml"
+      ],
+      "ways": [
+        {
+          "way_id": 570369893,
+          "way_version": 1,
+          "way_edited_at": "2018-03-16T20:56:19Z",
+          "latest_node_edit_at": "2017-10-30T00:39:46Z",
+          "tags": {
+            "intermittent": "yes",
+            "layer": "-1",
+            "source": "Mapbox",
+            "waterway": "stream"
+          }
+        },
+        {
+          "way_id": 25980163,
+          "way_version": 8,
+          "way_edited_at": "2020-07-19T04:20:04Z",
+          "latest_node_edit_at": "2020-07-19T04:20:04Z",
+          "tags": {
+            "layer": "-1",
+            "waterway": "stream"
+          }
+        },
+        {
+          "way_id": 535091453,
+          "way_version": 2,
+          "way_edited_at": "2020-07-19T04:19:12Z",
+          "latest_node_edit_at": "2017-10-25T04:01:32Z",
+          "tags": {
+            "layer": "-1",
+            "waterway": "stream"
+          }
+        },
+        {
+          "way_id": 535091454,
+          "way_version": 1,
+          "way_edited_at": "2017-10-25T04:01:31Z",
+          "latest_node_edit_at": "2017-10-25T04:01:32Z",
+          "tags": {
+            "layer": "-1",
+            "waterway": "stream"
+          }
+        },
+        {
+          "way_id": 781522545,
+          "way_version": 1,
+          "way_edited_at": "2020-03-15T11:47:32Z",
+          "latest_node_edit_at": "2023-04-20T17:38:18Z",
+          "tags": {
+            "waterway": "stream"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "ingemmet_a7406",
+      "title": "INGEMMET A7406 · Yanahuara",
+      "organization": "INGEMMET",
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/16497/descargar",
+      "published_at": "2023",
+      "observed_at": null,
+      "downloaded_at": "2026-10-14T06:24:02+00:00",
+      "original_crs": "EPSG:32719",
+      "license": "Documento público; conservado solo como referencia de validación con atribución.",
+      "review_status": "Cuadro 9 y figuras 17-20 inspeccionados. No se extrajeron polígonos de peligro.",
+      "raw_files": [
+        "ingemmet_A7406.pdf"
+      ]
+    },
+    {
+      "source_id": "ingemmet_ot006",
+      "title": "INGEMMET Opinión Técnica 006-2020 · Chullo",
+      "organization": "INGEMMET",
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/10009/descargar",
+      "published_at": "2020-11",
+      "observed_at": "2020-10-29",
+      "downloaded_at": "2026-10-14T06:24:01+00:00",
+      "original_crs": "EPSG:32719",
+      "license": "CC BY-NC-SA 4.0 según registro del repositorio; uso académico con atribución.",
+      "license_url": "https://alicia.concytec.gob.pe/vufind/Record/INGEMMET_1dfd183cfa07c0df2c68330d870bb030/Details",
+      "review_status": "Cuadro 1 y mapa de drenaje revisados; referencia de identificación, no geometría oficial digitalizada.",
+      "raw_files": [
+        "ingemmet_OT006_2020.pdf"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "image_id": "cenepred_mariano_melgar_20180605_crop",
+      "source_id": "cenepred_mariano_imagery",
+      "study_area_id": "mariano_melgar",
+      "title": "Ortomosaico real de Mariano Melgar · Arequipa · 2018",
+      "location_name": "Mariano Melgar, Arequipa (caso alternativo; no Chullo)",
+      "image_kind": "Ortomosaico aéreo de dron; no imagen satelital",
+      "raster_path": "data/imagery/mariano_melgar/mariano_melgar_rgb.tif",
+      "url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798",
+      "download_url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798/descargar",
+      "source": "CENEPRED · SIGRID",
+      "organization": "CENEPRED",
+      "observed_at": "2018-06-05",
+      "capture_date": "2018-06-05",
+      "published_at": "2019",
+      "downloaded_at": "2026-10-14T07:07:41.876218+00:00",
+      "license": "Acceso público SIGRID para consultar, compartir, analizar y monitorear información, con crédito a los autores. Sin licencia Creative Commons específica declarada.",
+      "license_url": "https://sigrid.cenepred.gob.pe/sigridv3/documento/6798",
+      "attribution": "Imagen aérea: CENEPRED / SIGRID, Ortomosaico Sector de Mariano Melgar, vuelo 05/06/2018. Recorte y remuestreo propios.",
+      "platform": "DJI Inspire 2 copter",
+      "sensor": "RGB",
+      "camera": "Zenmuse X5S",
+      "ground_control_reported": true,
+      "native_resolution_m": 0.1093,
+      "resolution_m": [
+        0.5,
+        0.5
+      ],
+      "crs": "EPSG:32719",
+      "bbox": [
+        233750.0,
+        8184400.0,
+        234150.0,
+        8184800.0
+      ],
+      "bbox_wgs84": [
+        -71.49295916730627,
+        -16.40710637092164,
+        -71.48917048370645,
+        -16.403449391894352
+      ],
+      "width": 800,
+      "height": 800,
+      "bands": 3,
+      "dtype": "uint8",
+      "valid_pixel_fraction": 1.0,
+      "sha256": "f90f882e7f80ed75c920836dd78d8f16130e0d51506881462c69aa42ebc8ea14",
+      "source_zip_sha256": "a2a66a239fc70cd431db0a413eaee9a4f02f265c772b1932a756bcb6a5006a85",
+      "processing": "Recorte UTM [233750,8184400,234150,8184800]; promedio a 0.5m; RGB y máscara nativa. Sin superresolución.",
+      "processing_tool": "GDAL 3.12.1 GISInternals con MrSID (solo preparación local)",
+      "georeferencing": "Georreferencia nativa MrSID oficial conservada; no ajustada manualmente.",
+      "accuracy_notes": "El catálogo indica control GPS diferencial, sin precisión numérica. Imagen de 2018; no representa un inventario actual ni validación de campo."
+    },
+    {
+      "source_id": "osm_mariano",
+      "title": "OpenStreetMap · ejes de torrenteras del sector Mariano Melgar",
+      "organization": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/320098555",
+      "license": "ODbL-1.0",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; datos bajo ODbL 1.0.",
+      "observed_at": null,
+      "downloaded_at": "2026-10-14T07:07:41.876218+00:00",
+      "original_crs": "EPSG:4326",
+      "review_status": "Correspondencia visual con cauces del ortomosaico CENEPRED; no exactitud topográfica ni nombre oficial verificados.",
+      "notes": "No tienen name OSM. Se conservan vías completas, sin sustituir el eje por borde ni banda legal.",
+      "ways": [
+        {
+          "way_id": 320098555,
+          "version": "19",
+          "edited_at": "2024-04-13T22:57:27Z",
+          "tags": {
+            "intermittent": "yes",
+            "waterway": "stream"
+          },
+          "sha256": "0c7f58535524f29685b1b32c352f5287182d797452128cfb49741ec584859d0f"
+        },
+        {
+          "way_id": 1014282552,
+          "version": "3",
+          "edited_at": "2022-12-18T05:55:47Z",
+          "tags": {
+            "intermittent": "yes",
+            "waterway": "stream"
+          },
+          "sha256": "65a96b7cb6164071885a507aa6bb2c45e1d0654e3bc2c513082e926faa65c4db"
+        },
+        {
+          "way_id": 1014282553,
+          "version": "2",
+          "edited_at": "2022-03-05T01:01:47Z",
+          "tags": {
+            "intermittent": "yes",
+            "tunnel": "culvert",
+            "waterway": "stream"
+          },
+          "sha256": "c9361e4a2d47ad17a2bc664c2242fe66ae8b630cd995f157f0a9f8e3383b10ed"
+        },
+        {
+          "way_id": 1014282554,
+          "version": "2",
+          "edited_at": "2022-12-18T06:19:05Z",
+          "tags": {
+            "intermittent": "yes",
+            "waterway": "brook"
+          },
+          "sha256": "2aa1973e75180199e8f4019bc6e5120bcc309250569accd0c566a371f50b34be"
+        },
+        {
+          "way_id": 1014282555,
+          "version": "1",
+          "edited_at": "2021-12-22T09:55:52Z",
+          "tags": {
+            "intermittent": "yes",
+            "layer": "-1",
+            "tunnel": "yes",
+            "waterway": "brook"
+          },
+          "sha256": "8c54a878d8f73f2ac0bc145c81fe47862e61dd62b75f6bc18748f3478cff9513"
+        },
+        {
+          "way_id": 1123063114,
+          "version": "1",
+          "edited_at": "2022-12-18T06:19:05Z",
+          "tags": {
+            "intermittent": "yes",
+            "waterway": "brook"
+          },
+          "sha256": "f047535d4d093c7d0b892b47f838dbe5876562083ad6dd0c439b19ca85f0d4f8"
+        }
+      ]
+    },
+    {
+      "source_id": "google_earth_chullo_imagery",
+      "study_area_id": "chullo",
+      "title": "Chullo · captura real de Google Earth Pro",
+      "organization": "Google Earth Pro / proveedor acreditado",
+      "url": "https://earth.google.com/",
+      "observed_at": "2026-03-04",
+      "license": "Imagen exportada de Google Earth Pro para este prototipo académico; conserva créditos del proveedor y condiciones aplicables. No es un dataset abierto.",
+      "license_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+      "attribution": "Google Earth; Image © 2026 Airbus",
+      "sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+      "georeferencing": {
+        "method": "Affine least squares in metric CRS, fit/check points kept separate",
+        "target_crs": "EPSG:32719",
+        "source_affine_gdal_corner_convention": [
+          0.1583783729525835,
+          0.0019808723052433365,
+          226776.71913667908,
+          0.0019930621335457472,
+          -0.15740970932730688,
+          8185598.889571551
+        ],
+        "pixel_coordinates": "Zero-based pixel-centre indices in input CSV. GDAL transform uses column+0.5,row+0.5.",
+        "fit_check_statistics": {
+          "fit": {
+            "count": 4,
+            "rmse_m": 0.0033144471409736836,
+            "max_error_m": 0.003314447155398475,
+            "mean_error_m": 0.0033144471409736836
+          },
+          "check": {
+            "count": 2,
+            "rmse_m": 0.22683439892594953,
+            "max_error_m": 0.23091251459897644,
+            "mean_error_m": 0.22679706257070395
+          },
+          "acceptance_limit_m": 3,
+          "design_condition_number": 1.0000000000000004,
+          "linear_condition_number": 1.0061537730378056,
+          "source_pixel_size_m": [
+            0.15839091298359198,
+            0.15742217266191227
+          ]
+        },
+        "control_points_path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\georeferencing_points.csv",
+        "control_points_sha256": "c5c7107a25c7ff5677c010fd18acec3acc064967a57a34867a936c243ce93526",
+        "residuals_path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\georeferencing_residuals.csv",
+        "control_points": [
+          {
+            "id": "C_NW",
+            "role": "fit",
+            "column": 2741.5,
+            "row": 1089.5,
+            "longitude": -71.554,
+            "latitude": -16.397,
+            "x": 227213.1485006353,
+            "y": 8185432.778401904,
+            "predicted_x": 227213.15178612777,
+            "predicted_y": 8185432.777964755,
+            "residual_x_m": 0.0032854924793355167,
+            "residual_y_m": -0.0004371488466858864,
+            "residual_m": 0.003314447155398475
+          },
+          {
+            "id": "C_NE",
+            "role": "fit",
+            "column": 5440.5,
+            "row": 1089.5,
+            "longitude": -71.55,
+            "latitude": -16.397,
+            "x": 227640.61830021924,
+            "y": 8185438.156802304,
+            "predicted_x": 227640.6150147268,
+            "predicted_y": 8185438.157239453,
+            "residual_x_m": -0.0032854924502316862,
+            "residual_y_m": 0.0004371488466858864,
+            "residual_m": 0.0033144471265488923
+          },
+          {
+            "id": "C_SE",
+            "role": "fit",
+            "column": 5440.5,
+            "row": 5309.5,
+            "longitude": -71.55,
+            "latitude": -16.403,
+            "x": 227648.97101036244,
+            "y": 8184773.888703241,
+            "predicted_x": 227648.97429585492,
+            "predicted_y": 8184773.888266092,
+            "residual_x_m": 0.0032854924793355167,
+            "residual_y_m": -0.0004371488466858864,
+            "residual_m": 0.003314447155398475
+          },
+          {
+            "id": "C_SW",
+            "role": "fit",
+            "column": 2741.5,
+            "row": 5309.5,
+            "longitude": -71.554,
+            "latitude": -16.403,
+            "x": 227221.51435274835,
+            "y": 8184768.508554244,
+            "predicted_x": 227221.5110672559,
+            "predicted_y": 8184768.508991393,
+            "residual_x_m": -0.0032854924502316862,
+            "residual_y_m": 0.0004371488466858864,
+            "residual_m": 0.0033144471265488923
+          },
+          {
+            "id": "V1",
+            "role": "check",
+            "column": 3552.0,
+            "row": 2495.0,
+            "longitude": -71.5528,
+            "latitude": -16.399,
+            "x": 227344.17653084575,
+            "y": 8185212.969735958,
+            "predicted_x": 227344.30157343086,
+            "predicted_y": 8185213.153995154,
+            "residual_x_m": 0.1250425851030741,
+            "residual_y_m": 0.1842591967433691,
+            "residual_m": 0.22268161054243146
+          },
+          {
+            "id": "V2",
+            "role": "check",
+            "column": 4632.0,
+            "row": 3902.0,
+            "longitude": -71.5512,
+            "latitude": -16.401,
+            "x": 227517.94824950607,
+            "y": 8184993.698454823,
+            "predicted_x": 227518.13730355314,
+            "predicted_y": 8184993.8310412355,
+            "residual_x_m": 0.18905404707766138,
+            "residual_y_m": 0.13258641213178635,
+            "residual_m": 0.23091251459897644
+          }
+        ],
+        "reference_image": {
+          "path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\chullo_con_referencias.jpg",
+          "sha256": "b274a957565b56c6ebb91812540076b415a2472df1dab370ff1df737fa313b7b",
+          "note": "Imagen usada para localizar puntos; requiere la misma cámara y vista que la captura RGB."
+        },
+        "extent_policy": "Full original image transformed; bounds snapped outward. No cropping; credits preserved in pixels.",
+        "accuracy_caveat": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory."
+      },
+      "resolution_note": "Output grid spacing, not a claim about the sensor's native resolution or positional accuracy.",
+      "downloaded_at": "2026-10-14T16:03:41.757733+00:00",
+      "original_crs": "Capture JPG without CRS; fitted to EPSG:32719",
+      "review_status": "Capture acquired through Google Earth Pro UI; internal fit/check residuals verified. No surveyed absolute accuracy.",
+      "notes": "Local academic demonstration, with original image and attribution retained. Mask R-CNN inference only; no training. Image date shown as 3/4/2026 (MM/DD/YYYY).",
+      "manifest": "data/imagery/chullo/manifest.json"
+    }
+  ]
+}

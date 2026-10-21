@@ -1,0 +1,11 @@
+streamlit>=1.40,<2
+folium>=0.18,<1
+streamlit-folium>=0.24,<1
+geopandas>=1.0,<2
+shapely>=2.0,<3
+pyproj>=3.6,<4
+pyogrio>=0.10,<1
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+pytest>=8,<10
+requests>=2.32,<3

@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "image_id": "earth_capture_6fa66832ea1b3140",
+  "source_id": "google_earth_chullo_imagery",
+  "study_area_id": "chullo",
+  "title": "Chullo · captura real de Google Earth Pro",
+  "image_kind": "RGB exportada de Google Earth Pro; georreferenciación propia de captura cenital",
+  "raster_path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\chullo_rgb.tif",
+  "source": "Google Earth Pro; proveedor según atribución de la imagen",
+  "organization": "Google Earth Pro / proveedor acreditado",
+  "url": "https://earth.google.com/",
+  "original_image": {
+    "path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\chullo_google_earth_original.jpg",
+    "sha256": "6fa66832ea1b31402016bc2c216baef61aee64803ca48e9b04afa04cda34c6a2",
+    "width": 8192,
+    "height": 6390,
+    "unmodified": true
+  },
+  "observed_at": "2026-03-04",
+  "capture_date": "2026-03-04",
+  "processed_at": "2026-10-14T16:00:43.592318+00:00",
+  "license": "Imagen exportada de Google Earth Pro para este prototipo académico; conserva créditos del proveedor y condiciones aplicables. No es un dataset abierto.",
+  "license_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+  "attribution": "Google Earth; Image © 2026 Airbus",
+  "native_resolution_m": null,
+  "resolution_m": [
+    0.5,
+    0.5
+  ],
+  "resolution_note": "Output grid spacing, not a claim about the sensor's native resolution or positional accuracy.",
+  "crs": "EPSG:32719",
+  "bbox": [
+    226776.5,
+    8184593.0,
+    228087.0,
+    8185615.5
+  ],
+  "bbox_wgs84": [
+    -71.55818434475866,
+    -16.40468333437251,
+    -71.54580285683775,
+    -16.39530014426853
+  ],
+  "width": 2621,
+  "height": 2045,
+  "bands": 3,
+  "dtype": "uint8",
+  "valid_pixel_fraction": 0.9740601815876841,
+  "sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+  "georeferencing": {
+    "method": "Affine least squares in metric CRS, fit/check points kept separate",
+    "target_crs": "EPSG:32719",
+    "source_affine_gdal_corner_convention": [
+      0.1583783729525835,
+      0.0019808723052433365,
+      226776.71913667908,
+      0.0019930621335457472,
+      -0.15740970932730688,
+      8185598.889571551
+    ],
+    "pixel_coordinates": "Zero-based pixel-centre indices in input CSV. GDAL transform uses column+0.5,row+0.5.",
+    "fit_check_statistics": {
+      "fit": {
+        "count": 4,
+        "rmse_m": 0.0033144471409736836,
+        "max_error_m": 0.003314447155398475,
+        "mean_error_m": 0.0033144471409736836
+      },
+      "check": {
+        "count": 2,
+        "rmse_m": 0.22683439892594953,
+        "max_error_m": 0.23091251459897644,
+        "mean_error_m": 0.22679706257070395
+      },
+      "acceptance_limit_m": 3,
+      "design_condition_number": 1.0000000000000004,
+      "linear_condition_number": 1.0061537730378056,
+      "source_pixel_size_m": [
+        0.15839091298359198,
+        0.15742217266191227
+      ]
+    },
+    "control_points_path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\georeferencing_points.csv",
+    "control_points_sha256": "c5c7107a25c7ff5677c010fd18acec3acc064967a57a34867a936c243ce93526",
+    "residuals_path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\georeferencing_residuals.csv",
+    "control_points": [
+      {
+        "id": "C_NW",
+        "role": "fit",
+        "column": 2741.5,
+        "row": 1089.5,
+        "longitude": -71.554,
+        "latitude": -16.397,
+        "x": 227213.1485006353,
+        "y": 8185432.778401904,
+        "predicted_x": 227213.15178612777,
+        "predicted_y": 8185432.777964755,
+        "residual_x_m": 0.0032854924793355167,
+        "residual_y_m": -0.0004371488466858864,
+        "residual_m": 0.003314447155398475
+      },
+      {
+        "id": "C_NE",
+        "role": "fit",
+        "column": 5440.5,
+        "row": 1089.5,
+        "longitude": -71.55,
+        "latitude": -16.397,
+        "x": 227640.61830021924,
+        "y": 8185438.156802304,
+        "predicted_x": 227640.6150147268,
+        "predicted_y": 8185438.157239453,
+        "residual_x_m": -0.0032854924502316862,
+        "residual_y_m": 0.0004371488466858864,
+        "residual_m": 0.0033144471265488923
+      },
+      {
+        "id": "C_SE",
+        "role": "fit",
+        "column": 5440.5,
+        "row": 5309.5,
+        "longitude": -71.55,
+        "latitude": -16.403,
+        "x": 227648.97101036244,
+        "y": 8184773.888703241,
+        "predicted_x": 227648.97429585492,
+        "predicted_y": 8184773.888266092,
+        "residual_x_m": 0.0032854924793355167,
+        "residual_y_m": -0.0004371488466858864,
+        "residual_m": 0.003314447155398475
+      },
+      {
+        "id": "C_SW",
+        "role": "fit",
+        "column": 2741.5,
+        "row": 5309.5,
+        "longitude": -71.554,
+        "latitude": -16.403,
+        "x": 227221.51435274835,
+        "y": 8184768.508554244,
+        "predicted_x": 227221.5110672559,
+        "predicted_y": 8184768.508991393,
+        "residual_x_m": -0.0032854924502316862,
+        "residual_y_m": 0.0004371488466858864,
+        "residual_m": 0.0033144471265488923
+      },
+      {
+        "id": "V1",
+        "role": "check",
+        "column": 3552.0,
+        "row": 2495.0,
+        "longitude": -71.5528,
+        "latitude": -16.399,
+        "x": 227344.17653084575,
+        "y": 8185212.969735958,
+        "predicted_x": 227344.30157343086,
+        "predicted_y": 8185213.153995154,
+        "residual_x_m": 0.1250425851030741,
+        "residual_y_m": 0.1842591967433691,
+        "residual_m": 0.22268161054243146
+      },
+      {
+        "id": "V2",
+        "role": "check",
+        "column": 4632.0,
+        "row": 3902.0,
+        "longitude": -71.5512,
+        "latitude": -16.401,
+        "x": 227517.94824950607,
+        "y": 8184993.698454823,
+        "predicted_x": 227518.13730355314,
+        "predicted_y": 8184993.8310412355,
+        "residual_x_m": 0.18905404707766138,
+        "residual_y_m": 0.13258641213178635,
+        "residual_m": 0.23091251459897644
+      }
+    ],
+    "reference_image": {
+      "path": "C:\\Users\\diego\\OneDrive\\Desktop\\gsti-teo\\data\\imagery\\chullo\\chullo_con_referencias.jpg",
+      "sha256": "b274a957565b56c6ebb91812540076b415a2472df1dab370ff1df737fa313b7b",
+      "note": "Imagen usada para localizar puntos; requiere la misma cámara y vista que la captura RGB."
+    },
+    "extent_policy": "Full original image transformed; bounds snapped outward. No cropping; credits preserved in pixels.",
+    "accuracy_caveat": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory."
+  },
+  "accuracy_notes": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory.",
+  "processing": "Complete original image warped with fitted affine transform; bilinear RGB resampling, nearest-neighbour validity mask. No superresolution, training or pixel content replacement."
+}

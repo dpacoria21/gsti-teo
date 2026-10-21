@@ -1,0 +1,67 @@
+# Entornos, cachés, archivos personales y credenciales.
+.venv/
+.venv-ml/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.runtime/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+Thumbs.db
+.DS_Store
+/tmp/
+*.running.lock
+.attempts/
+*.log
+*.zip
+
+# Solo la identificación del modelo: PREPARAR_IA.ps1 descarga y verifica los pesos.
+/models/*
+!/models/manifest.json
+
+# Datos mínimos del prototipo; originales y cargas de usuario permanecen locales.
+/data/*
+!/data/sources.json
+!/data/processed/
+!/data/imagery/
+/data/processed/*
+!/data/processed/chullo/
+!/data/processed/mariano_melgar/
+/data/imagery/*
+!/data/imagery/acquisition_report.json
+!/data/imagery/chullo/
+!/data/imagery/mariano_melgar/
+/data/imagery/chullo/*
+!/data/imagery/chullo/chullo_rgb.tif
+!/data/imagery/chullo/manifest.json
+!/data/imagery/chullo/capture_report.json
+!/data/imagery/chullo/georeferencing_points.csv
+!/data/imagery/chullo/georeferencing_residuals.csv
+!/data/imagery/chullo/earth_fecha_evidencia.png
+/data/imagery/mariano_melgar/*
+!/data/imagery/mariano_melgar/mariano_melgar_rgb.tif
+!/data/imagery/mariano_melgar/manifest.json
+
+# Conservar únicamente dos corridas demostrativas y material de explicación.
+# Nuevas ejecuciones, respaldos, auditorías locales y entregas ZIP no se publican.
+/outputs/*
+!/outputs/inference/
+!/outputs/arquitectura/
+!/outputs/presentacion/
+!/outputs/google_earth/
+/outputs/inference/*
+!/outputs/inference/chullo_demo/
+!/outputs/inference/mariano_melgar_demo/
+/outputs/inference/chullo_demo/*
+!/outputs/inference/chullo_demo/buildings.geojson
+!/outputs/inference/chullo_demo/manifest.json
+!/outputs/inference/chullo_demo/preview.png
+/outputs/inference/mariano_melgar_demo/*
+!/outputs/inference/mariano_melgar_demo/buildings.geojson
+!/outputs/inference/mariano_melgar_demo/manifest.json
+!/outputs/inference/mariano_melgar_demo/preview.png

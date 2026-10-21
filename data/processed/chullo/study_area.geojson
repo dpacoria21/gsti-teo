@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "area_id": "chullo",
+        "name": "Chullo · sector piloto",
+        "analysis_crs": "EPSG:32719"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.55,
+              -16.403
+            ],
+            [
+              -71.55,
+              -16.397
+            ],
+            [
+              -71.554,
+              -16.397
+            ],
+            [
+              -71.554,
+              -16.403
+            ],
+            [
+              -71.55,
+              -16.403
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

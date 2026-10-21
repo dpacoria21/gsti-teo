@@ -1,0 +1,85 @@
+{
+  "provider": "Simple Icons",
+  "website": "https://simpleicons.org",
+  "notice": "Logos de sus respectivos titulares; no implican patrocinio.",
+  "logos": [
+    {
+      "name": "python",
+      "url": "https://cdn.simpleicons.org/python",
+      "sha256": "a762008752dc999ad54e7e477194f12a1b2ce07c735be1f21b3b3af8f26eb7af",
+      "color": "#3776AB"
+    },
+    {
+      "name": "streamlit",
+      "url": "https://cdn.simpleicons.org/streamlit",
+      "sha256": "e4376e9336be556ab4a034eff4e9113d97d74ee4446e0c969751f26dd117f4b6",
+      "color": "#FF4B4B"
+    },
+    {
+      "name": "pytorch",
+      "url": "https://cdn.simpleicons.org/pytorch",
+      "sha256": "aaa16ace4553ae5eece75d9e2e0b4cb7fce1f340424631db5f9cd08fe6fa6ed2",
+      "color": "#EE4C2C"
+    },
+    {
+      "name": "geopandas",
+      "url": "https://cdn.simpleicons.org/geopandas",
+      "sha256": "0ba0244107b34684724d26fe3ef53d32657d03390e46bc2d9fa27b34c4f47490",
+      "color": "#139C5A"
+    },
+    {
+      "name": "leaflet",
+      "url": "https://cdn.simpleicons.org/leaflet",
+      "sha256": "8a6433bc63e9883886173d9d0e9f0552a37238953e125fc160a770e23ad4d9aa",
+      "color": "#199900"
+    },
+    {
+      "name": "googleearth",
+      "url": "https://cdn.simpleicons.org/googleearth",
+      "sha256": "44460cec786852d98803c44f9d1d5906a10621650e319523522111feb001f175",
+      "color": "#4285F4"
+    },
+    {
+      "name": "openstreetmap",
+      "url": "https://cdn.simpleicons.org/openstreetmap",
+      "sha256": "98520d510f03b5a098d2f379ca9376ccdb43472ba21501ca4e4557ae0e930b40",
+      "color": "#7EBC6F"
+    },
+    {
+      "name": "fastapi",
+      "url": "https://cdn.simpleicons.org/fastapi",
+      "sha256": "faca76e57b2cb4164d3a51d680ce014fd925c7c96a993f2fafa109386758cad3",
+      "color": "#009688"
+    },
+    {
+      "name": "redis",
+      "url": "https://cdn.simpleicons.org/redis",
+      "sha256": "4245419834dd111d83a8ed645a2e305c67faa0af5c5b864eb5f0991de156034c",
+      "color": "#FF4438"
+    },
+    {
+      "name": "celery",
+      "url": "https://cdn.simpleicons.org/celery",
+      "sha256": "b5391916d777834ad3da80199ff56263c478ee62a6e8108666b3e0c045e131b5",
+      "color": "#37814A"
+    },
+    {
+      "name": "postgresql",
+      "url": "https://cdn.simpleicons.org/postgresql",
+      "sha256": "bc45b1c56d0b1501dea387dbec4fda450d2ebc35244a620791815509d8c41dba",
+      "color": "#4169E1"
+    },
+    {
+      "name": "docker",
+      "url": "https://cdn.simpleicons.org/docker",
+      "sha256": "ba1fb157870b2ec02e054aed42154ac7418e25af91ec321fd328d17cad4023cd",
+      "color": "#2496ED"
+    },
+    {
+      "name": "nginx",
+      "url": "https://cdn.simpleicons.org/nginx",
+      "sha256": "14e77ea88f50ee3ebcf43919b91e545292673ec35b21bee32ad1f230ee5004bd",
+      "color": "#009639"
+    }
+  ]
+}
