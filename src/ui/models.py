@@ -26,6 +26,8 @@ class SidebarSelection:
     analyze: bool
     basemap: bool
     show_imagery: bool
+    session_id: str
+    input_id: str
 
     @property
     def use_detection(self) -> bool:

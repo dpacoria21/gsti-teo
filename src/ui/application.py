@@ -44,7 +44,7 @@ def main() -> None:
     selection = render_sidebar(_study_areas())
     band_m = applied_band(selection)
     render_header(selection)
-    band_m, detection_failed = execute_requested_detection(selection, band_m)
+    selection, band_m, detection_failed = execute_requested_detection(selection, band_m)
     view = prepare_analysis(selection, band_m, detection_failed)
     render_overview(selection, view)
 

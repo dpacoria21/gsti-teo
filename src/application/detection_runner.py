@@ -5,21 +5,30 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Callable
 
 from shapely.geometry import box
 
 from ..data_loader import load_study_area
-from ..settings import PROJECT_ROOT, environment_python
+from ..settings import PROJECT_ROOT, ml_python
 
 ROOT = PROJECT_ROOT
-ML_PYTHON = environment_python(".venv-ml")
+ML_PYTHON = ml_python()
+
+
+def _display_path(path: Path) -> str:
+    """Keep local diagnostics short without assuming an interpreter is in ROOT."""
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def ml_status() -> dict:
     required = [ML_PYTHON, ROOT / "scripts/run_detection.py", ROOT / "models/building_footprints_usa.pth"]
-    missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+    missing = [_display_path(path) for path in required if not path.is_file()]
     return {
         "available": not missing,
         "python": str(ML_PYTHON),
@@ -31,10 +40,48 @@ def ml_available() -> bool:
     return ml_status()["available"]
 
 
+@contextmanager
+def _inference_slot():
+    """Allow one worker across sessions/processes; the OS owns lock lifetime.
+
+    Keep the file in place: removing it could let another process lock a new
+    inode while a previous reader still owns the old one. Closing the descriptor
+    releases the lock, including when its process terminates unexpectedly.
+    """
+    lock_path = ROOT / ".runtime" / "inference.lock"
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("a+b") as handle:
+        if os.name == "nt":
+            import msvcrt
+
+            # Windows byte-range locks need a byte to lock on every filesystem.
+            handle.seek(0, os.SEEK_END)
+            if handle.tell() == 0:
+                handle.write(b"\0")
+                handle.flush()
+            handle.seek(0)
+            try:
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            except OSError as error:
+                raise ValueError(
+                    "El motor de IA está ocupado con otra detección. Espere a que termine y vuelva a intentarlo."
+                ) from error
+        else:
+            import fcntl
+
+            try:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError as error:
+                raise ValueError(
+                    "El motor de IA está ocupado con otra detección. Espere a que termine y vuelva a intentarlo."
+                ) from error
+        yield
+
+
 def inspect_raster(path: str | Path, area_id: str = "chullo") -> dict:
     """Read pixels/georeference in the ML environment before starting the model."""
     if not ML_PYTHON.is_file():
-        raise ValueError("El entorno de IA no está instalado. Ejecute PREPARAR_IA.ps1.")
+        raise ValueError("El intérprete de IA no está disponible. Configure CHULLO_ML_PYTHON o prepare .venv-ml.")
     result = subprocess.run(
         [str(ML_PYTHON), str(ROOT / "scripts/inspect_raster.py"), str(Path(path).resolve())],
         cwd=ROOT,
@@ -73,7 +120,6 @@ def run_detection(
     if device not in {"auto", "cpu", "cuda"}:
         raise ValueError("Dispositivo desconocido.")
     raster = Path(raster_path).resolve()
-    inspect_raster(raster, area_id=area_id)
     destination = Path(output_dir).resolve()
     if not destination.is_relative_to(ROOT / "outputs/inference"):
         raise ValueError("Los resultados deben guardarse dentro de outputs/inference.")
@@ -99,17 +145,19 @@ def run_detection(
         PYTHONUNBUFFERED="1",
         CHULLO_RUN_LOCK_OWNER=str(os.getpid()),
     )
-    lock = destination / ".running.lock"
-    try:
-        lock_handle = lock.open("x", encoding="utf-8")
-    except FileExistsError:
-        raise ValueError("Ya hay una detección ejecutándose en esta carpeta. Espere a que termine.") from None
-    lock_handle.write(str(os.getpid()))
-    lock_handle.close()
-    try:
-        return _execute_worker(command, destination, environment, on_progress)
-    finally:
-        lock.unlink(missing_ok=True)
+    with _inference_slot():
+        inspect_raster(raster, area_id=area_id)
+        lock = destination / ".running.lock"
+        try:
+            lock_handle = lock.open("x", encoding="utf-8")
+        except FileExistsError:
+            raise ValueError("Ya hay una detección ejecutándose en esta carpeta. Espere a que termine.") from None
+        lock_handle.write(str(os.getpid()))
+        lock_handle.close()
+        try:
+            return _execute_worker(command, destination, environment, on_progress)
+        finally:
+            lock.unlink(missing_ok=True)
 
 
 def _execute_worker(command, destination, environment, on_progress):
@@ -140,7 +188,11 @@ def _execute_worker(command, destination, environment, on_progress):
         finally:
             if process.poll() is None:
                 process.terminate()
-                process.wait(timeout=20)
+                try:
+                    process.wait(timeout=20)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait(timeout=20)
     if code:
         tail = (destination / "worker.log").read_text(encoding="utf-8")[-2000:]
         raise RuntimeError(f"El detector no completó la ejecución (código {code}). {tail}")

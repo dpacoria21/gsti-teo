@@ -1,11 +1,13 @@
 """Orchestrate the UI's progress, cache reads, and prepared analysis view."""
 
+from dataclasses import replace
 from pathlib import Path
 
 import streamlit as st
 
 from src.application.images import data_fingerprint, detection_fingerprint
 from src.application.provenance import describe_detection, detection_metadata, image_details
+from src.application.session_workspace import new_detection_output, remember_result
 from src.ui.cache import cached_analysis, cached_detection, cached_detection_analysis, cached_load
 from src.ui.engine import load_detection, run_detection
 from src.ui.models import AnalysisView, SidebarSelection
@@ -20,11 +22,10 @@ def applied_band(selection: SidebarSelection) -> float:
     return st.session_state.applied_analysis[2]
 
 
-def execute_requested_detection(selection: SidebarSelection, band_m: float) -> tuple[float, bool]:
+def execute_requested_detection(selection: SidebarSelection, band_m: float) -> tuple[SidebarSelection, float, bool]:
     use_detection = selection.use_detection
     detect_clicked = selection.detect_clicked
     raster_path = selection.raster_path
-    detection_dir = selection.detection_dir
     threshold = selection.threshold
     image_manifest_path = selection.image_manifest_path
     area_id = selection.area_id
@@ -32,6 +33,7 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
     chosen_band = selection.chosen_band
     detection_failed = False
     if use_detection and detect_clicked:
+        detection_dir = new_detection_output(selection.session_id)
         with st.status("Ejecutando el detector preentrenado…", expanded=True) as status:
             progress = st.progress(0)
             progress_text = st.empty()
@@ -54,6 +56,8 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
                     on_progress=on_progress,
                     area_id=area_id,
                 )
+                remember_result(st.session_state, selection.input_id, detection_dir)
+                selection = replace(selection, detection_dir=detection_dir)
                 progress.progress(1.0)
                 status.update(label="Detección completada · resultados guardados", state="complete", expanded=False)
                 st.session_state.applied_analysis = (area_id, building_mode, chosen_band)
@@ -63,7 +67,7 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
                 status.update(label="No se pudo completar la detección", state="error", expanded=True)
                 st.error(str(error))
 
-    return band_m, detection_failed
+    return selection, band_m, detection_failed
 
 
 def prepare_analysis(selection: SidebarSelection, band_m: float, detection_failed: bool) -> AnalysisView:

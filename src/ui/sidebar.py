@@ -3,12 +3,14 @@
 import streamlit as st
 
 from src.application.images import bundled_image, stored_upload
+from src.application.session_workspace import selected_result, session_identifier, session_output_root
 from src.settings import PROJECT_ROOT as ROOT
 from src.ui.engine import ml_status
 from src.ui.models import SidebarSelection
 
 
 def render_sidebar(areas: list[dict]) -> SidebarSelection:
+    session_id = session_identifier(st.session_state)
     with st.sidebar:
         st.markdown(
             '<div class="eyebrow">OBSERVATORIO TERRITORIAL</div><div class="brand">Chullo</div><div class="brand-sub">Edificaciones y torrenteras<br>Arequipa, Perú</div>',
@@ -42,6 +44,7 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         threshold = 0.50
         raster_path = image_manifest_path = None
         image_record = {}
+        input_id = f"{area_id}:bundled"
         detection_dir = ROOT / "outputs" / "inference" / f"{area_id}_demo"
         if use_detection:
             image_choice = st.selectbox(
@@ -66,10 +69,13 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
                 )
                 if uploaded is not None:
                     raster_path, image_manifest_path, image_record, detection_dir = stored_upload(
-                        uploaded.getvalue(), uploaded.name, area_id
+                        uploaded.getvalue(), uploaded.name, area_id, session_id=session_id
                     )
+                    input_id = f"{area_id}:upload:{image_record['sha256']}"
                 else:
-                    detection_dir = ROOT / "outputs" / "inference" / f"{area_id}_awaiting_upload"
+                    input_id = f"{area_id}:awaiting_upload"
+                    detection_dir = session_output_root(session_id) / f"{area_id}_awaiting_upload"
+            detection_dir = selected_result(st.session_state, input_id, detection_dir)
             threshold = st.slider(
                 "Puntuación mínima del detector",
                 min_value=0.20,
@@ -88,7 +94,8 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
             if not engine.get("available", False):
                 st.caption(engine.get("reason", "El motor de IA no está disponible."))
             st.caption(
-                "Modelo preentrenado de segmentación de edificios. Se ejecuta localmente; la primera ejecución puede tardar varios minutos."
+                "Modelo preentrenado de segmentación de edificios. La ejecución puede tardar varios minutos. "
+                "Los nuevos resultados se mantienen separados por sesión; descárgalos antes de cerrar la aplicación."
             )
             st.divider()
         maximum_band = float(area_lookup[area_id].get("max_band_m", 100))
@@ -133,4 +140,6 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         analyze=analyze,
         basemap=basemap,
         show_imagery=show_imagery,
+        session_id=session_id,
+        input_id=input_id,
     )

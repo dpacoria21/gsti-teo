@@ -8,6 +8,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+from src.application.session_workspace import session_output_root, validate_session_identifier
 from src.settings import PROJECT_ROOT, environment_python
 
 
@@ -29,11 +30,21 @@ def bundled_image(area_id: str, root: Path = PROJECT_ROOT) -> tuple[Path | None,
 
 
 def stored_upload(
-    content: bytes, original_filename: str, area_id: str, root: Path = PROJECT_ROOT
+    content: bytes,
+    original_filename: str,
+    area_id: str,
+    root: Path = PROJECT_ROOT,
+    *,
+    session_id: str | None = None,
 ) -> tuple[Path, Path, dict[str, Any], Path]:
-    """Persist by content hash; never interpret a user filename as a local path."""
+    """Persist by hash within the caller's session; preserve CLI storage defaults."""
     digest = hashlib.sha256(content).hexdigest()
-    folder = root / "data" / "uploads" / digest[:20]
+    uploads_root = root / "data" / "uploads"
+    output_root = root / "outputs" / "inference"
+    if session_id is not None:
+        uploads_root = uploads_root / "sessions" / validate_session_identifier(session_id)
+        output_root = session_output_root(session_id, root)
+    folder = uploads_root / digest[:20]
     folder.mkdir(parents=True, exist_ok=True)
     raster = folder / "image.tif"
     if not raster.exists():
@@ -53,7 +64,7 @@ def stored_upload(
     }
     if not manifest_path.exists():
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    return raster, manifest_path, manifest, root / "outputs" / "inference" / f"{area_id}_upload_{digest[:20]}"
+    return raster, manifest_path, manifest, output_root / f"{area_id}_upload_{digest[:20]}"
 
 
 def data_fingerprint(root: Path = PROJECT_ROOT) -> tuple[tuple[str, int], ...]:
@@ -62,7 +73,9 @@ def data_fingerprint(root: Path = PROJECT_ROOT) -> tuple[tuple[str, int], ...]:
         (str(path.relative_to(root)), path.stat().st_mtime_ns)
         for folder in (root / "config", root / "data")
         for path in folder.rglob("*")
-        if path.is_file() and path.suffix in {".json", ".geojson", ".gpkg"}
+        if path.is_file()
+        and path.suffix in {".json", ".geojson", ".gpkg"}
+        and not path.is_relative_to(root / "data" / "uploads")
     )
 
 

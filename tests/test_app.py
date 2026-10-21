@@ -5,6 +5,7 @@ The optional integration tests require the bundled image and inference artifacts
 """
 
 import json
+import shutil
 import subprocess
 from hashlib import sha256
 from io import BytesIO
@@ -123,3 +124,43 @@ def test_sources_and_full_downloads_follow_applied_analysis_not_table_filter(sav
         assert manifest["source_metadata"]["analysis_mode"] == "image_inference"
         assert manifest["analysis_crs"] == ["EPSG:32719"]
         assert len(pd.read_csv(archive.open("resumen_edificaciones.csv"))) == 237
+
+
+def test_session_run_is_selected_after_success_and_retained_after_failure(saved_app, monkeypatch, tmp_path):
+    """Exercise the real UI with a simulated worker; never overwrite the bundled demo."""
+    from src.application.session_workspace import RESULTS_KEY, SESSION_KEY, new_detection_output
+    from src.ui import sidebar, workflow
+
+    app, _ = saved_app
+    calls = []
+
+    def completed_worker(raster_path, output_dir, **kwargs):
+        calls.append(output_dir)
+        assert output_dir != SAVED_RUN
+        shutil.copytree(SAVED_RUN, output_dir)
+        return json.loads((output_dir / "manifest.json").read_text(encoding="utf-8"))
+
+    monkeypatch.setattr(sidebar, "ml_status", lambda: {"available": True})
+    monkeypatch.setattr(workflow, "new_detection_output", lambda session: new_detection_output(session, tmp_path))
+    monkeypatch.setattr(workflow, "run_detection", completed_worker)
+    app.run()
+    widget(app.button, "Detectar en esta imagen").click().run()
+    assert_rendered(app, total=237, inside=27, band=25)
+    selected = app.session_state[RESULTS_KEY]["chullo:bundled"]
+    assert Path(selected) == calls[0]
+    assert app.session_state[SESSION_KEY] in Path(selected).parts
+
+    app.run()
+    assert app.session_state[RESULTS_KEY]["chullo:bundled"] == selected
+
+    def failing_worker(raster_path, output_dir, **kwargs):
+        assert output_dir not in {SAVED_RUN, Path(selected)}
+        raise RuntimeError("Fallo simulado de prueba")
+
+    monkeypatch.setattr(workflow, "run_detection", failing_worker)
+    widget(app.button, "Detectar en esta imagen").click().run()
+    assert not app.exception
+    assert any("Fallo simulado de prueba" in element.value for element in app.error)
+    assert app.session_state[RESULTS_KEY]["chullo:bundled"] == selected
+    assert [element.value for element in app.metric[:3]] == ["237", "27", "210"]
+    assert any("Última detección completa conservada" in element.value for element in app.success)

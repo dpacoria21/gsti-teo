@@ -1,0 +1,7 @@
+# Python 3.12, Linux x86_64. CPU wheels avoid downloading a CUDA runtime.
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r ../requirements.lock.txt
+torch==2.11.0+cpu
+torchvision==0.26.0+cpu
+rasterio==1.5.2
+affine==3.0.1

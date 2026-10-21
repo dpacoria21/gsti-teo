@@ -24,6 +24,12 @@ La comprobación de georreferenciación de Chullo obtuvo RMSE interno de 0,227 m
 
 La carga de un GeoTIFF RGB permite analizar otra imagen que intersecte el sector elegido. La aplicación selecciona los contornos que intersectan ese sector y conserva su geometría completa; otros lugares necesitan sus propias capas de cauces. No admite fotos sin coordenadas ni imágenes Sentinel-2 de 10 m para edificios individuales.
 
+## Ejecutar en la nube
+
+El punto de entrada `cloud/app.py` prepara el modelo verificado y utiliza dependencias CPU de `cloud/requirements.txt` para Python 3.12. Se incluye un Dockerfile para servidores Linux y una ruta de despliegue en Streamlit Community Cloud. Las instrucciones, requisitos y comprobaciones están en [docs/DESPLIEGUE_NUBE.md](docs/DESPLIEGUE_NUBE.md).
+
+Las nuevas detecciones de la interfaz se separan por sesión y no reemplazan las demostraciones. El servidor procesa una inferencia a la vez. Las cargas y los resultados nuevos son temporales: descargar las exportaciones antes de cerrar la sesión.
+
 ## Abrir en esta computadora
 
 Las dependencias y los datos ya están instalados. Hacer doble clic en **INICIAR.cmd**. Abre `http://127.0.0.1:8501` y reutiliza el servidor si ya está funcionando. También puede ejecutarse:
@@ -96,7 +102,7 @@ flowchart LR
     E --> S
 ```
 
-Todo el procesamiento ocurre en la laptop. El navegador se conecta al proceso Streamlit por `127.0.0.1:8501`; los datos y dependencias viven en esta carpeta. El mapa base solicita teselas públicas a OpenStreetMap; los recursos del visor se cargan desde servicios externos. No hay API de IA, cuenta cloud ni publicación en Internet. El servidor escucha únicamente en esta computadora. La IA usa la NVIDIA RTX 5070 Ti disponible, con alternativa CPU. El mapa corre en `.venv` y lanza el detector en `.venv-ml`; ambos intercambian archivos locales y progreso JSON.
+En la ejecución local, el procesamiento ocurre en la laptop y el navegador se conecta a `127.0.0.1:8501`. La IA usa la NVIDIA RTX 5070 Ti disponible, con alternativa CPU; el mapa corre en `.venv` y lanza el detector en `.venv-ml`. En la configuración cloud, estos procesos se ejecutan en el servidor Linux: Streamlit atiende el navegador y lanza un worker CPU con el intérprete configurado mediante `CHULLO_ML_PYTHON`. Ambos modos intercambian archivos y progreso JSON. El mapa base solicita teselas a OpenStreetMap y recursos del visor a servicios externos; no se utiliza una API de inferencia de pago.
 
 | Archivo | Responsabilidad |
 |---|---|
