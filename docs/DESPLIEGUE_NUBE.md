@@ -59,8 +59,6 @@ Ejecuta la interfaz, solicita una detección real, valida distancias y exportaci
 
 La evaluación sigue siendo de proximidad al eje cartografiado. El despliegue no incorpora simulación hidráulica, delimitación legal ni una validación independiente de exactitud.
 
-## Referencias del proveedor
-
 ## Validación local del entorno cloud — 21 de octubre de 2026
 
 La imagen Docker Linux con Python 3.12 y PyTorch CPU completó las 106 pruebas. La comprobación de interfaz con una inferencia real de Chullo, limitada a 2 CPU y 4 GB, terminó en 53,64 segundos y alcanzó un pico de memoria del contenedor de 1 457,5 MiB. Produjo 235 contornos dentro del sector, 27 a 25 m o menos; se verificaron CSV y GeoJSON y la integridad de la demo original.
