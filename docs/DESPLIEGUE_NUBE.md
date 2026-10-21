@@ -4,7 +4,7 @@ El despliegue usa el mismo código modular, GeoTIFF y modelo verificado del prot
 
 ## Aplicación desplegada y acceso
 
-**[Abrir Chullo: acceso directo verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** El acceso de la aplicación se verificó en **Settings → Sharing → Only specific people can view this app**. La aplicación y el repositorio son privados; entrar requiere una cuenta autorizada.
+**[Abrir Chullo: acceso directo verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** El 21 de octubre de 2026 se guardó el acceso público solicitado por el titular y se verificó en **Settings → Sharing → This app is public and searchable**. Cualquier persona puede usar la aplicación sin iniciar sesión. El repositorio continúa privado; sus permisos son independientes de los de la aplicación.
 
 La ruta directa permite usar el detector, las distancias, las exportaciones y el mapa interactivo con la imagen real. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) permanece en la pantalla de carga en Chrome; su causa no está confirmada. Se utiliza la ruta directa como acceso verificado mientras se resuelve esa limitación de la página principal.
 
@@ -23,7 +23,7 @@ Community Cloud encuentra `cloud/requirements.txt` junto al punto de entrada. In
 
 El entorno fija **Streamlit 1.66.0** y **PyArrow 24.0.0**. La versión de PyArrow coincide con la medida de compatibilidad aplicada por Community Cloud y vinculada a [apache/arrow#50471](https://github.com/apache/arrow/issues/50471). El input de nube toma las dependencias declaradas de `requirements.in` y su lock resuelve las dependencias Linux sin alterar el lock ni el entorno local.
 
-Conservar el repositorio privado. El acceso a la aplicación se administra en la configuración de Community Cloud; no cambiarlo a público para resolver un problema de conexión al repositorio. La conexión OAuth y los términos del proveedor los revisa el titular de la cuenta.
+Conservar el repositorio privado. El acceso a la aplicación se administra por separado en la configuración de Community Cloud y se abrió al público por solicitud del titular. Este cambio no concede acceso al repositorio ni modifica la conexión OAuth de GitHub. La conexión OAuth y los términos del proveedor los revisa el titular de la cuenta.
 
 El alojamiento gratuito tiene recursos compartidos: comprobar una inferencia completa antes de considerar el despliegue funcional. Un mapa que abre no prueba que haya memoria suficiente para ejecutar Mask R-CNN. Si el proveedor termina el worker por falta de memoria, utilizar el contenedor en un servidor con capacidad suficiente; no sustituir silenciosamente la inferencia por resultados guardados.
 
@@ -41,7 +41,7 @@ Community Cloud recibe los cambios publicados en `main`, pero durante esta compr
 2. Abrir **Manage app**, abrir el menú de opciones y elegir **Reboot app**; confirmar **Reboot**.
 3. Esperar a que finalice la preparación y abrir una sesión nueva. Verificar el cambio concreto, además de que la página responda.
 
-El reinicio interrumpe las sesiones activas y puede eliminar sus archivos temporales. No hace público el repositorio ni la aplicación. El procedimiento del proveedor está en [Reboot your app](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/reboot-your-app).
+El reinicio interrumpe las sesiones activas y puede eliminar sus archivos temporales. No cambia los permisos de acceso de la aplicación ni del repositorio. El procedimiento del proveedor está en [Reboot your app](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/reboot-your-app).
 
 ## Contenedor Linux
 

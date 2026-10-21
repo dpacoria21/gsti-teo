@@ -26,7 +26,7 @@ La carga de un GeoTIFF RGB permite analizar otra imagen que intersecte el sector
 
 ## Ejecutar en la nube
 
-**[Abrir la aplicación en nube: acceso verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** La aplicación y el repositorio son privados; entrar requiere una cuenta autorizada. Se comprobaron la inferencia, las distancias, las descargas y la visualización del mapa con imagen real, contornos y fichas interactivas. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) sigue detenida en la pantalla de carga en Chrome; por ahora se utiliza la ruta directa indicada.
+**[Abrir la aplicación en nube: acceso verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** La aplicación es pública y puede usarse sin iniciar sesión. El repositorio continúa privado; sus permisos se administran por separado. Se comprobaron la inferencia, las distancias, las descargas y la visualización del mapa con imagen real, contornos y fichas interactivas. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) sigue detenida en la pantalla de carga en Chrome; por ahora se utiliza la ruta directa indicada.
 
 La inferencia real en el servidor CPU terminó en **125,064 segundos** y produjo **1 004 contornos en la imagen, 235 en el sector piloto y 27 dentro de 25 m**. Al aplicar 50 m, se obtuvieron 55 contornos dentro y 180 fuera, conservando las mismas distancias. Se descargaron y comprobaron el CSV y GeoJSON con 235 registros cada uno y el ZIP con sus cinco archivos. Esta ejecución es distinta de la demo GPU guardada de 237 contornos.
 
