@@ -9,7 +9,6 @@ branca==0.8.2
 certifi==2026.7.22
 charset-normalizer==3.5.2
 click==8.5.0
-colorama==0.4.6
 contourpy==1.4.0
 cycler==0.12.1
 filelock==4.2.4
@@ -18,7 +17,6 @@ fonttools==4.66.1
 fsspec==2026.9.0
 geopandas==1.2.0
 h11==0.16.0
-httptools==0.9.0
 idna==3.20
 iniconfig==2.3.1
 itsdangerous==2.2.0
@@ -37,7 +35,7 @@ pandas==3.0.6
 pillow==12.3.0
 pluggy==1.6.0
 protobuf==7.36.2
-pyarrow==25.0.1
+pyarrow==24.0.0
 pydeck==0.9.3
 pygments==2.21.0
 pyogrio==0.13.0
@@ -54,14 +52,12 @@ setuptools==81.0.0
 shapely==2.2.0
 six==1.17.0
 starlette==1.8.0
-streamlit==1.65.0
+streamlit==1.66.0
 streamlit-folium==0.27.4
 sympy==1.14.0
-toml==0.10.2
 torch==2.11.0+cpu
 torchvision==0.26.0+cpu
 typing-extensions==4.16.0
-tzdata==2026.5
 urllib3==2.8.0
 uvicorn==0.54.0
 watchdog==6.0.0

@@ -26,7 +26,11 @@ La carga de un GeoTIFF RGB permite analizar otra imagen que intersecte el sector
 
 ## Ejecutar en la nube
 
-El punto de entrada `cloud/app.py` prepara el modelo verificado y utiliza dependencias CPU de `cloud/requirements.txt` para Python 3.12. Se incluye un Dockerfile para servidores Linux y una ruta de despliegue en Streamlit Community Cloud. Las instrucciones, requisitos y comprobaciones están en [docs/DESPLIEGUE_NUBE.md](docs/DESPLIEGUE_NUBE.md).
+La aplicación está desplegada en [Chullo en Streamlit Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/), con acceso privado: **Only specific people can view this app**. El repositorio también permanece privado. El 21 de octubre de 2026, la página principal quedó detenida en la pantalla de carga en Chrome. Como acceso temporal se comprobó [la ruta directa de la aplicación](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/), que permitió ejecutar el modelo y descargar los resultados. Tras las interacciones, el componente del mapa también mostró una carga incompleta y un timeout. Ambos problemas de visualización siguen pendientes; esa ruta interna no sustituye su corrección.
+
+La inferencia real en el servidor CPU terminó en **125,064 segundos** y produjo **1 004 contornos en la imagen, 235 en el sector piloto y 27 dentro de 25 m**. Al aplicar 50 m, se obtuvieron 55 contornos dentro y 180 fuera, conservando las mismas distancias. Se descargaron y comprobaron el CSV y GeoJSON con 235 registros cada uno y el ZIP con sus cinco archivos. Esta ejecución es distinta de la demo GPU guardada de 237 contornos.
+
+El punto de entrada `cloud/app.py` prepara el modelo verificado y utiliza dependencias CPU de `cloud/requirements.txt` para Python 3.12. PyArrow se fija en 24.0.0 para coincidir con la versión de compatibilidad aplicada por Community Cloud. Se incluye un Dockerfile para servidores Linux. Las instrucciones, requisitos y evidencia separada de las pruebas locales y alojadas están en [docs/DESPLIEGUE_NUBE.md](docs/DESPLIEGUE_NUBE.md).
 
 Las nuevas detecciones de la interfaz se separan por sesión y no reemplazan las demostraciones. El servidor procesa una inferencia a la vez. Las cargas y los resultados nuevos son temporales: descargar las exportaciones antes de cerrar la sesión.
 

@@ -1,6 +1,9 @@
 # Python 3.12, Linux x86_64. CPU wheels avoid downloading a CUDA runtime.
 --extra-index-url https://download.pytorch.org/whl/cpu
--r ../requirements.lock.txt
+-r ../requirements.in
+# Match Community Cloud's compatibility pin for apache/arrow#50471.
+pyarrow==24.0.0
+streamlit==1.66.0
 torch==2.11.0+cpu
 torchvision==0.26.0+cpu
 rasterio==1.5.2

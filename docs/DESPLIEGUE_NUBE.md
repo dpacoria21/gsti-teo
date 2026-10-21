@@ -2,9 +2,15 @@
 
 El despliegue usa el mismo código modular, GeoTIFF y modelo verificado del prototipo. `cloud/app.py` prepara los pesos y configura el intérprete del worker antes de abrir Streamlit. La inferencia permanece en un proceso separado. No depende de que la laptop esté encendida.
 
+## Aplicación desplegada y acceso
+
+URL principal: [Chullo en Streamlit Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/). El acceso de la aplicación se verificó en **Settings → Sharing → Only specific people can view this app**. La aplicación y el repositorio son privados; entrar requiere una cuenta autorizada.
+
+En la comprobación del 21 de octubre de 2026, la página principal permaneció en la pantalla de carga en Chrome. La [ruta directa de la aplicación](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/), observada en el iframe que sirve Community Cloud, sí permitió ejecutar el detector y las descargas. Tras las interacciones, el componente `streamlit_folium.st_folium` mostró un timeout y el mapa quedó en carga incompleta. La ruta directa se conserva como acceso temporal comprobado para el cálculo y las exportaciones; la visualización del mapa y la URL principal siguen pendientes. No se atribuye una causa concreta sin evidencia.
+
 ## Streamlit Community Cloud
 
-En la cuenta conectada a GitHub, crear una aplicación con estos valores:
+La aplicación se desplegó desde la cuenta conectada a GitHub con estos valores:
 
 | Campo | Valor |
 |---|---|
@@ -14,6 +20,10 @@ En la cuenta conectada a GitHub, crear una aplicación con estos valores:
 | Python version, en Advanced settings | `3.12` |
 
 Community Cloud encuentra `cloud/requirements.txt` junto al punto de entrada. Incluye PyTorch y torchvision CPU, las bibliotecas geográficas y Streamlit con versiones fijadas. `packages.txt` instala las bibliotecas de sistema `libgomp1` y `libexpat1`, necesarias para el runtime numérico y la lectura de GeoTIFF. No requiere una clave API de IA. El primer arranque descarga los pesos públicos desde una revisión concreta de Hugging Face y verifica su SHA256; los siguientes accesos en ese proceso reutilizan el archivo.
+
+El proveedor sustituyó PyArrow 25.0.1 por 24.0.0 durante el despliegue, como medida de compatibilidad vinculada a [apache/arrow#50471](https://github.com/apache/arrow/issues/50471). El archivo cloud fija ahora **PyArrow 24.0.0** para coincidir con ese entorno. El input de nube toma las dependencias declaradas de `requirements.in`, sin alterar el lock ni el entorno local. La resolución Linux conserva las demás versiones y omite `colorama` y `tzdata`, dependencias específicas de Windows que se habían heredado del lock local.
+
+También se fija **Streamlit 1.66.0**, publicado el 14 de octubre de 2026, para comprobar sus correcciones de compatibilidad de iframes. La [corrección oficial de iframes con origen opaco](https://github.com/streamlit/streamlit/pull/17409) no confirma la causa del problema observado aquí. El cambio requiere comprobar de nuevo la URL alojada antes de dar la visualización por resuelta. El lock omite `httptools` y `toml`, que dejaron de ser dependencias obligatorias en esa versión; conserva las demás versiones.
 
 Conservar el repositorio privado. El acceso a la aplicación se administra en la configuración de Community Cloud; no cambiarlo a público para resolver un problema de conexión al repositorio. La conexión OAuth y los términos del proveedor los revisa el titular de la cuenta.
 
@@ -63,7 +73,31 @@ La evaluación sigue siendo de proximidad al eje cartografiado. El despliegue no
 
 La imagen Docker Linux con Python 3.12 y PyTorch CPU completó las 106 pruebas. La comprobación de interfaz con una inferencia real de Chullo, limitada a 2 CPU y 4 GB, terminó en 53,64 segundos y alcanzó un pico de memoria del contenedor de 1 457,5 MiB. Produjo 235 contornos dentro del sector, 27 a 25 m o menos; se verificaron CSV y GeoJSON y la integridad de la demo original.
 
-La demo guardada de GPU conserva 237 contornos. La ejecución CPU no es idéntica byte por byte; los resultados nuevos identifican su propia ejecución y parámetros. Estos valores prueban el funcionamiento de esta configuración, no la exactitud de las detecciones ni el tiempo o la capacidad del proveedor. La URL de nube aún necesita su propia comprobación después de publicar.
+La demo guardada de GPU conserva 237 contornos. La ejecución CPU no es idéntica byte por byte; los resultados nuevos identifican su propia ejecución y parámetros. Estos valores prueban el funcionamiento de esta configuración local, no la exactitud de las detecciones ni el tiempo o la capacidad del proveedor.
+
+Después de fijar PyArrow 24.0.0, una comprobación aislada Linux verificó la resolución y consistencia de dependencias, importación y asignación Arrow entre hilos, cuatro ejecuciones de la interfaz y exportaciones CSV, GeoJSON y ZIP de la demo. No repitió la inferencia completa ni modifica las mediciones locales anteriores.
+
+Con Streamlit 1.66.0 y PyArrow 24.0.0, la comprobación aislada Linux pasó `pip check`, las tres pruebas de interfaz existentes y tres ejecuciones con generación del componente Folium y sus capas. El cambio de banda de la demo a 50 m conservó el resultado esperado de 56 contornos dentro. Estas pruebas inspeccionan la interfaz y sus datos desde Python; no comprueban la ejecución de JavaScript ni la descarga de recursos en el navegador alojado.
+
+## Validación en Community Cloud — 21 de octubre de 2026
+
+La verificación se realizó desde la ruta directa indicada arriba, usando la imagen incluida de Chullo y una nueva ejecución del detector CPU con puntuación mínima 0,50. El manifiesto registra su finalización en **2026-10-21T16:23:56.531507-05:00** (hora de Lima).
+
+| Comprobación | Resultado alojado |
+|---|---|
+| Tiempo de inferencia registrado | 125,064 s |
+| Contornos en toda la imagen | 1 004 |
+| Contornos que intersectan el sector piloto | 235 |
+| Contornos dentro de 25 m del eje | 27 |
+| Banda de 50 m aplicada | 55 dentro y 180 fuera, sobre los mismos 235 contornos |
+| Distancias CSV de 25 m frente a 50 m | Idénticas: cero diferencias; cambia la pertenencia a la banda |
+| CSV descargado | 235 registros |
+| GeoJSON descargado | 235 geometrías |
+| ZIP descargado | Los cinco archivos esperados, comprobados |
+
+El ZIP contiene `resumen_edificaciones.csv`, `relaciones_cauces.csv`, `edificaciones.geojson`, `metadatos.json` y `LEEME.txt`. Las descargas corresponden a esa nueva corrida. Una segunda sesión nueva mostró los **237 contornos de la demo original**, confirmando que la inferencia de la primera sesión no sustituyó la demostración compartida. No se midió el pico de memoria del proveedor: los **1 457,5 MiB** de la sección anterior pertenecen únicamente al contenedor local.
+
+La pantalla de carga de la URL principal y el timeout del componente del mapa continúan pendientes. La prueba del detector y de las exportaciones mediante la ruta directa no demuestra que esos problemas de visualización hayan quedado corregidos.
 
 ## Referencias del proveedor
 
