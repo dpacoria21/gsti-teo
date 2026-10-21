@@ -2,9 +2,11 @@
 
 import hashlib
 import html
+import os
 
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 from streamlit_folium import st_folium
 
 from src.map_view import build_map
@@ -106,14 +108,19 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
             image_overlay=image_overlay,
             buildings_label="Edificaciones · detector preentrenado" if detection else "Edificaciones · Microsoft",
         )
-        map_identity = str(detection["manifest"].get("run_id", detection_fingerprint)) if detection else "inventory"
-        st_folium(
-            map_object,
-            height=590,
-            use_container_width=True,
-            returned_objects=[],
-            key=f"map_{active_area}_{band_m}_{selected_id}_{basemap}_{show_imagery}_{hashlib.sha256(map_identity.encode()).hexdigest()[:12]}",
-        )
+        if os.environ.get("CHULLO_DEPLOYMENT") == "cloud":
+            # Embed inline to avoid the observed Cloud component-loading timeout.
+            # Leaflet popups and controls need no Python callbacks in this UI.
+            components.html(map_object.get_root().render(), height=590, scrolling=False)
+        else:
+            map_identity = str(detection["manifest"].get("run_id", detection_fingerprint)) if detection else "inventory"
+            st_folium(
+                map_object,
+                height=590,
+                use_container_width=True,
+                returned_objects=[],
+                key=f"map_{active_area}_{band_m}_{selected_id}_{basemap}_{show_imagery}_{hashlib.sha256(map_identity.encode()).hexdigest()[:12]}",
+            )
         st.caption(
             "Datos vectoriales locales · El mapa base y los recursos del visor requieren Internet. Las distancias se calculan en metros sobre las geometrías originales."
         )

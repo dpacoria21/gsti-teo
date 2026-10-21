@@ -5,6 +5,7 @@ The optional integration tests require the bundled image and inference artifacts
 """
 
 import json
+import re
 import shutil
 import subprocess
 from hashlib import sha256
@@ -164,3 +165,49 @@ def test_session_run_is_selected_after_success_and_retained_after_failure(saved_
     assert app.session_state[RESULTS_KEY]["chullo:bundled"] == selected
     assert [element.value for element in app.metric[:3]] == ["237", "27", "210"]
     assert any("Última detección completa conservada" in element.value for element in app.success)
+
+
+def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_selection(saved_app, monkeypatch):
+    """Use real rendered Leaflet HTML without relying on a custom-component handshake."""
+    from src.ui import map_panel
+
+    app, _ = saved_app
+    monkeypatch.setenv("CHULLO_DEPLOYMENT", "cloud")
+
+    def reject_custom_component(*args, **kwargs):
+        pytest.fail("The cloud map must not use the custom-component route.")
+
+    monkeypatch.setattr(map_panel, "st_folium", reject_custom_component)
+    app.run()
+    assert_rendered(app, total=237, inside=27, band=25)
+    frames = app.get("iframe")
+    assert len(frames) == 1
+    rendered_map = frames[0].proto.srcdoc
+    assert '"FeatureCollection"' in rendered_map and '"coordinates"' in rendered_map
+    assert "building_id" in rendered_map and "bindPopup" in rendered_map
+    assert "L.control.layers" in rendered_map
+    assert "L.imageOverlay" in rendered_map and "data:image/png;base64," in rendered_map
+
+    selector = widget(app.selectbox, "Identificador")
+    selected_id = selector.options[1]
+    selector.set_value(selected_id).run()
+    assert_rendered(app, total=237, inside=27, band=25)
+    selected_map = app.get("iframe")[0].proto.srcdoc
+    assert selected_id in selected_map
+    collections = [
+        json.JSONDecoder().raw_decode(selected_map[match.end() :])[0]
+        for match in re.finditer(r"geo_json_[0-9a-f]+_add\(", selected_map)
+    ]
+    selected_geometry = next(
+        feature["geometry"]
+        for collection in collections
+        for feature in collection["features"]
+        if feature["properties"].get("building_id") == selected_id
+    )
+    assert any(
+        len(collection["features"]) == 1
+        and collection["features"][0]["properties"] == {}
+        and collection["features"][0]["geometry"] == selected_geometry
+        for collection in collections
+    ), "Selecting an identifier must add the exact building geometry as its highlight layer."
+    assert ".fitBounds(" in selected_map
