@@ -4,9 +4,9 @@ El despliegue usa el mismo código modular, GeoTIFF y modelo verificado del prot
 
 ## Aplicación desplegada y acceso
 
-URL principal: [Chullo en Streamlit Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/). El acceso de la aplicación se verificó en **Settings → Sharing → Only specific people can view this app**. La aplicación y el repositorio son privados; entrar requiere una cuenta autorizada.
+**[Abrir Chullo: acceso directo verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** El acceso de la aplicación se verificó en **Settings → Sharing → Only specific people can view this app**. La aplicación y el repositorio son privados; entrar requiere una cuenta autorizada.
 
-En la comprobación del 21 de octubre de 2026, la página principal permaneció en la pantalla de carga en Chrome. La [ruta directa de la aplicación](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/), observada en el iframe que sirve Community Cloud, sí permitió ejecutar el detector y las descargas. Tras las interacciones, el componente `streamlit_folium.st_folium` mostró un timeout y el mapa quedó en carga incompleta. La ruta directa se conserva como acceso temporal comprobado para el cálculo y las exportaciones; la visualización del mapa y la URL principal siguen pendientes. No se atribuye una causa concreta sin evidencia.
+La ruta directa permite usar el detector, las distancias, las exportaciones y el mapa interactivo con la imagen real. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) permanece en la pantalla de carga en Chrome; su causa no está confirmada. Se utiliza la ruta directa como acceso verificado mientras se resuelve esa limitación de la página principal.
 
 ## Streamlit Community Cloud
 
@@ -21,13 +21,27 @@ La aplicación se desplegó desde la cuenta conectada a GitHub con estos valores
 
 Community Cloud encuentra `cloud/requirements.txt` junto al punto de entrada. Incluye PyTorch y torchvision CPU, las bibliotecas geográficas y Streamlit con versiones fijadas. `packages.txt` instala las bibliotecas de sistema `libgomp1` y `libexpat1`, necesarias para el runtime numérico y la lectura de GeoTIFF. No requiere una clave API de IA. El primer arranque descarga los pesos públicos desde una revisión concreta de Hugging Face y verifica su SHA256; los siguientes accesos en ese proceso reutilizan el archivo.
 
-El proveedor sustituyó PyArrow 25.0.1 por 24.0.0 durante el despliegue, como medida de compatibilidad vinculada a [apache/arrow#50471](https://github.com/apache/arrow/issues/50471). El archivo cloud fija ahora **PyArrow 24.0.0** para coincidir con ese entorno. El input de nube toma las dependencias declaradas de `requirements.in`, sin alterar el lock ni el entorno local. La resolución Linux conserva las demás versiones y omite `colorama` y `tzdata`, dependencias específicas de Windows que se habían heredado del lock local.
-
-También se fija **Streamlit 1.66.0**, publicado el 14 de octubre de 2026, para comprobar sus correcciones de compatibilidad de iframes. La [corrección oficial de iframes con origen opaco](https://github.com/streamlit/streamlit/pull/17409) no confirma la causa del problema observado aquí. El cambio requiere comprobar de nuevo la URL alojada antes de dar la visualización por resuelta. El lock omite `httptools` y `toml`, que dejaron de ser dependencias obligatorias en esa versión; conserva las demás versiones.
+El entorno fija **Streamlit 1.66.0** y **PyArrow 24.0.0**. La versión de PyArrow coincide con la medida de compatibilidad aplicada por Community Cloud y vinculada a [apache/arrow#50471](https://github.com/apache/arrow/issues/50471). El input de nube toma las dependencias declaradas de `requirements.in` y su lock resuelve las dependencias Linux sin alterar el lock ni el entorno local.
 
 Conservar el repositorio privado. El acceso a la aplicación se administra en la configuración de Community Cloud; no cambiarlo a público para resolver un problema de conexión al repositorio. La conexión OAuth y los términos del proveedor los revisa el titular de la cuenta.
 
 El alojamiento gratuito tiene recursos compartidos: comprobar una inferencia completa antes de considerar el despliegue funcional. Un mapa que abre no prueba que haya memoria suficiente para ejecutar Mask R-CNN. Si el proveedor termina el worker por falta de memoria, utilizar el contenedor en un servidor con capacidad suficiente; no sustituir silenciosamente la inferencia por resultados guardados.
+
+## Visor del mapa en nube
+
+Con `CHULLO_DEPLOYMENT=cloud`, `src/ui/map_panel.py` genera el HTML de Folium y lo presenta mediante `streamlit.components.v1.html`. El HTML de las capas se incluye directamente en el iframe, sin cargar el frontend específico de `streamlit_folium.st_folium`, cuyo timeout se observó en Community Cloud. Leaflet conserva dentro del mapa el desplazamiento, zoom, control de capas y fichas de los contornos; estas acciones no necesitan callbacks a Python. El selector de edificación de Streamlit continúa preparando el encuadre elegido.
+
+El modo local conserva `st_folium`. Ambos modos utilizan `build_map`, las mismas geometrías y las mismas distancias; el cambio afecta a la presentación, no al detector ni al análisis espacial. Las teselas y bibliotecas del visor siguen requiriendo conexión. La revisión `d6b69cf` se comprobó visualmente en la ruta directa después de reiniciar el servidor: mostró la imagen real, los 237 contornos de la demo, el acercamiento a una edificación seleccionada y su ficha al pulsar el polígono.
+
+## Actualizar código y reiniciar
+
+Community Cloud recibe los cambios publicados en `main`, pero durante esta comprobación un cambio de código no renovó los módulos ya importados en el proceso. La configuración del proyecto utiliza `server.fileWatcherType = "none"`. Si los registros muestran la versión nueva pero la interfaz sigue mostrando el comportamiento anterior, realizar un reinicio explícito:
+
+1. Descargar los resultados que se quieran conservar y esperar a que termine cualquier inferencia en curso.
+2. Abrir **Manage app**, abrir el menú de opciones y elegir **Reboot app**; confirmar **Reboot**.
+3. Esperar a que finalice la preparación y abrir una sesión nueva. Verificar el cambio concreto, además de que la página responda.
+
+El reinicio interrumpe las sesiones activas y puede eliminar sus archivos temporales. No hace público el repositorio ni la aplicación. El procedimiento del proveedor está en [Reboot your app](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/reboot-your-app).
 
 ## Contenedor Linux
 
@@ -75,9 +89,7 @@ La imagen Docker Linux con Python 3.12 y PyTorch CPU completó las 106 pruebas. 
 
 La demo guardada de GPU conserva 237 contornos. La ejecución CPU no es idéntica byte por byte; los resultados nuevos identifican su propia ejecución y parámetros. Estos valores prueban el funcionamiento de esta configuración local, no la exactitud de las detecciones ni el tiempo o la capacidad del proveedor.
 
-Después de fijar PyArrow 24.0.0, una comprobación aislada Linux verificó la resolución y consistencia de dependencias, importación y asignación Arrow entre hilos, cuatro ejecuciones de la interfaz y exportaciones CSV, GeoJSON y ZIP de la demo. No repitió la inferencia completa ni modifica las mediciones locales anteriores.
-
-Con Streamlit 1.66.0 y PyArrow 24.0.0, la comprobación aislada Linux pasó `pip check`, las tres pruebas de interfaz existentes y tres ejecuciones con generación del componente Folium y sus capas. El cambio de banda de la demo a 50 m conservó el resultado esperado de 56 contornos dentro. Estas pruebas inspeccionan la interfaz y sus datos desde Python; no comprueban la ejecución de JavaScript ni la descarga de recursos en el navegador alojado.
+Las comprobaciones aisladas Linux de Streamlit 1.66.0 y PyArrow 24.0.0 pasaron la resolución de dependencias, `pip check`, importación y asignación Arrow entre hilos, las tres pruebas de interfaz y las exportaciones de la demo. No repitieron la inferencia completa ni modifican las mediciones locales anteriores. La revisión visual alojada se registra por separado a continuación.
 
 ## Validación en Community Cloud — 21 de octubre de 2026
 
@@ -97,7 +109,9 @@ La verificación se realizó desde la ruta directa indicada arriba, usando la im
 
 El ZIP contiene `resumen_edificaciones.csv`, `relaciones_cauces.csv`, `edificaciones.geojson`, `metadatos.json` y `LEEME.txt`. Las descargas corresponden a esa nueva corrida. Una segunda sesión nueva mostró los **237 contornos de la demo original**, confirmando que la inferencia de la primera sesión no sustituyó la demostración compartida. No se midió el pico de memoria del proveedor: los **1 457,5 MiB** de la sección anterior pertenecen únicamente al contenedor local.
 
-La pantalla de carga de la URL principal y el timeout del componente del mapa continúan pendientes. La prueba del detector y de las exportaciones mediante la ruta directa no demuestra que esos problemas de visualización hayan quedado corregidos.
+La comprobación visual final, después del reinicio con el visor HTML de Folium, mostró la imagen real y los **237 contornos de la demo guardada**. Seleccionar `ai_003711de861f7e55` resaltó y acercó la edificación, con distancia de **25,0 m** y puntuación **0,883**; pulsar su polígono abrió la ficha correspondiente. La captura de evidencia local se conserva en `outputs/cloud_validation/despliegue.jpg`.
+
+Esta comprobación visual utilizó la demo restaurada tras el reinicio y no ejecutó nuevamente el detector. La corrida CPU de **235 contornos** y sus exportaciones corresponden a la prueba alojada descrita en la tabla. El mapa funciona mediante la ruta directa; la pantalla de carga de la URL principal permanece como limitación pendiente.
 
 ## Referencias del proveedor
 
