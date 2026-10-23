@@ -200,6 +200,8 @@ Se exige puntuación ≥0,5 y coincidencia de máscara IoU ≥0,5. No es AP COCO
 
 Datos, licencia y reproducción en [DATOS_ENTRENAMIENTO.md](docs/DATOS_ENTRENAMIENTO.md); protocolo, métricas y límites en [ENTRENAMIENTO_MODELO.md](docs/ENTRENAMIENTO_MODELO.md). El informe JSON y los pesos exactos evaluados están en `models/spacenet2_khartoum_v1/`.
 
+La [revisión local v2 de Chullo](docs/REVISION_CHULLO_V2.md) corrige etiquetas y añade entrenamiento con exclusiones y ejemplos de fondo. Se ejecutaron siete configuraciones: ninguna redujo los falsos positivos sin perder aciertos o empeorar el diagnóstico de fusiones bajo el criterio fijado. La aplicación conserva los pesos anteriores; no se afirma una mejora del F1 histórico de prueba de 24,9 %. Los registros completos están en [el informe reproducible](reports/training/chullo_refinement_v2/resumen.json).
+
 Para instalar las herramientas de desarrollo sin cambiar las dependencias de ejecución:
 
 ```powershell

@@ -1,0 +1,838 @@
+{
+  "usa": [
+    {
+      "score_threshold": 0.5,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 10,
+        "fp": 10,
+        "fn": 60,
+        "precision": 0.5,
+        "recall": 0.14285714285714285,
+        "f1": 0.2222222222222222,
+        "mean_iou_true_positives": 0.655343992049743,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.3333333333333333
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 6,
+          "fp": 2,
+          "fn": 24,
+          "matched_iou_sum": 3.9356379660161966,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 8
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 8,
+          "fn": 36,
+          "matched_iou_sum": 2.6178019544812337,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 12
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.5,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 11,
+        "fp": 9,
+        "fn": 59,
+        "precision": 0.55,
+        "recall": 0.15714285714285714,
+        "f1": 0.24444444444444444,
+        "mean_iou_true_positives": 0.632443168671509,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.36666666666666664
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 7,
+          "fp": 1,
+          "fn": 23,
+          "matched_iou_sum": 4.4473438373617675,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 8
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 8,
+          "fn": 36,
+          "matched_iou_sum": 2.50953101802483,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 12
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.65,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 8,
+        "fp": 8,
+        "fn": 62,
+        "precision": 0.5,
+        "recall": 0.11428571428571428,
+        "f1": 0.18604651162790697,
+        "mean_iou_true_positives": 0.6710934542094433,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.29850746268656714
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 4,
+          "fp": 1,
+          "fn": 26,
+          "matched_iou_sum": 2.750945679194313,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 7,
+          "fn": 36,
+          "matched_iou_sum": 2.6178019544812337,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 11
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.65,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 8,
+        "fp": 8,
+        "fn": 62,
+        "precision": 0.5,
+        "recall": 0.11428571428571428,
+        "f1": 0.18604651162790697,
+        "mean_iou_true_positives": 0.6591518382998744,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.29850746268656714
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 4,
+          "fp": 1,
+          "fn": 26,
+          "matched_iou_sum": 2.763683688374165,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 7,
+          "fn": 36,
+          "matched_iou_sum": 2.50953101802483,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 11
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.8,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 6,
+        "fp": 2,
+        "fn": 64,
+        "precision": 0.75,
+        "recall": 0.08571428571428572,
+        "f1": 0.15384615384615385,
+        "mean_iou_true_positives": 0.6868723828167441,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.29411764705882354
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 3,
+          "fp": 0,
+          "fn": 27,
+          "matched_iou_sum": 2.111124650111539,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 3
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 3,
+          "fp": 2,
+          "fn": 37,
+          "matched_iou_sum": 2.010109646788926,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.8,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 6,
+        "fp": 2,
+        "fn": 64,
+        "precision": 0.75,
+        "recall": 0.08571428571428572,
+        "f1": 0.15384615384615385,
+        "mean_iou_true_positives": 0.6691929243613203,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.29411764705882354
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 3,
+          "fp": 0,
+          "fn": 27,
+          "matched_iou_sum": 2.0906067652972418,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 3
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 3,
+          "fp": 2,
+          "fn": 37,
+          "matched_iou_sum": 1.9245507808706797,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.9,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 6,
+        "fp": 1,
+        "fn": 64,
+        "precision": 0.8571428571428571,
+        "recall": 0.08571428571428572,
+        "f1": 0.15584415584415584,
+        "mean_iou_true_positives": 0.6868723828167441,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.30612244897959184
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 3,
+          "fp": 0,
+          "fn": 27,
+          "matched_iou_sum": 2.111124650111539,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 3
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 3,
+          "fp": 1,
+          "fn": 37,
+          "matched_iou_sum": 2.010109646788926,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 4
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.9,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 6,
+        "fp": 1,
+        "fn": 64,
+        "precision": 0.8571428571428571,
+        "recall": 0.08571428571428572,
+        "f1": 0.15584415584415584,
+        "mean_iou_true_positives": 0.6691929243613203,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.30612244897959184
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 3,
+          "fp": 0,
+          "fn": 27,
+          "matched_iou_sum": 2.0906067652972418,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 3
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 3,
+          "fp": 1,
+          "fn": 37,
+          "matched_iou_sum": 1.9245507808706797,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 4
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 0
+        }
+      ]
+    }
+  ],
+  "chullo_v1": [
+    {
+      "score_threshold": 0.5,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 37,
+        "fp": 68,
+        "fn": 33,
+        "precision": 0.3523809523809524,
+        "recall": 0.5285714285714286,
+        "f1": 0.4228571428571429,
+        "mean_iou_true_positives": 0.6294147934518125,
+        "merged_predictions": 4,
+        "references_affected_by_merges": 5,
+        "f0_5": 0.37755102040816324
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 23,
+          "fp": 17,
+          "fn": 7,
+          "matched_iou_sum": 14.51584936735926,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 30,
+          "predicted_instances": 40
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 14,
+          "fp": 48,
+          "fn": 26,
+          "matched_iou_sum": 8.7724979903578,
+          "merged_predictions": 3,
+          "references_affected_by_merges": 3,
+          "reference_instances": 40,
+          "predicted_instances": 62
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 3
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.5,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 34,
+        "fp": 71,
+        "fn": 36,
+        "precision": 0.3238095238095238,
+        "recall": 0.4857142857142857,
+        "f1": 0.38857142857142857,
+        "mean_iou_true_positives": 0.6220683414493052,
+        "merged_predictions": 2,
+        "references_affected_by_merges": 3,
+        "f0_5": 0.3469387755102041
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 23,
+          "fp": 17,
+          "fn": 7,
+          "matched_iou_sum": 14.166781051787734,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 40
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 11,
+          "fp": 51,
+          "fn": 29,
+          "matched_iou_sum": 6.9835425574886445,
+          "merged_predictions": 2,
+          "references_affected_by_merges": 3,
+          "reference_instances": 40,
+          "predicted_instances": 62
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 3
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.65,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 27,
+        "fp": 36,
+        "fn": 43,
+        "precision": 0.42857142857142855,
+        "recall": 0.38571428571428573,
+        "f1": 0.40601503759398494,
+        "mean_iou_true_positives": 0.6326946272799341,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.4192546583850932
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 18,
+          "fp": 8,
+          "fn": 12,
+          "matched_iou_sum": 11.294556332453762,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 26
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 9,
+          "fp": 25,
+          "fn": 31,
+          "matched_iou_sum": 5.7881986041044575,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 40,
+          "predicted_instances": 34
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 3
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.65,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 26,
+        "fp": 37,
+        "fn": 44,
+        "precision": 0.4126984126984127,
+        "recall": 0.37142857142857144,
+        "f1": 0.39097744360902253,
+        "mean_iou_true_positives": 0.6173153558476913,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "f0_5": 0.40372670807453415
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 18,
+          "fp": 8,
+          "fn": 12,
+          "matched_iou_sum": 10.930948574507168,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 26
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 8,
+          "fp": 26,
+          "fn": 32,
+          "matched_iou_sum": 5.119250677532808,
+          "merged_predictions": 1,
+          "references_affected_by_merges": 2,
+          "reference_instances": 40,
+          "predicted_instances": 34
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 3
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.8,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 19,
+        "fp": 18,
+        "fn": 51,
+        "precision": 0.5135135135135135,
+        "recall": 0.2714285714285714,
+        "f1": 0.35514018691588783,
+        "mean_iou_true_positives": 0.6407284217212288,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "f0_5": 0.43577981651376146
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 12,
+          "fp": 2,
+          "fn": 18,
+          "matched_iou_sum": 7.700608642453922,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 14
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 7,
+          "fp": 14,
+          "fn": 33,
+          "matched_iou_sum": 4.473231370249425,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 21
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 2
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.8,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 19,
+        "fp": 18,
+        "fn": 51,
+        "precision": 0.5135135135135135,
+        "recall": 0.2714285714285714,
+        "f1": 0.35514018691588783,
+        "mean_iou_true_positives": 0.6219867902640224,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "f0_5": 0.43577981651376146
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 12,
+          "fp": 2,
+          "fn": 18,
+          "matched_iou_sum": 7.456310837483617,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 14
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 7,
+          "fp": 14,
+          "fn": 33,
+          "matched_iou_sum": 4.361438177532808,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 21
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 2
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.9,
+      "mask_threshold": 0.5,
+      "summary": {
+        "images": 3,
+        "tp": 9,
+        "fp": 6,
+        "fn": 61,
+        "precision": 0.6,
+        "recall": 0.12857142857142856,
+        "f1": 0.21176470588235294,
+        "mean_iou_true_positives": 0.6931422918789276,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "f0_5": 0.34615384615384615
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 5,
+          "fp": 0,
+          "fn": 25,
+          "matched_iou_sum": 3.623358370292739,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 4,
+          "fn": 36,
+          "matched_iou_sum": 2.6149222566176094,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 8
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 2
+        }
+      ]
+    },
+    {
+      "score_threshold": 0.9,
+      "mask_threshold": 0.6,
+      "summary": {
+        "images": 3,
+        "tp": 9,
+        "fp": 6,
+        "fn": 61,
+        "precision": 0.6,
+        "recall": 0.12857142857142856,
+        "f1": 0.21176470588235294,
+        "mean_iou_true_positives": 0.6756549853464351,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "f0_5": 0.34615384615384615
+      },
+      "per_scene": [
+        {
+          "scene_id": "val_1100_900",
+          "tp": 5,
+          "fp": 0,
+          "fn": 25,
+          "matched_iou_sum": 3.5169482277412256,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 30,
+          "predicted_instances": 5
+        },
+        {
+          "scene_id": "val_1600_900",
+          "tp": 4,
+          "fp": 4,
+          "fn": 36,
+          "matched_iou_sum": 2.563946640376691,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 40,
+          "predicted_instances": 8
+        },
+        {
+          "scene_id": "negative_field_centre",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "matched_iou_sum": 0.0,
+          "merged_predictions": 0,
+          "references_affected_by_merges": 0,
+          "reference_instances": 0,
+          "predicted_instances": 2
+        }
+      ]
+    }
+  ]
+}

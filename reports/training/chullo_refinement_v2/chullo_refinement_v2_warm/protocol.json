@@ -1,0 +1,74 @@
+{
+  "status": "completed",
+  "manifest_sha256": "d779cf316f11f48363f51211f814d8361102c76c35aa89976e542194e84ca4de",
+  "manifest": "data\\training\\chullo_local_v2\\development_manifest.json",
+  "seed": 42,
+  "epochs": 60,
+  "suite": "warm_start",
+  "experiments": [
+    {
+      "name": "local_conservative",
+      "anchors": [
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "unfreeze_layer4": false
+    },
+    {
+      "name": "local_adapt_layer4",
+      "anchors": [
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "unfreeze_layer4": true
+    }
+  ],
+  "score_grid": [
+    0.5,
+    0.65,
+    0.8,
+    0.9
+  ],
+  "mask_grid": [
+    0.5,
+    0.6
+  ],
+  "snapshot_every_epochs": 2,
+  "selection": "Max F0.5 among candidates with TP >= v1 default, FP < v1 default, merged predictions and references affected <= v1 default, on validation only; earliest tie kept.",
+  "test_opened": false,
+  "checkpoint_dtype": "FP16; evaluation reloads those values into FP32",
+  "initial_model": "chullo_v1",
+  "base_checkpoint_sha256": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+  "baseline_checkpoints_sha256": {
+    "usa": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+    "chullo_v1": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c"
+  },
+  "image_scale": 1.5625,
+  "training": "Full parent windows, ignore-aware losses, flips/quarter rotations, explicit negative scenes; layer4 adaptation begins after epoch10 at LR 2e-06; heads LR 2e-05; AdamW wd1e-4; gradientclip1; AMP; batch1.",
+  "development_history": "Second validation-only round: the initial three USA-initialized experiments failed the unchanged promotion gate. This round retains local v1 knowledge with a lower learning rate. No new test predictions informed either round.",
+  "caveat": "Provisional assistant labels of visible roofs, not human truth or verified houses. One capture; new geographic test is not independent acquisition. Old validation is reused for model selection.",
+  "elapsed_seconds": 80.5977227000003,
+  "selected": null,
+  "validation_gate_passed": false,
+  "training_config": {
+    "epochs_per_experiment": 60,
+    "batch_size": 1,
+    "device": "cuda",
+    "image_scale": 1.5625,
+    "head_learning_rate": 2e-05,
+    "layer4_learning_rate": 2e-06,
+    "layer4_unfreeze_after_epoch": 10,
+    "layer4_unfreeze_experiment": "local_adapt_layer4",
+    "other_backbone_parameters_frozen": true,
+    "batch_normalization_statistics_frozen": true,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "amp": true
+  }
+}

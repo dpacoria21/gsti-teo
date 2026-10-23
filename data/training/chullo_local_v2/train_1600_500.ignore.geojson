@@ -1,0 +1,339 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Interior sombreado: no se distingue completamente cubierta de patio.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.5,
+              8185309.5
+            ],
+            [
+              227602.0,
+              8185309.5
+            ],
+            [
+              227602.0,
+              8185299.5
+            ],
+            [
+              227593.0,
+              8185299.5
+            ],
+            [
+              227591.5,
+              8185309.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Sombra profunda bajo cubierta alta; límites inferiores no resolubles.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227616.5,
+              8185309.0
+            ],
+            [
+              227624.5,
+              8185309.0
+            ],
+            [
+              227624.5,
+              8185300.5
+            ],
+            [
+              227616.5,
+              8185300.5
+            ],
+            [
+              227616.5,
+              8185309.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Fachada y partes ocluidas del edificio alto; no inferir proyección de la cubierta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.0,
+              8185275.0
+            ],
+            [
+              227604.5,
+              8185273.0
+            ],
+            [
+              227608.0,
+              8185275.5
+            ],
+            [
+              227608.5,
+              8185269.5
+            ],
+            [
+              227591.0,
+              8185269.5
+            ],
+            [
+              227591.0,
+              8185275.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Cubiertas, sombras y patios pequeños sin separación clara.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227656.5,
+              8185350.0
+            ],
+            [
+              227665.0,
+              8185350.0
+            ],
+            [
+              227662.0,
+              8185343.0
+            ],
+            [
+              227656.5,
+              8185343.0
+            ],
+            [
+              227656.5,
+              8185350.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Parte inferior con vegetación u oclusión junto a plano gris superior; continuidad de cubierta incierta. Se conserva la instancia completa bajo ignore, sin recortar un nuevo techo parcial.",
+        "source_reference_id": "r06",
+        "audit_action": "ignore_entire_instance",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.5,
+              8185365.5
+            ],
+            [
+              227608.5,
+              8185365.5
+            ],
+            [
+              227608.0,
+              8185351.0
+            ],
+            [
+              227602.0,
+              8185351.5
+            ],
+            [
+              227602.0,
+              8185355.5
+            ],
+            [
+              227601.0,
+              8185356.5
+            ],
+            [
+              227601.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Estructura lineal con elementos paralelos junto a la calle; el RGB no distingue cubierta continua, estructura abierta en construcción o fachada. Se ignora la instancia completa.",
+        "source_reference_id": "r34",
+        "audit_action": "ignore_entire_instance",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185325.0
+            ],
+            [
+              227583.5,
+              8185325.0
+            ],
+            [
+              227583.5,
+              8185319.5
+            ],
+            [
+              227576.5,
+              8185319.5
+            ],
+            [
+              227576.5,
+              8185325.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Estructura lineal contigua a r34 con huecos oscuros; no se confirma cubierta opaca independiente. No se fusiona ni se convierte en objeto parcial.",
+        "source_reference_id": "r35",
+        "audit_action": "ignore_entire_instance",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227584.5,
+              8185324.5
+            ],
+            [
+              227592.0,
+              8185324.5
+            ],
+            [
+              227591.5,
+              8185319.0
+            ],
+            [
+              227584.5,
+              8185319.5
+            ],
+            [
+              227584.5,
+              8185324.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_008",
+      "properties": {
+        "reason": "Predomina sombra/posible vegetación junto al parque y muro; no se confirma un techo separado. Se conserva su geometría original bajo ignore.",
+        "source_reference_id": "r67",
+        "audit_action": "ignore_entire_instance",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q4.png",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227667.5,
+              8185295.5
+            ],
+            [
+              227670.5,
+              8185293.5
+            ],
+            [
+              227668.5,
+              8185291.0
+            ],
+            [
+              227666.0,
+              8185292.5
+            ],
+            [
+              227667.5,
+              8185295.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

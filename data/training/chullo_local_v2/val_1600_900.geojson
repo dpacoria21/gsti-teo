@@ -1,0 +1,1631 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "roof_001",
+      "properties": {
+        "id": "roof_001",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185165.5
+            ],
+            [
+              227589.5,
+              8185165.5
+            ],
+            [
+              227591.0,
+              8185161.5
+            ],
+            [
+              227584.0,
+              8185155.0
+            ],
+            [
+              227576.5,
+              8185159.5
+            ],
+            [
+              227576.5,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_002",
+      "properties": {
+        "id": "roof_002",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227599.0,
+              8185165.5
+            ],
+            [
+              227604.0,
+              8185165.5
+            ],
+            [
+              227616.0,
+              8185157.0
+            ],
+            [
+              227609.5,
+              8185149.0
+            ],
+            [
+              227594.5,
+              8185159.0
+            ],
+            [
+              227599.0,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_003",
+      "properties": {
+        "id": "roof_003",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227605.0,
+              8185165.5
+            ],
+            [
+              227620.0,
+              8185165.5
+            ],
+            [
+              227615.5,
+              8185158.5
+            ],
+            [
+              227605.0,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_004",
+      "properties": {
+        "id": "roof_004",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185156.5
+            ],
+            [
+              227584.5,
+              8185151.5
+            ],
+            [
+              227582.0,
+              8185147.0
+            ],
+            [
+              227576.5,
+              8185150.5
+            ],
+            [
+              227576.5,
+              8185156.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_005",
+      "properties": {
+        "id": "roof_005",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227589.5,
+              8185157.5
+            ],
+            [
+              227600.5,
+              8185150.5
+            ],
+            [
+              227597.0,
+              8185145.0
+            ],
+            [
+              227586.5,
+              8185151.5
+            ],
+            [
+              227589.5,
+              8185157.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_006",
+      "properties": {
+        "id": "roof_006",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227588.5,
+              8185147.5
+            ],
+            [
+              227600.0,
+              8185140.5
+            ],
+            [
+              227596.0,
+              8185133.5
+            ],
+            [
+              227584.0,
+              8185141.0
+            ],
+            [
+              227588.5,
+              8185147.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_007",
+      "properties": {
+        "id": "roof_007",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185149.0
+            ],
+            [
+              227583.0,
+              8185144.5
+            ],
+            [
+              227580.5,
+              8185139.0
+            ],
+            [
+              227576.5,
+              8185141.5
+            ],
+            [
+              227576.5,
+              8185149.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_008",
+      "properties": {
+        "id": "roof_008",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227584.5,
+              8185134.5
+            ],
+            [
+              227596.0,
+              8185127.5
+            ],
+            [
+              227591.5,
+              8185120.5
+            ],
+            [
+              227581.0,
+              8185127.5
+            ],
+            [
+              227584.5,
+              8185134.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_009",
+      "properties": {
+        "id": "roof_009",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185126.0
+            ],
+            [
+              227588.5,
+              8185118.5
+            ],
+            [
+              227584.5,
+              8185112.0
+            ],
+            [
+              227576.5,
+              8185117.0
+            ],
+            [
+              227576.5,
+              8185126.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_010",
+      "properties": {
+        "id": "roof_010",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185111.5
+            ],
+            [
+              227584.0,
+              8185107.0
+            ],
+            [
+              227580.5,
+              8185101.0
+            ],
+            [
+              227576.5,
+              8185103.5
+            ],
+            [
+              227576.5,
+              8185111.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_011",
+      "properties": {
+        "id": "roof_011",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185103.0
+            ],
+            [
+              227581.0,
+              8185100.5
+            ],
+            [
+              227576.5,
+              8185094.0
+            ],
+            [
+              227576.5,
+              8185103.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_012",
+      "properties": {
+        "id": "roof_012",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227608.5,
+              8185124.5
+            ],
+            [
+              227616.5,
+              8185119.5
+            ],
+            [
+              227613.0,
+              8185113.5
+            ],
+            [
+              227604.0,
+              8185118.5
+            ],
+            [
+              227608.5,
+              8185124.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_013",
+      "properties": {
+        "id": "roof_013",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227604.5,
+              8185117.0
+            ],
+            [
+              227613.0,
+              8185112.0
+            ],
+            [
+              227609.5,
+              8185107.0
+            ],
+            [
+              227600.0,
+              8185111.5
+            ],
+            [
+              227604.5,
+              8185117.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_014",
+      "properties": {
+        "id": "roof_014",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.0,
+              8185110.0
+            ],
+            [
+              227612.5,
+              8185103.0
+            ],
+            [
+              227608.0,
+              8185097.0
+            ],
+            [
+              227596.5,
+              8185104.0
+            ],
+            [
+              227601.0,
+              8185110.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_015",
+      "properties": {
+        "id": "roof_015",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227613.0,
+              8185102.5
+            ],
+            [
+              227617.0,
+              8185100.0
+            ],
+            [
+              227614.0,
+              8185094.0
+            ],
+            [
+              227610.0,
+              8185096.5
+            ],
+            [
+              227613.0,
+              8185102.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_016",
+      "properties": {
+        "id": "roof_016",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227622.0,
+              8185141.5
+            ],
+            [
+              227632.5,
+              8185135.0
+            ],
+            [
+              227628.0,
+              8185128.0
+            ],
+            [
+              227617.5,
+              8185134.5
+            ],
+            [
+              227622.0,
+              8185141.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_017",
+      "properties": {
+        "id": "roof_017",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227617.0,
+              8185133.0
+            ],
+            [
+              227628.0,
+              8185126.5
+            ],
+            [
+              227623.5,
+              8185119.5
+            ],
+            [
+              227611.0,
+              8185127.0
+            ],
+            [
+              227617.0,
+              8185133.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_019",
+      "properties": {
+        "id": "roof_019",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227639.0,
+              8185165.5
+            ],
+            [
+              227650.0,
+              8185165.5
+            ],
+            [
+              227655.5,
+              8185160.5
+            ],
+            [
+              227650.5,
+              8185154.0
+            ],
+            [
+              227640.5,
+              8185159.5
+            ],
+            [
+              227639.0,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_020",
+      "properties": {
+        "id": "roof_020",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227650.0,
+              8185153.5
+            ],
+            [
+              227658.5,
+              8185149.0
+            ],
+            [
+              227654.0,
+              8185143.0
+            ],
+            [
+              227646.5,
+              8185147.5
+            ],
+            [
+              227650.0,
+              8185153.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_021",
+      "properties": {
+        "id": "roof_021",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227656.5,
+              8185165.5
+            ],
+            [
+              227666.5,
+              8185165.5
+            ],
+            [
+              227672.5,
+              8185160.5
+            ],
+            [
+              227672.5,
+              8185158.0
+            ],
+            [
+              227664.5,
+              8185155.0
+            ],
+            [
+              227655.5,
+              8185160.0
+            ],
+            [
+              227656.5,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_022",
+      "properties": {
+        "id": "roof_022",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227665.5,
+              8185154.5
+            ],
+            [
+              227672.5,
+              8185150.5
+            ],
+            [
+              227672.5,
+              8185146.0
+            ],
+            [
+              227667.5,
+              8185141.0
+            ],
+            [
+              227659.0,
+              8185147.0
+            ],
+            [
+              227665.5,
+              8185154.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_023",
+      "properties": {
+        "id": "roof_023",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227658.5,
+              8185147.0
+            ],
+            [
+              227667.0,
+              8185141.5
+            ],
+            [
+              227662.0,
+              8185135.0
+            ],
+            [
+              227653.5,
+              8185140.0
+            ],
+            [
+              227658.5,
+              8185147.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_025",
+      "properties": {
+        "id": "roof_025",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227636.5,
+              8185156.0
+            ],
+            [
+              227646.5,
+              8185150.0
+            ],
+            [
+              227642.5,
+              8185144.5
+            ],
+            [
+              227632.0,
+              8185150.0
+            ],
+            [
+              227636.5,
+              8185156.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_026",
+      "properties": {
+        "id": "roof_026",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227631.0,
+              8185148.5
+            ],
+            [
+              227641.5,
+              8185142.0
+            ],
+            [
+              227638.0,
+              8185138.0
+            ],
+            [
+              227627.5,
+              8185143.5
+            ],
+            [
+              227631.0,
+              8185148.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_027",
+      "properties": {
+        "id": "roof_027",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227647.0,
+              8185142.0
+            ],
+            [
+              227659.5,
+              8185134.0
+            ],
+            [
+              227653.0,
+              8185126.5
+            ],
+            [
+              227641.5,
+              8185133.5
+            ],
+            [
+              227647.0,
+              8185142.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_028",
+      "properties": {
+        "id": "roof_028",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227644.0,
+              8185145.0
+            ],
+            [
+              227647.0,
+              8185142.0
+            ],
+            [
+              227642.5,
+              8185137.0
+            ],
+            [
+              227639.5,
+              8185139.0
+            ],
+            [
+              227644.0,
+              8185145.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_029",
+      "properties": {
+        "id": "roof_029",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227645.0,
+              8185131.0
+            ],
+            [
+              227656.0,
+              8185124.5
+            ],
+            [
+              227652.0,
+              8185117.0
+            ],
+            [
+              227641.5,
+              8185123.5
+            ],
+            [
+              227645.0,
+              8185131.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_030",
+      "properties": {
+        "id": "roof_030",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227637.0,
+              8185129.0
+            ],
+            [
+              227642.0,
+              8185125.5
+            ],
+            [
+              227638.5,
+              8185121.0
+            ],
+            [
+              227633.5,
+              8185124.0
+            ],
+            [
+              227637.0,
+              8185129.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_031",
+      "properties": {
+        "id": "roof_031",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227640.0,
+              8185115.5
+            ],
+            [
+              227647.5,
+              8185111.0
+            ],
+            [
+              227642.5,
+              8185103.5
+            ],
+            [
+              227635.0,
+              8185108.5
+            ],
+            [
+              227640.0,
+              8185115.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_032",
+      "properties": {
+        "id": "roof_032",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227631.5,
+              8185122.5
+            ],
+            [
+              227640.0,
+              8185117.0
+            ],
+            [
+              227635.0,
+              8185110.0
+            ],
+            [
+              227626.5,
+              8185115.0
+            ],
+            [
+              227631.5,
+              8185122.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_033",
+      "properties": {
+        "id": "roof_033",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227608.0,
+              8185088.0
+            ],
+            [
+              227618.0,
+              8185082.0
+            ],
+            [
+              227613.0,
+              8185075.0
+            ],
+            [
+              227603.0,
+              8185081.0
+            ],
+            [
+              227608.0,
+              8185088.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_034",
+      "properties": {
+        "id": "roof_034",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227618.5,
+              8185082.5
+            ],
+            [
+              227628.5,
+              8185076.5
+            ],
+            [
+              227624.0,
+              8185070.0
+            ],
+            [
+              227613.5,
+              8185075.5
+            ],
+            [
+              227618.5,
+              8185082.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_035",
+      "properties": {
+        "id": "roof_035",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227618.5,
+              8185095.5
+            ],
+            [
+              227629.5,
+              8185089.0
+            ],
+            [
+              227625.0,
+              8185082.5
+            ],
+            [
+              227613.5,
+              8185089.0
+            ],
+            [
+              227618.5,
+              8185095.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_036",
+      "properties": {
+        "id": "roof_036",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227623.0,
+              8185103.0
+            ],
+            [
+              227633.5,
+              8185096.0
+            ],
+            [
+              227629.5,
+              8185089.5
+            ],
+            [
+              227619.0,
+              8185096.0
+            ],
+            [
+              227623.0,
+              8185103.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_038",
+      "properties": {
+        "id": "roof_038",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227596.5,
+              8185100.5
+            ],
+            [
+              227608.5,
+              8185093.5
+            ],
+            [
+              227604.0,
+              8185087.0
+            ],
+            [
+              227592.0,
+              8185093.0
+            ],
+            [
+              227596.5,
+              8185100.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_039",
+      "properties": {
+        "id": "roof_039",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227587.0,
+              8185086.5
+            ],
+            [
+              227598.0,
+              8185079.5
+            ],
+            [
+              227592.0,
+              8185071.0
+            ],
+            [
+              227582.0,
+              8185077.0
+            ],
+            [
+              227587.0,
+              8185086.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_041",
+      "properties": {
+        "id": "roof_041",
+        "confidence": "clear",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227587.5,
+              8185096.0
+            ],
+            [
+              227592.5,
+              8185092.5
+            ],
+            [
+              227589.0,
+              8185088.0
+            ],
+            [
+              227583.5,
+              8185091.0
+            ],
+            [
+              227587.5,
+              8185096.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_042",
+      "properties": {
+        "id": "roof_042",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227600.5,
+              8185077.0
+            ],
+            [
+              227611.5,
+              8185070.0
+            ],
+            [
+              227610.5,
+              8185069.5
+            ],
+            [
+              227596.0,
+              8185069.5
+            ],
+            [
+              227600.5,
+              8185077.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_043",
+      "properties": {
+        "id": "roof_043",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227653.5,
+              8185084.5
+            ],
+            [
+              227663.5,
+              8185077.0
+            ],
+            [
+              227659.0,
+              8185069.5
+            ],
+            [
+              227650.0,
+              8185069.5
+            ],
+            [
+              227646.5,
+              8185073.5
+            ],
+            [
+              227653.5,
+              8185084.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_044",
+      "properties": {
+        "id": "roof_044",
+        "confidence": "approximate",
+        "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227665.0,
+              8185085.0
+            ],
+            [
+              227672.5,
+              8185080.0
+            ],
+            [
+              227672.5,
+              8185069.5
+            ],
+            [
+              227663.0,
+              8185074.5
+            ],
+            [
+              227665.0,
+              8185085.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

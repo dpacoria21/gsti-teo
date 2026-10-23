@@ -13,13 +13,18 @@ from rasterio.features import rasterize
 from torch.utils.data import Dataset
 
 
-def read_manifest(path: str | Path) -> dict:
+def read_manifest(path: str | Path, *, required_splits: tuple[str, ...] = ("train", "val", "test")) -> dict:
     """Resolve paths and reject repeated scenes or prediction-derived supervision."""
     path = Path(path).resolve()
     manifest = json.loads(path.read_text(encoding="utf-8"))
     scenes = manifest.get("scenes", [])
     if not scenes or manifest.get("annotation_type") != "reference":
         raise ValueError("El manifiesto debe incluir scenes y annotation_type='reference'.")
+    expected = set(required_splits)
+    if not expected or not expected.issubset({"train", "val", "test"}) or len(expected) != len(required_splits):
+        raise ValueError("required_splits debe contener particiones válidas, distintas y no vacías.")
+    if {scene.get("split") for scene in scenes} != expected:
+        raise ValueError(f"El manifiesto debe incluir exactamente las particiones: {', '.join(required_splits)}.")
     seen = {key: set() for key in ("scene_id", "image", "labels")}
     for scene in scenes:
         if scene.get("split") not in {"train", "val", "test"}:
@@ -46,8 +51,6 @@ def read_manifest(path: str | Path) -> dict:
             if not ignore_path.is_file():
                 raise ValueError(f"No existe el archivo ignore_regions: {ignore_path}")
             scene["ignore_regions"] = str(ignore_path)
-    if {scene["split"] for scene in scenes} != {"train", "val", "test"}:
-        raise ValueError("El manifiesto debe incluir train, val y test separados.")
     return manifest
 
 
@@ -100,13 +103,15 @@ def read_rgb(source) -> tuple[np.ndarray, np.ndarray]:
     return pixels, valid
 
 
-def evaluation_validity(source, valid: np.ndarray, ignore_path: str | Path | None) -> np.ndarray:
+def evaluation_validity(
+    source, valid: np.ndarray, ignore_path: str | Path | None, *, allow_empty: bool = False
+) -> np.ndarray:
     """Exclude uncertain regions from evaluation only, retaining the original RGB.
 
     Ignore polygons use the same pixel-centre rasterization convention as labels.
     Both reference and prediction masks are later clipped to this evaluable area.
-    This is not a loss mask for torchvision's detector and must not be used to
-    train on incomplete annotations.
+    Training callers must also exclude complete ambiguous instances and install
+    the opt-in RPN/ROI losses; stock torchvision cannot consume this mask.
     """
     if ignore_path is None:
         return valid
@@ -127,20 +132,44 @@ def evaluation_validity(source, valid: np.ndarray, ignore_path: str | Path | Non
         else np.zeros(valid.shape, dtype="uint8")
     )
     evaluated = valid & ~ignored.astype(bool)
-    if not evaluated.any():
+    if not evaluated.any() and not allow_empty:
         raise ValueError("ignore_regions no deja píxeles válidos para evaluar la escena.")
     return evaluated
 
 
-class BuildingDataset(Dataset):
-    """Whole scenes; optional ignore regions are supported only for evaluation."""
+def training_supervision(masks: np.ndarray, valid: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """Exclude ambiguous instances whole, never teach their clipped fragments as roofs.
 
-    def __init__(self, manifest: dict, split: str, augment: bool = False):
+    Exclusion propagates through overlapping reference masks so that an excluded
+    roof never becomes background or clips another retained reference. Tiny
+    annotated instances are also ignored rather than relabelled as background.
+    """
+    supervised = valid.copy()
+    retained = np.ones(len(masks), dtype=bool)
+    too_small = masks.sum(axis=(1, 2)) < 4
+    while True:
+        excluded = retained & (too_small | (masks.astype(bool) & ~supervised).any(axis=(1, 2)))
+        if not excluded.any():
+            break
+        supervised &= ~masks[excluded].any(axis=0)
+        retained[excluded] = False
+    return masks[retained], supervised
+
+
+class BuildingDataset(Dataset):
+    """Whole scenes; training ignore requires explicit model/dataset opt-in."""
+
+    def __init__(self, manifest: dict, split: str, augment: bool = False, allow_training_ignore: bool = False):
         self.scenes = [scene for scene in manifest["scenes"] if scene["split"] == split]
         self.augment = augment
+        self.training_ignore = split == "train" and allow_training_ignore
         if split != "train" and augment:
             raise ValueError("Las escenas val/test no deben aumentarse.")
-        if split == "train" and any(scene.get("ignore_regions") is not None for scene in self.scenes):
+        if (
+            split == "train"
+            and not allow_training_ignore
+            and any(scene.get("ignore_regions") is not None for scene in self.scenes)
+        ):
             raise ValueError(
                 "No se admite ignore_regions en train: Mask R-CNN no ignora esas pérdidas. "
                 "Use recortes completamente anotados; la exclusión solo está implementada para evaluación."
@@ -153,12 +182,16 @@ class BuildingDataset(Dataset):
         scene = self.scenes[index]
         with rasterio.open(scene["image"]) as source:
             pixels, valid = read_rgb(source)
-            valid = evaluation_validity(source, valid, scene.get("ignore_regions"))
+            valid = evaluation_validity(source, valid, scene.get("ignore_regions"), allow_empty=self.training_ignore)
             labels = gpd.read_file(scene["labels"])
             if labels.crs is None:
                 raise ValueError("Las etiquetas necesitan un CRS explícito.")
             labels = labels.to_crs(source.crs)
-            masks = reference_masks(labels.geometry, (source.height, source.width), source.transform, valid)
+            if self.training_ignore:
+                masks = reference_masks(labels.geometry, (source.height, source.width), source.transform, min_pixels=1)
+                masks, valid = training_supervision(masks, valid)
+            else:
+                masks = reference_masks(labels.geometry, (source.height, source.width), source.transform, valid)
         image = torch.from_numpy(pixels)
         masks = torch.from_numpy(masks)
         valid_mask = torch.from_numpy(valid.copy())
@@ -180,6 +213,8 @@ class BuildingDataset(Dataset):
             "iscrowd": torch.zeros(len(masks), dtype=torch.int64),
             "valid_mask": valid_mask,
         }
+        if self.training_ignore:
+            target["supervision_mask"] = valid_mask.clone()
         return image.contiguous(), target
 
 

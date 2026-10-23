@@ -1,0 +1,1870 @@
+{
+  "scene_id": "train_1600_500",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "id": "r01",
+      "points": [
+        [
+          8,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          16,
+          31
+        ],
+        [
+          8,
+          32
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r02",
+      "points": [
+        [
+          17,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          24,
+          16
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r03",
+      "points": [
+        [
+          25,
+          0
+        ],
+        [
+          33,
+          0
+        ],
+        [
+          33,
+          27
+        ],
+        [
+          24,
+          27
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r04",
+      "points": [
+        [
+          34,
+          0
+        ],
+        [
+          42,
+          0
+        ],
+        [
+          42,
+          31
+        ],
+        [
+          33,
+          31
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r05",
+      "points": [
+        [
+          43,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          43,
+          15
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r06",
+      "points": [
+        [
+          50,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          63,
+          29
+        ],
+        [
+          51,
+          28
+        ],
+        [
+          51,
+          20
+        ],
+        [
+          49,
+          18
+        ]
+      ],
+      "confidence": "approximate",
+      "audit_v2": {
+        "action": "ignore_entire_instance",
+        "reason": "Parte inferior con vegetación u oclusión junto a plano gris superior; continuidad de cubierta incierta. Se conserva la instancia completa bajo ignore, sin recortar un nuevo techo parcial.",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false
+      }
+    },
+    {
+      "id": "r07",
+      "points": [
+        [
+          65,
+          0
+        ],
+        [
+          76,
+          0
+        ],
+        [
+          76,
+          16
+        ],
+        [
+          65,
+          16
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r08",
+      "points": [
+        [
+          76,
+          0
+        ],
+        [
+          88,
+          0
+        ],
+        [
+          87,
+          18
+        ],
+        [
+          82,
+          18
+        ],
+        [
+          81,
+          30
+        ],
+        [
+          76,
+          30
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado."
+    },
+    {
+      "id": "r09",
+      "points": [
+        [
+          89,
+          0
+        ],
+        [
+          99,
+          0
+        ],
+        [
+          99,
+          13
+        ],
+        [
+          96,
+          15
+        ],
+        [
+          91,
+          13
+        ],
+        [
+          89,
+          17
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado."
+    },
+    {
+      "id": "r10",
+      "points": [
+        [
+          102,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          8
+        ],
+        [
+          105,
+          8
+        ],
+        [
+          105,
+          14
+        ],
+        [
+          100,
+          14
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r11",
+      "points": [
+        [
+          111,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          118,
+          13
+        ],
+        [
+          111,
+          13
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r12",
+      "points": [
+        [
+          121,
+          0
+        ],
+        [
+          136,
+          0
+        ],
+        [
+          136,
+          22
+        ],
+        [
+          123,
+          25
+        ],
+        [
+          121,
+          17
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r13",
+      "points": [
+        [
+          137,
+          0
+        ],
+        [
+          145,
+          0
+        ],
+        [
+          145,
+          25
+        ],
+        [
+          140,
+          25
+        ],
+        [
+          139,
+          17
+        ],
+        [
+          137,
+          17
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r14",
+      "points": [
+        [
+          157,
+          0
+        ],
+        [
+          162,
+          0
+        ],
+        [
+          166,
+          16
+        ],
+        [
+          157,
+          17
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r15",
+      "points": [
+        [
+          163,
+          0
+        ],
+        [
+          177,
+          0
+        ],
+        [
+          178,
+          10
+        ],
+        [
+          167,
+          15
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r16",
+      "points": [
+        [
+          179,
+          0
+        ],
+        [
+          192,
+          0
+        ],
+        [
+          192,
+          17
+        ],
+        [
+          186,
+          14
+        ],
+        [
+          185,
+          8
+        ],
+        [
+          179,
+          10
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado."
+    },
+    {
+      "id": "r17",
+      "points": [
+        [
+          0,
+          32
+        ],
+        [
+          15,
+          32
+        ],
+        [
+          15,
+          57
+        ],
+        [
+          8,
+          56
+        ],
+        [
+          6,
+          51
+        ],
+        [
+          0,
+          51
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r18",
+      "points": [
+        [
+          20,
+          37
+        ],
+        [
+          32,
+          37
+        ],
+        [
+          32,
+          64
+        ],
+        [
+          20,
+          63
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r19",
+      "points": [
+        [
+          33,
+          37
+        ],
+        [
+          41,
+          37
+        ],
+        [
+          41,
+          63
+        ],
+        [
+          33,
+          64
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r20",
+      "points": [
+        [
+          42,
+          32
+        ],
+        [
+          49,
+          32
+        ],
+        [
+          49,
+          62
+        ],
+        [
+          42,
+          62
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r21",
+      "points": [
+        [
+          49,
+          33
+        ],
+        [
+          58,
+          34
+        ],
+        [
+          58,
+          62
+        ],
+        [
+          49,
+          62
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r22",
+      "points": [
+        [
+          61,
+          36
+        ],
+        [
+          74,
+          36
+        ],
+        [
+          74,
+          57
+        ],
+        [
+          61,
+          57
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r23",
+      "points": [
+        [
+          75,
+          31
+        ],
+        [
+          80,
+          32
+        ],
+        [
+          80,
+          63
+        ],
+        [
+          75,
+          63
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r24",
+      "points": [
+        [
+          82,
+          31
+        ],
+        [
+          91,
+          31
+        ],
+        [
+          91,
+          39
+        ],
+        [
+          88,
+          40
+        ],
+        [
+          88,
+          45
+        ],
+        [
+          92,
+          45
+        ],
+        [
+          91,
+          63
+        ],
+        [
+          81,
+          63
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r25",
+      "points": [
+        [
+          92,
+          31
+        ],
+        [
+          100,
+          31
+        ],
+        [
+          101,
+          55
+        ],
+        [
+          96,
+          55
+        ],
+        [
+          97,
+          63
+        ],
+        [
+          92,
+          63
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r26",
+      "points": [
+        [
+          102,
+          34
+        ],
+        [
+          112,
+          34
+        ],
+        [
+          112,
+          59
+        ],
+        [
+          102,
+          59
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r27",
+      "points": [
+        [
+          118,
+          33
+        ],
+        [
+          140,
+          32
+        ],
+        [
+          140,
+          49
+        ],
+        [
+          118,
+          49
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r28",
+      "points": [
+        [
+          118,
+          50
+        ],
+        [
+          139,
+          50
+        ],
+        [
+          139,
+          62
+        ],
+        [
+          121,
+          62
+        ],
+        [
+          121,
+          57
+        ],
+        [
+          118,
+          57
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r29",
+      "points": [
+        [
+          144,
+          33
+        ],
+        [
+          159,
+          35
+        ],
+        [
+          158,
+          46
+        ],
+        [
+          143,
+          44
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r30",
+      "points": [
+        [
+          144,
+          46
+        ],
+        [
+          159,
+          47
+        ],
+        [
+          159,
+          60
+        ],
+        [
+          143,
+          61
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r31",
+      "points": [
+        [
+          161,
+          17
+        ],
+        [
+          174,
+          18
+        ],
+        [
+          170,
+          30
+        ],
+        [
+          159,
+          29
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r32",
+      "points": [
+        [
+          178,
+          36
+        ],
+        [
+          190,
+          40
+        ],
+        [
+          187,
+          47
+        ],
+        [
+          175,
+          43
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r33",
+      "points": [
+        [
+          175,
+          47
+        ],
+        [
+          187,
+          51
+        ],
+        [
+          181,
+          63
+        ],
+        [
+          167,
+          58
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r34",
+      "points": [
+        [
+          0,
+          81
+        ],
+        [
+          14,
+          81
+        ],
+        [
+          14,
+          92
+        ],
+        [
+          0,
+          92
+        ]
+      ],
+      "confidence": "approximate",
+      "audit_v2": {
+        "action": "ignore_entire_instance",
+        "reason": "Estructura lineal con elementos paralelos junto a la calle; el RGB no distingue cubierta continua, estructura abierta en construcción o fachada. Se ignora la instancia completa.",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false
+      }
+    },
+    {
+      "id": "r35",
+      "points": [
+        [
+          16,
+          82
+        ],
+        [
+          31,
+          82
+        ],
+        [
+          30,
+          93
+        ],
+        [
+          16,
+          92
+        ]
+      ],
+      "confidence": "approximate",
+      "audit_v2": {
+        "action": "ignore_entire_instance",
+        "reason": "Estructura lineal contigua a r34 con huecos oscuros; no se confirma cubierta opaca independiente. No se fusiona ni se convierte en objeto parcial.",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false
+      }
+    },
+    {
+      "id": "r36",
+      "points": [
+        [
+          16,
+          95
+        ],
+        [
+          31,
+          95
+        ],
+        [
+          31,
+          105
+        ],
+        [
+          16,
+          105
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r37",
+      "points": [
+        [
+          0,
+          96
+        ],
+        [
+          14,
+          97
+        ],
+        [
+          14,
+          112
+        ],
+        [
+          0,
+          111
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r38",
+      "points": [
+        [
+          34,
+          90
+        ],
+        [
+          51,
+          90
+        ],
+        [
+          51,
+          111
+        ],
+        [
+          33,
+          109
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r39",
+      "points": [
+        [
+          52,
+          88
+        ],
+        [
+          67,
+          88
+        ],
+        [
+          66,
+          125
+        ],
+        [
+          52,
+          128
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r40",
+      "points": [
+        [
+          68,
+          88
+        ],
+        [
+          78,
+          83
+        ],
+        [
+          80,
+          110
+        ],
+        [
+          68,
+          111
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r41",
+      "points": [
+        [
+          82,
+          85
+        ],
+        [
+          91,
+          94
+        ],
+        [
+          93,
+          112
+        ],
+        [
+          80,
+          112
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r42",
+      "points": [
+        [
+          2,
+          116
+        ],
+        [
+          15,
+          116
+        ],
+        [
+          15,
+          130
+        ],
+        [
+          6,
+          130
+        ],
+        [
+          6,
+          125
+        ],
+        [
+          2,
+          125
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r43",
+      "points": [
+        [
+          25,
+          114
+        ],
+        [
+          31,
+          114
+        ],
+        [
+          31,
+          139
+        ],
+        [
+          24,
+          139
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r44",
+      "points": [
+        [
+          4,
+          132
+        ],
+        [
+          15,
+          132
+        ],
+        [
+          15,
+          153
+        ],
+        [
+          3,
+          152
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r45",
+      "points": [
+        [
+          23,
+          142
+        ],
+        [
+          31,
+          142
+        ],
+        [
+          31,
+          172
+        ],
+        [
+          18,
+          174
+        ],
+        [
+          18,
+          162
+        ],
+        [
+          22,
+          162
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r46",
+      "points": [
+        [
+          35,
+          134
+        ],
+        [
+          48,
+          132
+        ],
+        [
+          50,
+          148
+        ],
+        [
+          35,
+          148
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r47",
+      "points": [
+        [
+          50,
+          132
+        ],
+        [
+          64,
+          131
+        ],
+        [
+          67,
+          147
+        ],
+        [
+          56,
+          149
+        ],
+        [
+          56,
+          143
+        ],
+        [
+          53,
+          143
+        ],
+        [
+          53,
+          147
+        ],
+        [
+          50,
+          147
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r48",
+      "points": [
+        [
+          37,
+          150
+        ],
+        [
+          48,
+          151
+        ],
+        [
+          48,
+          158
+        ],
+        [
+          37,
+          158
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r49",
+      "points": [
+        [
+          50,
+          150
+        ],
+        [
+          64,
+          151
+        ],
+        [
+          64,
+          168
+        ],
+        [
+          54,
+          168
+        ],
+        [
+          54,
+          159
+        ],
+        [
+          49,
+          159
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r50",
+      "points": [
+        [
+          39,
+          159
+        ],
+        [
+          47,
+          159
+        ],
+        [
+          47,
+          170
+        ],
+        [
+          38,
+          170
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r51",
+      "points": [
+        [
+          0,
+          157
+        ],
+        [
+          14,
+          158
+        ],
+        [
+          14,
+          175
+        ],
+        [
+          0,
+          175
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r52",
+      "points": [
+        [
+          0,
+          177
+        ],
+        [
+          15,
+          177
+        ],
+        [
+          15,
+          192
+        ],
+        [
+          0,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r53",
+      "points": [
+        [
+          36,
+          173
+        ],
+        [
+          63,
+          173
+        ],
+        [
+          63,
+          180
+        ],
+        [
+          54,
+          185
+        ],
+        [
+          32,
+          181
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r54",
+      "points": [
+        [
+          100,
+          94
+        ],
+        [
+          112,
+          94
+        ],
+        [
+          112,
+          111
+        ],
+        [
+          100,
+          111
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r55",
+      "points": [
+        [
+          114,
+          97
+        ],
+        [
+          126,
+          98
+        ],
+        [
+          125,
+          112
+        ],
+        [
+          113,
+          112
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r56",
+      "points": [
+        [
+          128,
+          97
+        ],
+        [
+          141,
+          99
+        ],
+        [
+          138,
+          112
+        ],
+        [
+          127,
+          111
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r57",
+      "points": [
+        [
+          147,
+          92
+        ],
+        [
+          158,
+          98
+        ],
+        [
+          153,
+          109
+        ],
+        [
+          143,
+          105
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r58",
+      "points": [
+        [
+          164,
+          89
+        ],
+        [
+          176,
+          96
+        ],
+        [
+          169,
+          108
+        ],
+        [
+          159,
+          102
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r59",
+      "points": [
+        [
+          157,
+          104
+        ],
+        [
+          169,
+          111
+        ],
+        [
+          159,
+          126
+        ],
+        [
+          148,
+          121
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r60",
+      "points": [
+        [
+          97,
+          113
+        ],
+        [
+          110,
+          113
+        ],
+        [
+          111,
+          125
+        ],
+        [
+          96,
+          125
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r61",
+      "points": [
+        [
+          112,
+          114
+        ],
+        [
+          127,
+          113
+        ],
+        [
+          127,
+          125
+        ],
+        [
+          120,
+          125
+        ],
+        [
+          120,
+          122
+        ],
+        [
+          113,
+          122
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r62",
+      "points": [
+        [
+          129,
+          114
+        ],
+        [
+          139,
+          115
+        ],
+        [
+          141,
+          124
+        ],
+        [
+          130,
+          126
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r63",
+      "points": [
+        [
+          143,
+          108
+        ],
+        [
+          152,
+          111
+        ],
+        [
+          148,
+          119
+        ],
+        [
+          141,
+          118
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado."
+    },
+    {
+      "id": "r64",
+      "points": [
+        [
+          177,
+          101
+        ],
+        [
+          190,
+          113
+        ],
+        [
+          186,
+          118
+        ],
+        [
+          172,
+          107
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r65",
+      "points": [
+        [
+          173,
+          115
+        ],
+        [
+          184,
+          122
+        ],
+        [
+          178,
+          135
+        ],
+        [
+          163,
+          124
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r66",
+      "points": [
+        [
+          186,
+          126
+        ],
+        [
+          192,
+          130
+        ],
+        [
+          192,
+          143
+        ],
+        [
+          182,
+          138
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r67",
+      "points": [
+        [
+          182,
+          140
+        ],
+        [
+          188,
+          144
+        ],
+        [
+          184,
+          149
+        ],
+        [
+          179,
+          146
+        ]
+      ],
+      "confidence": "approximate",
+      "audit_v2": {
+        "action": "ignore_entire_instance",
+        "reason": "Predomina sombra/posible vegetación junto al parque y muro; no se confirma un techo separado. Se conserva su geometría original bajo ignore.",
+        "evidence": "outputs/label_audit_v2/train_1600_500_q4.png",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false
+      }
+    }
+  ],
+  "ignore_polygons": [
+    {
+      "points": [
+        [
+          30,
+          112
+        ],
+        [
+          51,
+          112
+        ],
+        [
+          51,
+          132
+        ],
+        [
+          33,
+          132
+        ]
+      ],
+      "reason": "Interior sombreado: no se distingue completamente cubierta de patio."
+    },
+    {
+      "points": [
+        [
+          80,
+          113
+        ],
+        [
+          96,
+          113
+        ],
+        [
+          96,
+          130
+        ],
+        [
+          80,
+          130
+        ]
+      ],
+      "reason": "Sombra profunda bajo cubierta alta; límites inferiores no resolubles."
+    },
+    {
+      "points": [
+        [
+          29,
+          181
+        ],
+        [
+          56,
+          185
+        ],
+        [
+          63,
+          180
+        ],
+        [
+          64,
+          192
+        ],
+        [
+          29,
+          192
+        ]
+      ],
+      "reason": "Fachada y partes ocluidas del edificio alto; no inferir proyección de la cubierta."
+    },
+    {
+      "points": [
+        [
+          160,
+          31
+        ],
+        [
+          177,
+          31
+        ],
+        [
+          171,
+          45
+        ],
+        [
+          160,
+          45
+        ]
+      ],
+      "reason": "Cubiertas, sombras y patios pequeños sin separación clara."
+    },
+    {
+      "points": [
+        [
+          50,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          63,
+          29
+        ],
+        [
+          51,
+          28
+        ],
+        [
+          51,
+          20
+        ],
+        [
+          49,
+          18
+        ]
+      ],
+      "reason": "Parte inferior con vegetación u oclusión junto a plano gris superior; continuidad de cubierta incierta. Se conserva la instancia completa bajo ignore, sin recortar un nuevo techo parcial.",
+      "source_reference_id": "r06",
+      "audit_action": "ignore_entire_instance",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png"
+    },
+    {
+      "points": [
+        [
+          0,
+          81
+        ],
+        [
+          14,
+          81
+        ],
+        [
+          14,
+          92
+        ],
+        [
+          0,
+          92
+        ]
+      ],
+      "reason": "Estructura lineal con elementos paralelos junto a la calle; el RGB no distingue cubierta continua, estructura abierta en construcción o fachada. Se ignora la instancia completa.",
+      "source_reference_id": "r34",
+      "audit_action": "ignore_entire_instance",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png"
+    },
+    {
+      "points": [
+        [
+          16,
+          82
+        ],
+        [
+          31,
+          82
+        ],
+        [
+          30,
+          93
+        ],
+        [
+          16,
+          92
+        ]
+      ],
+      "reason": "Estructura lineal contigua a r34 con huecos oscuros; no se confirma cubierta opaca independiente. No se fusiona ni se convierte en objeto parcial.",
+      "source_reference_id": "r35",
+      "audit_action": "ignore_entire_instance",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png"
+    },
+    {
+      "points": [
+        [
+          182,
+          140
+        ],
+        [
+          188,
+          144
+        ],
+        [
+          184,
+          149
+        ],
+        [
+          179,
+          146
+        ]
+      ],
+      "reason": "Predomina sombra/posible vegetación junto al parque y muro; no se confirma un techo separado. Se conserva su geometría original bajo ignore.",
+      "source_reference_id": "r67",
+      "audit_action": "ignore_entire_instance",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q4.png"
+    }
+  ],
+  "review_notes": [
+    "Anotación visual provisional de cubiertas visibles; no identifica predios, viviendas habitadas ni linderos legales.",
+    "Las construcciones se separan por límites de cubierta observables, con bordes aproximados en la imagen. Patios, parque, vías y fachadas quedan fuera.",
+    "Las regiones ignoradas no pueden usarse como fondo negativo al entrenar. Extraer únicamente ventanas que no las intersecten.",
+    "No se usaron predicciones del detector para crear estas etiquetas. Se requiere revisión humana de los contornos.",
+    "QA: r08/r09/r16/r63 ajustados en 1-2 píxeles tras inspección de la separación visible; no se hizo diferencia geométrica automática.",
+    "Auditoría v2 visual por asistente sobre RGB original; no revisión humana ni catastro. Se excluyen de supervisión instancias ambiguas completas mediante ignore; dos referencias sobre calzada se archivan como retiradas. Ningún contorno retenido se redibujó."
+  ],
+  "audit_revision": {
+    "version": "chullo_local_v2_visual_audit",
+    "date": "2026-10-23",
+    "source_annotation_sha256": "45b41ed340eb3698960d182ed8bce81001aa99f1d9a4724c045181e0d9c76768",
+    "annotation_method": "assistant_visual_manual",
+    "human_reviewed": false,
+    "reference_definition": "Visible roof instance; not dwelling, parcel, ownership or occupancy.",
+    "model_predictions_used": false,
+    "validation_or_test_labels_modified": false,
+    "coordinate_policy": "All retained/ignored instance geometries and holes copied verbatim. No partial GT objects created."
+  }
+}

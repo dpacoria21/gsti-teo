@@ -1,0 +1,277 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Borde superior: cubiertas contiguas y niveles de azotea cuya separación no se puede resolver con suficiente consistencia; no se infieren linderos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1100_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227344.0,
+              8185165.5
+            ],
+            [
+              227377.0,
+              8185165.5
+            ],
+            [
+              227373.5,
+              8185160.5
+            ],
+            [
+              227361.5,
+              8185153.5
+            ],
+            [
+              227350.5,
+              8185147.5
+            ],
+            [
+              227348.0,
+              8185151.5
+            ],
+            [
+              227345.0,
+              8185157.0
+            ],
+            [
+              227344.0,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Patios, escaleras y cubiertas pequeñas intercaladas; separación cubierta-patio ambigua.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1100_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227390.5,
+              8185156.5
+            ],
+            [
+              227405.0,
+              8185154.0
+            ],
+            [
+              227403.5,
+              8185147.5
+            ],
+            [
+              227399.5,
+              8185147.0
+            ],
+            [
+              227397.0,
+              8185150.0
+            ],
+            [
+              227390.5,
+              8185148.0
+            ],
+            [
+              227390.5,
+              8185156.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Franja de azoteas pequeñas, sombras y patios: no se distingue exhaustivamente cada cubierta individual; excluida de evaluación.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1100_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227405.0,
+              8185150.5
+            ],
+            [
+              227414.0,
+              8185148.5
+            ],
+            [
+              227412.0,
+              8185139.5
+            ],
+            [
+              227415.5,
+              8185135.5
+            ],
+            [
+              227413.5,
+              8185127.5
+            ],
+            [
+              227417.5,
+              8185123.5
+            ],
+            [
+              227413.5,
+              8185110.5
+            ],
+            [
+              227408.0,
+              8185105.0
+            ],
+            [
+              227403.0,
+              8185108.5
+            ],
+            [
+              227405.5,
+              8185115.0
+            ],
+            [
+              227402.0,
+              8185116.0
+            ],
+            [
+              227403.0,
+              8185124.0
+            ],
+            [
+              227400.5,
+              8185126.0
+            ],
+            [
+              227402.5,
+              8185134.0
+            ],
+            [
+              227401.0,
+              8185141.5
+            ],
+            [
+              227403.5,
+              8185145.5
+            ],
+            [
+              227405.0,
+              8185150.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Vegetación y construcciones ocultas en borde oriental; límites de cubierta inciertos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1100_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227414.0,
+              8185150.0
+            ],
+            [
+              227422.5,
+              8185150.0
+            ],
+            [
+              227422.5,
+              8185140.5
+            ],
+            [
+              227416.0,
+              8185141.0
+            ],
+            [
+              227413.0,
+              8185144.0
+            ],
+            [
+              227414.0,
+              8185150.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Acceso, sombras y estructuras pequeñas sin separación fiable respecto a patios.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1100_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227368.0,
+              8185085.5
+            ],
+            [
+              227379.0,
+              8185083.5
+            ],
+            [
+              227376.0,
+              8185078.0
+            ],
+            [
+              227372.0,
+              8185079.5
+            ],
+            [
+              227368.0,
+              8185076.0
+            ],
+            [
+              227368.0,
+              8185085.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

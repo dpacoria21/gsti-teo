@@ -176,4 +176,5 @@ def test_adjusted_model_keeps_actual_hash_and_training_provenance_in_export_meta
     assert metadata["detection"] == manifest
     source = next(source for source in metadata["sources"] if source.get("model_id") == model["id"])
     assert source["model_sha256"] == model["sha256"]
-    assert "ajuste SpaceNet" in source["organization"]
+    assert "ajuste supervisado" in source["organization"]
+    assert metadata["detection"]["model"]["variant"] == model["variant"]

@@ -49,6 +49,14 @@ Thumbs.db
 !/data/training/chullo_local_v1/*.geojson
 # Recortes preliminares de un área excluida antes del entrenamiento final.
 /data/training/chullo_local_v1/train_1100_500_chip_*
+!/data/training/chullo_local_v2/
+/data/training/chullo_local_v2/*
+!/data/training/chullo_local_v2/*.json
+!/data/training/chullo_local_v2/*.geojson
+!/data/training/chullo_local_v2/*.tif
+!/data/training/chullo_local_v2_holdout/
+/data/training/chullo_local_v2_holdout/*
+!/data/training/chullo_local_v2_holdout/*.pixels.json
 /data/processed/*
 !/data/processed/chullo/
 !/data/processed/mariano_melgar/

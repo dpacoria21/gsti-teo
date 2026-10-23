@@ -1,0 +1,337 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Conjunto en aparente construccion, sombras y posibles patios; no se resuelve cobertura de los compartimentos. No se etiquetan muros como techos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226926.5,
+              8184812.0
+            ],
+            [
+              226935.5,
+              8184805.5
+            ],
+            [
+              226938.0,
+              8184800.5
+            ],
+            [
+              226950.5,
+              8184794.5
+            ],
+            [
+              226956.0,
+              8184787.0
+            ],
+            [
+              226954.0,
+              8184781.5
+            ],
+            [
+              226948.5,
+              8184778.0
+            ],
+            [
+              226938.0,
+              8184782.0
+            ],
+            [
+              226934.0,
+              8184790.0
+            ],
+            [
+              226928.5,
+              8184793.0
+            ],
+            [
+              226926.5,
+              8184798.5
+            ],
+            [
+              226926.5,
+              8184812.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Conjunto con compartimentos y superficies oscuras: cubierta versus patio no resuelto.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226928.0,
+              8184762.5
+            ],
+            [
+              226934.0,
+              8184763.0
+            ],
+            [
+              226942.5,
+              8184758.0
+            ],
+            [
+              226942.0,
+              8184752.5
+            ],
+            [
+              226937.5,
+              8184745.5
+            ],
+            [
+              226933.0,
+              8184743.5
+            ],
+            [
+              226928.0,
+              8184747.5
+            ],
+            [
+              226926.5,
+              8184751.5
+            ],
+            [
+              226928.0,
+              8184762.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Elementos pequenos, sombra y posible escalera: cubierta no distinguible.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227006.5,
+              8184785.0
+            ],
+            [
+              227012.5,
+              8184785.5
+            ],
+            [
+              227014.0,
+              8184776.5
+            ],
+            [
+              227008.0,
+              8184773.5
+            ],
+            [
+              227006.5,
+              8184785.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Region roja y blanca puede incluir fachada o cubierta baja; geometria no resuelta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227006.5,
+              8184760.0
+            ],
+            [
+              227012.5,
+              8184759.0
+            ],
+            [
+              227016.5,
+              8184755.0
+            ],
+            [
+              227016.5,
+              8184751.0
+            ],
+            [
+              227007.5,
+              8184751.0
+            ],
+            [
+              227006.5,
+              8184760.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Pequenos elementos, patios y vegetacion mezclados; no separar instancias por suposicion.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227002.5,
+              8184734.5
+            ],
+            [
+              227010.0,
+              8184734.5
+            ],
+            [
+              227013.5,
+              8184729.0
+            ],
+            [
+              227009.5,
+              8184726.0
+            ],
+            [
+              227004.5,
+              8184728.0
+            ],
+            [
+              227001.5,
+              8184729.5
+            ],
+            [
+              227002.5,
+              8184734.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Superficie clara angosta: el RGB no permite resolver cubierta frente a paso/patio; se retira la candidata 003 antes de congelar.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226989.5,
+              8184801.5
+            ],
+            [
+              226996.0,
+              8184801.5
+            ],
+            [
+              226996.5,
+              8184790.5
+            ],
+            [
+              226990.5,
+              8184789.5
+            ],
+            [
+              226989.0,
+              8184794.0
+            ],
+            [
+              226989.5,
+              8184801.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Elemento pequeno entre vegetacion: no se distingue de forma fiable cubierta frente a material/patio; se retira candidata 004 antes de congelar.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226997.5,
+              8184797.0
+            ],
+            [
+              227005.5,
+              8184796.5
+            ],
+            [
+              227006.5,
+              8184791.0
+            ],
+            [
+              226998.5,
+              8184790.0
+            ],
+            [
+              226997.5,
+              8184797.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

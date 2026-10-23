@@ -1,0 +1,793 @@
+{
+  "scene_id": "holdout_300_1600",
+  "window": [
+    300,
+    1600,
+    192,
+    192
+  ],
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "id": "roof_001",
+      "points": [
+        [
+          137,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          168,
+          29
+        ],
+        [
+          153,
+          28
+        ],
+        [
+          141,
+          25
+        ],
+        [
+          137,
+          22
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara parcial en borde superior."
+    },
+    {
+      "id": "roof_002",
+      "points": [
+        [
+          183,
+          0
+        ],
+        [
+          192,
+          0
+        ],
+        [
+          192,
+          42
+        ],
+        [
+          178,
+          40
+        ],
+        [
+          177,
+          31
+        ],
+        [
+          180,
+          14
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara parcial derecha; se excluye el patio verde inferior."
+    },
+    {
+      "id": "roof_005",
+      "points": [
+        [
+          140,
+          53
+        ],
+        [
+          160,
+          52
+        ],
+        [
+          163,
+          69
+        ],
+        [
+          158,
+          74
+        ],
+        [
+          139,
+          73
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Plano gris oscuro rectangular; limite segun superficie visible."
+    },
+    {
+      "id": "roof_006",
+      "points": [
+        [
+          134,
+          75
+        ],
+        [
+          156,
+          76
+        ],
+        [
+          158,
+          93
+        ],
+        [
+          149,
+          97
+        ],
+        [
+          129,
+          94
+        ],
+        [
+          128,
+          83
+        ],
+        [
+          132,
+          81
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara irregular continua."
+    },
+    {
+      "id": "roof_007",
+      "points": [
+        [
+          128,
+          99
+        ],
+        [
+          158,
+          99
+        ],
+        [
+          155,
+          117
+        ],
+        [
+          143,
+          118
+        ],
+        [
+          129,
+          113
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Plano beige inferior delimitado por bordes claros."
+    },
+    {
+      "id": "roof_008",
+      "points": [
+        [
+          172,
+          96
+        ],
+        [
+          183,
+          95
+        ],
+        [
+          192,
+          100
+        ],
+        [
+          192,
+          114
+        ],
+        [
+          181,
+          119
+        ],
+        [
+          174,
+          111
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Plano claro parcial; region rojiza inferior excluida por ambiguedad."
+    },
+    {
+      "id": "roof_009",
+      "points": [
+        [
+          138,
+          165
+        ],
+        [
+          150,
+          168
+        ],
+        [
+          147,
+          176
+        ],
+        [
+          141,
+          181
+        ],
+        [
+          134,
+          192
+        ],
+        [
+          123,
+          192
+        ],
+        [
+          130,
+          179
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta roja angosta continua hacia borde inferior."
+    },
+    {
+      "id": "roof_010",
+      "points": [
+        [
+          150,
+          176
+        ],
+        [
+          157,
+          177
+        ],
+        [
+          157,
+          188
+        ],
+        [
+          153,
+          192
+        ],
+        [
+          137,
+          192
+        ],
+        [
+          143,
+          184
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta rojiza clara adyacente, separada por sombra visible."
+    },
+    {
+      "id": "roof_011",
+      "points": [
+        [
+          165,
+          179
+        ],
+        [
+          174,
+          174
+        ],
+        [
+          182,
+          182
+        ],
+        [
+          179,
+          191
+        ],
+        [
+          164,
+          192
+        ],
+        [
+          160,
+          187
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Plano gris claro irregular inferior."
+    },
+    {
+      "id": "roof_012",
+      "points": [
+        [
+          185,
+          175
+        ],
+        [
+          192,
+          170
+        ],
+        [
+          192,
+          181
+        ],
+        [
+          189,
+          181
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta azul parcial del borde derecho."
+    },
+    {
+      "id": "roof_013",
+      "points": [
+        [
+          188,
+          183
+        ],
+        [
+          192,
+          184
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          182,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara parcial inferior derecha."
+    },
+    {
+      "id": "roof_014",
+      "points": [
+        [
+          34,
+          119
+        ],
+        [
+          46,
+          121
+        ],
+        [
+          60,
+          129
+        ],
+        [
+          55,
+          148
+        ],
+        [
+          49,
+          154
+        ],
+        [
+          28,
+          142
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta beige y clara continua, sin dividir por propiedad."
+    },
+    {
+      "id": "roof_015",
+      "points": [
+        [
+          27,
+          153
+        ],
+        [
+          40,
+          159
+        ],
+        [
+          45,
+          167
+        ],
+        [
+          40,
+          178
+        ],
+        [
+          35,
+          182
+        ],
+        [
+          25,
+          178
+        ],
+        [
+          24,
+          168
+        ],
+        [
+          21,
+          161
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta continua con varios planos, rojo y gris; sin lindero inferido. QA RGB: borde occidental ajustado a la franja clara visible, sin invadir la cubierta roja 017."
+    },
+    {
+      "id": "roof_016",
+      "points": [
+        [
+          0,
+          143
+        ],
+        [
+          10,
+          146
+        ],
+        [
+          15,
+          153
+        ],
+        [
+          10,
+          161
+        ],
+        [
+          0,
+          159
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris parcial en borde occidental."
+    },
+    {
+      "id": "roof_017",
+      "points": [
+        [
+          13,
+          166
+        ],
+        [
+          21,
+          169
+        ],
+        [
+          23,
+          178
+        ],
+        [
+          18,
+          181
+        ],
+        [
+          12,
+          176
+        ],
+        [
+          8,
+          174
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Pequena cubierta roja; limites visibles aproximados."
+    },
+    {
+      "id": "roof_018",
+      "points": [
+        [
+          0,
+          163
+        ],
+        [
+          6,
+          166
+        ],
+        [
+          8,
+          171
+        ],
+        [
+          0,
+          170
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta rojiza parcial en borde occidental."
+    },
+    {
+      "id": "roof_019",
+      "points": [
+        [
+          80,
+          178
+        ],
+        [
+          90,
+          184
+        ],
+        [
+          92,
+          190
+        ],
+        [
+          84,
+          192
+        ],
+        [
+          75,
+          192
+        ],
+        [
+          75,
+          188
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara cortada por borde inferior."
+    },
+    {
+      "id": "roof_020",
+      "points": [
+        [
+          55,
+          68
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          66,
+          101
+        ],
+        [
+          54,
+          97
+        ],
+        [
+          48,
+          86
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara alargada sobre la calle diagonal."
+    },
+    {
+      "id": "roof_021",
+      "points": [
+        [
+          73,
+          89
+        ],
+        [
+          81,
+          91
+        ],
+        [
+          86,
+          102
+        ],
+        [
+          83,
+          108
+        ],
+        [
+          69,
+          103
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta azul/gris adyacente al plano claro."
+    }
+  ],
+  "ignore_polygons": [
+    {
+      "points": [
+        [
+          0,
+          7
+        ],
+        [
+          18,
+          20
+        ],
+        [
+          23,
+          30
+        ],
+        [
+          48,
+          42
+        ],
+        [
+          59,
+          57
+        ],
+        [
+          55,
+          68
+        ],
+        [
+          44,
+          75
+        ],
+        [
+          23,
+          67
+        ],
+        [
+          15,
+          51
+        ],
+        [
+          4,
+          45
+        ],
+        [
+          0,
+          34
+        ]
+      ],
+      "reason": "Conjunto en aparente construccion, sombras y posibles patios; no se resuelve cobertura de los compartimentos. No se etiquetan muros como techos."
+    },
+    {
+      "points": [
+        [
+          3,
+          106
+        ],
+        [
+          15,
+          105
+        ],
+        [
+          32,
+          115
+        ],
+        [
+          31,
+          126
+        ],
+        [
+          22,
+          140
+        ],
+        [
+          13,
+          144
+        ],
+        [
+          3,
+          136
+        ],
+        [
+          0,
+          128
+        ]
+      ],
+      "reason": "Conjunto con compartimentos y superficies oscuras: cubierta versus patio no resuelto."
+    },
+    {
+      "points": [
+        [
+          160,
+          61
+        ],
+        [
+          172,
+          60
+        ],
+        [
+          175,
+          78
+        ],
+        [
+          163,
+          84
+        ]
+      ],
+      "reason": "Elementos pequenos, sombra y posible escalera: cubierta no distinguible."
+    },
+    {
+      "points": [
+        [
+          160,
+          111
+        ],
+        [
+          172,
+          113
+        ],
+        [
+          180,
+          121
+        ],
+        [
+          180,
+          129
+        ],
+        [
+          162,
+          129
+        ]
+      ],
+      "reason": "Region roja y blanca puede incluir fachada o cubierta baja; geometria no resuelta."
+    },
+    {
+      "points": [
+        [
+          152,
+          162
+        ],
+        [
+          167,
+          162
+        ],
+        [
+          174,
+          173
+        ],
+        [
+          166,
+          179
+        ],
+        [
+          156,
+          175
+        ],
+        [
+          150,
+          172
+        ]
+      ],
+      "reason": "Pequenos elementos, patios y vegetacion mezclados; no separar instancias por suposicion."
+    },
+    {
+      "points": [
+        [
+          126,
+          28
+        ],
+        [
+          139,
+          28
+        ],
+        [
+          140,
+          50
+        ],
+        [
+          128,
+          52
+        ],
+        [
+          125,
+          43
+        ]
+      ],
+      "reason": "Superficie clara angosta: el RGB no permite resolver cubierta frente a paso/patio; se retira la candidata 003 antes de congelar."
+    },
+    {
+      "points": [
+        [
+          142,
+          37
+        ],
+        [
+          158,
+          38
+        ],
+        [
+          160,
+          49
+        ],
+        [
+          144,
+          51
+        ]
+      ],
+      "reason": "Elemento pequeno entre vegetacion: no se distingue de forma fiable cubierta frente a material/patio; se retira candidata 004 antes de congelar."
+    }
+  ],
+  "review_notes": [
+    "Anotacion del RGB original antes de evaluar este holdout y sin consultar predicciones de ningun modelo.",
+    "Unidad: cubierta visible. No equivale a vivienda, propiedad, uso residencial u ocupacion.",
+    "Misma captura Google Earth Pro / Airbus de 2026-03-04; georreferenciacion aproximada.",
+    "Ventana fijada por cobertura geografica, separada al menos 304.03 m de las areas v1.",
+    "No se etiquetan parcelas vacias, cultivos, vias ni muros sin evidencia de cubierta. Limites provisionales pendientes de revision humana.",
+    "QA previa a congelacion: candidatas 003 y 004 convertidas a ignore por ambiguedad de superficie; IDs conservan huecos. Bordes revisados contra RGB, sin predicciones.",
+    "Cubiertas cortadas por el borde se etiquetan solo en la parte visible. Ignore se aplicara simetricamente a referencias y predicciones; regiones ignoradas no son negativos.",
+    "Congelado antes de evaluar el holdout. Cualquier revision humana posterior requerira una nueva version y no reemplazara este registro."
+  ]
+}

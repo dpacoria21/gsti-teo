@@ -17,6 +17,8 @@ packages.txt text eol=lf
 *.geojson -text whitespace=cr-at-eol
 *.geojsonl -text whitespace=cr-at-eol
 *.csv -text whitespace=cr-at-eol
+# Copias de auditoría incluidas en el inventario SHA256 de cada informe.
+reports/training/**/*.md -text whitespace=cr-at-eol
 
 # Imágenes y pesos no deben recibir conversión de finales de línea.
 *.tif binary

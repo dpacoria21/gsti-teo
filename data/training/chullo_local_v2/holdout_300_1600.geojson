@@ -1,0 +1,895 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "roof_001",
+      "properties": {
+        "id": "roof_001",
+        "confidence": "approximate",
+        "notes": "Cubierta clara parcial en borde superior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226995.0,
+              8184815.5
+            ],
+            [
+              227011.0,
+              8184815.5
+            ],
+            [
+              227010.5,
+              8184801.0
+            ],
+            [
+              227003.0,
+              8184801.5
+            ],
+            [
+              226997.0,
+              8184803.0
+            ],
+            [
+              226995.0,
+              8184804.5
+            ],
+            [
+              226995.0,
+              8184815.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_002",
+      "properties": {
+        "id": "roof_002",
+        "confidence": "approximate",
+        "notes": "Cubierta clara parcial derecha; se excluye el patio verde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227018.0,
+              8184815.5
+            ],
+            [
+              227022.5,
+              8184815.5
+            ],
+            [
+              227022.5,
+              8184794.5
+            ],
+            [
+              227015.5,
+              8184795.5
+            ],
+            [
+              227015.0,
+              8184800.0
+            ],
+            [
+              227016.5,
+              8184808.5
+            ],
+            [
+              227018.0,
+              8184815.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_005",
+      "properties": {
+        "id": "roof_005",
+        "confidence": "approximate",
+        "notes": "Plano gris oscuro rectangular; limite segun superficie visible.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226996.5,
+              8184789.0
+            ],
+            [
+              227006.5,
+              8184789.5
+            ],
+            [
+              227008.0,
+              8184781.0
+            ],
+            [
+              227005.5,
+              8184778.5
+            ],
+            [
+              226996.0,
+              8184779.0
+            ],
+            [
+              226996.5,
+              8184789.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_006",
+      "properties": {
+        "id": "roof_006",
+        "confidence": "approximate",
+        "notes": "Cubierta clara irregular continua.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226993.5,
+              8184778.0
+            ],
+            [
+              227004.5,
+              8184777.5
+            ],
+            [
+              227005.5,
+              8184769.0
+            ],
+            [
+              227001.0,
+              8184767.0
+            ],
+            [
+              226991.0,
+              8184768.5
+            ],
+            [
+              226990.5,
+              8184774.0
+            ],
+            [
+              226992.5,
+              8184775.0
+            ],
+            [
+              226993.5,
+              8184778.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_007",
+      "properties": {
+        "id": "roof_007",
+        "confidence": "approximate",
+        "notes": "Plano beige inferior delimitado por bordes claros.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226990.5,
+              8184766.0
+            ],
+            [
+              227005.5,
+              8184766.0
+            ],
+            [
+              227004.0,
+              8184757.0
+            ],
+            [
+              226998.0,
+              8184756.5
+            ],
+            [
+              226991.0,
+              8184759.0
+            ],
+            [
+              226990.5,
+              8184766.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_008",
+      "properties": {
+        "id": "roof_008",
+        "confidence": "approximate",
+        "notes": "Plano claro parcial; region rojiza inferior excluida por ambiguedad.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227012.5,
+              8184767.5
+            ],
+            [
+              227018.0,
+              8184768.0
+            ],
+            [
+              227022.5,
+              8184765.5
+            ],
+            [
+              227022.5,
+              8184758.5
+            ],
+            [
+              227017.0,
+              8184756.0
+            ],
+            [
+              227013.5,
+              8184760.0
+            ],
+            [
+              227012.5,
+              8184767.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_009",
+      "properties": {
+        "id": "roof_009",
+        "confidence": "approximate",
+        "notes": "Cubierta roja angosta continua hacia borde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226995.5,
+              8184733.0
+            ],
+            [
+              227001.5,
+              8184731.5
+            ],
+            [
+              227000.0,
+              8184727.5
+            ],
+            [
+              226997.0,
+              8184725.0
+            ],
+            [
+              226993.5,
+              8184719.5
+            ],
+            [
+              226988.0,
+              8184719.5
+            ],
+            [
+              226991.5,
+              8184726.0
+            ],
+            [
+              226995.5,
+              8184733.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_010",
+      "properties": {
+        "id": "roof_010",
+        "confidence": "approximate",
+        "notes": "Cubierta rojiza clara adyacente, separada por sombra visible.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227001.5,
+              8184727.5
+            ],
+            [
+              227005.0,
+              8184727.0
+            ],
+            [
+              227005.0,
+              8184721.5
+            ],
+            [
+              227003.0,
+              8184719.5
+            ],
+            [
+              226995.0,
+              8184719.5
+            ],
+            [
+              226998.0,
+              8184723.5
+            ],
+            [
+              227001.5,
+              8184727.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_011",
+      "properties": {
+        "id": "roof_011",
+        "confidence": "approximate",
+        "notes": "Plano gris claro irregular inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227009.0,
+              8184726.0
+            ],
+            [
+              227013.5,
+              8184728.5
+            ],
+            [
+              227017.5,
+              8184724.5
+            ],
+            [
+              227016.0,
+              8184720.0
+            ],
+            [
+              227008.5,
+              8184719.5
+            ],
+            [
+              227006.5,
+              8184722.0
+            ],
+            [
+              227009.0,
+              8184726.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_012",
+      "properties": {
+        "id": "roof_012",
+        "confidence": "approximate",
+        "notes": "Cubierta azul parcial del borde derecho.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227019.0,
+              8184728.0
+            ],
+            [
+              227022.5,
+              8184730.5
+            ],
+            [
+              227022.5,
+              8184725.0
+            ],
+            [
+              227021.0,
+              8184725.0
+            ],
+            [
+              227019.0,
+              8184728.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_013",
+      "properties": {
+        "id": "roof_013",
+        "confidence": "approximate",
+        "notes": "Cubierta clara parcial inferior derecha.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227020.5,
+              8184724.0
+            ],
+            [
+              227022.5,
+              8184723.5
+            ],
+            [
+              227022.5,
+              8184719.5
+            ],
+            [
+              227017.5,
+              8184719.5
+            ],
+            [
+              227020.5,
+              8184724.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_014",
+      "properties": {
+        "id": "roof_014",
+        "confidence": "approximate",
+        "notes": "Cubierta beige y clara continua, sin dividir por propiedad.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226943.5,
+              8184756.0
+            ],
+            [
+              226949.5,
+              8184755.0
+            ],
+            [
+              226956.5,
+              8184751.0
+            ],
+            [
+              226954.0,
+              8184741.5
+            ],
+            [
+              226951.0,
+              8184738.5
+            ],
+            [
+              226940.5,
+              8184744.5
+            ],
+            [
+              226943.5,
+              8184756.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_015",
+      "properties": {
+        "id": "roof_015",
+        "confidence": "approximate",
+        "notes": "Cubierta continua con varios planos, rojo y gris; sin lindero inferido. QA RGB: borde occidental ajustado a la franja clara visible, sin invadir la cubierta roja 017.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226940.0,
+              8184739.0
+            ],
+            [
+              226946.5,
+              8184736.0
+            ],
+            [
+              226949.0,
+              8184732.0
+            ],
+            [
+              226946.5,
+              8184726.5
+            ],
+            [
+              226944.0,
+              8184724.5
+            ],
+            [
+              226939.0,
+              8184726.5
+            ],
+            [
+              226938.5,
+              8184731.5
+            ],
+            [
+              226937.0,
+              8184735.0
+            ],
+            [
+              226940.0,
+              8184739.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_016",
+      "properties": {
+        "id": "roof_016",
+        "confidence": "approximate",
+        "notes": "Cubierta gris parcial en borde occidental.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226926.5,
+              8184744.0
+            ],
+            [
+              226931.5,
+              8184742.5
+            ],
+            [
+              226934.0,
+              8184739.0
+            ],
+            [
+              226931.5,
+              8184735.0
+            ],
+            [
+              226926.5,
+              8184736.0
+            ],
+            [
+              226926.5,
+              8184744.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_017",
+      "properties": {
+        "id": "roof_017",
+        "confidence": "approximate",
+        "notes": "Pequena cubierta roja; limites visibles aproximados.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226933.0,
+              8184732.5
+            ],
+            [
+              226937.0,
+              8184731.0
+            ],
+            [
+              226938.0,
+              8184726.5
+            ],
+            [
+              226935.5,
+              8184725.0
+            ],
+            [
+              226932.5,
+              8184727.5
+            ],
+            [
+              226930.5,
+              8184728.5
+            ],
+            [
+              226933.0,
+              8184732.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_018",
+      "properties": {
+        "id": "roof_018",
+        "confidence": "approximate",
+        "notes": "Cubierta rojiza parcial en borde occidental.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226926.5,
+              8184734.0
+            ],
+            [
+              226929.5,
+              8184732.5
+            ],
+            [
+              226930.5,
+              8184730.0
+            ],
+            [
+              226926.5,
+              8184730.5
+            ],
+            [
+              226926.5,
+              8184734.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_019",
+      "properties": {
+        "id": "roof_019",
+        "confidence": "approximate",
+        "notes": "Cubierta clara cortada por borde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226966.5,
+              8184726.5
+            ],
+            [
+              226971.5,
+              8184723.5
+            ],
+            [
+              226972.5,
+              8184720.5
+            ],
+            [
+              226968.5,
+              8184719.5
+            ],
+            [
+              226964.0,
+              8184719.5
+            ],
+            [
+              226964.0,
+              8184721.5
+            ],
+            [
+              226966.5,
+              8184726.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_020",
+      "properties": {
+        "id": "roof_020",
+        "confidence": "approximate",
+        "notes": "Cubierta clara alargada sobre la calle diagonal.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226954.0,
+              8184781.5
+            ],
+            [
+              226964.0,
+              8184777.5
+            ],
+            [
+              226959.5,
+              8184765.0
+            ],
+            [
+              226953.5,
+              8184767.0
+            ],
+            [
+              226950.5,
+              8184772.5
+            ],
+            [
+              226954.0,
+              8184781.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roof_021",
+      "properties": {
+        "id": "roof_021",
+        "confidence": "approximate",
+        "notes": "Cubierta azul/gris adyacente al plano claro.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_300_1600"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              226963.0,
+              8184771.0
+            ],
+            [
+              226967.0,
+              8184770.0
+            ],
+            [
+              226969.5,
+              8184764.5
+            ],
+            [
+              226968.0,
+              8184761.5
+            ],
+            [
+              226961.0,
+              8184764.0
+            ],
+            [
+              226963.0,
+              8184771.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

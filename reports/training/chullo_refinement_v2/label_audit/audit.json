@@ -1,0 +1,394 @@
+{
+  "audit_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "date": "2026-10-23",
+  "source_capture_date": "2026-03-04",
+  "source_attribution": "Google Earth · Image © 2026 Airbus · captura 2026-03-04",
+  "source_original_jpeg_sha256": "6fa66832ea1b31402016bc2c216baef61aee64803ca48e9b04afa04cda34c6a2",
+  "source_working_rgb_tiff_sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+  "inspected": "All sixteen quarters of the four train parent areas, original RGB versus frozen v1 annotations.",
+  "no_predictions_used": true,
+  "frozen_v1_files_unchanged": true,
+  "frozen_v1_file_sha256": {
+    "data\\training\\chullo_local_v1\\manifest.json": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+    "data\\training\\chullo_local_v1\\selection.json": "947f865c078bcb33bfd31242be34bcf44e34f00e421c62b1697ea61fbfef1f96",
+    "data\\training\\chullo_local_v1\\test_1100_1400.geojson": "d85e1b7b726e488f33f1540e52b6944ed51c0db560b88bba64e7f15854ec7020",
+    "data\\training\\chullo_local_v1\\test_1100_1400.ignore.geojson": "477319982ec585ce21b085bf6c928a77a39815c248ba5ff91235bdba22e9aa57",
+    "data\\training\\chullo_local_v1\\test_1100_1400.pixels.json": "cc770977d3774425cb9ca6a59bf56fa87a755c5835b16e68564b94698210a306",
+    "data\\training\\chullo_local_v1\\test_1100_1400.tif": "058b345ec8d40aaac80b9be914bfd392fea2ba79e124cafb19b02bd9adfc2585",
+    "data\\training\\chullo_local_v1\\test_1600_1400.geojson": "62d29b5b1bc2062e7eb99256ea4e4a44126156fe211aae226f3fbc0b688a3dfa",
+    "data\\training\\chullo_local_v1\\test_1600_1400.ignore.geojson": "ac28c2b871cbee02f48b8fea3f9979e2302c8b53b3c8d964133e54b979557422",
+    "data\\training\\chullo_local_v1\\test_1600_1400.pixels.json": "7d6f42aac0210dfe052774ca9915b53223d533f9f5bc6be7d256afb1f6b30db9",
+    "data\\training\\chullo_local_v1\\test_1600_1400.tif": "f43cfb4dbb37d9a176c3fb2c5319bde4867f6c8ab8d6c7171939ec18c74e1f78",
+    "data\\training\\chullo_local_v1\\train_1100_100.geojson": "f830ef0448aedf2bf80b4992477111df2065a3315749a12baedc5b7fd3c5d876",
+    "data\\training\\chullo_local_v1\\train_1100_100.pixels.json": "4e45447aad2cffd59c2ecf380b00ff287ffe2f56b99c009d9ad78343002381ab",
+    "data\\training\\chullo_local_v1\\train_1100_100.tif": "645af9dc685ee1775a6ae5575467f13905f66253383b1bd4bafb306cbd42bfe5",
+    "data\\training\\chullo_local_v1\\train_1100_100_chip_0_0_192.geojson": "4bed913e2658ff925ef6aefcc3f018368f37e1a2f8668659f50c940c069cd148",
+    "data\\training\\chullo_local_v1\\train_1100_100_chip_0_0_192.tif": "645af9dc685ee1775a6ae5575467f13905f66253383b1bd4bafb306cbd42bfe5",
+    "data\\training\\chullo_local_v1\\train_1100_500.geojson": "6c4c7be5700c8f3b7d9ef855119d5150b9b4cad4d2a8a8295d5da1c47af0bd08",
+    "data\\training\\chullo_local_v1\\train_1100_500.ignore.geojson": "9c27fa9d7d555d7814cdf3cfbc42524ae26ca8c13ca3aa0135488a610270b02d",
+    "data\\training\\chullo_local_v1\\train_1100_500.pixels.json": "7604aaff619243a2eb842b40ced928a01bb162ed874fa2b62e243935625f2a0f",
+    "data\\training\\chullo_local_v1\\train_1100_500.tif": "e0f6895946c419b071be7d57468c7c882124f929894fe632acac179923767f3c",
+    "data\\training\\chullo_local_v1\\train_1100_500_chip_32_0_96.geojson": "023ed45daf640bfe4951fcd84edf5535dc17bf2bf21c2ecb33bd65a94cee819c",
+    "data\\training\\chullo_local_v1\\train_1100_500_chip_32_0_96.tif": "d46904f513fa70b0aef6c01eb7521ee08f9a76cbee5ee830347767a032f853c5",
+    "data\\training\\chullo_local_v1\\train_1100_500_chip_64_0_96.geojson": "542111d28cb5a982751127ba360603b86732f57b5b155b3b93fe6ac1808c4be6",
+    "data\\training\\chullo_local_v1\\train_1100_500_chip_64_0_96.tif": "da951ae00920a77be3964b830929c1cec44c83b6d927e08997eb0c6b6586768b",
+    "data\\training\\chullo_local_v1\\train_1600_100.geojson": "85fb2512a7ae51bad6688efdd6fbef6296cb7419efaee4a8a2e6c39d2fd14840",
+    "data\\training\\chullo_local_v1\\train_1600_100.ignore.geojson": "c4862a448447f38156a6b2afc82d85244bb0ab9bfe8105e37c1f283579468dd7",
+    "data\\training\\chullo_local_v1\\train_1600_100.pixels.json": "c3bf387ed4742205ad32e7bcfe32b3ff2eba57d03d37e60b17548ca397d20435",
+    "data\\training\\chullo_local_v1\\train_1600_100.tif": "316633588563a0111bbd5fb1882a4472a6ac290d0078dadf60a1166120a5fbdf",
+    "data\\training\\chullo_local_v1\\train_1600_100_chip_64_0_128.geojson": "2a4f183187f894bea39aaebccd6b8478b6cb452019f7a0bbdd7057f9d602b70d",
+    "data\\training\\chullo_local_v1\\train_1600_100_chip_64_0_128.tif": "38fb6c789ad8d5ac9cb4d890bdd9445a8aaefc7fdefd4478cb7c4896b585e5ed",
+    "data\\training\\chullo_local_v1\\train_1600_500.geojson": "911fa801bfafcb0ea85e81eee580fbdf8b3e2c0870ae2c54facef4ab35fc222b",
+    "data\\training\\chullo_local_v1\\train_1600_500.ignore.geojson": "07bdf74b2491824e08da06fcfd8721e5f521b6acc72daa0962e23c30834a6aab",
+    "data\\training\\chullo_local_v1\\train_1600_500.pixels.json": "45b41ed340eb3698960d182ed8bce81001aa99f1d9a4724c045181e0d9c76768",
+    "data\\training\\chullo_local_v1\\train_1600_500.tif": "b97348157a5d47926b82b01b3c2b824aff111b921d187c0eed0de3bd9f970ed7",
+    "data\\training\\chullo_local_v1\\train_1600_500_chip_0_0_96.geojson": "087800234bc89d7f40f5f485655d6566a73d304903472db293e1352813bdcc7e",
+    "data\\training\\chullo_local_v1\\train_1600_500_chip_0_0_96.tif": "313b30b4b5a30147cb3240cae6072b5425a335375acc3c355d73315ce2ad8f9a",
+    "data\\training\\chullo_local_v1\\train_1600_500_chip_48_0_96.geojson": "d3adb83c4ee06152cbec61c8271624a70b40a06dd8137a55ced3dbe529070fe3",
+    "data\\training\\chullo_local_v1\\train_1600_500_chip_48_0_96.tif": "257640181907b5f92a82cb5df4ac7b48f654971d85e47f3fe19656dd4e1ee8ba",
+    "data\\training\\chullo_local_v1\\val_1100_900.geojson": "e842c9b8df277b97dc04f5bd472b4289c842506f49bb0a5a2eb296f04f7b8fca",
+    "data\\training\\chullo_local_v1\\val_1100_900.ignore.geojson": "5a692f90a88360e2bd44270d9c75086abb9ccafcf77459ac3c627240e9a442ba",
+    "data\\training\\chullo_local_v1\\val_1100_900.pixels.json": "a05a98c32a098b818601814ddeb06852bd8ba255ea398bb6db3f5daddfabc7a5",
+    "data\\training\\chullo_local_v1\\val_1100_900.tif": "7ae73c4663c863326d900f6a14fb197a74eebe7988b9ebf2f980b5d38c56a0bb",
+    "data\\training\\chullo_local_v1\\val_1600_900.geojson": "d60b6a51d216ce42f3355ffdf0ccee0e96feb8d6b7b081c17c3a4bb8e318f2be",
+    "data\\training\\chullo_local_v1\\val_1600_900.ignore.geojson": "bc4bde27a56086a2890feb40d0a416bb7c0d4236b1c7e428f10013f1f599a1c2",
+    "data\\training\\chullo_local_v1\\val_1600_900.pixels.json": "6f27d60ba38956c5b000a48b11091e7b02805d74f90763f39828e951d288c0cb",
+    "data\\training\\chullo_local_v1\\val_1600_900.tif": "16289f83b07893b39760a6424eb59499cebe011fc59078e69c1a17e434ed0b1c"
+  },
+  "changes": [
+    {
+      "scene_id": "train_1100_100",
+      "reference_id": "r11",
+      "action": "retain_with_limitation",
+      "reason": "Franja de cubierta clara junto a sombra profunda. El límite exacto es incierto; la sombra no demuestra ausencia de techo. Se conserva la instancia sin inventar un lindero.",
+      "evidence": "outputs/label_audit_v2/train_1100_100_q1.png",
+      "bounds_local_pixels": [
+        48.0,
+        34.0,
+        57.0,
+        47.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_100",
+      "reference_id": "r16",
+      "action": "retain_with_limitation",
+      "reason": "Plano de cubierta visible junto a franja oscura longitudinal; posible fachada o sombra en el borde. Se conserva la geometría aproximada sin crear una instancia parcial.",
+      "evidence": "outputs/label_audit_v2/train_1100_100_q1.png",
+      "bounds_local_pixels": [
+        34.0,
+        55.0,
+        47.0,
+        84.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_100",
+      "reference_id": "r63",
+      "action": "retain_with_limitation",
+      "reason": "Cubierta grande continua. El hueco interior podría ser patio o volumen elevado; la imagen no permite resolverlo. Se preservan el contorno y el hueco originales; no se divide por tamaño.",
+      "evidence": "outputs/label_audit_v2/train_1100_100_q3.png",
+      "bounds_local_pixels": [
+        17.0,
+        110.0,
+        87.0,
+        186.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_100",
+      "reference_id": "r19",
+      "action": "ignore_entire_instance",
+      "reason": "La punta superior incluye superficie verde junto al plano blanco inferior; no se distingue patio/vegetación de terraza o cubierta. No se transforma la porción visible en un objeto nuevo.",
+      "evidence": "outputs/label_audit_v2/train_1600_100_q2.png",
+      "bounds_local_pixels": [
+        145.0,
+        45.0,
+        161.0,
+        62.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_100",
+      "reference_id": "r50",
+      "action": "ignore_entire_instance",
+      "reason": "Pequeña zona junto a la calle con vegetación, sombra y objetos; el RGB no sostiene una cubierta separada con límites fiables. No se afirma identidad de vehículo.",
+      "evidence": "outputs/label_audit_v2/train_1600_100_q3.png",
+      "bounds_local_pixels": [
+        44.0,
+        176.0,
+        59.0,
+        190.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r05",
+      "action": "ignore_entire_instance",
+      "reason": "Vegetación o cavidad entre muros y superficies claras; no se confirma una cubierta opaca individual. Se ignora toda la instancia original.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q1.png",
+      "bounds_local_pixels": [
+        0.0,
+        74.0,
+        16.0,
+        90.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r14",
+      "action": "retain_with_limitation",
+      "reason": "Bandas paralelas y plano gris coherentes con una cubierta corrugada. Se conserva; no se reclasifica como patio solo por su textura.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q1.png",
+      "bounds_local_pixels": [
+        46.0,
+        32.0,
+        58.0,
+        42.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r26",
+      "action": "retire_clear_nonroof",
+      "reason": "El polígono está sobre la calzada continua entre fachadas e incluye el alcorque de un árbol; no contiene un plano de cubierta. Se retira como referencia de techo y queda como fondo visible.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q2.png",
+      "bounds_local_pixels": [
+        128.0,
+        0.0,
+        151.0,
+        24.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r30",
+      "action": "ignore_entire_instance",
+      "reason": "Pequeño recinto con sombras y superficies de diferentes alturas al borde de la vía; no se distingue techo de patio descubierto con fiabilidad.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q2.png",
+      "bounds_local_pixels": [
+        117.0,
+        55.0,
+        128.0,
+        67.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r43",
+      "action": "ignore_entire_instance",
+      "reason": "Franja estrecha blanca y oscura entre cubiertas y vía; la proyección oblicua impide separar fachada, sombra y cubierta. Se conserva el contorno original bajo ignore.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q3.png",
+      "bounds_local_pixels": [
+        13.0,
+        171.0,
+        24.0,
+        192.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r68",
+      "action": "ignore_entire_instance",
+      "reason": "Pequeña cavidad verde/oscura entre cubiertas; no hay evidencia suficiente de un techo individual. La instancia entera se ignora.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q4.png",
+      "bounds_local_pixels": [
+        101.0,
+        154.0,
+        113.0,
+        164.0
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "reference_id": "r83",
+      "action": "retire_clear_nonroof",
+      "reason": "El contorno cruza calzada junto al bordillo y vehículos estacionados visibles. No es una cubierta fija; se retira como referencia, conservando ID y geometría en el historial.",
+      "evidence": "outputs/label_audit_v2/train_1100_500_q4.png",
+      "bounds_local_pixels": [
+        165.0,
+        174.0,
+        180.0,
+        192.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_500",
+      "reference_id": "r06",
+      "action": "ignore_entire_instance",
+      "reason": "Parte inferior con vegetación u oclusión junto a plano gris superior; continuidad de cubierta incierta. Se conserva la instancia completa bajo ignore, sin recortar un nuevo techo parcial.",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+      "bounds_local_pixels": [
+        49.0,
+        0.0,
+        64.0,
+        29.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_500",
+      "reference_id": "r34",
+      "action": "ignore_entire_instance",
+      "reason": "Estructura lineal con elementos paralelos junto a la calle; el RGB no distingue cubierta continua, estructura abierta en construcción o fachada. Se ignora la instancia completa.",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+      "bounds_local_pixels": [
+        0.0,
+        81.0,
+        14.0,
+        92.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_500",
+      "reference_id": "r35",
+      "action": "ignore_entire_instance",
+      "reason": "Estructura lineal contigua a r34 con huecos oscuros; no se confirma cubierta opaca independiente. No se fusiona ni se convierte en objeto parcial.",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q1.png",
+      "bounds_local_pixels": [
+        16.0,
+        82.0,
+        31.0,
+        93.0
+      ]
+    },
+    {
+      "scene_id": "train_1600_500",
+      "reference_id": "r67",
+      "action": "ignore_entire_instance",
+      "reason": "Predomina sombra/posible vegetación junto al parque y muro; no se confirma un techo separado. Se conserva su geometría original bajo ignore.",
+      "evidence": "outputs/label_audit_v2/train_1600_500_q4.png",
+      "bounds_local_pixels": [
+        179.0,
+        140.0,
+        188.0,
+        149.0
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "train_1100_100",
+      "source_reference_count": 67,
+      "retained_reference_count": 67,
+      "retired_reference_count": 0,
+      "source_ignore_count": 0,
+      "ignore_count": 0,
+      "additional_entire_instance_ignores": 0,
+      "reference_ids_intersecting_ignore_vector": [],
+      "reference_ids_positive_area_ignore_overlap": [],
+      "candidate_nonintersecting_reference_count_vector": 67,
+      "source_sha256": "4e45447aad2cffd59c2ecf380b00ff287ffe2f56b99c009d9ad78343002381ab",
+      "revised_sha256": "32f0b7d03629773bd949b17c8266a51c8d8168cc948bb0c2da44f89cf89889e3",
+      "geometry_validation": "valid; no roof overlap >1 pixel squared; retained geometries unchanged"
+    },
+    {
+      "scene_id": "train_1600_100",
+      "source_reference_count": 61,
+      "retained_reference_count": 61,
+      "retired_reference_count": 0,
+      "source_ignore_count": 3,
+      "ignore_count": 5,
+      "additional_entire_instance_ignores": 2,
+      "reference_ids_intersecting_ignore_vector": [
+        "r04",
+        "r05",
+        "r19",
+        "r46",
+        "r50"
+      ],
+      "reference_ids_positive_area_ignore_overlap": [
+        "r04",
+        "r05",
+        "r19",
+        "r46",
+        "r50"
+      ],
+      "candidate_nonintersecting_reference_count_vector": 56,
+      "source_sha256": "c3bf387ed4742205ad32e7bcfe32b3ff2eba57d03d37e60b17548ca397d20435",
+      "revised_sha256": "deed98eb08827a658d991c095f62b72af560f9548fc85787df695718c33848b4",
+      "geometry_validation": "valid; no roof overlap >1 pixel squared; retained geometries unchanged"
+    },
+    {
+      "scene_id": "train_1100_500",
+      "source_reference_count": 78,
+      "retained_reference_count": 76,
+      "retired_reference_count": 2,
+      "source_ignore_count": 8,
+      "ignore_count": 12,
+      "additional_entire_instance_ignores": 4,
+      "reference_ids_intersecting_ignore_vector": [
+        "r05",
+        "r07",
+        "r30",
+        "r36",
+        "r37",
+        "r43",
+        "r53",
+        "r54",
+        "r64",
+        "r66",
+        "r67",
+        "r68",
+        "r74"
+      ],
+      "reference_ids_positive_area_ignore_overlap": [
+        "r05",
+        "r07",
+        "r30",
+        "r36",
+        "r37",
+        "r43",
+        "r53",
+        "r54",
+        "r64",
+        "r67",
+        "r68"
+      ],
+      "candidate_nonintersecting_reference_count_vector": 63,
+      "source_sha256": "7604aaff619243a2eb842b40ced928a01bb162ed874fa2b62e243935625f2a0f",
+      "revised_sha256": "7ad1ed790ff7e2e0006ccb6704b2ac293f44ee14d037934db4eabfcdcc4b47e0",
+      "geometry_validation": "valid; no roof overlap >1 pixel squared; retained geometries unchanged"
+    },
+    {
+      "scene_id": "train_1600_500",
+      "source_reference_count": 67,
+      "retained_reference_count": 67,
+      "retired_reference_count": 0,
+      "source_ignore_count": 4,
+      "ignore_count": 8,
+      "additional_entire_instance_ignores": 4,
+      "reference_ids_intersecting_ignore_vector": [
+        "r06",
+        "r34",
+        "r35",
+        "r43",
+        "r46",
+        "r47",
+        "r53",
+        "r60",
+        "r67"
+      ],
+      "reference_ids_positive_area_ignore_overlap": [
+        "r06",
+        "r34",
+        "r35",
+        "r43",
+        "r47",
+        "r53",
+        "r67"
+      ],
+      "candidate_nonintersecting_reference_count_vector": 58,
+      "source_sha256": "45b41ed340eb3698960d182ed8bce81001aa99f1d9a4724c045181e0d9c76768",
+      "revised_sha256": "f409d4483a250603282e34f085a93160af9faadc20531b27e299051b59491763",
+      "geometry_validation": "valid; no roof overlap >1 pixel squared; retained geometries unchanged"
+    }
+  ],
+  "limits": [
+    "One Google Earth/Airbus capture; manual visual reference by AI assistant, without human or field verification.",
+    "No redraw of uncertain boundaries; any label touching ignore must be excluded as a whole instance by training dataset.",
+    "Vector counts are not final raster target counts; nodata and pixel rasterization may exclude more instances.",
+    "Continuous roof planes can belong to one complex or several properties. These are not counts of houses.",
+    "This audit corrects visible label problems; it does not establish improved model accuracy or fewer merged detections."
+  ]
+}

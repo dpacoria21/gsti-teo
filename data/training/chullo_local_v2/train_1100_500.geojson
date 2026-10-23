@@ -1,0 +1,3354 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "r01",
+      "properties": {
+        "id": "r01",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185355.0
+            ],
+            [
+              227330.0,
+              8185354.0
+            ],
+            [
+              227331.0,
+              8185352.0
+            ],
+            [
+              227326.5,
+              8185350.0
+            ],
+            [
+              227326.5,
+              8185355.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r02",
+      "properties": {
+        "id": "r02",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185348.5
+            ],
+            [
+              227330.0,
+              8185350.5
+            ],
+            [
+              227332.5,
+              8185346.0
+            ],
+            [
+              227330.0,
+              8185342.5
+            ],
+            [
+              227326.5,
+              8185341.5
+            ],
+            [
+              227326.5,
+              8185348.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r03",
+      "properties": {
+        "id": "r03",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185341.0
+            ],
+            [
+              227334.0,
+              8185344.0
+            ],
+            [
+              227337.0,
+              8185339.0
+            ],
+            [
+              227326.5,
+              8185333.0
+            ],
+            [
+              227326.5,
+              8185341.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r04",
+      "properties": {
+        "id": "r04",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227329.0,
+              8185333.0
+            ],
+            [
+              227336.5,
+              8185337.5
+            ],
+            [
+              227341.0,
+              8185331.0
+            ],
+            [
+              227337.0,
+              8185328.0
+            ],
+            [
+              227334.0,
+              8185328.5
+            ],
+            [
+              227332.0,
+              8185327.5
+            ],
+            [
+              227329.0,
+              8185330.5
+            ],
+            [
+              227329.0,
+              8185333.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r05",
+      "properties": {
+        "id": "r05",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "audit_v2": {
+          "action": "ignore_entire_instance",
+          "reason": "Vegetación o cavidad entre muros y superficies claras; no se confirma una cubierta opaca individual. Se ignora toda la instancia original.",
+          "evidence": "outputs/label_audit_v2/train_1100_500_q1.png",
+          "annotation_method": "assistant_visual_manual",
+          "human_reviewed": false
+        },
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185327.0
+            ],
+            [
+              227329.0,
+              8185328.5
+            ],
+            [
+              227331.5,
+              8185325.5
+            ],
+            [
+              227331.5,
+              8185324.5
+            ],
+            [
+              227334.5,
+              8185322.5
+            ],
+            [
+              227333.0,
+              8185320.5
+            ],
+            [
+              227328.5,
+              8185322.0
+            ],
+            [
+              227326.5,
+              8185325.0
+            ],
+            [
+              227326.5,
+              8185327.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r06",
+      "properties": {
+        "id": "r06",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227335.5,
+              8185324.5
+            ],
+            [
+              227341.0,
+              8185328.0
+            ],
+            [
+              227346.0,
+              8185322.5
+            ],
+            [
+              227343.5,
+              8185320.0
+            ],
+            [
+              227339.5,
+              8185321.0
+            ],
+            [
+              227337.5,
+              8185318.5
+            ],
+            [
+              227335.0,
+              8185320.5
+            ],
+            [
+              227335.5,
+              8185324.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r07",
+      "properties": {
+        "id": "r07",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185322.0
+            ],
+            [
+              227330.0,
+              8185321.5
+            ],
+            [
+              227332.5,
+              8185317.5
+            ],
+            [
+              227331.0,
+              8185315.0
+            ],
+            [
+              227326.5,
+              8185315.0
+            ],
+            [
+              227326.5,
+              8185322.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r08",
+      "properties": {
+        "id": "r08",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227339.5,
+              8185365.5
+            ],
+            [
+              227344.0,
+              8185365.5
+            ],
+            [
+              227349.0,
+              8185358.0
+            ],
+            [
+              227346.0,
+              8185355.5
+            ],
+            [
+              227344.0,
+              8185359.5
+            ],
+            [
+              227339.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r09",
+      "properties": {
+        "id": "r09",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227345.0,
+              8185365.5
+            ],
+            [
+              227351.0,
+              8185365.5
+            ],
+            [
+              227354.5,
+              8185361.0
+            ],
+            [
+              227350.5,
+              8185358.5
+            ],
+            [
+              227348.0,
+              8185363.0
+            ],
+            [
+              227345.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r10",
+      "properties": {
+        "id": "r10",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227352.5,
+              8185359.0
+            ],
+            [
+              227355.5,
+              8185361.0
+            ],
+            [
+              227358.5,
+              8185355.5
+            ],
+            [
+              227354.0,
+              8185353.0
+            ],
+            [
+              227352.5,
+              8185359.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r11",
+      "properties": {
+        "id": "r11",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227346.0,
+              8185354.0
+            ],
+            [
+              227350.5,
+              8185356.0
+            ],
+            [
+              227353.0,
+              8185352.0
+            ],
+            [
+              227350.5,
+              8185349.5
+            ],
+            [
+              227348.0,
+              8185350.0
+            ],
+            [
+              227346.0,
+              8185354.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r12",
+      "properties": {
+        "id": "r12",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227353.5,
+              8185352.0
+            ],
+            [
+              227357.5,
+              8185354.5
+            ],
+            [
+              227360.0,
+              8185351.0
+            ],
+            [
+              227355.5,
+              8185348.5
+            ],
+            [
+              227353.5,
+              8185352.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r13",
+      "properties": {
+        "id": "r13",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227355.5,
+              8185347.5
+            ],
+            [
+              227361.0,
+              8185351.0
+            ],
+            [
+              227364.5,
+              8185346.5
+            ],
+            [
+              227359.5,
+              8185344.0
+            ],
+            [
+              227357.5,
+              8185344.5
+            ],
+            [
+              227355.5,
+              8185347.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r14",
+      "properties": {
+        "id": "r14",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "audit_v2": {
+          "action": "retain_with_limitation",
+          "reason": "Bandas paralelas y plano gris coherentes con una cubierta corrugada. Se conserva; no se reclasifica como patio solo por su textura.",
+          "evidence": "outputs/label_audit_v2/train_1100_500_q1.png",
+          "annotation_method": "assistant_visual_manual",
+          "human_reviewed": false
+        },
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227349.5,
+              8185348.0
+            ],
+            [
+              227353.0,
+              8185349.5
+            ],
+            [
+              227355.5,
+              8185346.5
+            ],
+            [
+              227351.5,
+              8185344.5
+            ],
+            [
+              227349.5,
+              8185348.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r15",
+      "properties": {
+        "id": "r15",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227351.5,
+              8185343.5
+            ],
+            [
+              227356.0,
+              8185345.0
+            ],
+            [
+              227358.5,
+              8185342.5
+            ],
+            [
+              227363.0,
+              8185345.0
+            ],
+            [
+              227366.0,
+              8185342.5
+            ],
+            [
+              227367.5,
+              8185337.5
+            ],
+            [
+              227362.0,
+              8185333.5
+            ],
+            [
+              227359.0,
+              8185332.0
+            ],
+            [
+              227354.0,
+              8185337.0
+            ],
+            [
+              227351.5,
+              8185343.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r16",
+      "properties": {
+        "id": "r16",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227356.0,
+              8185365.5
+            ],
+            [
+              227359.5,
+              8185365.5
+            ],
+            [
+              227363.0,
+              8185360.5
+            ],
+            [
+              227360.0,
+              8185357.0
+            ],
+            [
+              227357.5,
+              8185358.5
+            ],
+            [
+              227356.5,
+              8185361.5
+            ],
+            [
+              227356.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r17",
+      "properties": {
+        "id": "r17",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227361.5,
+              8185365.5
+            ],
+            [
+              227371.0,
+              8185365.5
+            ],
+            [
+              227372.5,
+              8185361.5
+            ],
+            [
+              227367.0,
+              8185357.5
+            ],
+            [
+              227364.5,
+              8185359.0
+            ],
+            [
+              227361.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r18",
+      "properties": {
+        "id": "r18",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227372.0,
+              8185365.5
+            ],
+            [
+              227379.5,
+              8185365.5
+            ],
+            [
+              227381.0,
+              8185362.0
+            ],
+            [
+              227375.5,
+              8185359.0
+            ],
+            [
+              227373.5,
+              8185360.0
+            ],
+            [
+              227372.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r19",
+      "properties": {
+        "id": "r19",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227362.0,
+              8185355.5
+            ],
+            [
+              227366.5,
+              8185357.5
+            ],
+            [
+              227369.0,
+              8185353.5
+            ],
+            [
+              227365.0,
+              8185351.5
+            ],
+            [
+              227362.0,
+              8185355.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r20",
+      "properties": {
+        "id": "r20",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227367.0,
+              8185352.0
+            ],
+            [
+              227372.0,
+              8185354.5
+            ],
+            [
+              227375.0,
+              8185350.0
+            ],
+            [
+              227370.0,
+              8185348.0
+            ],
+            [
+              227367.0,
+              8185352.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r21",
+      "properties": {
+        "id": "r21",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227370.5,
+              8185347.0
+            ],
+            [
+              227375.0,
+              8185349.5
+            ],
+            [
+              227378.0,
+              8185344.5
+            ],
+            [
+              227374.0,
+              8185342.0
+            ],
+            [
+              227371.5,
+              8185343.5
+            ],
+            [
+              227370.5,
+              8185347.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r22",
+      "properties": {
+        "id": "r22",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227368.0,
+              8185342.0
+            ],
+            [
+              227371.5,
+              8185343.5
+            ],
+            [
+              227373.5,
+              8185340.0
+            ],
+            [
+              227370.5,
+              8185337.5
+            ],
+            [
+              227368.0,
+              8185342.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r24",
+      "properties": {
+        "id": "r24",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227380.0,
+              8185365.5
+            ],
+            [
+              227385.0,
+              8185365.5
+            ],
+            [
+              227386.5,
+              8185361.0
+            ],
+            [
+              227383.0,
+              8185359.5
+            ],
+            [
+              227381.0,
+              8185361.5
+            ],
+            [
+              227380.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r25",
+      "properties": {
+        "id": "r25",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227382.0,
+              8185357.5
+            ],
+            [
+              227387.0,
+              8185360.0
+            ],
+            [
+              227391.0,
+              8185354.5
+            ],
+            [
+              227387.5,
+              8185352.0
+            ],
+            [
+              227385.0,
+              8185351.0
+            ],
+            [
+              227383.0,
+              8185353.0
+            ],
+            [
+              227382.0,
+              8185357.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r27",
+      "properties": {
+        "id": "r27",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227389.0,
+              8185351.5
+            ],
+            [
+              227392.5,
+              8185353.0
+            ],
+            [
+              227401.0,
+              8185340.5
+            ],
+            [
+              227401.5,
+              8185337.5
+            ],
+            [
+              227397.5,
+              8185334.0
+            ],
+            [
+              227392.5,
+              8185335.0
+            ],
+            [
+              227389.0,
+              8185340.0
+            ],
+            [
+              227386.5,
+              8185343.0
+            ],
+            [
+              227387.0,
+              8185348.0
+            ],
+            [
+              227389.0,
+              8185351.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r28",
+      "properties": {
+        "id": "r28",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227377.5,
+              8185348.5
+            ],
+            [
+              227380.5,
+              8185350.5
+            ],
+            [
+              227383.5,
+              8185346.0
+            ],
+            [
+              227380.5,
+              8185343.0
+            ],
+            [
+              227379.0,
+              8185342.0
+            ],
+            [
+              227377.5,
+              8185348.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r29",
+      "properties": {
+        "id": "r29",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227379.0,
+              8185339.5
+            ],
+            [
+              227381.5,
+              8185341.0
+            ],
+            [
+              227385.0,
+              8185336.0
+            ],
+            [
+              227382.0,
+              8185334.0
+            ],
+            [
+              227380.5,
+              8185336.0
+            ],
+            [
+              227379.0,
+              8185339.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r30",
+      "properties": {
+        "id": "r30",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "audit_v2": {
+          "action": "ignore_entire_instance",
+          "reason": "Pequeño recinto con sombras y superficies de diferentes alturas al borde de la vía; no se distingue techo de patio descubierto con fiabilidad.",
+          "evidence": "outputs/label_audit_v2/train_1100_500_q2.png",
+          "annotation_method": "assistant_visual_manual",
+          "human_reviewed": false
+        },
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227385.0,
+              8185336.5
+            ],
+            [
+              227387.5,
+              8185338.0
+            ],
+            [
+              227390.5,
+              8185334.0
+            ],
+            [
+              227387.5,
+              8185332.0
+            ],
+            [
+              227385.0,
+              8185336.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r31",
+      "properties": {
+        "id": "r31",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227403.0,
+              8185365.5
+            ],
+            [
+              227412.0,
+              8185365.5
+            ],
+            [
+              227409.5,
+              8185361.5
+            ],
+            [
+              227407.0,
+              8185360.5
+            ],
+            [
+              227403.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r32",
+      "properties": {
+        "id": "r32",
+        "confidence": "clear",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227370.0,
+              8185331.5
+            ],
+            [
+              227378.0,
+              8185336.0
+            ],
+            [
+              227383.0,
+              8185327.0
+            ],
+            [
+              227375.0,
+              8185322.0
+            ],
+            [
+              227370.0,
+              8185331.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r33",
+      "properties": {
+        "id": "r33",
+        "confidence": "clear",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial. Extensión superior integrada por continuidad visible de la cubierta.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227359.5,
+              8185327.5
+            ],
+            [
+              227368.5,
+              8185332.5
+            ],
+            [
+              227370.0,
+              8185330.5
+            ],
+            [
+              227369.0,
+              8185329.0
+            ],
+            [
+              227375.0,
+              8185320.5
+            ],
+            [
+              227368.5,
+              8185316.5
+            ],
+            [
+              227364.0,
+              8185317.5
+            ],
+            [
+              227359.5,
+              8185327.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r35",
+      "properties": {
+        "id": "r35",
+        "confidence": "clear",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227341.0,
+              8185318.5
+            ],
+            [
+              227347.5,
+              8185322.0
+            ],
+            [
+              227355.5,
+              8185311.5
+            ],
+            [
+              227348.5,
+              8185308.0
+            ],
+            [
+              227341.0,
+              8185318.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r36",
+      "properties": {
+        "id": "r36",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227335.0,
+              8185314.5
+            ],
+            [
+              227340.0,
+              8185318.0
+            ],
+            [
+              227346.5,
+              8185309.5
+            ],
+            [
+              227341.0,
+              8185306.0
+            ],
+            [
+              227337.5,
+              8185309.0
+            ],
+            [
+              227335.0,
+              8185314.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r37",
+      "properties": {
+        "id": "r37",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227328.0,
+              8185306.0
+            ],
+            [
+              227336.0,
+              8185309.5
+            ],
+            [
+              227340.5,
+              8185300.0
+            ],
+            [
+              227335.5,
+              8185297.0
+            ],
+            [
+              227332.0,
+              8185299.5
+            ],
+            [
+              227328.0,
+              8185306.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r38",
+      "properties": {
+        "id": "r38",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227335.5,
+              8185296.0
+            ],
+            [
+              227340.5,
+              8185299.0
+            ],
+            [
+              227342.0,
+              8185296.0
+            ],
+            [
+              227336.5,
+              8185293.5
+            ],
+            [
+              227335.5,
+              8185296.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r39",
+      "properties": {
+        "id": "r39",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185304.5
+            ],
+            [
+              227328.5,
+              8185301.0
+            ],
+            [
+              227332.0,
+              8185295.0
+            ],
+            [
+              227335.0,
+              8185293.5
+            ],
+            [
+              227333.5,
+              8185291.5
+            ],
+            [
+              227329.5,
+              8185293.5
+            ],
+            [
+              227326.5,
+              8185298.5
+            ],
+            [
+              227326.5,
+              8185304.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r40",
+      "properties": {
+        "id": "r40",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185296.5
+            ],
+            [
+              227328.5,
+              8185294.0
+            ],
+            [
+              227332.0,
+              8185290.5
+            ],
+            [
+              227329.5,
+              8185288.5
+            ],
+            [
+              227326.5,
+              8185290.0
+            ],
+            [
+              227326.5,
+              8185296.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r43",
+      "properties": {
+        "id": "r43",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "audit_v2": {
+          "action": "ignore_entire_instance",
+          "reason": "Franja estrecha blanca y oscura entre cubiertas y vía; la proyección oblicua impide separar fachada, sombra y cubierta. Se conserva el contorno original bajo ignore.",
+          "evidence": "outputs/label_audit_v2/train_1100_500_q3.png",
+          "annotation_method": "assistant_visual_manual",
+          "human_reviewed": false
+        },
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227333.0,
+              8185278.0
+            ],
+            [
+              227335.5,
+              8185280.0
+            ],
+            [
+              227337.5,
+              8185276.5
+            ],
+            [
+              227336.0,
+              8185274.5
+            ],
+            [
+              227338.5,
+              8185272.5
+            ],
+            [
+              227337.5,
+              8185269.5
+            ],
+            [
+              227334.0,
+              8185269.5
+            ],
+            [
+              227333.5,
+              8185274.0
+            ],
+            [
+              227333.0,
+              8185278.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r44",
+      "properties": {
+        "id": "r44",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227338.0,
+              8185280.0
+            ],
+            [
+              227344.5,
+              8185284.0
+            ],
+            [
+              227348.0,
+              8185278.0
+            ],
+            [
+              227341.0,
+              8185273.0
+            ],
+            [
+              227338.0,
+              8185280.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r45",
+      "properties": {
+        "id": "r45",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227341.5,
+              8185273.0
+            ],
+            [
+              227348.5,
+              8185277.0
+            ],
+            [
+              227350.5,
+              8185274.0
+            ],
+            [
+              227344.0,
+              8185270.0
+            ],
+            [
+              227341.5,
+              8185273.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r46",
+      "properties": {
+        "id": "r46",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227345.0,
+              8185269.5
+            ],
+            [
+              227350.5,
+              8185273.5
+            ],
+            [
+              227353.5,
+              8185269.5
+            ],
+            [
+              227345.0,
+              8185269.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r47",
+      "properties": {
+        "id": "r47",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227347.0,
+              8185283.0
+            ],
+            [
+              227351.0,
+              8185285.5
+            ],
+            [
+              227355.0,
+              8185280.0
+            ],
+            [
+              227351.0,
+              8185276.5
+            ],
+            [
+              227347.0,
+              8185283.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r48",
+      "properties": {
+        "id": "r48",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227351.0,
+              8185276.0
+            ],
+            [
+              227356.5,
+              8185279.0
+            ],
+            [
+              227361.0,
+              8185273.0
+            ],
+            [
+              227356.0,
+              8185269.5
+            ],
+            [
+              227353.0,
+              8185271.0
+            ],
+            [
+              227351.0,
+              8185276.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r49",
+      "properties": {
+        "id": "r49",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227357.0,
+              8185269.5
+            ],
+            [
+              227362.0,
+              8185272.0
+            ],
+            [
+              227364.5,
+              8185269.5
+            ],
+            [
+              227357.0,
+              8185269.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r50",
+      "properties": {
+        "id": "r50",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227409.0,
+              8185359.0
+            ],
+            [
+              227416.0,
+              8185362.0
+            ],
+            [
+              227418.5,
+              8185357.5
+            ],
+            [
+              227414.0,
+              8185354.0
+            ],
+            [
+              227412.0,
+              8185356.0
+            ],
+            [
+              227409.0,
+              8185359.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r51",
+      "properties": {
+        "id": "r51",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227415.5,
+              8185364.0
+            ],
+            [
+              227422.5,
+              8185365.5
+            ],
+            [
+              227422.5,
+              8185361.5
+            ],
+            [
+              227418.5,
+              8185359.0
+            ],
+            [
+              227415.5,
+              8185364.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r52",
+      "properties": {
+        "id": "r52",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227419.5,
+              8185357.5
+            ],
+            [
+              227422.5,
+              8185359.5
+            ],
+            [
+              227422.5,
+              8185352.0
+            ],
+            [
+              227421.0,
+              8185352.5
+            ],
+            [
+              227419.5,
+              8185357.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r53",
+      "properties": {
+        "id": "r53",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227410.0,
+              8185352.5
+            ],
+            [
+              227414.0,
+              8185354.0
+            ],
+            [
+              227420.5,
+              8185345.5
+            ],
+            [
+              227415.5,
+              8185344.0
+            ],
+            [
+              227413.5,
+              8185347.5
+            ],
+            [
+              227410.0,
+              8185352.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r54",
+      "properties": {
+        "id": "r54",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227419.0,
+              8185351.0
+            ],
+            [
+              227422.5,
+              8185352.5
+            ],
+            [
+              227422.5,
+              8185347.0
+            ],
+            [
+              227421.0,
+              8185346.0
+            ],
+            [
+              227419.0,
+              8185351.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r55",
+      "properties": {
+        "id": "r55",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227405.0,
+              8185321.0
+            ],
+            [
+              227413.0,
+              8185325.5
+            ],
+            [
+              227417.5,
+              8185318.5
+            ],
+            [
+              227419.0,
+              8185315.5
+            ],
+            [
+              227411.5,
+              8185311.0
+            ],
+            [
+              227409.0,
+              8185313.5
+            ],
+            [
+              227405.0,
+              8185321.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r56",
+      "properties": {
+        "id": "r56",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227416.0,
+              8185326.0
+            ],
+            [
+              227422.5,
+              8185329.5
+            ],
+            [
+              227422.5,
+              8185321.0
+            ],
+            [
+              227420.0,
+              8185319.5
+            ],
+            [
+              227416.0,
+              8185326.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r57",
+      "properties": {
+        "id": "r57",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227418.5,
+              8185318.5
+            ],
+            [
+              227422.5,
+              8185320.5
+            ],
+            [
+              227422.5,
+              8185316.0
+            ],
+            [
+              227420.5,
+              8185315.5
+            ],
+            [
+              227418.5,
+              8185318.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r58",
+      "properties": {
+        "id": "r58",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227415.5,
+              8185313.0
+            ],
+            [
+              227419.0,
+              8185315.0
+            ],
+            [
+              227421.5,
+              8185311.0
+            ],
+            [
+              227417.5,
+              8185308.5
+            ],
+            [
+              227415.5,
+              8185313.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r59",
+      "properties": {
+        "id": "r59",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227417.5,
+              8185307.5
+            ],
+            [
+              227422.5,
+              8185311.0
+            ],
+            [
+              227422.5,
+              8185305.5
+            ],
+            [
+              227420.5,
+              8185304.0
+            ],
+            [
+              227417.5,
+              8185307.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r60",
+      "properties": {
+        "id": "r60",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227415.5,
+              8185301.5
+            ],
+            [
+              227422.5,
+              8185305.0
+            ],
+            [
+              227422.5,
+              8185295.5
+            ],
+            [
+              227420.0,
+              8185294.0
+            ],
+            [
+              227415.5,
+              8185301.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r61",
+      "properties": {
+        "id": "r61",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227398.5,
+              8185315.5
+            ],
+            [
+              227402.5,
+              8185318.0
+            ],
+            [
+              227406.0,
+              8185312.5
+            ],
+            [
+              227402.0,
+              8185310.0
+            ],
+            [
+              227400.5,
+              8185312.0
+            ],
+            [
+              227398.5,
+              8185311.5
+            ],
+            [
+              227398.5,
+              8185315.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r62",
+      "properties": {
+        "id": "r62",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227403.5,
+              8185308.5
+            ],
+            [
+              227409.0,
+              8185311.5
+            ],
+            [
+              227412.0,
+              8185306.5
+            ],
+            [
+              227409.0,
+              8185304.5
+            ],
+            [
+              227407.0,
+              8185306.5
+            ],
+            [
+              227404.0,
+              8185305.5
+            ],
+            [
+              227403.5,
+              8185308.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r63",
+      "properties": {
+        "id": "r63",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227393.5,
+              8185312.0
+            ],
+            [
+              227396.5,
+              8185314.0
+            ],
+            [
+              227401.0,
+              8185306.5
+            ],
+            [
+              227399.0,
+              8185304.5
+            ],
+            [
+              227396.5,
+              8185305.5
+            ],
+            [
+              227393.5,
+              8185312.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r64",
+      "properties": {
+        "id": "r64",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227386.5,
+              8185307.5
+            ],
+            [
+              227392.0,
+              8185310.5
+            ],
+            [
+              227398.0,
+              8185301.0
+            ],
+            [
+              227393.0,
+              8185298.0
+            ],
+            [
+              227390.0,
+              8185299.0
+            ],
+            [
+              227386.5,
+              8185307.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r66",
+      "properties": {
+        "id": "r66",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227370.0,
+              8185299.5
+            ],
+            [
+              227375.5,
+              8185303.0
+            ],
+            [
+              227383.5,
+              8185291.0
+            ],
+            [
+              227378.5,
+              8185288.0
+            ],
+            [
+              227374.5,
+              8185292.0
+            ],
+            [
+              227370.0,
+              8185299.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r67",
+      "properties": {
+        "id": "r67",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227378.0,
+              8185301.5
+            ],
+            [
+              227383.5,
+              8185304.5
+            ],
+            [
+              227389.5,
+              8185295.5
+            ],
+            [
+              227385.0,
+              8185291.5
+            ],
+            [
+              227382.0,
+              8185294.5
+            ],
+            [
+              227378.0,
+              8185301.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r68",
+      "properties": {
+        "id": "r68",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "audit_v2": {
+          "action": "ignore_entire_instance",
+          "reason": "Pequeña cavidad verde/oscura entre cubiertas; no hay evidencia suficiente de un techo individual. La instancia entera se ignora.",
+          "evidence": "outputs/label_audit_v2/train_1100_500_q4.png",
+          "annotation_method": "assistant_visual_manual",
+          "human_reviewed": false
+        },
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227377.0,
+              8185287.5
+            ],
+            [
+              227380.0,
+              8185288.5
+            ],
+            [
+              227383.0,
+              8185285.5
+            ],
+            [
+              227380.0,
+              8185283.5
+            ],
+            [
+              227377.0,
+              8185287.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r70",
+      "properties": {
+        "id": "r70",
+        "confidence": "clear",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227408.5,
+              8185303.0
+            ],
+            [
+              227411.0,
+              8185304.5
+            ],
+            [
+              227414.0,
+              8185300.0
+            ],
+            [
+              227410.5,
+              8185298.0
+            ],
+            [
+              227408.5,
+              8185303.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r71",
+      "properties": {
+        "id": "r71",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227404.0,
+              8185300.5
+            ],
+            [
+              227407.5,
+              8185302.5
+            ],
+            [
+              227410.0,
+              8185297.5
+            ],
+            [
+              227407.0,
+              8185295.5
+            ],
+            [
+              227404.0,
+              8185300.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r72",
+      "properties": {
+        "id": "r72",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227404.0,
+              8185293.0
+            ],
+            [
+              227410.0,
+              8185296.5
+            ],
+            [
+              227416.0,
+              8185287.5
+            ],
+            [
+              227410.0,
+              8185284.5
+            ],
+            [
+              227406.5,
+              8185287.0
+            ],
+            [
+              227404.0,
+              8185293.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r73",
+      "properties": {
+        "id": "r73",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227411.5,
+              8185295.5
+            ],
+            [
+              227416.5,
+              8185298.5
+            ],
+            [
+              227422.5,
+              8185290.0
+            ],
+            [
+              227419.0,
+              8185287.0
+            ],
+            [
+              227416.5,
+              8185289.5
+            ],
+            [
+              227411.5,
+              8185295.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r74",
+      "properties": {
+        "id": "r74",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227393.5,
+              8185288.5
+            ],
+            [
+              227398.5,
+              8185291.5
+            ],
+            [
+              227404.0,
+              8185282.0
+            ],
+            [
+              227399.5,
+              8185279.0
+            ],
+            [
+              227393.5,
+              8185288.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r75",
+      "properties": {
+        "id": "r75",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227402.0,
+              8185289.0
+            ],
+            [
+              227403.5,
+              8185290.5
+            ],
+            [
+              227409.5,
+              8185282.5
+            ],
+            [
+              227416.5,
+              8185286.5
+            ],
+            [
+              227419.5,
+              8185282.5
+            ],
+            [
+              227406.5,
+              8185275.5
+            ],
+            [
+              227406.0,
+              8185278.0
+            ],
+            [
+              227402.0,
+              8185289.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r76",
+      "properties": {
+        "id": "r76",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227379.0,
+              8185282.5
+            ],
+            [
+              227384.0,
+              8185285.5
+            ],
+            [
+              227387.0,
+              8185280.5
+            ],
+            [
+              227382.5,
+              8185277.5
+            ],
+            [
+              227380.5,
+              8185278.5
+            ],
+            [
+              227379.0,
+              8185282.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r77",
+      "properties": {
+        "id": "r77",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227385.5,
+              8185283.0
+            ],
+            [
+              227387.5,
+              8185284.5
+            ],
+            [
+              227393.5,
+              8185275.0
+            ],
+            [
+              227391.0,
+              8185273.5
+            ],
+            [
+              227385.5,
+              8185283.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r78",
+      "properties": {
+        "id": "r78",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227388.5,
+              8185285.5
+            ],
+            [
+              227392.5,
+              8185288.0
+            ],
+            [
+              227399.0,
+              8185278.0
+            ],
+            [
+              227394.5,
+              8185275.5
+            ],
+            [
+              227388.5,
+              8185285.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r79",
+      "properties": {
+        "id": "r79",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227375.5,
+              8185275.5
+            ],
+            [
+              227380.5,
+              8185278.0
+            ],
+            [
+              227385.0,
+              8185272.0
+            ],
+            [
+              227381.5,
+              8185269.5
+            ],
+            [
+              227376.5,
+              8185269.5
+            ],
+            [
+              227375.5,
+              8185275.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r80",
+      "properties": {
+        "id": "r80",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227382.5,
+              8185270.0
+            ],
+            [
+              227388.0,
+              8185274.0
+            ],
+            [
+              227390.5,
+              8185269.5
+            ],
+            [
+              227382.5,
+              8185270.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r81",
+      "properties": {
+        "id": "r81",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227390.5,
+              8185271.5
+            ],
+            [
+              227395.0,
+              8185274.5
+            ],
+            [
+              227399.0,
+              8185269.5
+            ],
+            [
+              227392.0,
+              8185269.5
+            ],
+            [
+              227390.5,
+              8185271.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r82",
+      "properties": {
+        "id": "r82",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227398.5,
+              8185273.0
+            ],
+            [
+              227403.5,
+              8185276.0
+            ],
+            [
+              227407.5,
+              8185270.5
+            ],
+            [
+              227406.0,
+              8185269.5
+            ],
+            [
+              227400.5,
+              8185269.5
+            ],
+            [
+              227398.5,
+              8185273.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r84",
+      "properties": {
+        "id": "r84",
+        "confidence": "approximate",
+        "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227417.5,
+              8185270.5
+            ],
+            [
+              227422.5,
+              8185273.5
+            ],
+            [
+              227422.5,
+              8185269.5
+            ],
+            [
+              227419.0,
+              8185269.5
+            ],
+            [
+              227417.5,
+              8185270.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-23T07:47:14.718944+00:00",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "predictions_consulted": false,
+  "source": "data/imagery/chullo/chullo_rgb.tif",
+  "source_sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+  "policy": "Frozen before evaluation; no edits from model results. Unit is visible roof, not dwelling. Ambiguous regions explicitly ignored. Same source capture, not independent acquisition.",
+  "scenes": [
+    {
+      "scene_id": "holdout_2100_1100",
+      "window": [
+        2100,
+        1100,
+        192,
+        192
+      ],
+      "annotation_file": "data/training/chullo_local_v2_holdout/holdout_2100_1100.pixels.json",
+      "sha256": "48f24d3ddfb5221098e585f729f67203f29e80e8b427439f6d71f8e25eda427e",
+      "reference_count": 34,
+      "effective_reference_count_min4": 34,
+      "ignore_count": 6,
+      "ignore_fraction": 0.08501519097222222,
+      "max_reference_ignore_fraction": 0.0659,
+      "overlaps_gt1px2": 0,
+      "invalid_polygons": 0,
+      "development_overlap_area_px2": 0,
+      "nearest_development_scene": "val_1600_900",
+      "development_gap_m": 154.0519392932137
+    },
+    {
+      "scene_id": "holdout_300_1600",
+      "window": [
+        300,
+        1600,
+        192,
+        192
+      ],
+      "annotation_file": "data/training/chullo_local_v2_holdout/holdout_300_1600.pixels.json",
+      "sha256": "ecb40ef0b16515a2832378da9194332b8800a6854752ca17a1fe9f829d695685",
+      "reference_count": 19,
+      "effective_reference_count_min4": 19,
+      "ignore_count": 7,
+      "ignore_fraction": 0.11165364583333333,
+      "max_reference_ignore_fraction": 0.039,
+      "overlaps_gt1px2": 0,
+      "invalid_polygons": 0,
+      "development_overlap_area_px2": 0,
+      "nearest_development_scene": "negative_field_centre",
+      "development_gap_m": 344.0
+    }
+  ]
+}

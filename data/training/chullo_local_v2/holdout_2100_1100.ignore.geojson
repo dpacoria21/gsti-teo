@@ -1,0 +1,303 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Conjunto blanco irregular con posible fachada, patios y pequenos planos. No separar cubiertas por suposicion.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227859.0,
+              8185058.5
+            ],
+            [
+              227867.5,
+              8185059.5
+            ],
+            [
+              227873.5,
+              8185057.0
+            ],
+            [
+              227874.5,
+              8185039.0
+            ],
+            [
+              227868.5,
+              8185033.0
+            ],
+            [
+              227864.0,
+              8185032.5
+            ],
+            [
+              227858.5,
+              8185033.0
+            ],
+            [
+              227857.5,
+              8185038.5
+            ],
+            [
+              227858.5,
+              8185042.0
+            ],
+            [
+              227861.0,
+              8185053.5
+            ],
+            [
+              227859.0,
+              8185058.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Sombra profunda y vegetacion entre edificios: cobertura inferior no resoluble.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227841.0,
+              8185053.0
+            ],
+            [
+              227847.0,
+              8185052.5
+            ],
+            [
+              227846.5,
+              8185044.5
+            ],
+            [
+              227843.0,
+              8185042.5
+            ],
+            [
+              227840.0,
+              8185046.0
+            ],
+            [
+              227841.0,
+              8185053.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Pequenos elementos, patios y vegetacion al nordeste; limites de cubiertas no claros.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227905.5,
+              8185055.5
+            ],
+            [
+              227917.0,
+              8185056.5
+            ],
+            [
+              227922.5,
+              8185053.5
+            ],
+            [
+              227922.5,
+              8185046.5
+            ],
+            [
+              227913.5,
+              8185047.0
+            ],
+            [
+              227907.5,
+              8185044.5
+            ],
+            [
+              227905.0,
+              8185049.0
+            ],
+            [
+              227905.5,
+              8185055.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Marco blanco con posible patio abierto y cubiertas contiguas no separables con confianza.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227886.0,
+              8185039.0
+            ],
+            [
+              227895.0,
+              8185039.5
+            ],
+            [
+              227902.0,
+              8185038.5
+            ],
+            [
+              227902.0,
+              8185034.0
+            ],
+            [
+              227899.5,
+              8185030.5
+            ],
+            [
+              227891.5,
+              8185031.0
+            ],
+            [
+              227884.5,
+              8185032.5
+            ],
+            [
+              227886.0,
+              8185039.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Franja estrecha con sombra, muros y cubiertas bajas no resolubles.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227832.0,
+              8184983.5
+            ],
+            [
+              227836.5,
+              8184981.0
+            ],
+            [
+              227835.0,
+              8184974.5
+            ],
+            [
+              227835.0,
+              8184969.5
+            ],
+            [
+              227831.0,
+              8184969.5
+            ],
+            [
+              227832.5,
+              8184975.0
+            ],
+            [
+              227832.0,
+              8184983.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Abertura interior potencial en el conjunto 027: RGB no resuelve patio frente a plano de cubierta. No se inventa lindero entre unidades.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "holdout_2100_1100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227843.5,
+              8184997.0
+            ],
+            [
+              227847.5,
+              8184996.5
+            ],
+            [
+              227848.0,
+              8184993.0
+            ],
+            [
+              227843.5,
+              8184991.5
+            ],
+            [
+              227842.5,
+              8184993.5
+            ],
+            [
+              227843.5,
+              8184997.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

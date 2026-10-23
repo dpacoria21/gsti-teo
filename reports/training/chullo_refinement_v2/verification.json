@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-23",
+  "application_suite": {"passed": 196, "skipped": 16, "failed": 0, "environment": ".venv"},
+  "training_tests": {"passed": 50, "failed": 0, "environment": ".venv-ml", "files": ["test_training.py", "test_training_ignore.py", "test_refinement.py", "test_local_training.py", "test_chullo_label_preparation.py"]},
+  "evaluation_and_inference_tests": {"passed": 83, "failed": 0, "environment": ".venv-ml", "files": ["test_final_evaluation.py", "test_model_variants.py", "test_register_local_model.py", "test_inference_pipeline.py"]},
+  "application_skips": "The lightweight UI environment lacks Torch/Rasterio; most related tests were covered separately in the ML environment. One Windows symlink privilege test was also skipped.",
+  "ruff_changed_python_files_passed": true,
+  "repository_wide_ruff": "27 existing lint findings remain in unrelated acquisition/export/architecture scripts; this is not a clean whole-repository lint claim.",
+  "git_index_data_and_report_sha256_checked": 49,
+  "v1_weights_sha256_unchanged": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+  "v1_dataset_manifest_sha256_unchanged": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+  "new_test_evaluated": false,
+  "production_model_changed": false,
+  "inference_ui_changed": false
+}

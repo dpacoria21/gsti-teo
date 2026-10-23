@@ -1,0 +1,224 @@
+{
+  "status": "completed_no_candidate_approved",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "production_model_changed": false,
+  "new_test_evaluated": false,
+  "new_weights_registered": false,
+  "total_experiments": 7,
+  "total_epochs": 520,
+  "total_optimizer_updates": 3640,
+  "runs": [
+    {
+      "run": "chullo_refinement_v2",
+      "epochs": 240,
+      "optimizer_updates": 1680,
+      "skipped_updates": 0,
+      "elapsed_training_seconds": 119.24127029999909,
+      "validation_gate_passed": false,
+      "selected": null
+    },
+    {
+      "run": "chullo_refinement_v2_warm",
+      "epochs": 120,
+      "optimizer_updates": 840,
+      "skipped_updates": 0,
+      "elapsed_training_seconds": 80.5977227000003,
+      "validation_gate_passed": false,
+      "selected": null
+    },
+    {
+      "run": "chullo_refinement_v2_detail",
+      "epochs": 160,
+      "optimizer_updates": 1120,
+      "skipped_updates": 0,
+      "elapsed_training_seconds": 86.57965119999972,
+      "validation_gate_passed": false,
+      "selected": null
+    }
+  ],
+  "baseline_validation": {
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "summary": {
+      "images": 3,
+      "tp": 37,
+      "fp": 68,
+      "fn": 33,
+      "precision": 0.3523809523809524,
+      "recall": 0.5285714285714286,
+      "f1": 0.4228571428571429,
+      "mean_iou_true_positives": 0.6294147934518125,
+      "merged_predictions": 4,
+      "references_affected_by_merges": 5,
+      "f0_5": 0.37755102040816324
+    },
+    "per_scene": [
+      {
+        "scene_id": "val_1100_900",
+        "tp": 23,
+        "fp": 17,
+        "fn": 7,
+        "matched_iou_sum": 14.51584936735926,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "reference_instances": 30,
+        "predicted_instances": 40
+      },
+      {
+        "scene_id": "val_1600_900",
+        "tp": 14,
+        "fp": 48,
+        "fn": 26,
+        "matched_iou_sum": 8.7724979903578,
+        "merged_predictions": 3,
+        "references_affected_by_merges": 3,
+        "reference_instances": 40,
+        "predicted_instances": 62
+      },
+      {
+        "scene_id": "negative_field_centre",
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "matched_iou_sum": 0.0,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "reference_instances": 0,
+        "predicted_instances": 3
+      }
+    ]
+  },
+  "exploratory_highest_validation_f1": {
+    "run": "chullo_refinement_v2_warm",
+    "experiment": "local_conservative",
+    "epoch": 38,
+    "image_scale": 1.5625,
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "summary": {
+      "images": 3,
+      "tp": 33,
+      "fp": 33,
+      "fn": 37,
+      "precision": 0.5,
+      "recall": 0.4714285714285714,
+      "f1": 0.4852941176470588,
+      "mean_iou_true_positives": 0.6273811704835387,
+      "merged_predictions": 3,
+      "references_affected_by_merges": 6,
+      "f0_5": 0.4940119760479042
+    },
+    "per_scene": [
+      {
+        "scene_id": "val_1100_900",
+        "tp": 22,
+        "fp": 8,
+        "fn": 8,
+        "matched_iou_sum": 14.207452400347792,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "reference_instances": 30,
+        "predicted_instances": 30
+      },
+      {
+        "scene_id": "val_1600_900",
+        "tp": 11,
+        "fp": 25,
+        "fn": 29,
+        "matched_iou_sum": 6.496126225608983,
+        "merged_predictions": 2,
+        "references_affected_by_merges": 4,
+        "reference_instances": 40,
+        "predicted_instances": 36
+      },
+      {
+        "scene_id": "negative_field_centre",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_iou_sum": 0.0,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "reference_instances": 0,
+        "predicted_instances": 0
+      }
+    ]
+  },
+  "exploratory_highest_validation_f0_5": {
+    "run": "chullo_refinement_v2_warm",
+    "experiment": "local_conservative",
+    "epoch": 50,
+    "image_scale": 1.5625,
+    "score_threshold": 0.65,
+    "mask_threshold": 0.5,
+    "summary": {
+      "images": 3,
+      "tp": 28,
+      "fp": 22,
+      "fn": 42,
+      "precision": 0.56,
+      "recall": 0.4,
+      "f1": 0.4666666666666667,
+      "mean_iou_true_positives": 0.6284307796026878,
+      "merged_predictions": 2,
+      "references_affected_by_merges": 4,
+      "f0_5": 0.5185185185185185
+    },
+    "per_scene": [
+      {
+        "scene_id": "val_1100_900",
+        "tp": 18,
+        "fp": 4,
+        "fn": 12,
+        "matched_iou_sum": 11.433394009808124,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "reference_instances": 30,
+        "predicted_instances": 22
+      },
+      {
+        "scene_id": "val_1600_900",
+        "tp": 10,
+        "fp": 18,
+        "fn": 30,
+        "matched_iou_sum": 6.162667819067133,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2,
+        "reference_instances": 40,
+        "predicted_instances": 28
+      },
+      {
+        "scene_id": "negative_field_centre",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_iou_sum": 0.0,
+        "merged_predictions": 0,
+        "references_affected_by_merges": 0,
+        "reference_instances": 0,
+        "predicted_instances": 0
+      }
+    ]
+  },
+  "interpretation": "No tested configuration met all predeclared validation criteria. Exploratory maxima are post-hoc descriptions, not selected or stored checkpoints. The historical test F1 0.24885 has not been superseded. The new 53-reference test remains unevaluated.",
+  "next_evidence_needed": "Human review of visible-roof boundaries, additional legally usable independent imagery and spatially separated reference annotations. The current labels do not establish individual houses or cadastral limits.",
+  "artifact_sha256": {
+    "chullo_refinement_v2/protocol.json": "c9d23f2712df789ee434bb78200a597975090f588b6d486e95f13777d22d940c",
+    "chullo_refinement_v2/epochs.json": "cded3ba39ef5d2ab4b63b6601499e1b394d1ed4797d92e887bf4edebcab4f8a8",
+    "chullo_refinement_v2/baselines_validation.json": "98ddba4f8d9655b7bb3ae9942b9c14bd993bd35ad561c858e679742192054f7e",
+    "chullo_refinement_v2_warm/protocol.json": "fe8051b3493d38f665b8375917f713bc93bad37154f2bb43a8603390c5b5d95c",
+    "chullo_refinement_v2_warm/epochs.json": "0aabcd734215eec152b755fd618e26b377e607cafc24f18739456394c44ba57c",
+    "chullo_refinement_v2_warm/baselines_validation.json": "98ddba4f8d9655b7bb3ae9942b9c14bd993bd35ad561c858e679742192054f7e",
+    "chullo_refinement_v2_detail/protocol.json": "08417b2df866fa796c0d17ea046d1643ca3956857bf81aeade9a989b617ebfc5",
+    "chullo_refinement_v2_detail/epochs.json": "e7fc7ef045b2c975df5b146bd56d088ff73d0c6ff94a79c31870b9629391a0f9",
+    "chullo_refinement_v2_detail/baselines_validation.json": "eb801401ecdf8542f4b751d5468d30e64eae672d7ff3d2c8f14f420c513d9e45",
+    "label_audit/audit.json": "a1c1df4071052cf1424b4008b98fda1d91fbb7e4d5e65c990666d943a3ffbb4c",
+    "label_audit/AUDITORIA_ETIQUETAS.md": "2df5b8a2dee6f917ab86b05012aa64f62541a42226099715a951e317cc9d9ae2",
+    "label_audit/holdout_freeze.json": "a62557e53d7c73494d3ddf762ef548ec5457ac3f245c2d21a93ff046f9339fbc",
+    "label_audit/validation_review.md": "0abbd94456d23b60ceeb9304636cc6a06c2a7af96e57f4ab81e879ab19079b50",
+    "label_audit/train_1100_500_v2_review.png": "48977d1c0975c2eb79de7bf018fc247f29817c7410dc911683e31f5a96746dc2",
+    "label_audit/holdout_300_1600_annotation_qa.png": "75ac8f9b997493bcebeac5dd7b5bbda6a8962f8e59b4360abb2ac601b351b3e4",
+    "label_audit/holdout_2100_1100_annotation_qa.png": "ed0a87ea06bcd6ff3ad849b4f9306c82f64dfc6846d70bf6fcccdcc3ca408788"
+  }
+}
