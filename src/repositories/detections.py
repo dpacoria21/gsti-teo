@@ -74,7 +74,7 @@ def load_detection(output_dir: str | Path, area_id: str = "chullo") -> dict:
             "source_id": manifest.get("source_id", "geoai_building_inference"),
             "title": "Detecciones ejecutadas con Mask R-CNN",
             "organization": (
-                "Proyecto Chullo; ajuste SpaceNet sobre pesos de giswqs/GeoAI"
+                "Proyecto Chullo; ajuste supervisado sobre pesos de giswqs/GeoAI"
                 if model.get("trained_locally")
                 else "Proyecto Chullo; pesos de giswqs/GeoAI"
             ),

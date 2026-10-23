@@ -1,0 +1,87 @@
+{
+  "status": "completed",
+  "config": {
+    "epochs": 50,
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "freeze_backbone_epochs": 50,
+    "workers": 0,
+    "device": "cuda",
+    "amp": true,
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "match_iou": 0.5,
+    "gradient_clip": 1.0,
+    "bootstrap_samples": 1000,
+    "image_scale": 1.5625
+  },
+  "dataset_id": "chullo_local_assistant_provisional_v1",
+  "dataset_manifest": "data/training/chullo_local_v1/manifest.json",
+  "dataset_manifest_sha256": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+  "annotation_type": "reference",
+  "initial_checkpoint": "models/building_footprints_usa.pth",
+  "initial_checkpoint_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "architecture": "torchvision.maskrcnn_resnet50_fpn",
+  "num_classes": 2,
+  "resize": {
+    "image_scale": 1.5625
+  },
+  "training_images": "Prepared manifest scenes/chips; random quarter rotations and horizontal/vertical flips",
+  "annotation_provenance": {
+    "method": "assistant_visual_manual",
+    "human_reviewed": false,
+    "source_capture_date": "2026-03-04",
+    "annotation_unit": "visually distinguishable roof, not dwelling, occupancy or cadastral parcel"
+  },
+  "input_preprocessing": "uint8 RGB /255; raw uint16 fallback valid-pixel per-band percentiles 2/98",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "selection": "Highest validation instance F1; earliest epoch wins ties; test unused until final comparison",
+  "checkpoint_storage_dtype": "float16 for floating tensors; original dtype for integer tensors",
+  "inference_dtype": "float32 after strict state-dict loading",
+  "evaluation_protocol": {
+    "images": "Manifest scenes without inference tiling or area filtering; resize as registered above",
+    "nodata": "Reference/prediction masks clipped to identical valid area, excluding declared uncertain regions; RGB unchanged",
+    "fusion_diagnostic": "Prediction covers >=50% of each of >=2 distinct reference roofs",
+    "max_detections_per_image": 100,
+    "min_reference_pixels": 4,
+    "deployment_difference": "Production uses 512px overlapping tiles and area/duplicate filtering"
+  },
+  "trainable_components": "FPN, RPN and ROI box/mask heads; ResNet body frozen for freeze_backbone_epochs",
+  "batch_normalization": "Running statistics frozen throughout training because the default batch size is one",
+  "metric": "Instance-mask precision/recall/F1 at fixed score and IoU thresholds; not COCO AP",
+  "split_counts": {
+    "train": 4,
+    "val": 2,
+    "test": 2
+  },
+  "reproducibility": "Seeded RNGs; deterministic algorithms warn_only; cross-device bitwise equality not promised",
+  "execution": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "best_epoch": 47,
+  "best_validation_f1": 0.4418604651162791,
+  "baseline_validation_f1": 0.2222222222222222,
+  "stored_checkpoint_validation_f1": 0.43023255813953487,
+  "validation_improved": true,
+  "checkpoint": "training_run/best_model.pth",
+  "checkpoint_sha256": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+  "elapsed_seconds": 53.107956699999704,
+  "peak_cuda_memory_allocated_mib": 653.68603515625,
+  "production_model_modified": false,
+  "skipped_amp_steps": 0
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "images": 2,
+    "tp": 6,
+    "fp": 11,
+    "fn": 114,
+    "precision": 0.35294117647058826,
+    "recall": 0.05,
+    "f1": 0.08759124087591241,
+    "mean_iou_true_positives": 0.656071936902395,
+    "merged_predictions": 6,
+    "references_affected_by_merges": 15
+  },
+  "per_scene": [
+    {
+      "scene_id": "test_1100_1400",
+      "tp": 2,
+      "fp": 4,
+      "fn": 49,
+      "matched_iou_sum": 1.5341889483065954,
+      "merged_predictions": 1,
+      "references_affected_by_merges": 3,
+      "reference_instances": 51,
+      "predicted_instances": 6,
+      "detection_limit": 100,
+      "reference_count_exceeds_detection_limit": false
+    },
+    {
+      "scene_id": "test_1600_1400",
+      "tp": 4,
+      "fp": 7,
+      "fn": 65,
+      "matched_iou_sum": 2.402242673107774,
+      "merged_predictions": 5,
+      "references_affected_by_merges": 12,
+      "reference_instances": 69,
+      "predicted_instances": 11,
+      "detection_limit": 100,
+      "reference_count_exceeds_detection_limit": false
+    }
+  ]
+}

@@ -10,8 +10,15 @@ from src import model_catalog
 from src.inference import model as model_loader
 
 
-@pytest.fixture
-def registered_candidate(tmp_path, monkeypatch):
+@pytest.fixture(autouse=True)
+def isolated_catalog(tmp_path, monkeypatch):
+    """Never depend on real optional weights or manifests on the developer machine."""
+    monkeypatch.setattr(model_catalog, "TRAINED_MANIFEST", tmp_path / "missing_spacenet" / "manifest.json")
+    monkeypatch.setattr(model_catalog, "LOCAL_MANIFEST", tmp_path / "missing_chullo" / "manifest.json")
+
+
+@pytest.fixture(params=model_catalog.TRAINED_VARIANTS)
+def registered_candidate(tmp_path, monkeypatch, request):
     directory = tmp_path / "registered_model"
     directory.mkdir()
     checkpoint = directory / "candidate.pth"
@@ -19,7 +26,7 @@ def registered_candidate(tmp_path, monkeypatch):
     metadata = {
         "id": "test-only/spacenet-candidate",
         "name": "Test-only adjusted detector",
-        "variant": model_catalog.TRAINED_VARIANT,
+        "variant": request.param,
         "filename": checkpoint.name,
         "size_bytes": checkpoint.stat().st_size,
         "sha256": model_loader.sha256_file(checkpoint),
@@ -31,7 +38,8 @@ def registered_candidate(tmp_path, monkeypatch):
     manifest = directory / "manifest.json"
     manifest.write_text(json.dumps(metadata), encoding="utf-8")
     (directory / "evaluation.json").write_text('{"test_fixture": true}', encoding="utf-8")
-    monkeypatch.setattr(model_catalog, "TRAINED_MANIFEST", manifest)
+    constant = "TRAINED_MANIFEST" if request.param == model_catalog.TRAINED_VARIANT else "LOCAL_MANIFEST"
+    monkeypatch.setattr(model_catalog, constant, manifest)
     return checkpoint, metadata, manifest
 
 
@@ -44,19 +52,19 @@ def test_registered_candidate_resolves_exact_checkpoint_and_metadata_without_dow
         pytest.fail("An adjusted-model request must not resolve to the original checkpoint")
 
     monkeypatch.setattr(model_loader, "ensure_model", no_original_download)
-    path, actual = model_loader.resolve_variant(model_catalog.TRAINED_VARIANT)
+    path, actual = model_loader.resolve_variant(metadata["variant"])
     assert path == checkpoint.resolve()
     assert actual == {**metadata, "path": str(checkpoint.resolve())}
-    assert list(model_catalog.model_choices()) == [model_catalog.ORIGINAL_VARIANT, model_catalog.TRAINED_VARIANT]
+    assert list(model_catalog.model_choices()) == [model_catalog.ORIGINAL_VARIANT, metadata["variant"]]
 
 
 @pytest.mark.parametrize("same_size", [False, True])
 def test_changed_checkpoint_bytes_are_rejected_before_deserialization(registered_candidate, same_size):
-    checkpoint, _, _ = registered_candidate
+    checkpoint, metadata, _ = registered_candidate
     original = checkpoint.read_bytes()
     checkpoint.write_bytes(bytes([original[0] ^ 1]) + original[1:] if same_size else original + b"changed")
     with pytest.raises(ValueError, match="SHA256"):
-        model_loader.resolve_variant(model_catalog.TRAINED_VARIANT)
+        model_loader.resolve_variant(metadata["variant"])
 
 
 def test_registered_checkpoint_cannot_escape_its_model_directory(registered_candidate):
@@ -65,7 +73,7 @@ def test_registered_checkpoint_cannot_escape_its_model_directory(registered_cand
     external.write_bytes(b"outside")
     manifest.write_text(json.dumps({**metadata, "filename": "../outside.pth"}), encoding="utf-8")
     with pytest.raises(ValueError, match="carpeta"):
-        model_loader.resolve_variant(model_catalog.TRAINED_VARIANT)
+        model_loader.resolve_variant(metadata["variant"])
     assert model_catalog.model_choices() == {"usa": "Original · GeoAI USA"}
 
 
@@ -118,6 +126,7 @@ def test_selected_model_provenance_survives_full_raster_pipeline(registered_cand
     from src.inference import pipeline
 
     checkpoint, metadata, _ = registered_candidate
+    tile_size = 512 if metadata["variant"] == model_catalog.LOCAL_VARIANT else 256
     raster = tmp_path / "input_rgb.tif"
     with rasterio.open(
         raster,
@@ -135,6 +144,8 @@ def test_selected_model_provenance_survives_full_raster_pipeline(registered_cand
     class TestOnlyDetector:
         def __call__(self, images):
             assert images[0].device.type == "cpu"
+            assert tuple(images[0].shape) == (3, tile_size, tile_size)
+            assert not images[0][:, 128:, :].any() and not images[0][:, :, 128:].any()
             height, width = images[0].shape[-2:]
             masks = torch.zeros((1, 1, height, width))
             masks[0, 0, 20:40, 20:40] = 1
@@ -149,7 +160,9 @@ def test_selected_model_provenance_survives_full_raster_pipeline(registered_cand
 
     monkeypatch.setattr(pipeline, "load_model", load_registered)
     output = tmp_path / "test_inference"
-    result = pipeline.detect_buildings(raster, output, device="cpu", model_variant=model_catalog.TRAINED_VARIANT)
+    result = pipeline.detect_buildings(
+        raster, output, device="cpu", model_variant=metadata["variant"], tile_size=tile_size, overlap=64
+    )
     assert calls == [(checkpoint.resolve(), "cpu")]
     assert result["model_id"] == metadata["id"]
     for key in ("id", "variant", "sha256", "size_bytes", "trained_locally", "evaluation_report"):
@@ -167,7 +180,61 @@ def test_selected_model_provenance_survives_full_raster_pipeline(registered_cand
     assert (output / "preview.png").is_file()
 
 
-@pytest.mark.parametrize("variant", [model_catalog.ORIGINAL_VARIANT, model_catalog.TRAINED_VARIANT])
+def test_local_variant_rejects_wrong_tile_size_before_loading_weights_or_images(tmp_path, monkeypatch):
+    pytest.importorskip("rasterio")
+    from src.inference import pipeline
+
+    def forbidden(*args, **kwargs):
+        pytest.fail("Tile-size validation must happen before reading imagery or acquiring/loading weights.")
+
+    monkeypatch.setattr(pipeline, "resolve_variant", forbidden)
+    monkeypatch.setattr(pipeline, "load_model", forbidden)
+    monkeypatch.setattr(pipeline, "inspect_image", forbidden)
+    with pytest.raises(ValueError, match="tile_size=512"):
+        pipeline.detect_buildings(
+            tmp_path / "not-opened.tif",
+            tmp_path / "not-created",
+            model_variant=model_catalog.LOCAL_VARIANT,
+            tile_size=256,
+            overlap=64,
+        )
+    assert not (tmp_path / "not-created").exists()
+
+
+def test_cli_reports_incompatible_local_tile_without_publishing_or_loading_weights(tmp_path, monkeypatch, capsys):
+    pytest.importorskip("rasterio")
+    from scripts.run_detection import main
+    from src.inference import pipeline
+
+    def forbidden(*args, **kwargs):
+        pytest.fail("An incompatible local-model tile must never read imagery or load weights.")
+
+    monkeypatch.setattr(pipeline, "resolve_variant", forbidden)
+    monkeypatch.setattr(pipeline, "load_model", forbidden)
+    monkeypatch.setattr(pipeline, "inspect_image", forbidden)
+    output = tmp_path / "rejected"
+    result = main(
+        [
+            "--image",
+            str(tmp_path / "not-opened.tif"),
+            "--output-dir",
+            str(output),
+            "--model-variant",
+            model_catalog.LOCAL_VARIANT,
+            "--tile-size",
+            "256",
+            "--overlap",
+            "64",
+        ]
+    )
+    assert result == 1
+    event = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
+    assert event["stage"] == "error" and "tile_size=512" in event["message"]
+    assert not (output / "manifest.json").exists()
+    assert not (output / ".running.lock").exists()
+
+
+@pytest.mark.parametrize("variant", model_catalog.REGISTERED_VARIANTS)
 def test_application_preserves_variant_across_worker_boundary(tmp_path, monkeypatch, variant):
     from src.application import detection_runner
 
@@ -183,14 +250,15 @@ def test_application_preserves_variant_across_worker_boundary(tmp_path, monkeypa
     monkeypatch.setattr(detection_runner, "_execute_worker", record_worker)
     output = tmp_path / "outputs" / "inference" / "test_run"
     detection_runner.run_detection(tmp_path / "input.tif", output, model_variant=variant, device="cpu")
-    if variant == model_catalog.TRAINED_VARIANT:
+    if variant in model_catalog.TRAINED_VARIANTS:
         assert commands[0][commands[0].index("--model-variant") + 1] == variant
     else:
         assert "--model-variant" not in commands[0] or commands[0][commands[0].index("--model-variant") + 1] == variant
     assert not (output / ".running.lock").exists()
 
 
-def test_cli_forwards_adjusted_variant_and_publishes_matching_provenance(tmp_path):
+@pytest.mark.parametrize("variant", model_catalog.TRAINED_VARIANTS)
+def test_cli_forwards_adjusted_variant_and_publishes_matching_provenance(tmp_path, variant):
     from PIL import Image
 
     from scripts.run_detection import main
@@ -227,13 +295,95 @@ def test_cli_forwards_adjusted_variant_and_publishes_matching_provenance(tmp_pat
             "--device",
             "cpu",
             "--model-variant",
-            model_catalog.TRAINED_VARIANT,
+            variant,
         ],
         detector=test_detector,
     )
-    assert code == 0 and requested == [model_catalog.TRAINED_VARIANT]
+    assert code == 0 and requested == [variant]
     manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
     assert manifest["model_id"] == model_id
-    assert manifest["model"]["variant"] == model_catalog.TRAINED_VARIANT
+    assert manifest["model"]["variant"] == variant
     assert manifest["model"]["trained_locally"] is True
     assert not (output / ".running.lock").exists()
+
+
+def test_trained_metadata_no_argument_keeps_spacenet_default(registered_candidate):
+    _, metadata, _ = registered_candidate
+    if metadata["variant"] == model_catalog.TRAINED_VARIANT:
+        assert model_catalog.trained_metadata() == model_catalog.trained_metadata(model_catalog.TRAINED_VARIANT)
+    else:
+        with pytest.raises(FileNotFoundError):
+            model_catalog.trained_metadata()
+        assert model_catalog.trained_metadata(model_catalog.LOCAL_VARIANT)["variant"] == model_catalog.LOCAL_VARIANT
+
+
+@pytest.mark.parametrize("checksum", [None, "", "not-a-hash", "0" * 63, "g" * 64])
+def test_unpinned_adjusted_model_is_not_offered_or_resolved(registered_candidate, checksum):
+    _, metadata, manifest = registered_candidate
+    manifest.write_text(json.dumps({**metadata, "sha256": checksum}), encoding="utf-8")
+    assert model_catalog.model_choices() == {"usa": "Original · GeoAI USA"}
+    with pytest.raises(ValueError, match="SHA256"):
+        model_loader.resolve_variant(metadata["variant"])
+
+
+@pytest.mark.parametrize("size", [None, 0, -1, True, "10"])
+def test_missing_or_invalid_checkpoint_size_is_rejected(registered_candidate, size):
+    _, metadata, manifest = registered_candidate
+    manifest.write_text(json.dumps({**metadata, "size_bytes": size}), encoding="utf-8")
+    assert model_catalog.model_choices() == {"usa": "Original · GeoAI USA"}
+    with pytest.raises(ValueError, match="tamaño"):
+        model_loader.resolve_variant(metadata["variant"])
+
+
+def test_missing_optional_models_leave_original_as_only_default():
+    assert model_catalog.model_choices() == {model_catalog.ORIGINAL_VARIANT: "Original · GeoAI USA"}
+    with pytest.raises(FileNotFoundError):
+        model_loader.resolve_variant(model_catalog.LOCAL_VARIANT)
+
+
+def test_optional_registration_never_replaces_pinned_original(registered_candidate, tmp_path, monkeypatch):
+    original = tmp_path / "original.pth"
+    original.write_bytes(b"original test fixture; no real weights")
+    monkeypatch.setattr(model_loader, "ensure_model", lambda **kwargs: original)
+    path, metadata = model_loader.resolve_variant()
+    assert path == original
+    assert original.read_bytes() == b"original test fixture; no real weights"
+    assert metadata["variant"] == model_catalog.ORIGINAL_VARIANT
+    assert metadata["sha256"] == model_loader.MODEL_SHA256
+    assert metadata["trained_locally"] is False
+
+
+def test_local_presentation_reports_one_capture_and_unreviewed_annotations():
+    presentation = model_catalog.model_presentation(variant=model_catalog.LOCAL_VARIANT)
+    assert presentation["title"] == "Ajustado · Chullo (piloto)"
+    assert "3 recortes originales" in presentation["description"]
+    assert "4 anotados; 1 excluido" in presentation["description"]
+    assert "2 de validación y 2 de prueba" in presentation["description"]
+    assert "Google Earth Pro / Airbus" in presentation["description"]
+    assert "2026-03-04" in presentation["description"]
+    limitations = " ".join(presentation["limitations"])
+    assert "assistant_visual_manual" in limitations and "human_reviewed=false" in limitations
+    assert "sin revisión humana" in presentation["notice"]
+    assert "falsos positivos" in presentation["notice"] and "unir edificios" in presentation["notice"]
+    assert "Jartum" not in str(presentation) and "sin etiquetas de entrenamiento de Chullo" not in str(presentation)
+
+
+def test_manifest_presentation_and_detection_title_override_legacy_fallback(registered_candidate):
+    from src.application.provenance import describe_detection
+
+    _, metadata, manifest = registered_candidate
+    presented = {
+        **metadata,
+        "title": "Título registrado",
+        "description": "Procedencia registrada",
+        "limitations": ["Alcance registrado"],
+        "user_notice": "Aviso registrado para la demostración",
+    }
+    manifest.write_text(json.dumps(presented), encoding="utf-8")
+    actual = model_catalog.model_presentation(variant=metadata["variant"])
+    assert actual == {
+        **{key: presented[key] for key in ("title", "description", "limitations")},
+        "notice": presented["user_notice"],
+    }
+    assert model_catalog.model_choices()[metadata["variant"]] == presented["title"]
+    assert describe_detection({"model": presented}).model_name == presented["title"]

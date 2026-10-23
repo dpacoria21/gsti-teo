@@ -2,9 +2,14 @@
 
 from __future__ import annotations
 
+import html
 import json
+import math
 
 import folium
+from branca.element import MacroElement, Template
+
+from src.risk_explanation import DemoRuleProvider, ExplanationProvider, ProximityExplanation
 
 COLORS = {
     "river": "#07838a",
@@ -22,13 +27,14 @@ def build_map(
     rivers,
     area,
     bands,
-    band_m=25,
+    band_m=50,
     selected_id=None,
     basemap=True,
     image_overlay=None,
     buildings_label="Edificaciones · Microsoft",
     traffic_zones=None,
     red_band_m=25,
+    rule_provider: ExplanationProvider | None = None,
 ):
     """Build a map in WGS84 from already evaluated, full-resolution geometries."""
     bounds = area.total_bounds if len(area) else summary.total_bounds
@@ -101,7 +107,9 @@ def build_map(
             interactive=False,
         ).add_to(map_view)
 
+    building_layers = []
     if len(summary):
+        provider = rule_provider or DemoRuleProvider()
         columns = [
             "building_id",
             "distance_m",
@@ -114,24 +122,20 @@ def build_map(
             "geometry",
         ]
         display = summary[[column for column in columns if column in summary.columns]].copy()
-        display["Distancia"] = display["distance_m"].map(
-            lambda value: f"{value:.1f} m" if value is not None and value == value else "Sin evaluación"
-        )
-        display["Resultado"] = display["proximity_label"].fillna("Sin evaluación")
-        display["Referencia"] = (
-            display["distance_reference"].map(_reference_label)
-            if "distance_reference" in display.columns
-            else _reference_label("axis")
-        )
-        display["Alcance"] = PROXIMITY_NOTICE
-        popup_fields = ["building_id", "Distancia", "Resultado", "Referencia", "Alcance"]
-        popup_aliases = ["Edificación", "Distancia mínima", "Semáforo de proximidad", "Medición", "Interpretación"]
-        if "confidence" in display.columns:
-            display["Puntuación IA"] = display["confidence"].map(
-                lambda value: f"{float(value):.3f}" if value is not None and value == value else "No disponible"
-            )
-            popup_fields.append("Puntuación IA")
-            popup_aliases.append("Puntuación del detector")
+        explanations = [
+            provider.explain(row["distance_m"], red_band_m, band_m, row.get("proximity_class"))
+            for _, row in display.iterrows()
+        ]
+        display["proximity_class"] = [item.classification for item in explanations]
+        display["Resultado"] = [item.label for item in explanations]
+        display["Distancia"] = [
+            f"{item.distance_m:.2f} m" if item.distance_m is not None else "Sin evaluación" for item in explanations
+        ]
+        display["Ficha"] = [
+            _building_popup(row, explanation) for (_, row), explanation in zip(display.iterrows(), explanations)
+        ]
+        # The tooltip inserts text into HTML; retain the raw ID separately for selection.
+        display["Identificador"] = display["building_id"].astype(str).map(html.escape)
 
         def building_style(feature):
             classification = feature["properties"].get("proximity_class")
@@ -143,20 +147,24 @@ def build_map(
                 "fillOpacity": 0.24 if image_overlay else 0.58,
             }
 
-        folium.GeoJson(
-            json.loads(display.to_json()),
-            name=buildings_label,
-            style_function=building_style,
-            highlight_function=lambda _: {"weight": 2.5, "color": COLORS["selected"], "fillOpacity": 0.85},
-            tooltip=folium.GeoJsonTooltip(
-                fields=["building_id", "Distancia", "Resultado", "Alcance"],
-                aliases=["Edificación", "Distancia", "Semáforo de proximidad", "Interpretación"],
-                sticky=False,
-                localize=False,
-            ),
-            popup=folium.GeoJsonPopup(fields=popup_fields, aliases=popup_aliases, max_width=380, localize=False),
-            smooth_factor=0,
-        ).add_to(map_view)
+        for color, label in (("red", "Rojo"), ("yellow", "Amarillo"), ("green", "Verde"), ("unknown", "Sin evaluación")):
+            subset = display.loc[display["proximity_class"].eq(color)]
+            if subset.empty:
+                continue
+            layer = folium.GeoJson(
+                json.loads(subset.to_json()),
+                name=f"{label} · {len(subset)} · {buildings_label}",
+                style_function=building_style,
+                highlight_function=lambda _: {"weight": 2.5, "color": COLORS["selected"], "fillOpacity": 0.65},
+                tooltip=folium.GeoJsonTooltip(
+                    fields=["Identificador", "Distancia", "Resultado"],
+                    aliases=["Edificación", "Distancia", "Semáforo demo"],
+                    sticky=False, localize=False,
+                ),
+                popup=folium.GeoJsonPopup(fields=["Ficha"], labels=False, max_width=410, localize=False),
+                smooth_factor=0,
+            ).add_to(map_view)
+            building_layers.append({"variable": layer.get_name(), "count": len(subset), "label": label})
 
     if len(rivers):
         fields = [field for field in ["name", "river_id"] if field in rivers.columns]
@@ -191,7 +199,106 @@ def build_map(
         map_view.fit_bounds([[south, west], [north, east]], padding=(24, 24))
 
     folium.LayerControl(position="topright", collapsed=True).add_to(map_view)
+    _BuildingInteractions(building_layers).add_to(map_view)
     return map_view
+
+
+def _building_popup(row, explanation: ProximityExplanation) -> str:
+    """Self-contained escaped HTML works in Cloud without callbacks to Python."""
+    def escape(value):
+        return html.escape(str(value))
+
+    color = COLORS[explanation.classification]
+    distance = f"{explanation.distance_m:.2f} m" if explanation.distance_m is not None else "Sin evaluación"
+    factors = "".join(f"<li>{escape(item)}</li>" for item in explanation.pending_factors)
+    actions = "".join(f"<li>{escape(item)}</li>" for item in explanation.actions)
+    try:
+        confidence = float(row.get("confidence"))
+    except (TypeError, ValueError):
+        confidence = float("nan")
+    confidence_html = (
+        f'<div>Puntuación del detector: <b>{confidence:.3f}</b> · no representa probabilidad de peligro.</div>'
+        if math.isfinite(confidence) else ""
+    )
+    return (
+        '<section class="building-explanation" style="max-width:360px;max-height:390px;overflow-y:auto;'
+        'font:13px/1.45 system-ui,sans-serif;white-space:normal;padding:3px 5px">'
+        f'<strong style="color:{color};font-size:15px">{escape(explanation.label)}</strong>'
+        f'<div style="color:#526878;margin:5px 0">Edificación {escape(row["building_id"])}</div>'
+        f'<div style="font-size:22px;font-weight:700">{distance}</div>'
+        f'<div>{escape(_reference_label(row.get("distance_reference", "axis")))}</div>'
+        f'<div>Cauce: {escape(row.get("nearest_river_name", "Cauce cartografiado"))}</div>'
+        f'{confidence_html}'
+        f'<p><strong>¿Por qué este color?</strong><br>{escape(explanation.criterion)} '
+        f'{escape(explanation.reason)}</p>'
+        f'<div>Límite rojo: <b>{explanation.red_band_m:g} m</b> · '
+        f'Ancho amarillo: <b>{explanation.yellow_width_m:g} m</b> · '
+        f'Límite exterior: <b>{explanation.outer_band_m:g} m</b></div>'
+        f'<p>{escape(explanation.potential_exposure)}</p>'
+        f'<details><summary><strong>Factores pendientes de evaluar</strong></summary><ul>{factors}</ul></details>'
+        f'<details><summary><strong>Qué verificar</strong></summary><ul>{actions}</ul></details>'
+        f'<p style="background:#f1f5f9;padding:8px;border-radius:5px">{escape(explanation.notice)}</p>'
+        f'<small>Regla de demostración {escape(explanation.rule_version)} · '
+        'criterios ilustrativos del proyecto, no una evaluación oficial.</small></section>'
+    )
+
+
+class _BuildingInteractions(MacroElement):
+    """Local Leaflet selection, zoom and live visibility counts within the iframe."""
+
+    _template = Template("""
+    {% macro script(this, kwargs) %}
+    (function () {
+        const map = {{ this._parent.get_name() }};
+        const groups = [
+            {% for item in this.layers %}
+            {layer: {{ item.variable }}, count: {{ item.count }}, label: {{ item.label | tojson }}},
+            {% endfor %}
+        ];
+        let selected = null;
+        const counter = L.control({position: 'bottomleft'});
+        counter.onAdd = function () {
+            this.node = L.DomUtil.create('div', 'building-visibility-counter');
+            this.node.style.cssText = 'background:white;padding:8px 10px;border-radius:6px;'
+                + 'box-shadow:0 1px 5px #0003;font:12px/1.5 system-ui;max-width:300px;';
+            L.DomEvent.disableClickPropagation(this.node);
+            return this.node;
+        };
+        counter.addTo(map);
+        function updateCounter() {
+            let count = 0;
+            const parts = [];
+            groups.forEach(function (item) {
+                if (map.hasLayer(item.layer)) { count += item.count; parts.push(item.label + ': ' + item.count); }
+            });
+            counter.node.textContent = count + ' edificaciones visibles · ' + parts.join(' · ');
+        }
+        groups.forEach(function (item) {
+            item.layer.eachLayer(function (feature) {
+                feature.on('click', function () {
+                    if (selected) { selected.group.resetStyle(selected.feature); }
+                    selected = {group: item.layer, feature: feature};
+                    feature.setStyle({color: '#182d43', weight: 3.5, fillOpacity: 0.42});
+                    map.fitBounds(feature.getBounds(), {padding: [65, 65], maxZoom: 19});
+                    feature.openPopup();
+                });
+                feature.on('mouseout', function () {
+                    if (selected && selected.feature === feature) {
+                        feature.setStyle({color: '#182d43', weight: 3.5, fillOpacity: 0.42});
+                    }
+                });
+            });
+        });
+        map.on('overlayadd overlayremove', updateCounter);
+        updateCounter();
+    })();
+    {% endmacro %}
+    """)
+
+    def __init__(self, layers):
+        super().__init__()
+        self._name = "BuildingInteractions"
+        self.layers = layers
 
 
 def _reference_label(value):

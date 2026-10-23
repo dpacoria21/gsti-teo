@@ -38,6 +38,14 @@ def read_manifest(path: str | Path) -> dict:
             if value in seen[key]:
                 raise ValueError(f"Escena/archivo repetido ({key}); no se permite mezclar splits.")
             seen[key].add(value)
+        if scene.get("ignore_regions") is not None:
+            ignore_path = scene["ignore_regions"]
+            if not isinstance(ignore_path, str) or not ignore_path:
+                raise ValueError("ignore_regions debe ser la ruta de un archivo de polígonos de exclusión.")
+            ignore_path = (path.parent / ignore_path).resolve()
+            if not ignore_path.is_file():
+                raise ValueError(f"No existe el archivo ignore_regions: {ignore_path}")
+            scene["ignore_regions"] = str(ignore_path)
     if {scene["split"] for scene in scenes} != {"train", "val", "test"}:
         raise ValueError("El manifiesto debe incluir train, val y test separados.")
     return manifest
@@ -92,14 +100,51 @@ def read_rgb(source) -> tuple[np.ndarray, np.ndarray]:
     return pixels, valid
 
 
+def evaluation_validity(source, valid: np.ndarray, ignore_path: str | Path | None) -> np.ndarray:
+    """Exclude uncertain regions from evaluation only, retaining the original RGB.
+
+    Ignore polygons use the same pixel-centre rasterization convention as labels.
+    Both reference and prediction masks are later clipped to this evaluable area.
+    This is not a loss mask for torchvision's detector and must not be used to
+    train on incomplete annotations.
+    """
+    if ignore_path is None:
+        return valid
+    regions = gpd.read_file(ignore_path)
+    if regions.crs is None:
+        raise ValueError("Los polígonos ignore_regions necesitan un CRS.")
+    regions = regions.to_crs(source.crs)
+    geometries = []
+    for geometry in regions.geometry:
+        if geometry is None or geometry.is_empty:
+            continue
+        if geometry.geom_type not in {"Polygon", "MultiPolygon"} or not geometry.is_valid:
+            raise ValueError("ignore_regions solo admite Polygon/MultiPolygon válidos.")
+        geometries.append((geometry, 1))
+    ignored = (
+        rasterize(geometries, out_shape=valid.shape, transform=source.transform, fill=0, dtype="uint8")
+        if geometries
+        else np.zeros(valid.shape, dtype="uint8")
+    )
+    evaluated = valid & ~ignored.astype(bool)
+    if not evaluated.any():
+        raise ValueError("ignore_regions no deja píxeles válidos para evaluar la escena.")
+    return evaluated
+
+
 class BuildingDataset(Dataset):
-    """Whole scenes, without crops; augmentation changes only training scenes."""
+    """Whole scenes; optional ignore regions are supported only for evaluation."""
 
     def __init__(self, manifest: dict, split: str, augment: bool = False):
         self.scenes = [scene for scene in manifest["scenes"] if scene["split"] == split]
         self.augment = augment
         if split != "train" and augment:
             raise ValueError("Las escenas val/test no deben aumentarse.")
+        if split == "train" and any(scene.get("ignore_regions") is not None for scene in self.scenes):
+            raise ValueError(
+                "No se admite ignore_regions en train: Mask R-CNN no ignora esas pérdidas. "
+                "Use recortes completamente anotados; la exclusión solo está implementada para evaluación."
+            )
 
     def __len__(self):
         return len(self.scenes)
@@ -108,6 +153,7 @@ class BuildingDataset(Dataset):
         scene = self.scenes[index]
         with rasterio.open(scene["image"]) as source:
             pixels, valid = read_rgb(source)
+            valid = evaluation_validity(source, valid, scene.get("ignore_regions"))
             labels = gpd.read_file(scene["labels"])
             if labels.crs is None:
                 raise ValueError("Las etiquetas necesitan un CRS explícito.")

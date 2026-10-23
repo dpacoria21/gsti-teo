@@ -1,0 +1,107 @@
+{
+  "parent_image": "data/imagery/chullo/chullo_rgb.tif",
+  "source_sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+  "scenes": [
+    {
+      "scene_id": "train_1100_100",
+      "split": "train",
+      "image": "train_1100_100.tif",
+      "labels": "train_1100_100.geojson",
+      "window": [
+        1100,
+        100,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "train_1600_100",
+      "split": "train",
+      "image": "train_1600_100.tif",
+      "labels": "train_1600_100.geojson",
+      "window": [
+        1600,
+        100,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "train_1100_500",
+      "split": "train",
+      "image": "train_1100_500.tif",
+      "labels": "train_1100_500.geojson",
+      "window": [
+        1100,
+        500,
+        192,
+        192
+      ],
+      "excluded_from_training": true,
+      "exclusion_reason": "Final assistant visual QA removed ambiguous shadow/vehicle references and added ignore regions. No 192/128/96-pixel candidate on the fixed grid remains outside ignore plus a 1-pixel margin with at least 8 usable roof references. Retained for annotation provenance only; excluded explicitly before training, without model results."
+    },
+    {
+      "scene_id": "train_1600_500",
+      "split": "train",
+      "image": "train_1600_500.tif",
+      "labels": "train_1600_500.geojson",
+      "window": [
+        1600,
+        500,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "val_1100_900",
+      "split": "val",
+      "image": "val_1100_900.tif",
+      "labels": "val_1100_900.geojson",
+      "window": [
+        1100,
+        900,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "val_1600_900",
+      "split": "val",
+      "image": "val_1600_900.tif",
+      "labels": "val_1600_900.geojson",
+      "window": [
+        1600,
+        900,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "test_1100_1400",
+      "split": "test",
+      "image": "test_1100_1400.tif",
+      "labels": "test_1100_1400.geojson",
+      "window": [
+        1100,
+        1400,
+        192,
+        192
+      ]
+    },
+    {
+      "scene_id": "test_1600_1400",
+      "split": "test",
+      "image": "test_1600_1400.tif",
+      "labels": "test_1600_1400.geojson",
+      "window": [
+        1600,
+        1400,
+        192,
+        192
+      ]
+    }
+  ],
+  "selection_reason": "Fixed pixel grid by geographic north/centre/south bands, before annotating and without predictions",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false
+}

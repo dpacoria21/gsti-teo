@@ -8,6 +8,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from src.model_catalog import model_presentation
 from src.settings import PROJECT_ROOT
 from src.ui.header import render_header
 from src.ui.map_panel import render_map_panel
@@ -58,12 +59,9 @@ def main() -> None:
 
     building_credit = "Edificaciones: Microsoft"
     if view.detection:
-        building_credit = (
-            "Edificaciones: modelo ajustado SpaceNet (experimental)"
-            if view.detection["manifest"].get("model", {}).get("trained_locally")
-            else "Edificaciones: inferencia de modelo preentrenado"
-        )
+        model = view.detection["manifest"].get("model", {})
+        building_credit = f"Edificaciones: {model_presentation(model)['title']}"
     st.markdown(
-        f'<div class="foot">{html.escape(selection.area_name.upper())} · Prototipo académico de análisis territorial · {building_credit} · Procedencia de las capas en «Fuentes y alcance» · La proximidad es un indicador espacial.</div>',
+        f'<div class="foot">{html.escape(selection.area_name.upper())} · Prototipo académico de análisis territorial · {html.escape(building_credit)} · Procedencia de las capas en «Fuentes y alcance» · La proximidad es un indicador espacial.</div>',
         unsafe_allow_html=True,
     )

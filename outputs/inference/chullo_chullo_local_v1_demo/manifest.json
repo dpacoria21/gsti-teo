@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "started_at": "2026-10-23T06:56:28.805950+00:00",
+  "completed_at": "2026-10-23T06:56:52.547235+00:00",
+  "elapsed_seconds": 23.741,
+  "count": 2164,
+  "model_id": "chullo/maskrcnn_chullo_local_v1",
+  "image_id": "img_467bd573342bf91f",
+  "source_id": "geoai_building_inference",
+  "bounds_wgs84": [
+    -71.55818434475866,
+    -16.40468333437251,
+    -71.54580285683775,
+    -16.39530014426853
+  ],
+  "preview_bounds_wgs84": [
+    [
+      -16.404683641464594,
+      -71.55818434475866
+    ],
+    [
+      -16.39530014426853,
+      -71.545800713191
+    ]
+  ],
+  "image": {
+    "path": "data/imagery/chullo/chullo_rgb.tif",
+    "width": 2621,
+    "height": 2045,
+    "bands": 3,
+    "dtype": "uint8",
+    "crs": "EPSG:32719",
+    "transform": [
+      0.5,
+      0.0,
+      226776.5,
+      0.0,
+      -0.5,
+      8185615.5
+    ],
+    "resolution_m_approx": [
+      0.49974072835559774,
+      0.49974072825828775
+    ],
+    "bounds_wgs84": [
+      -71.55818434475866,
+      -16.40468333437251,
+      -71.54580285683775,
+      -16.39530014426853
+    ],
+    "preview_bounds_wgs84": [
+      [
+        -16.40468333437251,
+        -71.55818434475866
+      ],
+      [
+        -16.39530014426853,
+        -71.54580285683775
+      ]
+    ],
+    "rgb_bands": [
+      1,
+      2,
+      3
+    ],
+    "size_bytes": 12159125,
+    "sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+    "source_id": "google_earth_chullo_imagery",
+    "observed_at": "2026-03-04",
+    "license": "Imagen exportada de Google Earth Pro para este prototipo académico; conserva créditos del proveedor y condiciones aplicables. No es un dataset abierto.",
+    "provenance": {
+      "schema_version": 1,
+      "image_id": "earth_capture_6fa66832ea1b3140",
+      "source_id": "google_earth_chullo_imagery",
+      "study_area_id": "chullo",
+      "title": "Chullo · captura real de Google Earth Pro",
+      "image_kind": "RGB exportada de Google Earth Pro; georreferenciación propia de captura cenital",
+      "raster_path": "data/imagery/chullo/chullo_rgb.tif",
+      "source": "Google Earth Pro; proveedor según atribución de la imagen",
+      "organization": "Google Earth Pro / proveedor acreditado",
+      "url": "https://earth.google.com/",
+      "original_image": {
+        "path": "data/imagery/chullo/chullo_google_earth_original.jpg",
+        "sha256": "6fa66832ea1b31402016bc2c216baef61aee64803ca48e9b04afa04cda34c6a2",
+        "width": 8192,
+        "height": 6390,
+        "unmodified": true
+      },
+      "observed_at": "2026-03-04",
+      "capture_date": "2026-03-04",
+      "processed_at": "2026-10-14T16:00:43.592318+00:00",
+      "license": "Imagen exportada de Google Earth Pro para este prototipo académico; conserva créditos del proveedor y condiciones aplicables. No es un dataset abierto.",
+      "license_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+      "attribution": "Google Earth; Image © 2026 Airbus",
+      "native_resolution_m": null,
+      "resolution_m": [
+        0.5,
+        0.5
+      ],
+      "resolution_note": "Output grid spacing, not a claim about the sensor's native resolution or positional accuracy.",
+      "crs": "EPSG:32719",
+      "bbox": [
+        226776.5,
+        8184593.0,
+        228087.0,
+        8185615.5
+      ],
+      "bbox_wgs84": [
+        -71.55818434475866,
+        -16.40468333437251,
+        -71.54580285683775,
+        -16.39530014426853
+      ],
+      "width": 2621,
+      "height": 2045,
+      "bands": 3,
+      "dtype": "uint8",
+      "valid_pixel_fraction": 0.9740601815876841,
+      "sha256": "467bd573342bf91f0cb8f78eff23b2a62331a6887ae09cd69880cd8b59d6554a",
+      "georeferencing": {
+        "method": "Affine least squares in metric CRS, fit/check points kept separate",
+        "target_crs": "EPSG:32719",
+        "source_affine_gdal_corner_convention": [
+          0.1583783729525835,
+          0.0019808723052433365,
+          226776.71913667908,
+          0.0019930621335457472,
+          -0.15740970932730688,
+          8185598.889571551
+        ],
+        "pixel_coordinates": "Zero-based pixel-centre indices in input CSV. GDAL transform uses column+0.5,row+0.5.",
+        "fit_check_statistics": {
+          "fit": {
+            "count": 4,
+            "rmse_m": 0.0033144471409736836,
+            "max_error_m": 0.003314447155398475,
+            "mean_error_m": 0.0033144471409736836
+          },
+          "check": {
+            "count": 2,
+            "rmse_m": 0.22683439892594953,
+            "max_error_m": 0.23091251459897644,
+            "mean_error_m": 0.22679706257070395
+          },
+          "acceptance_limit_m": 3,
+          "design_condition_number": 1.0000000000000004,
+          "linear_condition_number": 1.0061537730378056,
+          "source_pixel_size_m": [
+            0.15839091298359198,
+            0.15742217266191227
+          ]
+        },
+        "control_points_path": "data/imagery/chullo/georeferencing_points.csv",
+        "control_points_sha256": "c5c7107a25c7ff5677c010fd18acec3acc064967a57a34867a936c243ce93526",
+        "residuals_path": "data/imagery/chullo/georeferencing_residuals.csv",
+        "control_points": [
+          {
+            "id": "C_NW",
+            "role": "fit",
+            "column": 2741.5,
+            "row": 1089.5,
+            "longitude": -71.554,
+            "latitude": -16.397,
+            "x": 227213.1485006353,
+            "y": 8185432.778401904,
+            "predicted_x": 227213.15178612777,
+            "predicted_y": 8185432.777964755,
+            "residual_x_m": 0.0032854924793355167,
+            "residual_y_m": -0.0004371488466858864,
+            "residual_m": 0.003314447155398475
+          },
+          {
+            "id": "C_NE",
+            "role": "fit",
+            "column": 5440.5,
+            "row": 1089.5,
+            "longitude": -71.55,
+            "latitude": -16.397,
+            "x": 227640.61830021924,
+            "y": 8185438.156802304,
+            "predicted_x": 227640.6150147268,
+            "predicted_y": 8185438.157239453,
+            "residual_x_m": -0.0032854924502316862,
+            "residual_y_m": 0.0004371488466858864,
+            "residual_m": 0.0033144471265488923
+          },
+          {
+            "id": "C_SE",
+            "role": "fit",
+            "column": 5440.5,
+            "row": 5309.5,
+            "longitude": -71.55,
+            "latitude": -16.403,
+            "x": 227648.97101036244,
+            "y": 8184773.888703241,
+            "predicted_x": 227648.97429585492,
+            "predicted_y": 8184773.888266092,
+            "residual_x_m": 0.0032854924793355167,
+            "residual_y_m": -0.0004371488466858864,
+            "residual_m": 0.003314447155398475
+          },
+          {
+            "id": "C_SW",
+            "role": "fit",
+            "column": 2741.5,
+            "row": 5309.5,
+            "longitude": -71.554,
+            "latitude": -16.403,
+            "x": 227221.51435274835,
+            "y": 8184768.508554244,
+            "predicted_x": 227221.5110672559,
+            "predicted_y": 8184768.508991393,
+            "residual_x_m": -0.0032854924502316862,
+            "residual_y_m": 0.0004371488466858864,
+            "residual_m": 0.0033144471265488923
+          },
+          {
+            "id": "V1",
+            "role": "check",
+            "column": 3552.0,
+            "row": 2495.0,
+            "longitude": -71.5528,
+            "latitude": -16.399,
+            "x": 227344.17653084575,
+            "y": 8185212.969735958,
+            "predicted_x": 227344.30157343086,
+            "predicted_y": 8185213.153995154,
+            "residual_x_m": 0.1250425851030741,
+            "residual_y_m": 0.1842591967433691,
+            "residual_m": 0.22268161054243146
+          },
+          {
+            "id": "V2",
+            "role": "check",
+            "column": 4632.0,
+            "row": 3902.0,
+            "longitude": -71.5512,
+            "latitude": -16.401,
+            "x": 227517.94824950607,
+            "y": 8184993.698454823,
+            "predicted_x": 227518.13730355314,
+            "predicted_y": 8184993.8310412355,
+            "residual_x_m": 0.18905404707766138,
+            "residual_y_m": 0.13258641213178635,
+            "residual_m": 0.23091251459897644
+          }
+        ],
+        "reference_image": {
+          "path": "data/imagery/chullo/chullo_con_referencias.jpg",
+          "sha256": "b274a957565b56c6ebb91812540076b415a2472df1dab370ff1df737fa313b7b",
+          "note": "Imagen usada para localizar puntos; requiere la misma cámara y vista que la captura RGB."
+        },
+        "extent_policy": "Full original image transformed; bounds snapped outward. No cropping; credits preserved in pixels.",
+        "accuracy_caveat": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory."
+      },
+      "accuracy_notes": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory.",
+      "processing": "Complete original image warped with fitted affine transform; bilinear RGB resampling, nearest-neighbour validity mask. No superresolution, training or pixel content replacement."
+    },
+    "title": "Chullo · captura real de Google Earth Pro",
+    "attribution": "Google Earth; Image © 2026 Airbus",
+    "source": "Google Earth Pro; proveedor según atribución de la imagen",
+    "organization": "Google Earth Pro / proveedor acreditado",
+    "image_kind": "RGB exportada de Google Earth Pro; georreferenciación propia de captura cenital",
+    "license_url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+    "accuracy_notes": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory.",
+    "georeferencing": {
+      "method": "Affine least squares in metric CRS, fit/check points kept separate",
+      "target_crs": "EPSG:32719",
+      "source_affine_gdal_corner_convention": [
+        0.1583783729525835,
+        0.0019808723052433365,
+        226776.71913667908,
+        0.0019930621335457472,
+        -0.15740970932730688,
+        8185598.889571551
+      ],
+      "pixel_coordinates": "Zero-based pixel-centre indices in input CSV. GDAL transform uses column+0.5,row+0.5.",
+      "fit_check_statistics": {
+        "fit": {
+          "count": 4,
+          "rmse_m": 0.0033144471409736836,
+          "max_error_m": 0.003314447155398475,
+          "mean_error_m": 0.0033144471409736836
+        },
+        "check": {
+          "count": 2,
+          "rmse_m": 0.22683439892594953,
+          "max_error_m": 0.23091251459897644,
+          "mean_error_m": 0.22679706257070395
+        },
+        "acceptance_limit_m": 3,
+        "design_condition_number": 1.0000000000000004,
+        "linear_condition_number": 1.0061537730378056,
+        "source_pixel_size_m": [
+          0.15839091298359198,
+          0.15742217266191227
+        ]
+      },
+      "control_points_path": "data/imagery/chullo/georeferencing_points.csv",
+      "control_points_sha256": "c5c7107a25c7ff5677c010fd18acec3acc064967a57a34867a936c243ce93526",
+      "residuals_path": "data/imagery/chullo/georeferencing_residuals.csv",
+      "control_points": [
+        {
+          "id": "C_NW",
+          "role": "fit",
+          "column": 2741.5,
+          "row": 1089.5,
+          "longitude": -71.554,
+          "latitude": -16.397,
+          "x": 227213.1485006353,
+          "y": 8185432.778401904,
+          "predicted_x": 227213.15178612777,
+          "predicted_y": 8185432.777964755,
+          "residual_x_m": 0.0032854924793355167,
+          "residual_y_m": -0.0004371488466858864,
+          "residual_m": 0.003314447155398475
+        },
+        {
+          "id": "C_NE",
+          "role": "fit",
+          "column": 5440.5,
+          "row": 1089.5,
+          "longitude": -71.55,
+          "latitude": -16.397,
+          "x": 227640.61830021924,
+          "y": 8185438.156802304,
+          "predicted_x": 227640.6150147268,
+          "predicted_y": 8185438.157239453,
+          "residual_x_m": -0.0032854924502316862,
+          "residual_y_m": 0.0004371488466858864,
+          "residual_m": 0.0033144471265488923
+        },
+        {
+          "id": "C_SE",
+          "role": "fit",
+          "column": 5440.5,
+          "row": 5309.5,
+          "longitude": -71.55,
+          "latitude": -16.403,
+          "x": 227648.97101036244,
+          "y": 8184773.888703241,
+          "predicted_x": 227648.97429585492,
+          "predicted_y": 8184773.888266092,
+          "residual_x_m": 0.0032854924793355167,
+          "residual_y_m": -0.0004371488466858864,
+          "residual_m": 0.003314447155398475
+        },
+        {
+          "id": "C_SW",
+          "role": "fit",
+          "column": 2741.5,
+          "row": 5309.5,
+          "longitude": -71.554,
+          "latitude": -16.403,
+          "x": 227221.51435274835,
+          "y": 8184768.508554244,
+          "predicted_x": 227221.5110672559,
+          "predicted_y": 8184768.508991393,
+          "residual_x_m": -0.0032854924502316862,
+          "residual_y_m": 0.0004371488466858864,
+          "residual_m": 0.0033144471265488923
+        },
+        {
+          "id": "V1",
+          "role": "check",
+          "column": 3552.0,
+          "row": 2495.0,
+          "longitude": -71.5528,
+          "latitude": -16.399,
+          "x": 227344.17653084575,
+          "y": 8185212.969735958,
+          "predicted_x": 227344.30157343086,
+          "predicted_y": 8185213.153995154,
+          "residual_x_m": 0.1250425851030741,
+          "residual_y_m": 0.1842591967433691,
+          "residual_m": 0.22268161054243146
+        },
+        {
+          "id": "V2",
+          "role": "check",
+          "column": 4632.0,
+          "row": 3902.0,
+          "longitude": -71.5512,
+          "latitude": -16.401,
+          "x": 227517.94824950607,
+          "y": 8184993.698454823,
+          "predicted_x": 227518.13730355314,
+          "predicted_y": 8184993.8310412355,
+          "residual_x_m": 0.18905404707766138,
+          "residual_y_m": 0.13258641213178635,
+          "residual_m": 0.23091251459897644
+        }
+      ],
+      "reference_image": {
+        "path": "data/imagery/chullo/chullo_con_referencias.jpg",
+        "sha256": "b274a957565b56c6ebb91812540076b415a2472df1dab370ff1df737fa313b7b",
+        "note": "Imagen usada para localizar puntos; requiere la misma cámara y vista que la captura RGB."
+      },
+      "extent_policy": "Full original image transformed; bounds snapped outward. No cropping; credits preserved in pixels.",
+      "accuracy_caveat": "Fit/check residuals describe internal consistency with supplied coordinates, which may come from the same Google Earth view. They do not establish ground accuracy, image-to-OSM registration accuracy, orthorectification quality, or roof-to-ground offsets. Distances remain exploratory."
+    }
+  },
+  "model": {
+    "id": "chullo/maskrcnn_chullo_local_v1",
+    "variant": "chullo_local_v1",
+    "name": "Mask R-CNN ajustado Chullo (piloto)",
+    "title": "Ajustado · Chullo (piloto)",
+    "description": "Modelo experimental. Ajuste piloto con 3 recortes originales de entrenamiento (4 anotados; 1 excluido), 2 de validación y 2 de prueba de una sola captura de Chullo, Google Earth Pro / Airbus, del 2026-03-04.",
+    "limitations": [
+      "Referencias assistant_visual_manual; human_reviewed=false. Son anotaciones visuales del asistente sin revisión humana.",
+      "Los recortes pertenecen a una sola captura: la evaluación piloto no demuestra generalización a otras fechas o localidades.",
+      "Se detectan cubiertas visibles; no se confirma uso residencial, número de viviendas, peligro ni permiso para construir.",
+      "Modelo experimental. Comparación en dos recortes test: F1 0.08759 → 0.24885; recuperación 0.05000 → 0.22500; precisión 0.35294 → 0.27835; falsos positivos 11 → 70.",
+      "Recupera más referencias, pero también genera más falsos positivos; no es una mejora uniforme.",
+      "Predicciones que unen al menos dos referencias: 6 → 12; referencias afectadas: 15 → 27. Las uniones no están resueltas; no permite afirmar que se separan techos o viviendas individuales.",
+      "Validación usada para seleccionar la época: F1=0.44186046511627908; validación de los pesos almacenados en FP16 y recargados en FP32: F1=0.43023255813953487; diferencia almacenado menos selección=-0.011627906976744207. Las métricas test publicadas corresponden al checkpoint almacenado.",
+      "Las distancias usan georreferenciación aproximada; este modelo no evalúa peligro ni autoriza construir.",
+      "Las métricas usan dos recortes test y regiones evaluables: no equivalen a exactitud en toda Chullo o Arequipa.",
+      "La imagen fuente conserva las condiciones de Google Earth y Airbus; no se declara licencia abierta."
+    ],
+    "filename": "weights.pth",
+    "sha256": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+    "revision": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+    "size_bytes": 88170873,
+    "trained_locally": true,
+    "registered_at_utc": "2026-10-23T06:55:00.170857+00:00",
+    "initial_model_id": "giswqs/geoai/building_footprints_usa",
+    "initial_model_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+    "training_image_scale": 1.5625,
+    "inference_tile_size": 512,
+    "storage_dtype": "float16",
+    "inference_dtype": "float32",
+    "image_source": "Google Earth Pro / Airbus",
+    "image_capture_date": "2026-03-04",
+    "annotation_method": "assistant_visual_manual",
+    "human_reviewed": false,
+    "dataset_id": "chullo_local_assistant_provisional_v1",
+    "parent_split_counts": {
+      "train": 3,
+      "val": 2,
+      "test": 2
+    },
+    "used_parent_split_counts": {
+      "train": 3,
+      "val": 2,
+      "test": 2
+    },
+    "annotated_parent_split_counts": {
+      "train": 4,
+      "val": 2,
+      "test": 2
+    },
+    "excluded_parents": [
+      {
+        "scene_id": "train_1100_500",
+        "split": "train",
+        "reason": "Final assistant visual QA removed ambiguous shadow/vehicle references and added ignore regions. No 192/128/96-pixel candidate on the fixed grid remains outside ignore plus a 1-pixel margin with at least 8 usable roof references. Retained for annotation provenance only; excluded explicitly before training, without model results."
+      }
+    ],
+    "split_counts": {
+      "train": 4,
+      "val": 2,
+      "test": 2
+    },
+    "best_epoch": 47,
+    "evaluation_report": "comparison.json",
+    "evaluation_summary": {
+      "test_images": 2,
+      "reference_instances": 120,
+      "score_threshold": 0.5,
+      "mask_threshold": 0.5,
+      "mask_iou_threshold": 0.5,
+      "baseline": {
+        "images": 2,
+        "tp": 6,
+        "fp": 11,
+        "fn": 114,
+        "precision": 0.35294117647058826,
+        "recall": 0.05,
+        "f1": 0.08759124087591241,
+        "mean_iou_true_positives": 0.656071936902395,
+        "merged_predictions": 6,
+        "references_affected_by_merges": 15
+      },
+      "candidate": {
+        "images": 2,
+        "tp": 27,
+        "fp": 70,
+        "fn": 93,
+        "precision": 0.27835051546391754,
+        "recall": 0.225,
+        "f1": 0.2488479262672811,
+        "mean_iou_true_positives": 0.630024692189717,
+        "merged_predictions": 12,
+        "references_affected_by_merges": 27
+      },
+      "stored_validation": {
+        "images": 2,
+        "tp": 37,
+        "fp": 65,
+        "fn": 33,
+        "precision": 0.3627450980392157,
+        "recall": 0.5285714285714286,
+        "f1": 0.43023255813953487,
+        "mean_iou_true_positives": 0.6295319357270244,
+        "merged_predictions": 4,
+        "references_affected_by_merges": 5
+      },
+      "selection_validation": {
+        "images": 2,
+        "tp": 38,
+        "fp": 64,
+        "fn": 32,
+        "precision": 0.37254901960784315,
+        "recall": 0.5428571428571428,
+        "f1": 0.4418604651162791,
+        "mean_iou_true_positives": 0.6261411210600021,
+        "merged_predictions": 4,
+        "references_affected_by_merges": 5
+      },
+      "stored_minus_selection_validation_f1": -0.011627906976744207,
+      "baseline_validation": {
+        "images": 2,
+        "tp": 10,
+        "fp": 10,
+        "fn": 60,
+        "precision": 0.5,
+        "recall": 0.14285714285714285,
+        "f1": 0.2222222222222222,
+        "mean_iou_true_positives": 0.655343992049743,
+        "merged_predictions": 1,
+        "references_affected_by_merges": 2
+      },
+      "selection_used_test": false,
+      "interpretation": "Evaluación piloto de una sola captura de Chullo con referencias visuales provisionales del asistente, sin revisión humana. La separación espacial no establece independencia de adquisición ni estadística. Los resultados no representan exactitud en toda Chullo ni Arequipa."
+    },
+    "geography": "Recortes espacialmente separados de una sola captura de Chullo; evaluación piloto provisional.",
+    "license": "Inicialización GeoAI MIT; imagen y derivados sujetos a condiciones Google Earth/Airbus. Véase LICENSE_AND_ATTRIBUTION.txt.",
+    "url": "https://www.google.com/help/terms_maps-earth/",
+    "dataset_manifest": "dataset_manifest.json",
+    "dataset_manifest_paths_base": "data/training/chullo_local_v1",
+    "dataset_source_manifest_sha256": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+    "source_run_sha256": "c668c311a3ab1462f27a116980d91ffd8520b782174800083a97a93a9bfa8d62",
+    "public_reports_sha256": {
+      "run.json": "28a795795f71336ae9797745400df375458b189e39d95905163a597b0cb71864",
+      "epochs.json": "0f2e99ae567e32821ab45d3c65c1e1038da3b85b317c22d47bb9955447ba9d53",
+      "comparison.json": "7b16b4d7832493730b792abaf6dd9bd237de3e35d0a00979b9c9e8e608bc90ba",
+      "baseline_val.json": "fb8acd7cda31be1e4acf206639ef627a510ff390d20ec30b0e1bdaf4c490b11f",
+      "best_val.json": "14c1fb2a389b2e632b9e6b651b92ddf7722aba1b923bdc2d168e442c1bed42e1",
+      "best_val_stored_checkpoint.json": "1a88fc3465edb308d7ac1aa5d5cea33ba724656342f252d4919dfffb0f78096a",
+      "baseline_test.json": "c99508be205916ffba1b99945474449b1e4756e030eebd9c8da02e00152d7f57",
+      "candidate_test.json": "7a71686d8031dcce47faa260501d33f835b46b93777ef76df55e8365c142603d",
+      "config.json": "8d916bd97ef61d40c1d18c988a432d5f86ce0a9802cf4621a04ffc48a0b9055a",
+      "dataset_manifest.json": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e"
+    },
+    "portable_copy_note": "Las copias públicas omiten rutas personales. Las rutas de imágenes/etiquetas del dataset se resuelven desde dataset_manifest_paths_base; los hashes originales conservan su referencia al archivo fuente.",
+    "path": "models/chullo_local_v1/weights.pth",
+    "architecture": "Mask R-CNN ResNet50-FPN",
+    "pretrained": true,
+    "num_classes": 2,
+    "min_size": 800,
+    "max_size": 1333,
+    "normalization": {
+      "input": "RGB uint8 / 255",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "parameters": {
+    "confidence_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "tile_size": 512,
+    "overlap": 128,
+    "min_area_m2": 10.0,
+    "nms_iou": 0.35,
+    "nms_containment": 0.7,
+    "analysis_crs": "EPSG:32719"
+  },
+  "execution": {
+    "device": "cuda",
+    "device_requested": "cuda",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "tiles": 35,
+    "raw_candidates": 3414,
+    "duplicates_removed": 1250
+  },
+  "outputs": {
+    "buildings": "buildings.geojson",
+    "preview": "preview.png",
+    "buildings_sha256": "66d95d3184340b987ce8f8c1afaba182a838a6fcd1f2f394a3da5636001bd867"
+  },
+  "warnings": [],
+  "limitations": [
+    "Detecciones automáticas sin revisión; pueden existir omisiones y falsos positivos.",
+    "La confianza del modelo no es una probabilidad calibrada ni una medida de peligro.",
+    "Se detectan edificaciones, no uso residencial ni ocupación.",
+    "Los contornos corresponden a máscaras y pueden representar cubiertas; no sustituyen catastro ni levantamiento de campo.",
+    "Fecha de captura desconocida salvo declaración explícita de la fuente.",
+    "Las instancias que llegan al borde de la imagen pueden quedar incompletas."
+  ]
+}

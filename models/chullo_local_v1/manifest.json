@@ -1,0 +1,157 @@
+{
+  "id": "chullo/maskrcnn_chullo_local_v1",
+  "variant": "chullo_local_v1",
+  "name": "Mask R-CNN ajustado Chullo (piloto)",
+  "title": "Ajustado · Chullo (piloto)",
+  "description": "Modelo experimental. Ajuste piloto con 3 recortes originales de entrenamiento (4 anotados; 1 excluido), 2 de validación y 2 de prueba de una sola captura de Chullo, Google Earth Pro / Airbus, del 2026-03-04.",
+  "limitations": [
+    "Referencias assistant_visual_manual; human_reviewed=false. Son anotaciones visuales del asistente sin revisión humana.",
+    "Los recortes pertenecen a una sola captura: la evaluación piloto no demuestra generalización a otras fechas o localidades.",
+    "Se detectan cubiertas visibles; no se confirma uso residencial, número de viviendas, peligro ni permiso para construir.",
+    "Modelo experimental. Comparación en dos recortes test: F1 0.08759 → 0.24885; recuperación 0.05000 → 0.22500; precisión 0.35294 → 0.27835; falsos positivos 11 → 70.",
+    "Recupera más referencias, pero también genera más falsos positivos; no es una mejora uniforme.",
+    "Predicciones que unen al menos dos referencias: 6 → 12; referencias afectadas: 15 → 27. Las uniones no están resueltas; no permite afirmar que se separan techos o viviendas individuales.",
+    "Validación usada para seleccionar la época: F1=0.44186046511627908; validación de los pesos almacenados en FP16 y recargados en FP32: F1=0.43023255813953487; diferencia almacenado menos selección=-0.011627906976744207. Las métricas test publicadas corresponden al checkpoint almacenado.",
+    "Las distancias usan georreferenciación aproximada; este modelo no evalúa peligro ni autoriza construir.",
+    "Las métricas usan dos recortes test y regiones evaluables: no equivalen a exactitud en toda Chullo o Arequipa.",
+    "La imagen fuente conserva las condiciones de Google Earth y Airbus; no se declara licencia abierta."
+  ],
+  "filename": "weights.pth",
+  "sha256": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+  "revision": "dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c",
+  "size_bytes": 88170873,
+  "trained_locally": true,
+  "registered_at_utc": "2026-10-23T06:55:00.170857+00:00",
+  "initial_model_id": "giswqs/geoai/building_footprints_usa",
+  "initial_model_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "training_image_scale": 1.5625,
+  "inference_tile_size": 512,
+  "storage_dtype": "float16",
+  "inference_dtype": "float32",
+  "image_source": "Google Earth Pro / Airbus",
+  "image_capture_date": "2026-03-04",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "dataset_id": "chullo_local_assistant_provisional_v1",
+  "parent_split_counts": {
+    "train": 3,
+    "val": 2,
+    "test": 2
+  },
+  "used_parent_split_counts": {
+    "train": 3,
+    "val": 2,
+    "test": 2
+  },
+  "annotated_parent_split_counts": {
+    "train": 4,
+    "val": 2,
+    "test": 2
+  },
+  "excluded_parents": [
+    {
+      "scene_id": "train_1100_500",
+      "split": "train",
+      "reason": "Final assistant visual QA removed ambiguous shadow/vehicle references and added ignore regions. No 192/128/96-pixel candidate on the fixed grid remains outside ignore plus a 1-pixel margin with at least 8 usable roof references. Retained for annotation provenance only; excluded explicitly before training, without model results."
+    }
+  ],
+  "split_counts": {
+    "train": 4,
+    "val": 2,
+    "test": 2
+  },
+  "best_epoch": 47,
+  "evaluation_report": "comparison.json",
+  "evaluation_summary": {
+    "test_images": 2,
+    "reference_instances": 120,
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "mask_iou_threshold": 0.5,
+    "baseline": {
+      "images": 2,
+      "tp": 6,
+      "fp": 11,
+      "fn": 114,
+      "precision": 0.35294117647058826,
+      "recall": 0.05,
+      "f1": 0.08759124087591241,
+      "mean_iou_true_positives": 0.656071936902395,
+      "merged_predictions": 6,
+      "references_affected_by_merges": 15
+    },
+    "candidate": {
+      "images": 2,
+      "tp": 27,
+      "fp": 70,
+      "fn": 93,
+      "precision": 0.27835051546391754,
+      "recall": 0.225,
+      "f1": 0.2488479262672811,
+      "mean_iou_true_positives": 0.630024692189717,
+      "merged_predictions": 12,
+      "references_affected_by_merges": 27
+    },
+    "stored_validation": {
+      "images": 2,
+      "tp": 37,
+      "fp": 65,
+      "fn": 33,
+      "precision": 0.3627450980392157,
+      "recall": 0.5285714285714286,
+      "f1": 0.43023255813953487,
+      "mean_iou_true_positives": 0.6295319357270244,
+      "merged_predictions": 4,
+      "references_affected_by_merges": 5
+    },
+    "selection_validation": {
+      "images": 2,
+      "tp": 38,
+      "fp": 64,
+      "fn": 32,
+      "precision": 0.37254901960784315,
+      "recall": 0.5428571428571428,
+      "f1": 0.4418604651162791,
+      "mean_iou_true_positives": 0.6261411210600021,
+      "merged_predictions": 4,
+      "references_affected_by_merges": 5
+    },
+    "stored_minus_selection_validation_f1": -0.011627906976744207,
+    "baseline_validation": {
+      "images": 2,
+      "tp": 10,
+      "fp": 10,
+      "fn": 60,
+      "precision": 0.5,
+      "recall": 0.14285714285714285,
+      "f1": 0.2222222222222222,
+      "mean_iou_true_positives": 0.655343992049743,
+      "merged_predictions": 1,
+      "references_affected_by_merges": 2
+    },
+    "selection_used_test": false,
+    "interpretation": "Evaluación piloto de una sola captura de Chullo con referencias visuales provisionales del asistente, sin revisión humana. La separación espacial no establece independencia de adquisición ni estadística. Los resultados no representan exactitud en toda Chullo ni Arequipa."
+  },
+  "geography": "Recortes espacialmente separados de una sola captura de Chullo; evaluación piloto provisional.",
+  "license": "Inicialización GeoAI MIT; imagen y derivados sujetos a condiciones Google Earth/Airbus. Véase LICENSE_AND_ATTRIBUTION.txt.",
+  "url": "https://www.google.com/help/terms_maps-earth/",
+  "dataset_manifest": "dataset_manifest.json",
+  "dataset_manifest_paths_base": "data/training/chullo_local_v1",
+  "dataset_source_manifest_sha256": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+  "source_run_sha256": "c668c311a3ab1462f27a116980d91ffd8520b782174800083a97a93a9bfa8d62",
+  "public_reports_sha256": {
+    "run.json": "28a795795f71336ae9797745400df375458b189e39d95905163a597b0cb71864",
+    "epochs.json": "0f2e99ae567e32821ab45d3c65c1e1038da3b85b317c22d47bb9955447ba9d53",
+    "comparison.json": "7b16b4d7832493730b792abaf6dd9bd237de3e35d0a00979b9c9e8e608bc90ba",
+    "baseline_val.json": "fb8acd7cda31be1e4acf206639ef627a510ff390d20ec30b0e1bdaf4c490b11f",
+    "best_val.json": "14c1fb2a389b2e632b9e6b651b92ddf7722aba1b923bdc2d168e442c1bed42e1",
+    "best_val_stored_checkpoint.json": "1a88fc3465edb308d7ac1aa5d5cea33ba724656342f252d4919dfffb0f78096a",
+    "baseline_test.json": "c99508be205916ffba1b99945474449b1e4756e030eebd9c8da02e00152d7f57",
+    "candidate_test.json": "7a71686d8031dcce47faa260501d33f835b46b93777ef76df55e8365c142603d",
+    "config.json": "8d916bd97ef61d40c1d18c988a432d5f86ce0a9802cf4621a04ffc48a0b9055a",
+    "dataset_manifest.json": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+    "prior_spacenet_test.json": "9196e25d87b302b9b54e6cf3d2c4f114e2a4b3d2a53b742d04869482dd5f6752"
+  },
+  "portable_copy_note": "Las copias públicas omiten rutas personales. Las rutas de imágenes/etiquetas del dataset se resuelven desde dataset_manifest_paths_base; los hashes originales conservan su referencia al archivo fuente.",
+  "contextual_comparison_report": "prior_spacenet_test.json"
+}

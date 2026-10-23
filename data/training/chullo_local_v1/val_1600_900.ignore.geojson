@@ -1,0 +1,495 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Borde superior entre cubiertas: sombras y azoteas pequeñas no permiten separar unidades con certeza.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.5,
+              8185165.5
+            ],
+            [
+              227598.5,
+              8185165.5
+            ],
+            [
+              227595.5,
+              8185159.0
+            ],
+            [
+              227589.0,
+              8185154.5
+            ],
+            [
+              227585.5,
+              8185156.5
+            ],
+            [
+              227591.5,
+              8185165.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Patios con vegetación, techos pequeños y sombras; se omiten unidades ambiguas sin considerarlas fondo conocido.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185140.5
+            ],
+            [
+              227584.5,
+              8185136.5
+            ],
+            [
+              227585.0,
+              8185132.5
+            ],
+            [
+              227581.0,
+              8185127.0
+            ],
+            [
+              227576.5,
+              8185129.0
+            ],
+            [
+              227576.5,
+              8185140.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Vegetación y azoteas en varios niveles: cubiertas individuales no separables de patios con seguridad.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227615.0,
+              8185117.5
+            ],
+            [
+              227624.0,
+              8185113.0
+            ],
+            [
+              227627.5,
+              8185108.0
+            ],
+            [
+              227621.0,
+              8185100.0
+            ],
+            [
+              227614.5,
+              8185103.5
+            ],
+            [
+              227611.0,
+              8185108.0
+            ],
+            [
+              227615.0,
+              8185117.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Patio central y cubiertas intercaladas, separación incompleta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227629.5,
+              8185137.5
+            ],
+            [
+              227637.5,
+              8185134.0
+            ],
+            [
+              227634.5,
+              8185128.5
+            ],
+            [
+              227629.5,
+              8185126.0
+            ],
+            [
+              227625.0,
+              8185129.5
+            ],
+            [
+              227629.5,
+              8185137.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Estructuras pequeñas parcialmente ocultas junto al eje vial.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227629.0,
+              8185158.5
+            ],
+            [
+              227635.5,
+              8185155.5
+            ],
+            [
+              227632.5,
+              8185151.0
+            ],
+            [
+              227628.5,
+              8185152.0
+            ],
+            [
+              227625.5,
+              8185148.5
+            ],
+            [
+              227623.0,
+              8185150.5
+            ],
+            [
+              227629.0,
+              8185158.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Construcciones parcialmente ocultas por vegetación; no se inventa el contorno.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227611.0,
+              8185099.5
+            ],
+            [
+              227620.5,
+              8185094.0
+            ],
+            [
+              227617.0,
+              8185089.0
+            ],
+            [
+              227611.0,
+              8185092.5
+            ],
+            [
+              227611.0,
+              8185099.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Pequeña azotea azul y su borde hacia la vía, oculta/ambigua.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227643.0,
+              8185120.5
+            ],
+            [
+              227649.5,
+              8185116.5
+            ],
+            [
+              227647.0,
+              8185111.5
+            ],
+            [
+              227642.0,
+              8185114.5
+            ],
+            [
+              227643.0,
+              8185120.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_008",
+      "properties": {
+        "reason": "Segunda revisión visual: esta cubierta parcial o unión de azoteas no puede separarse con consistencia; retirada de referencias y excluida, no convertida en fondo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227637.0,
+              8185162.0
+            ],
+            [
+              227641.5,
+              8185159.5
+            ],
+            [
+              227639.5,
+              8185155.5
+            ],
+            [
+              227635.0,
+              8185158.0
+            ],
+            [
+              227637.0,
+              8185162.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_009",
+      "properties": {
+        "reason": "Segunda revisión visual: esta cubierta parcial o unión de azoteas no puede separarse con consistencia; retirada de referencias y excluida, no convertida en fondo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227669.5,
+              8185146.0
+            ],
+            [
+              227672.5,
+              8185144.5
+            ],
+            [
+              227672.5,
+              8185137.0
+            ],
+            [
+              227666.5,
+              8185140.5
+            ],
+            [
+              227669.5,
+              8185146.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_010",
+      "properties": {
+        "reason": "Segunda revisión visual: esta cubierta parcial o unión de azoteas no puede separarse con consistencia; retirada de referencias y excluida, no convertida en fondo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227605.0,
+              8185093.5
+            ],
+            [
+              227614.5,
+              8185087.5
+            ],
+            [
+              227609.5,
+              8185081.0
+            ],
+            [
+              227600.0,
+              8185086.0
+            ],
+            [
+              227605.0,
+              8185093.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_011",
+      "properties": {
+        "reason": "Segunda revisión visual: esta cubierta parcial o unión de azoteas no puede separarse con consistencia; retirada de referencias y excluida, no convertida en fondo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.0,
+              8185075.5
+            ],
+            [
+              227599.5,
+              8185070.5
+            ],
+            [
+              227598.0,
+              8185069.5
+            ],
+            [
+              227586.5,
+              8185069.5
+            ],
+            [
+              227591.0,
+              8185075.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_012",
+      "properties": {
+        "reason": "Segunda revisión visual: esta cubierta parcial o unión de azoteas no puede separarse con consistencia; retirada de referencias y excluida, no convertida en fondo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "val_1600_900"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185073.5
+            ],
+            [
+              227582.5,
+              8185070.0
+            ],
+            [
+              227581.5,
+              8185069.5
+            ],
+            [
+              227576.5,
+              8185069.5
+            ],
+            [
+              227576.5,
+              8185073.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

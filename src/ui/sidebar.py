@@ -4,7 +4,7 @@ import streamlit as st
 
 from src.application.images import bundled_image, stored_upload
 from src.application.session_workspace import selected_result, session_identifier, session_output_root
-from src.model_catalog import ORIGINAL_VARIANT, model_choices
+from src.model_catalog import ORIGINAL_VARIANT, model_choices, model_presentation
 from src.settings import PROJECT_ROOT as ROOT
 from src.ui.engine import ml_status
 from src.ui.models import SidebarSelection
@@ -55,10 +55,9 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
                     "Modelo de edificaciones", list(choices), format_func=choices.get, key=f"model_{area_id}"
                 )
                 if model_variant != ORIGINAL_VARIANT:
-                    st.caption(
-                        "Ajustado con imágenes y etiquetas de SpaceNet (Jartum). Evaluación disponible en Fuentes y alcance; "
-                        "su exactitud en Chullo todavía no está cuantificada."
-                    )
+                    presentation = model_presentation(variant=model_variant)
+                    st.caption(presentation["description"])
+                    st.caption(presentation["notice"])
             image_choice = st.selectbox(
                 "Imagen de entrada",
                 [f"{area_name} · imagen incluida", f"Subir GeoTIFF de {area_name}"],
@@ -133,13 +132,15 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         maximum_width = maximum_band - chosen_red_band
         width_key = f"yellow_width_{area_id}"
         if width_key in st.session_state:
-            st.session_state[width_key] = max(1, min(int(st.session_state[width_key]), maximum_width))
+            clamped_width = max(1, min(int(st.session_state[width_key]), maximum_width))
+            if clamped_width != st.session_state[width_key]:
+                st.session_state[width_key] = clamped_width
         yellow_width = (
             st.slider(
                 "Ancho de la zona amarilla (m)",
                 min_value=1,
                 max_value=maximum_width,
-                value=min(25, maximum_width),
+                value=int(st.session_state.get(width_key, min(25, maximum_width))),
                 step=1,
                 key=width_key,
                 disabled=maximum_width == 1,

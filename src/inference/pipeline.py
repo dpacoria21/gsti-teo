@@ -12,6 +12,8 @@ import numpy as np
 import rasterio
 from pyproj import Transformer
 
+from src.model_catalog import LOCAL_VARIANT
+
 from .config import InferenceParameters
 from .model import load_model, resolve_variant, sha256_file
 from .postprocess import SOURCE_ID, candidates_from_masks, detection_frame, suppress_duplicates
@@ -42,6 +44,11 @@ def detect_buildings(
         analysis_crs=analysis_crs,
         device=device,
     )
+    if model_variant == LOCAL_VARIANT and parameters.tile_size != 512:
+        raise ValueError(
+            "El modelo Chullo piloto requiere tile_size=512 para conservar la escala "
+            "de entrenamiento 1.5625 (512 → 800 píxeles)."
+        )
     import torch
     import torchvision
 

@@ -1,0 +1,309 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Árboles, patio y elementos de techo pequeños; no es posible separar todas las cubiertas.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227614.5,
+              8184898.5
+            ],
+            [
+              227624.5,
+              8184895.0
+            ],
+            [
+              227627.0,
+              8184892.5
+            ],
+            [
+              227625.5,
+              8184887.5
+            ],
+            [
+              227622.0,
+              8184887.0
+            ],
+            [
+              227616.0,
+              8184889.0
+            ],
+            [
+              227614.5,
+              8184898.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Patio interior y pequeñas cubiertas mezclados con vegetación y sombra.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227606.0,
+              8184880.5
+            ],
+            [
+              227615.0,
+              8184878.0
+            ],
+            [
+              227617.0,
+              8184873.5
+            ],
+            [
+              227615.5,
+              8184866.0
+            ],
+            [
+              227610.5,
+              8184867.5
+            ],
+            [
+              227608.0,
+              8184872.5
+            ],
+            [
+              227606.0,
+              8184880.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Superficie beige interior: no se confirma techo frente a patio abierto.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227611.0,
+              8184875.5
+            ],
+            [
+              227616.5,
+              8184874.0
+            ],
+            [
+              227614.5,
+              8184865.0
+            ],
+            [
+              227608.5,
+              8184866.5
+            ],
+            [
+              227611.0,
+              8184875.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Pasillo y superficies pequeñas junto al patio: cobertura ambigua.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227602.5,
+              8184856.0
+            ],
+            [
+              227605.5,
+              8184855.5
+            ],
+            [
+              227604.0,
+              8184849.5
+            ],
+            [
+              227600.5,
+              8184850.5
+            ],
+            [
+              227602.5,
+              8184856.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Área abierta de superficies azules/rojas y vegetación; puede ser cancha/patio con pequeños cobertizos. No se etiqueta como techo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227608.0,
+              8184860.5
+            ],
+            [
+              227626.0,
+              8184854.5
+            ],
+            [
+              227630.5,
+              8184851.5
+            ],
+            [
+              227624.5,
+              8184840.5
+            ],
+            [
+              227620.0,
+              8184840.5
+            ],
+            [
+              227606.5,
+              8184845.0
+            ],
+            [
+              227604.5,
+              8184848.0
+            ],
+            [
+              227608.0,
+              8184860.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Fragmentos de cubierta ocultos por sombra en el límite occidental.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227580.5,
+              8184863.0
+            ],
+            [
+              227584.0,
+              8184861.0
+            ],
+            [
+              227582.0,
+              8184853.5
+            ],
+            [
+              227579.5,
+              8184853.0
+            ],
+            [
+              227580.5,
+              8184863.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Sombras, patio y pequeñas cubiertas cercanas al borde derecho; límites inciertos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1600_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227664.0,
+              8184840.0
+            ],
+            [
+              227672.5,
+              8184837.0
+            ],
+            [
+              227672.5,
+              8184826.5
+            ],
+            [
+              227666.5,
+              8184827.5
+            ],
+            [
+              227663.0,
+              8184832.5
+            ],
+            [
+              227664.0,
+              8184840.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

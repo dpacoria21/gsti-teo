@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Sector con terraza, patio/vegetaciÃ³n y posibles cubiertas contiguas; lÃ­mites de cobertura no resueltos en esta captura.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227590.0,
+              8185549.0
+            ],
+            [
+              227596.0,
+              8185552.0
+            ],
+            [
+              227600.5,
+              8185549.5
+            ],
+            [
+              227605.0,
+              8185541.0
+            ],
+            [
+              227597.5,
+              8185538.5
+            ],
+            [
+              227592.0,
+              8185542.5
+            ],
+            [
+              227590.0,
+              8185549.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Sombra profunda junto al edificio alto: no se resuelve si hay cubiertas inferiores o suelo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227598.0,
+              8185495.5
+            ],
+            [
+              227608.5,
+              8185499.0
+            ],
+            [
+              227609.0,
+              8185490.5
+            ],
+            [
+              227610.5,
+              8185484.0
+            ],
+            [
+              227606.0,
+              8185481.5
+            ],
+            [
+              227600.5,
+              8185484.0
+            ],
+            [
+              227598.0,
+              8185495.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "PequeÃ±o sector azul y superficies contiguas: no se resuelve cubierta versus patio/depÃ³sito.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227648.0,
+              8185491.5
+            ],
+            [
+              227655.0,
+              8185492.0
+            ],
+            [
+              227657.0,
+              8185485.5
+            ],
+            [
+              227650.0,
+              8185484.0
+            ],
+            [
+              227648.0,
+              8185491.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

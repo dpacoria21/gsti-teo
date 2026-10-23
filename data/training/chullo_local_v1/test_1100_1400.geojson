@@ -1,0 +1,2111 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_001",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris cortada por borde superior.",
+        "id": "test_1100_1400_roof_001",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227343.0,
+              8184915.5
+            ],
+            [
+              227350.5,
+              8184915.5
+            ],
+            [
+              227353.0,
+              8184900.0
+            ],
+            [
+              227345.5,
+              8184898.0
+            ],
+            [
+              227343.0,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_002",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta separada por parapeto visible; cortada por borde superior.",
+        "id": "test_1100_1400_roof_002",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227351.0,
+              8184915.5
+            ],
+            [
+              227358.5,
+              8184915.5
+            ],
+            [
+              227360.5,
+              8184900.5
+            ],
+            [
+              227353.5,
+              8184899.0
+            ],
+            [
+              227351.0,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_003",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris; borde superior truncado.",
+        "id": "test_1100_1400_roof_003",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227359.0,
+              8184915.5
+            ],
+            [
+              227366.5,
+              8184915.5
+            ],
+            [
+              227367.5,
+              8184910.0
+            ],
+            [
+              227366.5,
+              8184900.5
+            ],
+            [
+              227361.0,
+              8184900.5
+            ],
+            [
+              227359.0,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_004",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta continua en el borde superior; sin división catastral inferida.",
+        "id": "test_1100_1400_roof_004",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227374.5,
+              8184915.5
+            ],
+            [
+              227398.5,
+              8184915.5
+            ],
+            [
+              227398.5,
+              8184905.5
+            ],
+            [
+              227390.5,
+              8184906.0
+            ],
+            [
+              227390.5,
+              8184907.0
+            ],
+            [
+              227374.5,
+              8184906.0
+            ],
+            [
+              227374.5,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_005",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta rectangular estrecha junto a vegetación.",
+        "id": "test_1100_1400_roof_005",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227377.5,
+              8184905.5
+            ],
+            [
+              227382.0,
+              8184905.5
+            ],
+            [
+              227382.5,
+              8184899.0
+            ],
+            [
+              227378.0,
+              8184898.0
+            ],
+            [
+              227377.5,
+              8184905.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_006",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Pequeña cubierta clara.",
+        "id": "test_1100_1400_roof_006",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227393.0,
+              8184904.5
+            ],
+            [
+              227397.5,
+              8184904.0
+            ],
+            [
+              227397.0,
+              8184900.0
+            ],
+            [
+              227392.5,
+              8184900.5
+            ],
+            [
+              227393.0,
+              8184904.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_007",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta clara al este de un vacío oscuro.",
+        "id": "test_1100_1400_roof_007",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227387.5,
+              8184899.0
+            ],
+            [
+              227397.5,
+              8184899.0
+            ],
+            [
+              227397.5,
+              8184892.5
+            ],
+            [
+              227390.0,
+              8184892.0
+            ],
+            [
+              227387.5,
+              8184894.0
+            ],
+            [
+              227387.5,
+              8184899.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_008",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha clara, con sombra contigua.",
+        "id": "test_1100_1400_roof_008",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227356.0,
+              8184898.0
+            ],
+            [
+              227359.0,
+              8184899.0
+            ],
+            [
+              227361.0,
+              8184892.5
+            ],
+            [
+              227357.5,
+              8184891.5
+            ],
+            [
+              227356.0,
+              8184898.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_009",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta rectangular gris.",
+        "id": "test_1100_1400_roof_009",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227360.0,
+              8184898.5
+            ],
+            [
+              227366.0,
+              8184899.5
+            ],
+            [
+              227367.5,
+              8184893.5
+            ],
+            [
+              227362.0,
+              8184892.0
+            ],
+            [
+              227360.0,
+              8184898.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_010",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña; borde parcialmente sombreado.",
+        "id": "test_1100_1400_roof_010",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227367.0,
+              8184898.0
+            ],
+            [
+              227370.0,
+              8184899.0
+            ],
+            [
+              227371.5,
+              8184895.0
+            ],
+            [
+              227368.0,
+              8184893.5
+            ],
+            [
+              227367.0,
+              8184898.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_011",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña al norte de la cubierta mayor.",
+        "id": "test_1100_1400_roof_011",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227369.0,
+              8184893.5
+            ],
+            [
+              227374.0,
+              8184895.0
+            ],
+            [
+              227374.5,
+              8184892.5
+            ],
+            [
+              227370.0,
+              8184891.0
+            ],
+            [
+              227369.0,
+              8184893.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_012",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta rectangular con parapeto.",
+        "id": "test_1100_1400_roof_012",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227365.5,
+              8184889.5
+            ],
+            [
+              227370.5,
+              8184891.0
+            ],
+            [
+              227371.5,
+              8184888.5
+            ],
+            [
+              227367.0,
+              8184886.5
+            ],
+            [
+              227365.5,
+              8184889.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_013",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta parda distinta de patio sombreado.",
+        "id": "test_1100_1400_roof_013",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227359.5,
+              8184888.0
+            ],
+            [
+              227363.5,
+              8184889.0
+            ],
+            [
+              227365.5,
+              8184886.0
+            ],
+            [
+              227361.0,
+              8184884.5
+            ],
+            [
+              227359.5,
+              8184888.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_014",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Gran cubierta gris continua; no dividida en propiedades.",
+        "id": "test_1100_1400_roof_014",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227358.0,
+              8184883.5
+            ],
+            [
+              227374.5,
+              8184887.5
+            ],
+            [
+              227376.0,
+              8184878.0
+            ],
+            [
+              227368.5,
+              8184875.0
+            ],
+            [
+              227361.0,
+              8184875.5
+            ],
+            [
+              227358.0,
+              8184883.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_015",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña clara con esquina irregular.",
+        "id": "test_1100_1400_roof_015",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227377.5,
+              8184893.5
+            ],
+            [
+              227382.0,
+              8184894.0
+            ],
+            [
+              227382.0,
+              8184888.0
+            ],
+            [
+              227379.5,
+              8184886.5
+            ],
+            [
+              227377.0,
+              8184887.0
+            ],
+            [
+              227377.5,
+              8184893.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_016",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta de tono gris rojizo; incluye solo superficie techada visible.",
+        "id": "test_1100_1400_roof_016",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.0,
+              8184892.0
+            ],
+            [
+              227390.0,
+              8184891.5
+            ],
+            [
+              227390.5,
+              8184882.5
+            ],
+            [
+              227382.5,
+              8184881.5
+            ],
+            [
+              227383.0,
+              8184892.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_017",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta rojiza rectangular.",
+        "id": "test_1100_1400_roof_017",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227391.0,
+              8184891.5
+            ],
+            [
+              227397.5,
+              8184892.0
+            ],
+            [
+              227397.5,
+              8184883.0
+            ],
+            [
+              227391.5,
+              8184883.0
+            ],
+            [
+              227391.0,
+              8184891.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_018",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta clara con saliente.",
+        "id": "test_1100_1400_roof_018",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227384.0,
+              8184880.5
+            ],
+            [
+              227389.5,
+              8184881.0
+            ],
+            [
+              227390.0,
+              8184876.0
+            ],
+            [
+              227383.0,
+              8184876.0
+            ],
+            [
+              227383.0,
+              8184878.5
+            ],
+            [
+              227384.0,
+              8184880.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_019",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris clara; separación visible con cubierta vecina.",
+        "id": "test_1100_1400_roof_019",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227390.5,
+              8184881.5
+            ],
+            [
+              227397.0,
+              8184881.5
+            ],
+            [
+              227397.5,
+              8184875.5
+            ],
+            [
+              227391.0,
+              8184875.5
+            ],
+            [
+              227390.5,
+              8184881.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_020",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta clara transversal.",
+        "id": "test_1100_1400_roof_020",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.5,
+              8184875.0
+            ],
+            [
+              227397.5,
+              8184875.0
+            ],
+            [
+              227397.0,
+              8184871.0
+            ],
+            [
+              227383.5,
+              8184871.0
+            ],
+            [
+              227383.5,
+              8184875.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_021",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Superficie gris continua con elementos en cubierta; no subdividida.",
+        "id": "test_1100_1400_roof_021",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.0,
+              8184870.5
+            ],
+            [
+              227396.5,
+              8184870.0
+            ],
+            [
+              227396.0,
+              8184860.5
+            ],
+            [
+              227382.5,
+              8184860.5
+            ],
+            [
+              227383.0,
+              8184870.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_022",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha; lindero occidental aproximado.",
+        "id": "test_1100_1400_roof_022",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227376.0,
+              8184877.5
+            ],
+            [
+              227379.0,
+              8184879.0
+            ],
+            [
+              227381.0,
+              8184873.0
+            ],
+            [
+              227376.0,
+              8184872.5
+            ],
+            [
+              227376.0,
+              8184877.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_023",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta pequeña azul grisácea.",
+        "id": "test_1100_1400_roof_023",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227375.5,
+              8184872.0
+            ],
+            [
+              227379.5,
+              8184872.0
+            ],
+            [
+              227379.0,
+              8184869.5
+            ],
+            [
+              227375.0,
+              8184870.0
+            ],
+            [
+              227375.5,
+              8184872.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_024",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta en L alrededor de vegetación; se excluye el centro arbolado.",
+        "id": "test_1100_1400_roof_024",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227362.0,
+              8184873.5
+            ],
+            [
+              227364.5,
+              8184874.5
+            ],
+            [
+              227366.0,
+              8184872.0
+            ],
+            [
+              227365.0,
+              8184870.0
+            ],
+            [
+              227367.0,
+              8184867.5
+            ],
+            [
+              227372.5,
+              8184869.0
+            ],
+            [
+              227373.5,
+              8184865.5
+            ],
+            [
+              227365.0,
+              8184863.0
+            ],
+            [
+              227362.0,
+              8184873.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_025",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha clara junto a sombra del bloque oriental.",
+        "id": "test_1100_1400_roof_025",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227375.0,
+              8184868.5
+            ],
+            [
+              227379.0,
+              8184868.5
+            ],
+            [
+              227379.5,
+              8184863.5
+            ],
+            [
+              227377.0,
+              8184860.5
+            ],
+            [
+              227374.5,
+              8184860.5
+            ],
+            [
+              227375.0,
+              8184868.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_026",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta clara con escalonamiento; patio oriental excluido.",
+        "id": "test_1100_1400_roof_026",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227364.5,
+              8184861.0
+            ],
+            [
+              227373.0,
+              8184863.5
+            ],
+            [
+              227374.0,
+              8184860.0
+            ],
+            [
+              227368.0,
+              8184857.0
+            ],
+            [
+              227365.5,
+              8184855.5
+            ],
+            [
+              227364.5,
+              8184861.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_027",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta gris con varios elementos claros.",
+        "id": "test_1100_1400_roof_027",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227372.5,
+              8184859.0
+            ],
+            [
+              227382.0,
+              8184859.0
+            ],
+            [
+              227382.0,
+              8184851.5
+            ],
+            [
+              227373.5,
+              8184850.5
+            ],
+            [
+              227372.5,
+              8184859.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_028",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris clara con parapeto visible.",
+        "id": "test_1100_1400_roof_028",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.0,
+              8184859.0
+            ],
+            [
+              227391.0,
+              8184859.0
+            ],
+            [
+              227391.0,
+              8184851.5
+            ],
+            [
+              227383.0,
+              8184851.5
+            ],
+            [
+              227383.0,
+              8184859.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_029",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta oriental estrecha; parte del borde en sombra.",
+        "id": "test_1100_1400_roof_029",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227392.0,
+              8184858.5
+            ],
+            [
+              227397.0,
+              8184858.5
+            ],
+            [
+              227397.0,
+              8184853.0
+            ],
+            [
+              227392.5,
+              8184852.0
+            ],
+            [
+              227392.0,
+              8184858.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_030",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta baja irregular; no incluye vacío oscuro occidental.",
+        "id": "test_1100_1400_roof_030",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227372.0,
+              8184850.0
+            ],
+            [
+              227381.5,
+              8184851.0
+            ],
+            [
+              227381.5,
+              8184845.5
+            ],
+            [
+              227374.0,
+              8184844.0
+            ],
+            [
+              227372.0,
+              8184846.0
+            ],
+            [
+              227372.0,
+              8184850.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_031",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris continua.",
+        "id": "test_1100_1400_roof_031",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227382.5,
+              8184850.5
+            ],
+            [
+              227391.0,
+              8184850.5
+            ],
+            [
+              227390.5,
+              8184845.0
+            ],
+            [
+              227382.5,
+              8184844.0
+            ],
+            [
+              227382.5,
+              8184850.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_032",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha con escalonamiento.",
+        "id": "test_1100_1400_roof_032",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227392.5,
+              8184851.0
+            ],
+            [
+              227396.5,
+              8184852.0
+            ],
+            [
+              227396.5,
+              8184845.0
+            ],
+            [
+              227391.0,
+              8184844.0
+            ],
+            [
+              227392.5,
+              8184851.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_033",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña clara.",
+        "id": "test_1100_1400_roof_033",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227372.5,
+              8184842.5
+            ],
+            [
+              227377.0,
+              8184843.5
+            ],
+            [
+              227377.5,
+              8184841.5
+            ],
+            [
+              227373.5,
+              8184840.0
+            ],
+            [
+              227372.5,
+              8184842.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_034",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña gris.",
+        "id": "test_1100_1400_roof_034",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227374.5,
+              8184840.0
+            ],
+            [
+              227377.5,
+              8184841.0
+            ],
+            [
+              227378.0,
+              8184837.5
+            ],
+            [
+              227375.0,
+              8184836.5
+            ],
+            [
+              227374.5,
+              8184840.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_035",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta rectangular pequeña.",
+        "id": "test_1100_1400_roof_035",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227378.5,
+              8184841.5
+            ],
+            [
+              227381.5,
+              8184842.5
+            ],
+            [
+              227382.5,
+              8184838.5
+            ],
+            [
+              227379.0,
+              8184837.0
+            ],
+            [
+              227378.5,
+              8184841.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_036",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña clara.",
+        "id": "test_1100_1400_roof_036",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227382.5,
+              8184842.5
+            ],
+            [
+              227385.5,
+              8184843.0
+            ],
+            [
+              227386.5,
+              8184839.0
+            ],
+            [
+              227383.0,
+              8184838.5
+            ],
+            [
+              227382.5,
+              8184842.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_037",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta pequeña con parapeto.",
+        "id": "test_1100_1400_roof_037",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227387.0,
+              8184842.5
+            ],
+            [
+              227390.0,
+              8184843.5
+            ],
+            [
+              227391.0,
+              8184840.0
+            ],
+            [
+              227387.5,
+              8184839.0
+            ],
+            [
+              227387.0,
+              8184842.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_038",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha gris; el patio contiguo queda fuera.",
+        "id": "test_1100_1400_roof_038",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227376.5,
+              8184836.0
+            ],
+            [
+              227379.0,
+              8184836.5
+            ],
+            [
+              227380.5,
+              8184830.0
+            ],
+            [
+              227378.0,
+              8184829.0
+            ],
+            [
+              227376.5,
+              8184836.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_039",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta gris trapezoidal.",
+        "id": "test_1100_1400_roof_039",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227381.5,
+              8184837.0
+            ],
+            [
+              227390.5,
+              8184839.5
+            ],
+            [
+              227392.0,
+              8184832.0
+            ],
+            [
+              227383.0,
+              8184829.5
+            ],
+            [
+              227381.5,
+              8184837.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_040",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta clara al borde oriental.",
+        "id": "test_1100_1400_roof_040",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227391.5,
+              8184840.0
+            ],
+            [
+              227397.0,
+              8184842.0
+            ],
+            [
+              227398.0,
+              8184835.5
+            ],
+            [
+              227394.5,
+              8184834.5
+            ],
+            [
+              227392.0,
+              8184836.0
+            ],
+            [
+              227391.5,
+              8184840.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_041",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta azul grisácea.",
+        "id": "test_1100_1400_roof_041",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227392.0,
+              8184833.5
+            ],
+            [
+              227397.5,
+              8184834.5
+            ],
+            [
+              227398.5,
+              8184829.0
+            ],
+            [
+              227392.5,
+              8184827.0
+            ],
+            [
+              227392.0,
+              8184833.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_042",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris clara; unidad visible sin división de propiedad.",
+        "id": "test_1100_1400_roof_042",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.0,
+              8184829.0
+            ],
+            [
+              227389.0,
+              8184831.0
+            ],
+            [
+              227390.5,
+              8184827.5
+            ],
+            [
+              227384.0,
+              8184826.0
+            ],
+            [
+              227383.0,
+              8184829.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_043",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Pequeña cubierta rojiza.",
+        "id": "test_1100_1400_roof_043",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227377.5,
+              8184828.0
+            ],
+            [
+              227380.5,
+              8184829.0
+            ],
+            [
+              227381.5,
+              8184825.5
+            ],
+            [
+              227378.5,
+              8184824.5
+            ],
+            [
+              227377.5,
+              8184828.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_044",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris cortada por el borde inferior.",
+        "id": "test_1100_1400_roof_044",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227376.5,
+              8184823.5
+            ],
+            [
+              227382.0,
+              8184825.0
+            ],
+            [
+              227383.5,
+              8184819.5
+            ],
+            [
+              227377.5,
+              8184819.5
+            ],
+            [
+              227376.5,
+              8184823.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_045",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha cortada por el borde inferior.",
+        "id": "test_1100_1400_roof_045",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227383.5,
+              8184825.0
+            ],
+            [
+              227386.0,
+              8184825.5
+            ],
+            [
+              227387.5,
+              8184819.5
+            ],
+            [
+              227384.0,
+              8184819.5
+            ],
+            [
+              227383.5,
+              8184825.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_046",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha junto a vacío oscuro; truncada por borde inferior.",
+        "id": "test_1100_1400_roof_046",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227388.0,
+              8184825.0
+            ],
+            [
+              227390.0,
+              8184825.5
+            ],
+            [
+              227391.5,
+              8184819.5
+            ],
+            [
+              227388.0,
+              8184819.5
+            ],
+            [
+              227388.0,
+              8184825.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_047",
+      "properties": {
+        "confidence": "clear",
+        "notes": "Cubierta clara rectangular.",
+        "id": "test_1100_1400_roof_047",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227391.0,
+              8184825.0
+            ],
+            [
+              227397.0,
+              8184826.5
+            ],
+            [
+              227398.5,
+              8184822.0
+            ],
+            [
+              227392.5,
+              8184820.5
+            ],
+            [
+              227391.0,
+              8184825.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_048",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Fragmento de cubierta cortado por borde inferior.",
+        "id": "test_1100_1400_roof_048",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227392.5,
+              8184820.0
+            ],
+            [
+              227398.5,
+              8184821.5
+            ],
+            [
+              227399.0,
+              8184819.5
+            ],
+            [
+              227392.5,
+              8184819.5
+            ],
+            [
+              227392.5,
+              8184820.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_049",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris cortada por borde derecho; área sombreada occidental excluida.",
+        "id": "test_1100_1400_roof_049",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227414.5,
+              8184914.0
+            ],
+            [
+              227422.5,
+              8184911.0
+            ],
+            [
+              227422.5,
+              8184898.5
+            ],
+            [
+              227413.0,
+              8184900.5
+            ],
+            [
+              227414.5,
+              8184914.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_050",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Cubierta gris parcial en borde derecho; delimitación aproximada por sombras.",
+        "id": "test_1100_1400_roof_050",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227416.5,
+              8184837.5
+            ],
+            [
+              227422.5,
+              8184836.0
+            ],
+            [
+              227422.5,
+              8184828.0
+            ],
+            [
+              227414.5,
+              8184830.5
+            ],
+            [
+              227416.5,
+              8184837.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "test_1100_1400_roof_051",
+      "properties": {
+        "confidence": "approximate",
+        "notes": "Fragmento claro de cubierta en el borde inferior.",
+        "id": "test_1100_1400_roof_051",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227413.5,
+              8184822.0
+            ],
+            [
+              227417.5,
+              8184820.5
+            ],
+            [
+              227418.0,
+              8184819.5
+            ],
+            [
+              227412.0,
+              8184819.5
+            ],
+            [
+              227413.5,
+              8184822.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

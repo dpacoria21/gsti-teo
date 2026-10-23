@@ -1,0 +1,14 @@
+CHULLO · MODELO PILOTO
+
+Inicialización: GeoAI building_footprints_usa (repositorio del modelo: MIT).
+https://huggingface.co/giswqs/geoai
+Imagen: Google Earth Pro / Airbus; fecha de captura declarada 2026-03-04.
+La imagen fuente conserva sus condiciones y atribución; no se afirma una licencia abierta ni un permiso general de redistribución o entrenamiento.
+https://www.google.com/help/terms_maps-earth/
+https://about.google/brand-resource-center/products-and-services/geo-guidelines/
+
+Anotaciones: delineación visual provisional del asistente (assistant_visual_manual), sin revisión humana (human_reviewed=false), sin etiquetas derivadas de predicciones.
+Áreas originales utilizadas: train=3, val=2, test=2. Áreas train anotadas=4, excluidas=1. Una sola captura. La separación espacial no acredita independencia estadística ni generalización.
+Registro educativo experimental; detección de cubiertas, no catastro ni uso residencial. No evalúa peligro, faja marginal o permiso de construcción.
+
+dataset_manifest.json es una copia de auditoría. Sus rutas relativas de imágenes y etiquetas se resuelven desde data/training/chullo_local_v1, no desde esta carpeta de pesos. No se incluyen imágenes ni etiquetas en este registro.

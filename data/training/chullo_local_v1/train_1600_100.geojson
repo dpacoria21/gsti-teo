@@ -1,0 +1,2871 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "r01",
+      "properties": {
+        "id": "r01",
+        "confidence": "approximate",
+        "notes": "Cubierta parcial cortada por borde superior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185565.5
+            ],
+            [
+              227580.5,
+              8185565.5
+            ],
+            [
+              227580.5,
+              8185561.5
+            ],
+            [
+              227577.0,
+              8185560.5
+            ],
+            [
+              227576.5,
+              8185563.0
+            ],
+            [
+              227576.5,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r02",
+      "properties": {
+        "id": "r02",
+        "confidence": "approximate",
+        "notes": "Cubierta clara parcial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227581.0,
+              8185565.5
+            ],
+            [
+              227587.0,
+              8185565.5
+            ],
+            [
+              227587.0,
+              8185562.5
+            ],
+            [
+              227581.0,
+              8185560.5
+            ],
+            [
+              227580.5,
+              8185562.0
+            ],
+            [
+              227581.0,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r03",
+      "properties": {
+        "id": "r03",
+        "confidence": "clear",
+        "notes": "Plano gris continuo visible.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185559.5
+            ],
+            [
+              227587.0,
+              8185562.0
+            ],
+            [
+              227587.5,
+              8185556.5
+            ],
+            [
+              227577.5,
+              8185553.5
+            ],
+            [
+              227576.5,
+              8185555.5
+            ],
+            [
+              227576.5,
+              8185559.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r04",
+      "properties": {
+        "id": "r04",
+        "confidence": "approximate",
+        "notes": "Conjunto de superficies de cubierta contiguas sin separaciÃ³n inequÃ­voca.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185551.5
+            ],
+            [
+              227587.5,
+              8185556.5
+            ],
+            [
+              227590.5,
+              8185552.5
+            ],
+            [
+              227590.0,
+              8185548.0
+            ],
+            [
+              227586.0,
+              8185546.0
+            ],
+            [
+              227576.5,
+              8185544.0
+            ],
+            [
+              227576.5,
+              8185551.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r05",
+      "properties": {
+        "id": "r05",
+        "confidence": "approximate",
+        "notes": "Cubierta frontal continua; excluye calle y sombra exterior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227577.0,
+              8185543.5
+            ],
+            [
+              227585.5,
+              8185545.0
+            ],
+            [
+              227589.0,
+              8185543.5
+            ],
+            [
+              227592.0,
+              8185541.0
+            ],
+            [
+              227597.0,
+              8185539.5
+            ],
+            [
+              227594.0,
+              8185536.5
+            ],
+            [
+              227585.5,
+              8185532.5
+            ],
+            [
+              227581.5,
+              8185535.5
+            ],
+            [
+              227577.0,
+              8185543.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r06",
+      "properties": {
+        "id": "r06",
+        "confidence": "approximate",
+        "notes": "Cubierta parcial junto a vegetaciÃ³n.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.0,
+              8185565.5
+            ],
+            [
+              227598.5,
+              8185565.5
+            ],
+            [
+              227600.5,
+              8185561.0
+            ],
+            [
+              227599.0,
+              8185558.0
+            ],
+            [
+              227594.0,
+              8185559.5
+            ],
+            [
+              227592.0,
+              8185562.5
+            ],
+            [
+              227591.0,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r07",
+      "properties": {
+        "id": "r07",
+        "confidence": "approximate",
+        "notes": "Superficies de cubierta unidas; lÃ­mite superior truncado.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227603.5,
+              8185565.5
+            ],
+            [
+              227615.0,
+              8185565.5
+            ],
+            [
+              227616.0,
+              8185560.0
+            ],
+            [
+              227611.5,
+              8185557.0
+            ],
+            [
+              227607.5,
+              8185557.0
+            ],
+            [
+              227605.0,
+              8185561.5
+            ],
+            [
+              227603.5,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r08",
+      "properties": {
+        "id": "r08",
+        "confidence": "clear",
+        "notes": "Franja de cubierta rojiza.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227603.5,
+              8185556.0
+            ],
+            [
+              227606.5,
+              8185557.0
+            ],
+            [
+              227609.5,
+              8185550.5
+            ],
+            [
+              227607.0,
+              8185549.0
+            ],
+            [
+              227603.5,
+              8185556.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r09",
+      "properties": {
+        "id": "r09",
+        "confidence": "approximate",
+        "notes": "Cubierta contigua de tonos claros.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227607.5,
+              8185556.0
+            ],
+            [
+              227612.5,
+              8185556.75
+            ],
+            [
+              227615.0,
+              8185554.0
+            ],
+            [
+              227614.5,
+              8185551.0
+            ],
+            [
+              227610.0,
+              8185549.5
+            ],
+            [
+              227608.5,
+              8185553.0
+            ],
+            [
+              227607.5,
+              8185556.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r10",
+      "properties": {
+        "id": "r10",
+        "confidence": "approximate",
+        "notes": "Superficie clara irregular; bordes poco definidos.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227610.5,
+              8185548.5
+            ],
+            [
+              227616.5,
+              8185550.5
+            ],
+            [
+              227619.5,
+              8185545.0
+            ],
+            [
+              227615.5,
+              8185542.5
+            ],
+            [
+              227615.5,
+              8185541.5
+            ],
+            [
+              227614.0,
+              8185539.5
+            ],
+            [
+              227610.0,
+              8185538.0
+            ],
+            [
+              227608.0,
+              8185540.5
+            ],
+            [
+              227608.0,
+              8185543.5
+            ],
+            [
+              227608.5,
+              8185544.5
+            ],
+            [
+              227610.5,
+              8185548.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r12",
+      "properties": {
+        "id": "r12",
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha al costado de paso oscuro.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227627.5,
+              8185561.5
+            ],
+            [
+              227631.5,
+              8185560.5
+            ],
+            [
+              227628.5,
+              8185551.0
+            ],
+            [
+              227624.5,
+              8185552.0
+            ],
+            [
+              227627.5,
+              8185561.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r13",
+      "properties": {
+        "id": "r13",
+        "confidence": "approximate",
+        "notes": "Cubierta beige irregular; excluye paso oscuro a izquierda.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227632.0,
+              8185563.5
+            ],
+            [
+              227639.5,
+              8185565.5
+            ],
+            [
+              227641.0,
+              8185561.0
+            ],
+            [
+              227636.0,
+              8185558.5
+            ],
+            [
+              227633.5,
+              8185554.5
+            ],
+            [
+              227629.5,
+              8185553.0
+            ],
+            [
+              227630.5,
+              8185556.5
+            ],
+            [
+              227632.0,
+              8185563.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r14",
+      "properties": {
+        "id": "r14",
+        "confidence": "approximate",
+        "notes": "Cubierta clara con elementos sobre techo.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227636.0,
+              8185554.0
+            ],
+            [
+              227637.0,
+              8185558.0
+            ],
+            [
+              227641.5,
+              8185560.5
+            ],
+            [
+              227645.5,
+              8185564.0
+            ],
+            [
+              227648.5,
+              8185558.5
+            ],
+            [
+              227645.0,
+              8185555.5
+            ],
+            [
+              227642.5,
+              8185554.0
+            ],
+            [
+              227638.5,
+              8185554.5
+            ],
+            [
+              227636.0,
+              8185554.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r15",
+      "properties": {
+        "id": "r15",
+        "confidence": "clear",
+        "notes": "Cubierta gris clara principal.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227637.0,
+              8185552.0
+            ],
+            [
+              227645.5,
+              8185554.5
+            ],
+            [
+              227649.5,
+              8185548.0
+            ],
+            [
+              227645.5,
+              8185545.0
+            ],
+            [
+              227643.5,
+              8185543.5
+            ],
+            [
+              227639.0,
+              8185545.5
+            ],
+            [
+              227637.0,
+              8185552.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r16",
+      "properties": {
+        "id": "r16",
+        "confidence": "approximate",
+        "notes": "Superficie beige estrecha, contorno aproximado.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227628.5,
+              8185550.0
+            ],
+            [
+              227633.0,
+              8185552.0
+            ],
+            [
+              227637.5,
+              8185544.5
+            ],
+            [
+              227633.5,
+              8185542.0
+            ],
+            [
+              227629.5,
+              8185543.5
+            ],
+            [
+              227628.5,
+              8185550.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r17",
+      "properties": {
+        "id": "r17",
+        "confidence": "approximate",
+        "notes": "Cubierta clara quebrada, sin incluir patio verde.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227621.0,
+              8185547.5
+            ],
+            [
+              227624.5,
+              8185549.5
+            ],
+            [
+              227627.5,
+              8185545.0
+            ],
+            [
+              227626.5,
+              8185543.5
+            ],
+            [
+              227630.5,
+              8185537.5
+            ],
+            [
+              227626.5,
+              8185536.0
+            ],
+            [
+              227624.0,
+              8185541.0
+            ],
+            [
+              227622.0,
+              8185544.0
+            ],
+            [
+              227621.0,
+              8185547.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r18",
+      "properties": {
+        "id": "r18",
+        "confidence": "approximate",
+        "notes": "Cubierta blanca frente a bloque de vegetaciÃ³n.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227638.0,
+              8185542.0
+            ],
+            [
+              227645.0,
+              8185544.0
+            ],
+            [
+              227648.5,
+              8185540.0
+            ],
+            [
+              227644.5,
+              8185538.0
+            ],
+            [
+              227645.0,
+              8185535.5
+            ],
+            [
+              227641.0,
+              8185534.5
+            ],
+            [
+              227638.5,
+              8185537.5
+            ],
+            [
+              227638.0,
+              8185542.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r19",
+      "properties": {
+        "id": "r19",
+        "confidence": "approximate",
+        "notes": "Plano claro cercano a calle diagonal.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227649.0,
+              8185541.5
+            ],
+            [
+              227652.5,
+              8185543.0
+            ],
+            [
+              227657.0,
+              8185536.5
+            ],
+            [
+              227653.0,
+              8185534.5
+            ],
+            [
+              227650.5,
+              8185537.5
+            ],
+            [
+              227649.0,
+              8185541.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r20",
+      "properties": {
+        "id": "r20",
+        "confidence": "clear",
+        "notes": "Cubierta blanca con contorno exterior marcado.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227654.0,
+              8185533.5
+            ],
+            [
+              227657.5,
+              8185535.0
+            ],
+            [
+              227661.5,
+              8185529.5
+            ],
+            [
+              227658.0,
+              8185527.0
+            ],
+            [
+              227655.0,
+              8185526.5
+            ],
+            [
+              227653.0,
+              8185529.5
+            ],
+            [
+              227654.0,
+              8185533.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r21",
+      "properties": {
+        "id": "r21",
+        "confidence": "approximate",
+        "notes": "Cubierta parcial derecha cortada por recorte.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227666.5,
+              8185541.0
+            ],
+            [
+              227670.5,
+              8185542.5
+            ],
+            [
+              227672.5,
+              8185538.5
+            ],
+            [
+              227672.5,
+              8185530.5
+            ],
+            [
+              227669.0,
+              8185529.0
+            ],
+            [
+              227667.0,
+              8185534.0
+            ],
+            [
+              227666.5,
+              8185541.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r22",
+      "properties": {
+        "id": "r22",
+        "confidence": "approximate",
+        "notes": "Cubierta blanca parcial superior derecha.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227659.0,
+              8185565.5
+            ],
+            [
+              227663.5,
+              8185565.5
+            ],
+            [
+              227668.0,
+              8185559.0
+            ],
+            [
+              227664.5,
+              8185557.5
+            ],
+            [
+              227661.5,
+              8185561.5
+            ],
+            [
+              227659.0,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r23",
+      "properties": {
+        "id": "r23",
+        "confidence": "approximate",
+        "notes": "PorciÃ³n de cubierta junto a borde superior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227665.5,
+              8185565.5
+            ],
+            [
+              227672.5,
+              8185565.5
+            ],
+            [
+              227672.5,
+              8185561.0
+            ],
+            [
+              227669.0,
+              8185559.5
+            ],
+            [
+              227665.5,
+              8185565.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r24",
+      "properties": {
+        "id": "r24",
+        "confidence": "approximate",
+        "notes": "Conjunto de cubierta rojiza contigua al borde derecho.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227663.5,
+              8185557.0
+            ],
+            [
+              227669.5,
+              8185559.5
+            ],
+            [
+              227672.5,
+              8185556.0
+            ],
+            [
+              227672.5,
+              8185544.0
+            ],
+            [
+              227668.5,
+              8185541.5
+            ],
+            [
+              227664.5,
+              8185548.0
+            ],
+            [
+              227665.5,
+              8185552.0
+            ],
+            [
+              227663.5,
+              8185553.5
+            ],
+            [
+              227663.5,
+              8185557.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r25",
+      "properties": {
+        "id": "r25",
+        "confidence": "approximate",
+        "notes": "Cubierta gris continua con anexos elevados; sin divisiÃ³n predial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227590.0,
+              8185533.0
+            ],
+            [
+              227607.0,
+              8185538.5
+            ],
+            [
+              227610.5,
+              8185535.0
+            ],
+            [
+              227614.0,
+              8185531.0
+            ],
+            [
+              227611.5,
+              8185527.0
+            ],
+            [
+              227605.5,
+              8185525.0
+            ],
+            [
+              227597.5,
+              8185524.5
+            ],
+            [
+              227596.5,
+              8185527.0
+            ],
+            [
+              227591.5,
+              8185526.5
+            ],
+            [
+              227590.0,
+              8185533.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r26",
+      "properties": {
+        "id": "r26",
+        "confidence": "clear",
+        "notes": "Plano de cubierta rosada.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227598.0,
+              8185524.0
+            ],
+            [
+              227606.0,
+              8185524.5
+            ],
+            [
+              227609.0,
+              8185521.5
+            ],
+            [
+              227609.0,
+              8185517.5
+            ],
+            [
+              227600.0,
+              8185517.5
+            ],
+            [
+              227598.0,
+              8185521.0
+            ],
+            [
+              227598.0,
+              8185524.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r27",
+      "properties": {
+        "id": "r27",
+        "confidence": "approximate",
+        "notes": "Cubierta beige irregular.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227610.0,
+              8185523.5
+            ],
+            [
+              227613.0,
+              8185526.0
+            ],
+            [
+              227617.0,
+              8185521.5
+            ],
+            [
+              227615.5,
+              8185517.5
+            ],
+            [
+              227610.5,
+              8185517.5
+            ],
+            [
+              227610.0,
+              8185523.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r28",
+      "properties": {
+        "id": "r28",
+        "confidence": "approximate",
+        "notes": "Techo beige con variaciÃ³n de altura visible.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227615.5,
+              8185540.0
+            ],
+            [
+              227621.0,
+              8185541.5
+            ],
+            [
+              227625.0,
+              8185535.0
+            ],
+            [
+              227620.0,
+              8185532.5
+            ],
+            [
+              227620.5,
+              8185530.0
+            ],
+            [
+              227616.5,
+              8185530.5
+            ],
+            [
+              227614.0,
+              8185535.0
+            ],
+            [
+              227615.5,
+              8185540.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r29",
+      "properties": {
+        "id": "r29",
+        "confidence": "approximate",
+        "notes": "Cubierta clara central; excluye franja de calle lateral.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227620.0,
+              8185529.0
+            ],
+            [
+              227624.5,
+              8185531.0
+            ],
+            [
+              227627.0,
+              8185526.0
+            ],
+            [
+              227626.0,
+              8185523.0
+            ],
+            [
+              227627.0,
+              8185520.5
+            ],
+            [
+              227623.5,
+              8185517.5
+            ],
+            [
+              227620.5,
+              8185522.0
+            ],
+            [
+              227621.5,
+              8185524.5
+            ],
+            [
+              227620.0,
+              8185529.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r30",
+      "properties": {
+        "id": "r30",
+        "confidence": "clear",
+        "notes": "Cubierta rojiza junto a avenida.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227630.5,
+              8185523.5
+            ],
+            [
+              227633.0,
+              8185525.0
+            ],
+            [
+              227637.0,
+              8185520.0
+            ],
+            [
+              227635.5,
+              8185517.5
+            ],
+            [
+              227633.0,
+              8185518.0
+            ],
+            [
+              227630.5,
+              8185523.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r31",
+      "properties": {
+        "id": "r31",
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha clara; bordes exteriores aproximados.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227627.0,
+              8185528.5
+            ],
+            [
+              227629.5,
+              8185530.0
+            ],
+            [
+              227632.0,
+              8185525.5
+            ],
+            [
+              227629.5,
+              8185523.5
+            ],
+            [
+              227631.0,
+              8185520.0
+            ],
+            [
+              227629.0,
+              8185518.5
+            ],
+            [
+              227627.0,
+              8185523.5
+            ],
+            [
+              227627.0,
+              8185528.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r32",
+      "properties": {
+        "id": "r32",
+        "confidence": "approximate",
+        "notes": "Cubierta rojiza irregular.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227630.5,
+              8185533.5
+            ],
+            [
+              227635.0,
+              8185536.0
+            ],
+            [
+              227638.0,
+              8185533.0
+            ],
+            [
+              227637.0,
+              8185531.5
+            ],
+            [
+              227641.0,
+              8185527.0
+            ],
+            [
+              227637.0,
+              8185525.5
+            ],
+            [
+              227634.5,
+              8185528.0
+            ],
+            [
+              227630.5,
+              8185533.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r33",
+      "properties": {
+        "id": "r33",
+        "confidence": "clear",
+        "notes": "Plano rojizo sobre cubierta azul.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227639.0,
+              8185533.5
+            ],
+            [
+              227645.5,
+              8185535.25
+            ],
+            [
+              227647.5,
+              8185533.0
+            ],
+            [
+              227641.0,
+              8185530.5
+            ],
+            [
+              227639.0,
+              8185533.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r34",
+      "properties": {
+        "id": "r34",
+        "confidence": "clear",
+        "notes": "Cubierta azul visible; no se interpreta uso.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227642.0,
+              8185530.0
+            ],
+            [
+              227648.0,
+              8185532.0
+            ],
+            [
+              227650.0,
+              8185529.0
+            ],
+            [
+              227644.5,
+              8185526.0
+            ],
+            [
+              227642.0,
+              8185530.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r35",
+      "properties": {
+        "id": "r35",
+        "confidence": "approximate",
+        "notes": "Cubierta gris beige inferior a cubierta azul.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227643.0,
+              8185525.0
+            ],
+            [
+              227649.0,
+              8185527.5
+            ],
+            [
+              227651.5,
+              8185524.0
+            ],
+            [
+              227648.5,
+              8185522.0
+            ],
+            [
+              227645.5,
+              8185522.5
+            ],
+            [
+              227643.0,
+              8185525.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r36",
+      "properties": {
+        "id": "r36",
+        "confidence": "approximate",
+        "notes": "Cubierta clara hacia la avenida.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227637.5,
+              8185524.5
+            ],
+            [
+              227641.5,
+              8185526.5
+            ],
+            [
+              227643.5,
+              8185523.5
+            ],
+            [
+              227642.0,
+              8185521.0
+            ],
+            [
+              227638.0,
+              8185519.0
+            ],
+            [
+              227637.5,
+              8185524.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r37",
+      "properties": {
+        "id": "r37",
+        "confidence": "approximate",
+        "notes": "Cubierta clara pequeÃ±a entre planos vecinos.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227648.0,
+              8185533.0
+            ],
+            [
+              227651.5,
+              8185534.5
+            ],
+            [
+              227653.0,
+              8185530.5
+            ],
+            [
+              227651.0,
+              8185528.0
+            ],
+            [
+              227648.0,
+              8185533.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r38",
+      "properties": {
+        "id": "r38",
+        "confidence": "approximate",
+        "notes": "Cubierta blanca parcial inferior izquierda.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185495.5
+            ],
+            [
+              227583.0,
+              8185501.0
+            ],
+            [
+              227587.0,
+              8185497.0
+            ],
+            [
+              227586.0,
+              8185493.0
+            ],
+            [
+              227582.0,
+              8185489.5
+            ],
+            [
+              227576.5,
+              8185493.0
+            ],
+            [
+              227576.5,
+              8185495.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r39",
+      "properties": {
+        "id": "r39",
+        "confidence": "approximate",
+        "notes": "PorciÃ³n de cubierta clara cortada a izquierda.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185492.5
+            ],
+            [
+              227581.5,
+              8185489.0
+            ],
+            [
+              227579.5,
+              8185487.0
+            ],
+            [
+              227576.5,
+              8185489.0
+            ],
+            [
+              227576.5,
+              8185492.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r41",
+      "properties": {
+        "id": "r41",
+        "confidence": "approximate",
+        "notes": "Plano claro gris de contorno irregular.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227586.5,
+              8185499.5
+            ],
+            [
+              227590.0,
+              8185502.0
+            ],
+            [
+              227597.5,
+              8185505.5
+            ],
+            [
+              227601.5,
+              8185500.5
+            ],
+            [
+              227597.5,
+              8185497.5
+            ],
+            [
+              227598.0,
+              8185494.5
+            ],
+            [
+              227595.0,
+              8185492.0
+            ],
+            [
+              227592.0,
+              8185493.0
+            ],
+            [
+              227588.0,
+              8185495.5
+            ],
+            [
+              227586.5,
+              8185499.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r42",
+      "properties": {
+        "id": "r42",
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha de borde posterior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.5,
+              8185505.0
+            ],
+            [
+              227606.5,
+              8185507.0
+            ],
+            [
+              227608.5,
+              8185503.0
+            ],
+            [
+              227606.5,
+              8185500.5
+            ],
+            [
+              227601.5,
+              8185499.5
+            ],
+            [
+              227601.5,
+              8185505.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r43",
+      "properties": {
+        "id": "r43",
+        "confidence": "approximate",
+        "notes": "Plano gris de cubierta superior del edificio alto. Se excluye la fachada blanca; hay desplazamiento aparente por perspectiva.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227609.0,
+              8185496.5
+            ],
+            [
+              227612.5,
+              8185500.5
+            ],
+            [
+              227624.0,
+              8185503.5
+            ],
+            [
+              227621.0,
+              8185498.0
+            ],
+            [
+              227609.0,
+              8185496.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r44",
+      "properties": {
+        "id": "r44",
+        "confidence": "approximate",
+        "notes": "Cubierta gris parcial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185485.5
+            ],
+            [
+              227581.0,
+              8185487.5
+            ],
+            [
+              227585.0,
+              8185484.0
+            ],
+            [
+              227583.0,
+              8185481.5
+            ],
+            [
+              227577.5,
+              8185479.0
+            ],
+            [
+              227576.5,
+              8185481.0
+            ],
+            [
+              227576.5,
+              8185485.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r45",
+      "properties": {
+        "id": "r45",
+        "confidence": "approximate",
+        "notes": "Cubierta beige con elementos salientes.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227585.0,
+              8185486.5
+            ],
+            [
+              227590.5,
+              8185490.0
+            ],
+            [
+              227594.0,
+              8185484.5
+            ],
+            [
+              227590.0,
+              8185482.0
+            ],
+            [
+              227588.0,
+              8185480.0
+            ],
+            [
+              227584.5,
+              8185481.0
+            ],
+            [
+              227585.0,
+              8185486.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r46",
+      "properties": {
+        "id": "r46",
+        "confidence": "approximate",
+        "notes": "PorciÃ³n visible de cubierta clara inferior a zona de sombra.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227594.0,
+              8185481.0
+            ],
+            [
+              227598.0,
+              8185483.5
+            ],
+            [
+              227601.0,
+              8185479.0
+            ],
+            [
+              227603.0,
+              8185477.0
+            ],
+            [
+              227599.5,
+              8185474.5
+            ],
+            [
+              227596.5,
+              8185477.5
+            ],
+            [
+              227594.0,
+              8185481.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r47",
+      "properties": {
+        "id": "r47",
+        "confidence": "approximate",
+        "notes": "Cubierta beige prÃ³xima al borde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.5,
+              8185475.5
+            ],
+            [
+              227593.5,
+              8185478.0
+            ],
+            [
+              227596.5,
+              8185476.0
+            ],
+            [
+              227598.5,
+              8185473.0
+            ],
+            [
+              227592.5,
+              8185469.5
+            ],
+            [
+              227589.5,
+              8185471.5
+            ],
+            [
+              227591.5,
+              8185475.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r48",
+      "properties": {
+        "id": "r48",
+        "confidence": "clear",
+        "notes": "Plano blanco inclinado de cubierta.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227582.5,
+              8185475.5
+            ],
+            [
+              227588.0,
+              8185479.5
+            ],
+            [
+              227591.0,
+              8185475.0
+            ],
+            [
+              227588.5,
+              8185473.0
+            ],
+            [
+              227588.5,
+              8185469.5
+            ],
+            [
+              227585.0,
+              8185469.5
+            ],
+            [
+              227582.5,
+              8185475.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r49",
+      "properties": {
+        "id": "r49",
+        "confidence": "approximate",
+        "notes": "Cubierta rojiza parcial.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227576.5,
+              8185477.5
+            ],
+            [
+              227579.5,
+              8185477.5
+            ],
+            [
+              227581.5,
+              8185475.0
+            ],
+            [
+              227579.0,
+              8185473.5
+            ],
+            [
+              227583.0,
+              8185471.0
+            ],
+            [
+              227582.0,
+              8185469.5
+            ],
+            [
+              227580.0,
+              8185469.5
+            ],
+            [
+              227576.5,
+              8185472.5
+            ],
+            [
+              227576.5,
+              8185477.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r50",
+      "properties": {
+        "id": "r50",
+        "confidence": "approximate",
+        "notes": "PorciÃ³n de cubierta clara sobre borde de calle.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227599.0,
+              8185474.0
+            ],
+            [
+              227603.5,
+              8185477.5
+            ],
+            [
+              227606.0,
+              8185476.0
+            ],
+            [
+              227605.0,
+              8185474.0
+            ],
+            [
+              227600.5,
+              8185470.5
+            ],
+            [
+              227598.5,
+              8185471.5
+            ],
+            [
+              227599.0,
+              8185474.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r51",
+      "properties": {
+        "id": "r51",
+        "confidence": "clear",
+        "notes": "Gran cubierta gris rectangular.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227644.0,
+              8185507.0
+            ],
+            [
+              227654.5,
+              8185510.0
+            ],
+            [
+              227656.0,
+              8185502.5
+            ],
+            [
+              227647.0,
+              8185500.5
+            ],
+            [
+              227644.5,
+              8185502.0
+            ],
+            [
+              227644.0,
+              8185507.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r52",
+      "properties": {
+        "id": "r52",
+        "confidence": "approximate",
+        "notes": "Cubierta gris posterior; patio inferior excluido.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227646.5,
+              8185499.5
+            ],
+            [
+              227655.5,
+              8185501.0
+            ],
+            [
+              227657.0,
+              8185495.0
+            ],
+            [
+              227653.5,
+              8185493.0
+            ],
+            [
+              227649.0,
+              8185492.0
+            ],
+            [
+              227647.0,
+              8185494.5
+            ],
+            [
+              227646.5,
+              8185499.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r53",
+      "properties": {
+        "id": "r53",
+        "confidence": "approximate",
+        "notes": "Cubierta estrecha intermedia.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227656.5,
+              8185510.0
+            ],
+            [
+              227660.0,
+              8185511.5
+            ],
+            [
+              227662.5,
+              8185503.0
+            ],
+            [
+              227658.5,
+              8185501.5
+            ],
+            [
+              227656.5,
+              8185510.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r54",
+      "properties": {
+        "id": "r54",
+        "confidence": "clear",
+        "notes": "Cubierta beige parcial junto a borde derecho.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227663.0,
+              8185511.0
+            ],
+            [
+              227672.5,
+              8185513.5
+            ],
+            [
+              227672.5,
+              8185503.5
+            ],
+            [
+              227665.5,
+              8185501.0
+            ],
+            [
+              227663.5,
+              8185504.0
+            ],
+            [
+              227663.0,
+              8185511.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r55",
+      "properties": {
+        "id": "r55",
+        "confidence": "approximate",
+        "notes": "Cubiertas contiguas sin divisiÃ³n inequÃ­voca visible.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227663.5,
+              8185499.0
+            ],
+            [
+              227669.0,
+              8185501.0
+            ],
+            [
+              227672.5,
+              8185499.0
+            ],
+            [
+              227672.5,
+              8185489.0
+            ],
+            [
+              227667.0,
+              8185487.0
+            ],
+            [
+              227664.0,
+              8185490.5
+            ],
+            [
+              227663.5,
+              8185499.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r56",
+      "properties": {
+        "id": "r56",
+        "confidence": "approximate",
+        "notes": "Cubierta beige estrecha.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227657.5,
+              8185496.0
+            ],
+            [
+              227661.5,
+              8185498.5
+            ],
+            [
+              227663.5,
+              8185494.0
+            ],
+            [
+              227662.5,
+              8185489.0
+            ],
+            [
+              227659.0,
+              8185487.0
+            ],
+            [
+              227657.5,
+              8185489.5
+            ],
+            [
+              227657.5,
+              8185496.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r57",
+      "properties": {
+        "id": "r57",
+        "confidence": "approximate",
+        "notes": "Franja de cubierta clara junto a la calle.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227642.5,
+              8185490.0
+            ],
+            [
+              227646.5,
+              8185491.0
+            ],
+            [
+              227648.5,
+              8185479.0
+            ],
+            [
+              227645.5,
+              8185477.0
+            ],
+            [
+              227643.5,
+              8185478.5
+            ],
+            [
+              227642.5,
+              8185490.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r58",
+      "properties": {
+        "id": "r58",
+        "confidence": "clear",
+        "notes": "Cubierta rojiza inferior derecha.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227659.5,
+              8185484.0
+            ],
+            [
+              227664.0,
+              8185486.0
+            ],
+            [
+              227666.0,
+              8185480.0
+            ],
+            [
+              227661.5,
+              8185478.0
+            ],
+            [
+              227659.5,
+              8185484.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r59",
+      "properties": {
+        "id": "r59",
+        "confidence": "approximate",
+        "notes": "Cubierta clara alargada.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227651.5,
+              8185483.0
+            ],
+            [
+              227656.5,
+              8185484.5
+            ],
+            [
+              227659.0,
+              8185476.5
+            ],
+            [
+              227654.0,
+              8185474.5
+            ],
+            [
+              227651.5,
+              8185483.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r60",
+      "properties": {
+        "id": "r60",
+        "confidence": "approximate",
+        "notes": "Cubierta parcial de borde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227646.0,
+              8185476.0
+            ],
+            [
+              227652.0,
+              8185477.0
+            ],
+            [
+              227654.5,
+              8185469.5
+            ],
+            [
+              227647.0,
+              8185469.5
+            ],
+            [
+              227646.0,
+              8185476.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r61",
+      "properties": {
+        "id": "r61",
+        "confidence": "approximate",
+        "notes": "Cubierta gris parcial inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227655.0,
+              8185473.5
+            ],
+            [
+              227660.5,
+              8185475.5
+            ],
+            [
+              227662.5,
+              8185469.5
+            ],
+            [
+              227656.5,
+              8185469.5
+            ],
+            [
+              227655.0,
+              8185473.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r62",
+      "properties": {
+        "id": "r62",
+        "confidence": "approximate",
+        "notes": "Cubierta clara cortada por borde inferior.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227666.5,
+              8185474.5
+            ],
+            [
+              227671.5,
+              8185476.5
+            ],
+            [
+              227672.5,
+              8185469.5
+            ],
+            [
+              227667.5,
+              8185469.5
+            ],
+            [
+              227666.5,
+              8185474.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r63",
+      "properties": {
+        "id": "r63",
+        "confidence": "approximate",
+        "notes": "Cubierta parcial derecha.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_100"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227667.0,
+              8185484.5
+            ],
+            [
+              227672.5,
+              8185486.0
+            ],
+            [
+              227672.5,
+              8185477.0
+            ],
+            [
+              227667.5,
+              8185475.5
+            ],
+            [
+              227667.0,
+              8185484.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

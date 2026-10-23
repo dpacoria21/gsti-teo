@@ -193,17 +193,14 @@ def test_session_run_is_selected_after_success_and_retained_after_failure(saved_
     assert any("Última detección completa conservada" in element.value for element in app.success)
 
 
-def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_selection(saved_app, monkeypatch):
+@pytest.mark.parametrize("deployment", ["cloud", "local"])
+def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_selection(saved_app, monkeypatch, deployment):
     """Use real rendered Leaflet HTML without relying on a custom-component handshake."""
     from src.ui import map_panel
 
     app, _ = saved_app
-    monkeypatch.setenv("CHULLO_DEPLOYMENT", "cloud")
-
-    def reject_custom_component(*args, **kwargs):
-        pytest.fail("The cloud map must not use the custom-component route.")
-
-    monkeypatch.setattr(map_panel, "st_folium", reject_custom_component)
+    monkeypatch.setenv("CHULLO_DEPLOYMENT", deployment)
+    assert not hasattr(map_panel, "st_folium"), "The map must not depend on a custom-component handshake."
     app.run()
     assert_rendered(app)
     frames = app.get("iframe")
@@ -241,11 +238,14 @@ def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_select
     assert ".fitBounds(" in selected_map
 
 
-def test_model_switch_keeps_actual_provenance_and_separates_completed_session_results(saved_app, monkeypatch, tmp_path):
+@pytest.mark.parametrize("variant", ["spacenet2_khartoum_v1", "chullo_local_v1"])
+def test_model_switch_keeps_actual_provenance_and_separates_completed_session_results(
+    saved_app, monkeypatch, tmp_path, variant
+):
     """Candidate fixtures live in tmp_path; both the original demo and real weights remain untouched."""
     from src.application.session_workspace import RESULTS_KEY, new_detection_output
     from src.inference.model import MODEL_ID
-    from src.model_catalog import TRAINED_VARIANT
+    from src.model_catalog import LOCAL_VARIANT, model_presentation
     from src.ui import sidebar, workflow
 
     app, downloads = saved_app
@@ -257,13 +257,14 @@ def test_model_switch_keeps_actual_provenance_and_separates_completed_session_re
         "model_choices",
         lambda: {
             "usa": "Original · GeoAI USA",
-            TRAINED_VARIANT: "Ajustado · SpaceNet (experimental)",
+            variant: model_presentation({"variant": variant})["title"],
         },
     )
     monkeypatch.setattr(sidebar, "ml_status", lambda: {"available": True})
     monkeypatch.setattr(workflow, "new_detection_output", lambda session: new_detection_output(session, tmp_path))
     app.run()
-    widget(app.selectbox, "Modelo de edificaciones").set_value(TRAINED_VARIANT).run()
+    assert widget(app.selectbox, "Modelo de edificaciones").value == "usa"
+    widget(app.selectbox, "Modelo de edificaciones").set_value(variant).run()
     assert_rendered(app)
     assert any("otro modelo" in element.value for element in app.info)
     before_run = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
@@ -272,13 +273,16 @@ def test_model_switch_keeps_actual_provenance_and_separates_completed_session_re
         before_metadata = json.loads(archive.read("metadatos.json"))["source_metadata"]["detection"]
     assert before_metadata["model_id"] == MODEL_ID
     assert before_metadata["model"]["trained_locally"] is False
+    before_footer = next(element.value for element in app.markdown if 'class="foot"' in element.value)
+    assert "Edificaciones: Original · GeoAI USA" in before_footer
+    assert model_presentation({"variant": variant})["title"] not in before_footer
 
     candidate_id = "synthetic-test/candidate"
     candidate_hash = "2" * 64
     calls = []
 
     def completed_candidate(raster_path, output_dir, **kwargs):
-        assert kwargs["model_variant"] == TRAINED_VARIANT
+        assert kwargs["model_variant"] == variant
         calls.append(output_dir)
         shutil.copytree(SAVED_RUN, output_dir)
         geojson_path = output_dir / "buildings.geojson"
@@ -293,7 +297,7 @@ def test_model_switch_keeps_actual_provenance_and_separates_completed_session_re
             {
                 "id": candidate_id,
                 "name": "Synthetic adjusted detector fixture",
-                "variant": TRAINED_VARIANT,
+                "variant": variant,
                 "trained_locally": True,
                 "sha256": candidate_hash,
                 "evaluation_summary": {"scope": "Synthetic test fixture, no real evaluation"},
@@ -307,7 +311,7 @@ def test_model_switch_keeps_actual_provenance_and_separates_completed_session_re
     widget(app.button, "Detectar en esta imagen").click().run()
     assert_rendered(app)
     assert not any("otro modelo" in element.value for element in app.info)
-    candidate_key = f"chullo:bundled:{TRAINED_VARIANT}"
+    candidate_key = f"chullo:bundled:{variant}"
     assert Path(app.session_state[RESULTS_KEY][candidate_key]) == calls[0]
     candidate = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
     assert candidate.model_id.eq(candidate_id).all()
@@ -316,21 +320,34 @@ def test_model_switch_keeps_actual_provenance_and_separates_completed_session_re
     assert source_metadata["building_mode"] == "finetuned_model_inference"
     assert source_metadata["detection"]["model"]["sha256"] == candidate_hash
     assert source_metadata["detection"]["model"]["trained_locally"] is True
+    candidate_footer = next(element.value for element in app.markdown if 'class="foot"' in element.value)
+    assert f"Edificaciones: {model_presentation({'variant': variant})['title']}" in candidate_footer
+    detection_source = next(source for source in source_metadata["sources"] if source.get("model_id") == candidate_id)
+    assert detection_source["organization"] == "Proyecto Chullo; ajuste supervisado sobre pesos de giswqs/GeoAI"
+    assert detection_source["model_sha256"] == candidate_hash
+    if variant == LOCAL_VARIANT:
+        captions = "\n".join(element.value for element in app.caption)
+        warnings = "\n".join(element.value for element in app.warning)
+        assert "3 recortes originales" in captions and "Google Earth Pro / Airbus" in captions
+        assert "sin revisión humana" in warnings
+        assert "Jartum" not in captions and "Jartum" not in warnings
 
     widget(app.selectbox, "Modelo de edificaciones").set_value("usa").run()
     assert_rendered(app)
     original_again = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
     assert original_again.model_id.eq(MODEL_ID).all()
+    original_footer = next(element.value for element in app.markdown if 'class="foot"' in element.value)
+    assert "Edificaciones: Original · GeoAI USA" in original_footer
     assert Path(app.session_state[RESULTS_KEY][candidate_key]) == calls[0]
 
-    widget(app.selectbox, "Modelo de edificaciones").set_value(TRAINED_VARIANT).run()
+    widget(app.selectbox, "Modelo de edificaciones").set_value(variant).run()
     assert_rendered(app)
     candidate_again = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
     assert candidate_again.model_id.eq(candidate_id).all()
     assert len(calls) == 1, "Switching saved model results must not run inference"
 
     def failing_candidate(*args, **kwargs):
-        assert kwargs["model_variant"] == TRAINED_VARIANT
+        assert kwargs["model_variant"] == variant
         raise RuntimeError("Synthetic candidate failure")
 
     monkeypatch.setattr(workflow, "run_detection", failing_candidate)

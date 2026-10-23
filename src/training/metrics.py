@@ -5,6 +5,29 @@ from __future__ import annotations
 import numpy as np
 
 
+def merged_instances(predicted: np.ndarray, reference: np.ndarray, coverage: float = 0.5) -> dict:
+    """Count predictions covering at least half of two separate reference roofs.
+
+    This diagnostic detects fusion at a fixed operating point, independently of
+    one-to-one IoU matching. It is not a cadastral or semantic house count.
+    """
+    predicted, reference = np.asarray(predicted, dtype=bool), np.asarray(reference, dtype=bool)
+    if predicted.ndim != 3 or reference.ndim != 3 or predicted.shape[1:] != reference.shape[1:]:
+        raise ValueError("Las máscaras deben compartir dimensiones [N,H,W].")
+    if not 0 < coverage <= 1:
+        raise ValueError("coverage debe estar en (0,1].")
+    areas = reference.sum(axis=(1, 2))
+    merged, affected = 0, set()
+    for mask in predicted:
+        intersection = reference[:, mask].sum(axis=1)
+        fractions = np.divide(intersection, areas, out=np.zeros(len(reference)), where=areas > 0)
+        covered = np.flatnonzero(fractions >= coverage)
+        if len(covered) >= 2:
+            merged += 1
+            affected.update(covered.tolist())
+    return {"merged_predictions": merged, "references_affected_by_merges": len(affected)}
+
+
 def match_masks(predicted: np.ndarray, reference: np.ndarray, iou_threshold: float = 0.5) -> dict:
     """Greedy maximum-IoU one-to-one matching, with deterministic tie ordering."""
     predicted, reference = np.asarray(predicted, dtype=bool), np.asarray(reference, dtype=bool)

@@ -37,7 +37,9 @@ def _acquire_run_lock(output: Path) -> tuple[Path, bool]:
 def main(argv: list[str] | None = None, *, detector=None) -> int:
     if hasattr(sys.stderr, "reconfigure"):
         sys.stderr.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="Detección real de edificaciones con Mask R-CNN USA preentrenado.")
+    from src.model_catalog import ORIGINAL_VARIANT, REGISTERED_VARIANTS
+
+    parser = argparse.ArgumentParser(description="Detección de edificaciones con un modelo Mask R-CNN registrado.")
     parser.add_argument("--image", "--raster", dest="image", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--threshold", "--confidence", dest="threshold", type=float, default=0.5)
@@ -47,7 +49,7 @@ def main(argv: list[str] | None = None, *, detector=None) -> int:
     parser.add_argument("--overlap", type=int, default=128)
     parser.add_argument("--mask-threshold", type=float, default=0.5)
     parser.add_argument("--min-area-m2", type=float, default=10.0)
-    parser.add_argument("--model-variant", choices=("usa", "spacenet2_khartoum_v1"), default="usa")
+    parser.add_argument("--model-variant", choices=REGISTERED_VARIANTS, default=ORIGINAL_VARIANT)
     args = parser.parse_args(argv)
     output = Path(args.output_dir).resolve()
     lock, owns_lock, attempt = None, False, None

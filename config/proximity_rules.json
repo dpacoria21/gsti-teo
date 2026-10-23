@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "provider_id": "local_proximity_demo",
+  "rule_version": "2026.10.demo.1",
+  "mode": "demo_rules",
+  "title": "Reglas de demostración por proximidad",
+  "source": "Criterios ilustrativos definidos en el proyecto; no son umbrales oficiales de peligro.",
+  "default_thresholds": {"red_band_m": 25, "yellow_width_m": 25},
+  "notice": "No determina peligro ni permiso para construir; verde no implica seguridad.",
+  "pending_factors": [
+    "Terreno: falta verificar pendiente, elevación y geometría del cauce.",
+    "Caudal y arrastre: falta evaluar lluvias, flujo, desbordes y transporte de materiales.",
+    "Faja marginal y uso del suelo: faltan delimitaciones y autorizaciones oficiales aplicables."
+  ],
+  "rules": {
+    "red": {
+      "label": "Rojo · prioridad de revisión alta",
+      "priority": "Revisión alta por proximidad",
+      "reason": "La edificación está dentro del primer intervalo de distancia de esta demostración.",
+      "potential_exposure": "La cercanía justifica revisar exposición a desbordes y arrastre; el modelo no determina si ocurre.",
+      "actions": [
+        "Priorizar una revisión técnica del lugar y del contorno detectado.",
+        "Contrastar la ubicación con estudios del cauce y delimitaciones oficiales antes de decidir una construcción."
+      ]
+    },
+    "yellow": {
+      "label": "Amarillo · revisión preventiva",
+      "priority": "Revisión preventiva",
+      "reason": "La edificación supera el límite rojo, pero permanece dentro de la franja amarilla configurada.",
+      "potential_exposure": "La cercanía justifica revisar exposición a desbordes y arrastre; el modelo no determina si ocurre.",
+      "actions": [
+        "Verificar preventivamente el terreno, el contorno y los posibles recorridos del agua.",
+        "Consultar estudios y delimitaciones oficiales antes de tomar decisiones sobre el uso del suelo."
+      ]
+    },
+    "green": {
+      "label": "Verde · menor proximidad",
+      "priority": "Menor proximidad; seguridad sin evaluar",
+      "reason": "La edificación se encuentra más allá del límite exterior amarillo de esta demostración.",
+      "potential_exposure": "Una mayor distancia al eje no descarta desbordes, otros cauces ni condiciones del terreno. Verde no significa seguro ni edificable.",
+      "actions": [
+        "Comprobar otros cauces, la topografía y las condiciones locales.",
+        "Verificar estudios y permisos aplicables; este color no autoriza construir."
+      ]
+    },
+    "unknown": {
+      "label": "Sin evaluación",
+      "priority": "Datos insuficientes",
+      "reason": "No existe una distancia válida para asignar un color.",
+      "potential_exposure": "Sin una medición válida no se puede interpretar la proximidad ni descartar exposición.",
+      "actions": [
+        "Revisar la geometría de la edificación, el eje del cauce y su georreferenciación.",
+        "Repetir el análisis cuando existan datos válidos."
+      ]
+    }
+  }
+}

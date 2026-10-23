@@ -32,6 +32,7 @@ def main():
     parser.add_argument("--match-iou", type=float, default=0.5)
     parser.add_argument("--gradient-clip", type=float, default=1.0)
     parser.add_argument("--bootstrap-samples", type=int, default=1000)
+    parser.add_argument("--image-scale", type=float, help="Fixed scale factor for variable-size chips; requires batch size 1")
     arguments = vars(parser.parse_args())
     manifest, output_dir, checkpoint = (arguments.pop(key) for key in ("manifest", "output_dir", "checkpoint"))
     arguments["amp"] = not arguments.pop("no_amp")

@@ -3,6 +3,7 @@
 import streamlit as st
 
 from src.application.provenance import approximate_georeferencing
+from src.model_catalog import model_presentation
 from src.ui.formatting import number
 from src.ui.models import AnalysisView, SidebarSelection
 
@@ -27,18 +28,15 @@ def render_overview(selection: SidebarSelection, view: AnalysisView) -> None:
             "Detecciones automáticas provisionales: pueden existir omisiones y falsos positivos. Revisa los contornos sobre la imagen antes de interpretar las distancias."
         )
         model_info = detection["manifest"].get("model", {})
+        presentation = model_presentation(model_info)
         training_note = (
-            "Modelo ajustado con SpaceNet (Jartum), sin etiquetas de entrenamiento de Chullo."
+            presentation["description"]
             if model_info.get("trained_locally")
             else "No se ha entrenado el modelo con estas edificaciones; se aplican pesos preentrenados."
         )
         st.caption(f"Captura de imagen: {observed_at} · {training_note}")
-        if model_info.get("trained_locally") and active_area == "chullo":
-            st.warning(
-                "Modelo experimental: en la revisión visual de Chullo se observaron varias cubiertas y patios "
-                "unidos en un solo contorno. Este resultado no permite contar viviendas individuales; "
-                "compara con el modelo original y revisa los polígonos."
-            )
+        if model_info.get("trained_locally") and presentation["limitations"]:
+            st.warning(presentation["notice"])
         if model_info.get("variant", "usa") != selection.model_variant:
             st.info(
                 "Los contornos visibles corresponden al otro modelo. Pulsa «Detectar en esta imagen» para aplicar el modelo seleccionado."

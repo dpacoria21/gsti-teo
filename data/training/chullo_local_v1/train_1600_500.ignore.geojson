@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Interior sombreado: no se distingue completamente cubierta de patio.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.5,
+              8185309.5
+            ],
+            [
+              227602.0,
+              8185309.5
+            ],
+            [
+              227602.0,
+              8185299.5
+            ],
+            [
+              227593.0,
+              8185299.5
+            ],
+            [
+              227591.5,
+              8185309.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Sombra profunda bajo cubierta alta; límites inferiores no resolubles.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227616.5,
+              8185309.0
+            ],
+            [
+              227624.5,
+              8185309.0
+            ],
+            [
+              227624.5,
+              8185300.5
+            ],
+            [
+              227616.5,
+              8185300.5
+            ],
+            [
+              227616.5,
+              8185309.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Fachada y partes ocluidas del edificio alto; no inferir proyección de la cubierta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227591.0,
+              8185275.0
+            ],
+            [
+              227604.5,
+              8185273.0
+            ],
+            [
+              227608.0,
+              8185275.5
+            ],
+            [
+              227608.5,
+              8185269.5
+            ],
+            [
+              227591.0,
+              8185269.5
+            ],
+            [
+              227591.0,
+              8185275.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Cubiertas, sombras y patios pequeños sin separación clara.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227656.5,
+              8185350.0
+            ],
+            [
+              227665.0,
+              8185350.0
+            ],
+            [
+              227662.0,
+              8185343.0
+            ],
+            [
+              227656.5,
+              8185343.0
+            ],
+            [
+              227656.5,
+              8185350.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

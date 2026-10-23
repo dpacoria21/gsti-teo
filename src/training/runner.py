@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 
 from src.inference.model import MODEL_PATH, MODEL_SHA256, load_model, sha256_file
 from src.training.dataset import BuildingDataset, collate_scenes, read_manifest
-from src.training.metrics import aggregate_counts, match_masks, paired_bootstrap
+from src.training.metrics import aggregate_counts, match_masks, merged_instances, paired_bootstrap
 
 
 @dataclass(frozen=True)
@@ -36,6 +36,7 @@ class TrainingConfig:
     match_iou: float = 0.5
     gradient_clip: float = 1.0
     bootstrap_samples: int = 1000
+    image_scale: float | None = None
 
     def __post_init__(self):
         if self.epochs < 1 or self.batch_size < 1 or self.workers < 0 or self.freeze_backbone_epochs < 0:
@@ -47,6 +48,19 @@ class TrainingConfig:
             raise ValueError("Los umbrales deben estar en (0,1].")
         if self.device not in {"auto", "cuda", "cpu"} or self.bootstrap_samples < 1:
             raise ValueError("Dispositivo o número de muestras bootstrap inválido.")
+        if self.image_scale is not None and (
+            not math.isfinite(self.image_scale) or self.image_scale <= 0 or self.batch_size != 1
+        ):
+            raise ValueError("image_scale debe ser positivo y finito y requiere batch_size=1.")
+
+
+def configure_image_scale(model, image, config):
+    """Keep roof scale equal across small annotation chips and 512px production tiles."""
+    if config.image_scale is None:
+        return
+    height, width = image.shape[-2:]
+    model.transform.min_size = (max(1, round(min(height, width) * config.image_scale)),)
+    model.transform.max_size = max(1, round(max(height, width) * config.image_scale))
 
 
 def _write_json(path, value):
@@ -74,6 +88,7 @@ def evaluate_model(model, dataset, device, config, log=None, phase="evaluation")
     with torch.inference_mode():
         for index in range(len(dataset)):
             image, target = dataset[index]
+            configure_image_scale(model, image, config)
             prediction = model([image.to(device)])[0]
             keep = (prediction["scores"] >= config.score_threshold) & (prediction["labels"] == 1)
             masks = prediction["masks"][keep, 0].detach().cpu().numpy() >= config.mask_threshold
@@ -84,6 +99,7 @@ def evaluate_model(model, dataset, device, config, log=None, phase="evaluation")
             row = {
                 "scene_id": dataset.scenes[index]["scene_id"],
                 **counts,
+                **merged_instances(masks, target["masks"].numpy()),
                 "reference_instances": len(target["masks"]),
                 "predicted_instances": len(masks),
                 "detection_limit": limit,
@@ -92,7 +108,10 @@ def evaluate_model(model, dataset, device, config, log=None, phase="evaluation")
             rows.append(row)
             if log:
                 log("evaluation_image", phase=phase, index=index + 1, total=len(dataset), **row)
-    return {"summary": aggregate_counts(rows), "per_scene": rows}
+    summary = aggregate_counts(rows)
+    for key in ("merged_predictions", "references_affected_by_merges"):
+        summary[key] = sum(row[key] for row in rows)
+    return {"summary": summary, "per_scene": rows}
 
 
 def run_training(manifest_path, output_dir, config=TrainingConfig(), checkpoint=MODEL_PATH):
@@ -127,16 +146,18 @@ def run_training(manifest_path, output_dir, config=TrainingConfig(), checkpoint=
         "initial_checkpoint_sha256": initial_sha,
         "architecture": "torchvision.maskrcnn_resnet50_fpn",
         "num_classes": 2,
-        "resize": {"min_size": 800, "max_size": 1333},
-        "training_images": "Whole scenes, no crops; random quarter rotations and horizontal/vertical flips",
+        "resize": {"image_scale": config.image_scale} if config.image_scale else {"min_size": 800, "max_size": 1333},
+        "training_images": "Prepared manifest scenes/chips; random quarter rotations and horizontal/vertical flips",
+        "annotation_provenance": manifest.get("annotation_provenance"),
         "input_preprocessing": "uint8 RGB /255; raw uint16 fallback valid-pixel per-band percentiles 2/98",
         "normalization": {"mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]},
         "selection": "Highest validation instance F1; earliest epoch wins ties; test unused until final comparison",
         "checkpoint_storage_dtype": "float16 for floating tensors; original dtype for integer tensors",
         "inference_dtype": "float32 after strict state-dict loading",
         "evaluation_protocol": {
-            "images": "Whole scenes, torchvision resize 800/1333, no tiling or area filtering",
-            "nodata": "Reference and prediction masks clipped to identical valid-pixel mask; empty predictions ignored",
+            "images": "Manifest scenes without inference tiling or area filtering; resize as registered above",
+            "nodata": "Reference/prediction masks clipped to identical valid area, excluding declared uncertain regions; RGB unchanged",
+            "fusion_diagnostic": "Prediction covers >=50% of each of >=2 distinct reference roofs",
             "max_detections_per_image": 100,
             "min_reference_pixels": 4,
             "deployment_difference": "Production uses 512px overlapping tiles and area/duplicate filtering",
@@ -198,6 +219,7 @@ def run_training(manifest_path, output_dir, config=TrainingConfig(), checkpoint=
             consecutive_amp_skips = 0
             epoch_start = time.perf_counter()
             for step, (images, targets) in enumerate(loader, start=1):
+                configure_image_scale(model, images[0], config)
                 images = [image.to(device) for image in images]
                 targets = [
                     {key: value.to(device) for key, value in target.items() if key != "valid_mask"}
@@ -294,7 +316,9 @@ def run_training(manifest_path, output_dir, config=TrainingConfig(), checkpoint=
                 baseline_test["per_scene"], candidate_test["per_scene"], config.seed, config.bootstrap_samples
             ),
             "selection_used_test": False,
-            "interpretation": "Held-out SpaceNet scenes only; this does not establish accuracy in Chullo.",
+            "interpretation": manifest.get(
+                "assessment_caveat", "Held-out dataset scenes only; this does not establish accuracy in Chullo."
+            ),
         }
         _write_json(output_dir / "comparison.json", comparison)
         run.update(

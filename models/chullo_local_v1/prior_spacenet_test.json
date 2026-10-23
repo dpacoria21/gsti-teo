@@ -1,0 +1,89 @@
+{
+  "purpose": "Post-hoc contextual comparison with the previous SpaceNet experiment; not used for local epoch/checkpoint selection or threshold tuning.",
+  "created_at_utc": "2026-10-23T06:56:33.539484+00:00",
+  "prior_model_id": "chullo/maskrcnn_spacenet2_khartoum_v1",
+  "checkpoint": "models\\spacenet2_khartoum_v1\\weights.pth",
+  "checkpoint_sha256": "5e929fa3cf1f657b1fa9afd2cbdc48ea475629d8c78910c98c9a99c8fffb90c6",
+  "dataset_manifest": "data/training/chullo_local_v1/manifest.json",
+  "dataset_manifest_sha256": "0631962c46b7cdb2a6b3b17cdf1cd3afd32e22f09c1d0bf36090f989b841ef4e",
+  "config": {
+    "epochs": 50,
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "freeze_backbone_epochs": 50,
+    "workers": 0,
+    "device": "cuda",
+    "amp": true,
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "match_iou": 0.5,
+    "gradient_clip": 1.0,
+    "bootstrap_samples": 1000,
+    "image_scale": 1.5625
+  },
+  "evaluation_protocol": {
+    "images": "Manifest scenes without inference tiling or area filtering; resize as registered above",
+    "nodata": "Reference/prediction masks clipped to identical valid area, excluding declared uncertain regions; RGB unchanged",
+    "fusion_diagnostic": "Prediction covers >=50% of each of >=2 distinct reference roofs",
+    "max_detections_per_image": 100,
+    "min_reference_pixels": 4,
+    "deployment_difference": "Production uses 512px overlapping tiles and area/duplicate filtering"
+  },
+  "execution": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "inference_dtype": "float32 after strict loading of the prior float16 artifact",
+  "elapsed_seconds": 15.762670800000706,
+  "annotation_provenance": {
+    "method": "assistant_visual_manual",
+    "human_reviewed": false,
+    "source_capture_date": "2026-03-04",
+    "annotation_unit": "visually distinguishable roof, not dwelling, occupancy or cadastral parcel"
+  },
+  "assessment_caveat": "Evaluación piloto de una sola captura de Chullo con referencias visuales provisionales del asistente, sin revisión humana. La separación espacial no establece independencia de adquisición ni estadística. Los resultados no representan exactitud en toda Chullo ni Arequipa.",
+  "local_best_epoch_unchanged": 47,
+  "summary": {
+    "images": 2,
+    "tp": 1,
+    "fp": 20,
+    "fn": 119,
+    "precision": 0.047619047619047616,
+    "recall": 0.008333333333333333,
+    "f1": 0.014184397163120567,
+    "mean_iou_true_positives": 0.6568047337278107,
+    "merged_predictions": 15,
+    "references_affected_by_merges": 106
+  },
+  "per_scene": [
+    {
+      "scene_id": "test_1100_1400",
+      "tp": 1,
+      "fp": 8,
+      "fn": 50,
+      "matched_iou_sum": 0.6568047337278107,
+      "merged_predictions": 4,
+      "references_affected_by_merges": 46,
+      "reference_instances": 51,
+      "predicted_instances": 9,
+      "detection_limit": 100,
+      "reference_count_exceeds_detection_limit": false
+    },
+    {
+      "scene_id": "test_1600_1400",
+      "tp": 0,
+      "fp": 12,
+      "fn": 69,
+      "matched_iou_sum": 0.0,
+      "merged_predictions": 11,
+      "references_affected_by_merges": 60,
+      "reference_instances": 69,
+      "predicted_instances": 12,
+      "detection_limit": 100,
+      "reference_count_exceeds_detection_limit": false
+    }
+  ]
+}

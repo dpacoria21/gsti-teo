@@ -1,0 +1,351 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Vegetación, sombras y elementos pequeños impiden separar cubiertas, patios y bordes.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185315.5
+            ],
+            [
+              227333.0,
+              8185317.5
+            ],
+            [
+              227335.0,
+              8185313.5
+            ],
+            [
+              227335.0,
+              8185308.5
+            ],
+            [
+              227329.5,
+              8185306.0
+            ],
+            [
+              227326.5,
+              8185309.5
+            ],
+            [
+              227326.5,
+              8185315.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Terraza/patio con elementos sobrepuestos: perímetro de cubierta incierto.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227340.5,
+              8185306.5
+            ],
+            [
+              227346.0,
+              8185309.0
+            ],
+            [
+              227350.5,
+              8185303.0
+            ],
+            [
+              227347.0,
+              8185298.5
+            ],
+            [
+              227343.5,
+              8185298.0
+            ],
+            [
+              227340.5,
+              8185306.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Superficie gris en cruce: no se distingue con certeza entre cubierta y superficie abierta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227413.0,
+              8185343.0
+            ],
+            [
+              227422.5,
+              8185347.5
+            ],
+            [
+              227422.5,
+              8185334.5
+            ],
+            [
+              227416.5,
+              8185331.5
+            ],
+            [
+              227411.0,
+              8185337.5
+            ],
+            [
+              227413.0,
+              8185343.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Vegetación, patios y sombras impiden separar pequeñas cubiertas en esta región.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227384.5,
+              8185296.0
+            ],
+            [
+              227392.0,
+              8185298.5
+            ],
+            [
+              227397.0,
+              8185294.0
+            ],
+            [
+              227396.0,
+              8185290.0
+            ],
+            [
+              227388.0,
+              8185285.5
+            ],
+            [
+              227384.5,
+              8185291.0
+            ],
+            [
+              227384.5,
+              8185296.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Objeto blanco pequeño junto a la vía; no se distingue con certeza si es cubierta o vehículo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227385.5,
+              8185311.5
+            ],
+            [
+              227387.5,
+              8185312.5
+            ],
+            [
+              227390.5,
+              8185308.5
+            ],
+            [
+              227388.0,
+              8185306.0
+            ],
+            [
+              227385.5,
+              8185308.5
+            ],
+            [
+              227385.5,
+              8185311.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Sombra oscura: no se puede resolver cubierta frente a suelo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227371.5,
+              8185337.5
+            ],
+            [
+              227376.5,
+              8185340.5
+            ],
+            [
+              227379.0,
+              8185337.0
+            ],
+            [
+              227374.0,
+              8185334.5
+            ],
+            [
+              227371.5,
+              8185337.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Objeto blanco junto a la via que puede ser un vehiculo; no se etiqueta como cubierta.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185278.5
+            ],
+            [
+              227330.5,
+              8185281.0
+            ],
+            [
+              227332.0,
+              8185278.5
+            ],
+            [
+              227328.0,
+              8185275.5
+            ],
+            [
+              227326.5,
+              8185275.5
+            ],
+            [
+              227326.5,
+              8185278.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_008",
+      "properties": {
+        "reason": "Sombra oscura: no se puede resolver cubierta frente a suelo.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1100_500"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8185273.0
+            ],
+            [
+              227331.5,
+              8185275.5
+            ],
+            [
+              227333.5,
+              8185272.0
+            ],
+            [
+              227329.5,
+              8185269.5
+            ],
+            [
+              227326.5,
+              8185269.5
+            ],
+            [
+              227326.5,
+              8185273.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

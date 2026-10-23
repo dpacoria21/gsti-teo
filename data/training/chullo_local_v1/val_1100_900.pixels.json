@@ -1,0 +1,899 @@
+{
+  "scene_id": "val_1100_900",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "id": "roof_001",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          18,
+          23
+        ],
+        [
+          0,
+          29
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_002",
+      "points": [
+        [
+          16,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          34,
+          11
+        ],
+        [
+          18,
+          17
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_003",
+      "points": [
+        [
+          18,
+          23
+        ],
+        [
+          36,
+          14
+        ],
+        [
+          42,
+          29
+        ],
+        [
+          23,
+          35
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          18,
+          31
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_004",
+      "points": [
+        [
+          0,
+          29
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          20,
+          48
+        ],
+        [
+          0,
+          54
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_005",
+      "points": [
+        [
+          22,
+          37
+        ],
+        [
+          43,
+          30
+        ],
+        [
+          48,
+          39
+        ],
+        [
+          20,
+          49
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_006",
+      "points": [
+        [
+          134,
+          0
+        ],
+        [
+          156,
+          7
+        ],
+        [
+          152,
+          23
+        ],
+        [
+          130,
+          17
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_007",
+      "points": [
+        [
+          156,
+          0
+        ],
+        [
+          177,
+          0
+        ],
+        [
+          174,
+          14
+        ],
+        [
+          157,
+          9
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_008",
+      "points": [
+        [
+          181,
+          0
+        ],
+        [
+          192,
+          0
+        ],
+        [
+          192,
+          31
+        ],
+        [
+          176,
+          28
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_009",
+      "points": [
+        [
+          160,
+          15
+        ],
+        [
+          177,
+          18
+        ],
+        [
+          174,
+          33
+        ],
+        [
+          157,
+          29
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_010",
+      "points": [
+        [
+          135,
+          35
+        ],
+        [
+          152,
+          38
+        ],
+        [
+          149,
+          48
+        ],
+        [
+          132,
+          44
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_011",
+      "points": [
+        [
+          129,
+          47
+        ],
+        [
+          151,
+          51
+        ],
+        [
+          148,
+          65
+        ],
+        [
+          126,
+          61
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_012",
+      "points": [
+        [
+          126,
+          65
+        ],
+        [
+          149,
+          68
+        ],
+        [
+          146,
+          82
+        ],
+        [
+          122,
+          79
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_013",
+      "points": [
+        [
+          122,
+          82
+        ],
+        [
+          146,
+          86
+        ],
+        [
+          142,
+          103
+        ],
+        [
+          118,
+          97
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_014",
+      "points": [
+        [
+          121,
+          101
+        ],
+        [
+          140,
+          108
+        ],
+        [
+          135,
+          123
+        ],
+        [
+          114,
+          119
+        ],
+        [
+          116,
+          110
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_015",
+      "points": [
+        [
+          112,
+          121
+        ],
+        [
+          137,
+          127
+        ],
+        [
+          132,
+          142
+        ],
+        [
+          106,
+          137
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_016",
+      "points": [
+        [
+          141,
+          109
+        ],
+        [
+          158,
+          114
+        ],
+        [
+          153,
+          127
+        ],
+        [
+          138,
+          123
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_017",
+      "points": [
+        [
+          149,
+          128
+        ],
+        [
+          163,
+          133
+        ],
+        [
+          159,
+          149
+        ],
+        [
+          144,
+          146
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_018",
+      "points": [
+        [
+          164,
+          133
+        ],
+        [
+          178,
+          138
+        ],
+        [
+          175,
+          155
+        ],
+        [
+          160,
+          151
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_019",
+      "points": [
+        [
+          180,
+          134
+        ],
+        [
+          192,
+          137
+        ],
+        [
+          192,
+          160
+        ],
+        [
+          177,
+          156
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_020",
+      "points": [
+        [
+          181,
+          116
+        ],
+        [
+          192,
+          118
+        ],
+        [
+          192,
+          135
+        ],
+        [
+          179,
+          132
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_021",
+      "points": [
+        [
+          178,
+          91
+        ],
+        [
+          192,
+          95
+        ],
+        [
+          192,
+          114
+        ],
+        [
+          174,
+          111
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_022",
+      "points": [
+        [
+          181,
+          51
+        ],
+        [
+          192,
+          54
+        ],
+        [
+          192,
+          73
+        ],
+        [
+          177,
+          69
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_023",
+      "points": [
+        [
+          185,
+          74
+        ],
+        [
+          192,
+          76
+        ],
+        [
+          192,
+          93
+        ],
+        [
+          182,
+          89
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_024",
+      "points": [
+        [
+          171,
+          112
+        ],
+        [
+          180,
+          114
+        ],
+        [
+          177,
+          127
+        ],
+        [
+          168,
+          124
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_025",
+      "points": [
+        [
+          95,
+          173
+        ],
+        [
+          113,
+          184
+        ],
+        [
+          108,
+          192
+        ],
+        [
+          84,
+          192
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_026",
+      "points": [
+        [
+          105,
+          164
+        ],
+        [
+          121,
+          169
+        ],
+        [
+          117,
+          181
+        ],
+        [
+          100,
+          173
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_027",
+      "points": [
+        [
+          121,
+          174
+        ],
+        [
+          137,
+          179
+        ],
+        [
+          133,
+          192
+        ],
+        [
+          116,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_028",
+      "points": [
+        [
+          139,
+          177
+        ],
+        [
+          160,
+          182
+        ],
+        [
+          156,
+          192
+        ],
+        [
+          134,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_029",
+      "points": [
+        [
+          164,
+          178
+        ],
+        [
+          181,
+          183
+        ],
+        [
+          178,
+          192
+        ],
+        [
+          160,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    },
+    {
+      "id": "roof_030",
+      "points": [
+        [
+          183,
+          177
+        ],
+        [
+          192,
+          180
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          180,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta visible; límite dibujado visualmente por el asistente, no lindero catastral."
+    }
+  ],
+  "ignore_polygons": [
+    {
+      "points": [
+        [
+          35,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          94,
+          10
+        ],
+        [
+          70,
+          24
+        ],
+        [
+          48,
+          36
+        ],
+        [
+          43,
+          28
+        ],
+        [
+          37,
+          17
+        ]
+      ],
+      "reason": "Borde superior: cubiertas contiguas y niveles de azotea cuya separación no se puede resolver con suficiente consistencia; no se infieren linderos."
+    },
+    {
+      "points": [
+        [
+          128,
+          18
+        ],
+        [
+          157,
+          23
+        ],
+        [
+          154,
+          36
+        ],
+        [
+          146,
+          37
+        ],
+        [
+          141,
+          31
+        ],
+        [
+          128,
+          35
+        ]
+      ],
+      "reason": "Patios, escaleras y cubiertas pequeñas intercaladas; separación cubierta-patio ambigua."
+    },
+    {
+      "points": [
+        [
+          157,
+          30
+        ],
+        [
+          175,
+          34
+        ],
+        [
+          171,
+          52
+        ],
+        [
+          178,
+          60
+        ],
+        [
+          174,
+          76
+        ],
+        [
+          182,
+          84
+        ],
+        [
+          174,
+          110
+        ],
+        [
+          163,
+          121
+        ],
+        [
+          153,
+          114
+        ],
+        [
+          158,
+          101
+        ],
+        [
+          151,
+          99
+        ],
+        [
+          153,
+          83
+        ],
+        [
+          148,
+          79
+        ],
+        [
+          152,
+          63
+        ],
+        [
+          149,
+          48
+        ],
+        [
+          154,
+          40
+        ]
+      ],
+      "reason": "Franja de azoteas pequeñas, sombras y patios: no se distingue exhaustivamente cada cubierta individual; excluida de evaluación."
+    },
+    {
+      "points": [
+        [
+          175,
+          31
+        ],
+        [
+          192,
+          31
+        ],
+        [
+          192,
+          50
+        ],
+        [
+          179,
+          49
+        ],
+        [
+          173,
+          43
+        ]
+      ],
+      "reason": "Vegetación y construcciones ocultas en borde oriental; límites de cubierta inciertos."
+    },
+    {
+      "points": [
+        [
+          83,
+          160
+        ],
+        [
+          105,
+          164
+        ],
+        [
+          99,
+          175
+        ],
+        [
+          91,
+          172
+        ],
+        [
+          83,
+          179
+        ]
+      ],
+      "reason": "Acceso, sombras y estructuras pequeñas sin separación fiable respecto a patios."
+    }
+  ],
+  "review_notes": [
+    "Anotación visual provisional del asistente sobre RGB y detalle de la captura original Google Earth/Airbus; no se consultaron contornos de los detectores.",
+    "Una instancia representa una cubierta distinguible en la imagen; no acredita vivienda, ocupación ni límites catastrales.",
+    "Los polígonos que llegan al borde de la escena representan solo la parte visible. Cubiertas ambiguas se excluyen mediante ignore_polygons.",
+    "No hay validación humana ni topográfica independiente. Las regiones excluidas limitan la dificultad evaluada; no extrapolar el resultado a toda Chullo.",
+    "Segunda pasada del asistente sobre superposición: ajustados bordes adyacentes y conservadas exclusiones donde no se puede separar cada cubierta."
+  ]
+}

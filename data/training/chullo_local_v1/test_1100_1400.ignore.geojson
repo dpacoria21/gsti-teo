@@ -1,0 +1,309 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ignore_001",
+      "properties": {
+        "reason": "Superficie muy oscura del extremo noroeste: cubierta o terreno indeterminados.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227326.5,
+              8184915.5
+            ],
+            [
+              227342.5,
+              8184915.5
+            ],
+            [
+              227344.0,
+              8184901.5
+            ],
+            [
+              227340.5,
+              8184900.0
+            ],
+            [
+              227326.5,
+              8184899.5
+            ],
+            [
+              227326.5,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_002",
+      "properties": {
+        "reason": "Franja con sombra y superficie curva; cubierta y vacío no separables con confianza.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227367.5,
+              8184915.5
+            ],
+            [
+              227374.0,
+              8184915.5
+            ],
+            [
+              227374.5,
+              8184902.0
+            ],
+            [
+              227372.0,
+              8184898.5
+            ],
+            [
+              227368.5,
+              8184899.5
+            ],
+            [
+              227367.0,
+              8184900.0
+            ],
+            [
+              227367.5,
+              8184915.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_003",
+      "properties": {
+        "reason": "Vegetación y sombra ocultan pequeñas cubiertas o vacíos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227350.5,
+              8184899.5
+            ],
+            [
+              227356.0,
+              8184900.0
+            ],
+            [
+              227357.0,
+              8184892.5
+            ],
+            [
+              227353.5,
+              8184889.5
+            ],
+            [
+              227351.0,
+              8184892.5
+            ],
+            [
+              227350.5,
+              8184899.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_004",
+      "properties": {
+        "reason": "Conjunto de pequeños elementos y sombras con límites de cubierta poco legibles.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227371.5,
+              8184891.5
+            ],
+            [
+              227375.0,
+              8184892.5
+            ],
+            [
+              227376.0,
+              8184888.5
+            ],
+            [
+              227372.0,
+              8184887.5
+            ],
+            [
+              227371.5,
+              8184891.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_005",
+      "properties": {
+        "reason": "Patio y pequeños cobertizos mezclados; no se inventan cubiertas completas.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227366.5,
+              8184857.5
+            ],
+            [
+              227370.5,
+              8184858.0
+            ],
+            [
+              227371.5,
+              8184848.5
+            ],
+            [
+              227374.0,
+              8184846.0
+            ],
+            [
+              227372.0,
+              8184843.0
+            ],
+            [
+              227367.5,
+              8184846.0
+            ],
+            [
+              227366.5,
+              8184857.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_006",
+      "properties": {
+        "reason": "Sector con estructuras estrechas y posibles patios; límites de cobertura inciertos.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227367.0,
+              8184843.0
+            ],
+            [
+              227372.5,
+              8184845.0
+            ],
+            [
+              227374.5,
+              8184836.0
+            ],
+            [
+              227372.0,
+              8184834.5
+            ],
+            [
+              227369.5,
+              8184837.0
+            ],
+            [
+              227367.0,
+              8184843.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ignore_007",
+      "properties": {
+        "reason": "Vegetación, sombra y posibles estructuras recortadas en extremo sureste.",
+        "annotation_type": "ignore",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "test_1100_1400"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227415.5,
+              8184828.0
+            ],
+            [
+              227422.5,
+              8184828.5
+            ],
+            [
+              227422.5,
+              8184819.5
+            ],
+            [
+              227418.0,
+              8184819.5
+            ],
+            [
+              227412.0,
+              8184823.5
+            ],
+            [
+              227415.5,
+              8184828.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

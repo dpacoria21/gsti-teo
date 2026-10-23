@@ -8,6 +8,7 @@ import streamlit as st
 from src.application.images import data_fingerprint, detection_fingerprint
 from src.application.provenance import describe_detection, detection_metadata, image_details
 from src.application.session_workspace import new_detection_output, remember_result
+from src.risk_explanation import DemoRuleProvider
 from src.ui.cache import cached_analysis, cached_detection, cached_detection_analysis, cached_load
 from src.ui.engine import load_detection, run_detection
 from src.ui.models import AnalysisView, SidebarSelection
@@ -131,6 +132,7 @@ def prepare_analysis(selection: SidebarSelection, band_m: float, detection_faile
         metadata = (
             detection_metadata(payload.get("metadata", {}), detection) if detection else payload.get("metadata", {})
         )
+        metadata = {**metadata, "explanation_rules": DemoRuleProvider().descriptor()}
     except Exception as error:
         st.title("Análisis de proximidad")
         st.error(f"No se pudo preparar el análisis: {error}")

@@ -1,0 +1,1081 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32719"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "r05",
+      "properties": {
+        "id": "r05",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227600.5,
+              8185365.5
+            ],
+            [
+              227600.5,
+              8185358.416666667
+            ],
+            [
+              227601.0,
+              8185358.5
+            ],
+            [
+              227601.0,
+              8185365.5
+            ],
+            [
+              227600.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r06",
+      "properties": {
+        "id": "r06",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.5,
+              8185365.5
+            ],
+            [
+              227601.0,
+              8185356.5
+            ],
+            [
+              227602.0,
+              8185355.5
+            ],
+            [
+              227602.0,
+              8185351.5
+            ],
+            [
+              227608.0,
+              8185351.0
+            ],
+            [
+              227608.5,
+              8185365.5
+            ],
+            [
+              227601.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r07",
+      "properties": {
+        "id": "r07",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227609.0,
+              8185365.5
+            ],
+            [
+              227609.0,
+              8185357.5
+            ],
+            [
+              227614.5,
+              8185357.5
+            ],
+            [
+              227614.5,
+              8185365.5
+            ],
+            [
+              227609.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r08",
+      "properties": {
+        "id": "r08",
+        "confidence": "approximate",
+        "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227614.5,
+              8185365.5
+            ],
+            [
+              227614.5,
+              8185350.5
+            ],
+            [
+              227617.0,
+              8185350.5
+            ],
+            [
+              227617.5,
+              8185356.5
+            ],
+            [
+              227620.0,
+              8185356.5
+            ],
+            [
+              227620.5,
+              8185365.5
+            ],
+            [
+              227614.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r09",
+      "properties": {
+        "id": "r09",
+        "confidence": "approximate",
+        "notes": "Borde corregido por inspección visual del detalle original para evitar solapamiento con cubierta vecina; límite aproximado.",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227621.0,
+              8185365.5
+            ],
+            [
+              227621.0,
+              8185357.0
+            ],
+            [
+              227622.0,
+              8185359.0
+            ],
+            [
+              227624.5,
+              8185358.0
+            ],
+            [
+              227626.0,
+              8185359.0
+            ],
+            [
+              227626.0,
+              8185365.5
+            ],
+            [
+              227621.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r10",
+      "properties": {
+        "id": "r10",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227627.5,
+              8185365.5
+            ],
+            [
+              227626.5,
+              8185358.5
+            ],
+            [
+              227629.0,
+              8185358.5
+            ],
+            [
+              227629.0,
+              8185361.5
+            ],
+            [
+              227631.5,
+              8185361.5
+            ],
+            [
+              227631.5,
+              8185365.5
+            ],
+            [
+              227627.5,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r11",
+      "properties": {
+        "id": "r11",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227632.0,
+              8185365.5
+            ],
+            [
+              227632.0,
+              8185359.0
+            ],
+            [
+              227635.5,
+              8185359.0
+            ],
+            [
+              227636.0,
+              8185365.5
+            ],
+            [
+              227632.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r12",
+      "properties": {
+        "id": "r12",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227637.0,
+              8185365.5
+            ],
+            [
+              227637.0,
+              8185357.0
+            ],
+            [
+              227638.0,
+              8185353.0
+            ],
+            [
+              227644.5,
+              8185354.5
+            ],
+            [
+              227644.5,
+              8185365.5
+            ],
+            [
+              227637.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r13",
+      "properties": {
+        "id": "r13",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227645.0,
+              8185365.5
+            ],
+            [
+              227645.0,
+              8185357.0
+            ],
+            [
+              227646.0,
+              8185357.0
+            ],
+            [
+              227646.5,
+              8185353.0
+            ],
+            [
+              227648.5,
+              8185353.0
+            ],
+            [
+              227648.5,
+              8185365.5
+            ],
+            [
+              227645.0,
+              8185365.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r20",
+      "properties": {
+        "id": "r20",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.0,
+              8185334.5
+            ],
+            [
+              227601.0,
+              8185349.5
+            ],
+            [
+              227600.5,
+              8185349.5
+            ],
+            [
+              227600.5,
+              8185334.5
+            ],
+            [
+              227601.0,
+              8185334.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r21",
+      "properties": {
+        "id": "r21",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227601.0,
+              8185334.5
+            ],
+            [
+              227605.5,
+              8185334.5
+            ],
+            [
+              227605.5,
+              8185348.5
+            ],
+            [
+              227601.0,
+              8185349.0
+            ],
+            [
+              227601.0,
+              8185334.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r22",
+      "properties": {
+        "id": "r22",
+        "confidence": "clear",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227607.0,
+              8185337.0
+            ],
+            [
+              227613.5,
+              8185337.0
+            ],
+            [
+              227613.5,
+              8185347.5
+            ],
+            [
+              227607.0,
+              8185347.5
+            ],
+            [
+              227607.0,
+              8185337.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r23",
+      "properties": {
+        "id": "r23",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227614.0,
+              8185334.0
+            ],
+            [
+              227616.5,
+              8185334.0
+            ],
+            [
+              227616.5,
+              8185349.5
+            ],
+            [
+              227614.0,
+              8185350.0
+            ],
+            [
+              227614.0,
+              8185334.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r24",
+      "properties": {
+        "id": "r24",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227617.0,
+              8185334.0
+            ],
+            [
+              227622.0,
+              8185334.0
+            ],
+            [
+              227622.5,
+              8185343.0
+            ],
+            [
+              227620.5,
+              8185343.0
+            ],
+            [
+              227620.5,
+              8185345.5
+            ],
+            [
+              227622.0,
+              8185346.0
+            ],
+            [
+              227622.0,
+              8185350.0
+            ],
+            [
+              227617.5,
+              8185350.0
+            ],
+            [
+              227617.0,
+              8185334.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r25",
+      "properties": {
+        "id": "r25",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227622.5,
+              8185334.0
+            ],
+            [
+              227625.0,
+              8185334.0
+            ],
+            [
+              227624.5,
+              8185338.0
+            ],
+            [
+              227627.0,
+              8185338.0
+            ],
+            [
+              227626.5,
+              8185350.0
+            ],
+            [
+              227622.5,
+              8185350.0
+            ],
+            [
+              227622.5,
+              8185334.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r26",
+      "properties": {
+        "id": "r26",
+        "confidence": "clear",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227627.5,
+              8185336.0
+            ],
+            [
+              227632.5,
+              8185336.0
+            ],
+            [
+              227632.5,
+              8185348.5
+            ],
+            [
+              227627.5,
+              8185348.5
+            ],
+            [
+              227627.5,
+              8185336.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r27",
+      "properties": {
+        "id": "r27",
+        "confidence": "clear",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227635.5,
+              8185341.0
+            ],
+            [
+              227646.5,
+              8185341.0
+            ],
+            [
+              227646.5,
+              8185349.5
+            ],
+            [
+              227635.5,
+              8185349.0
+            ],
+            [
+              227635.5,
+              8185341.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r28",
+      "properties": {
+        "id": "r28",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227635.5,
+              8185337.0
+            ],
+            [
+              227637.0,
+              8185337.0
+            ],
+            [
+              227637.0,
+              8185334.5
+            ],
+            [
+              227646.0,
+              8185334.5
+            ],
+            [
+              227646.0,
+              8185340.5
+            ],
+            [
+              227635.5,
+              8185340.5
+            ],
+            [
+              227635.5,
+              8185337.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r29",
+      "properties": {
+        "id": "r29",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227648.0,
+              8185343.5
+            ],
+            [
+              227648.5,
+              8185343.433333334
+            ],
+            [
+              227648.5,
+              8185349.0
+            ],
+            [
+              227648.0,
+              8185343.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r30",
+      "properties": {
+        "id": "r30",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227648.0,
+              8185335.0
+            ],
+            [
+              227648.5,
+              8185335.03125
+            ],
+            [
+              227648.5,
+              8185342.5
+            ],
+            [
+              227648.0,
+              8185335.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r38",
+      "properties": {
+        "id": "r38",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227602.0,
+              8185320.5
+            ],
+            [
+              227600.5,
+              8185320.5
+            ],
+            [
+              227600.5,
+              8185317.5
+            ],
+            [
+              227602.0,
+              8185317.5
+            ],
+            [
+              227602.0,
+              8185320.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r39",
+      "properties": {
+        "id": "r39",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227610.0,
+              8185321.5
+            ],
+            [
+              227602.5,
+              8185321.5
+            ],
+            [
+              227602.5,
+              8185317.5
+            ],
+            [
+              227609.8918918919,
+              8185317.5
+            ],
+            [
+              227610.0,
+              8185321.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r40",
+      "properties": {
+        "id": "r40",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227615.5,
+              8185324.0
+            ],
+            [
+              227610.5,
+              8185321.5
+            ],
+            [
+              227610.5,
+              8185317.5
+            ],
+            [
+              227615.9814814815,
+              8185317.5
+            ],
+            [
+              227615.5,
+              8185324.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r41",
+      "properties": {
+        "id": "r41",
+        "confidence": "clear",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227622.0,
+              8185318.5
+            ],
+            [
+              227617.5,
+              8185323.0
+            ],
+            [
+              227617.09259259258,
+              8185317.5
+            ],
+            [
+              227622.11111111112,
+              8185317.5
+            ],
+            [
+              227622.0,
+              8185318.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "r54",
+      "properties": {
+        "id": "r54",
+        "confidence": "approximate",
+        "annotation_type": "reference",
+        "annotation_method": "assistant_visual_manual",
+        "human_reviewed": false,
+        "parent_scene_id": "train_1600_500",
+        "clipped_to_chip": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              227632.5,
+              8185318.5
+            ],
+            [
+              227626.5,
+              8185318.5
+            ],
+            [
+              227626.5,
+              8185317.5
+            ],
+            [
+              227632.5,
+              8185317.5
+            ],
+            [
+              227632.5,
+              8185318.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

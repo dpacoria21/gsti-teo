@@ -60,7 +60,8 @@ class DetectionDescription:
 def describe_detection(manifest: dict) -> DetectionDescription:
     model = manifest.get("model", {})
     model_name = (
-        model.get("name")
+        model.get("title")
+        or model.get("name")
         or model.get("architecture")
         or model.get("id")
         or manifest.get("model_id", "Modelo preentrenado")

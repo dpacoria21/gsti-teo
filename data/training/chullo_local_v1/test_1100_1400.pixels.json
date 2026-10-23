@@ -1,0 +1,1428 @@
+{
+  "scene_id": "test_1100_1400",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "points": [
+        [
+          33,
+          0
+        ],
+        [
+          48,
+          0
+        ],
+        [
+          53,
+          31
+        ],
+        [
+          38,
+          35
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris cortada por borde superior.",
+      "id": "test_1100_1400_roof_001"
+    },
+    {
+      "points": [
+        [
+          49,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          68,
+          30
+        ],
+        [
+          54,
+          33
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta separada por parapeto visible; cortada por borde superior.",
+      "id": "test_1100_1400_roof_002"
+    },
+    {
+      "points": [
+        [
+          65,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          82,
+          11
+        ],
+        [
+          80,
+          30
+        ],
+        [
+          69,
+          30
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris; borde superior truncado.",
+      "id": "test_1100_1400_roof_003"
+    },
+    {
+      "points": [
+        [
+          96,
+          0
+        ],
+        [
+          144,
+          0
+        ],
+        [
+          144,
+          20
+        ],
+        [
+          128,
+          19
+        ],
+        [
+          128,
+          17
+        ],
+        [
+          96,
+          19
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta continua en el borde superior; sin división catastral inferida.",
+      "id": "test_1100_1400_roof_004"
+    },
+    {
+      "points": [
+        [
+          102,
+          20
+        ],
+        [
+          111,
+          20
+        ],
+        [
+          112,
+          33
+        ],
+        [
+          103,
+          35
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta rectangular estrecha junto a vegetación.",
+      "id": "test_1100_1400_roof_005"
+    },
+    {
+      "points": [
+        [
+          133,
+          22
+        ],
+        [
+          142,
+          23
+        ],
+        [
+          141,
+          31
+        ],
+        [
+          132,
+          30
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Pequeña cubierta clara.",
+      "id": "test_1100_1400_roof_006"
+    },
+    {
+      "points": [
+        [
+          122,
+          33
+        ],
+        [
+          142,
+          33
+        ],
+        [
+          142,
+          46
+        ],
+        [
+          127,
+          47
+        ],
+        [
+          122,
+          43
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara al este de un vacío oscuro.",
+      "id": "test_1100_1400_roof_007"
+    },
+    {
+      "points": [
+        [
+          59,
+          35
+        ],
+        [
+          65,
+          33
+        ],
+        [
+          69,
+          46
+        ],
+        [
+          62,
+          48
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha clara, con sombra contigua.",
+      "id": "test_1100_1400_roof_008"
+    },
+    {
+      "points": [
+        [
+          67,
+          34
+        ],
+        [
+          79,
+          32
+        ],
+        [
+          82,
+          44
+        ],
+        [
+          71,
+          47
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta rectangular gris.",
+      "id": "test_1100_1400_roof_009"
+    },
+    {
+      "points": [
+        [
+          81,
+          35
+        ],
+        [
+          87,
+          33
+        ],
+        [
+          90,
+          41
+        ],
+        [
+          83,
+          44
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña; borde parcialmente sombreado.",
+      "id": "test_1100_1400_roof_010"
+    },
+    {
+      "points": [
+        [
+          85,
+          44
+        ],
+        [
+          95,
+          41
+        ],
+        [
+          96,
+          46
+        ],
+        [
+          87,
+          49
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña al norte de la cubierta mayor.",
+      "id": "test_1100_1400_roof_011"
+    },
+    {
+      "points": [
+        [
+          78,
+          52
+        ],
+        [
+          88,
+          49
+        ],
+        [
+          90,
+          54
+        ],
+        [
+          81,
+          58
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta rectangular con parapeto.",
+      "id": "test_1100_1400_roof_012"
+    },
+    {
+      "points": [
+        [
+          66,
+          55
+        ],
+        [
+          74,
+          53
+        ],
+        [
+          78,
+          59
+        ],
+        [
+          69,
+          62
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta parda distinta de patio sombreado.",
+      "id": "test_1100_1400_roof_013"
+    },
+    {
+      "points": [
+        [
+          63,
+          64
+        ],
+        [
+          96,
+          56
+        ],
+        [
+          99,
+          75
+        ],
+        [
+          84,
+          81
+        ],
+        [
+          69,
+          80
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Gran cubierta gris continua; no dividida en propiedades.",
+      "id": "test_1100_1400_roof_014"
+    },
+    {
+      "points": [
+        [
+          102,
+          44
+        ],
+        [
+          111,
+          43
+        ],
+        [
+          111,
+          55
+        ],
+        [
+          106,
+          58
+        ],
+        [
+          101,
+          57
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña clara con esquina irregular.",
+      "id": "test_1100_1400_roof_015"
+    },
+    {
+      "points": [
+        [
+          113,
+          47
+        ],
+        [
+          127,
+          48
+        ],
+        [
+          128,
+          66
+        ],
+        [
+          112,
+          68
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta de tono gris rojizo; incluye solo superficie techada visible.",
+      "id": "test_1100_1400_roof_016"
+    },
+    {
+      "points": [
+        [
+          129,
+          48
+        ],
+        [
+          142,
+          47
+        ],
+        [
+          142,
+          65
+        ],
+        [
+          130,
+          65
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta rojiza rectangular.",
+      "id": "test_1100_1400_roof_017"
+    },
+    {
+      "points": [
+        [
+          115,
+          70
+        ],
+        [
+          126,
+          69
+        ],
+        [
+          127,
+          79
+        ],
+        [
+          113,
+          79
+        ],
+        [
+          113,
+          74
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara con saliente.",
+      "id": "test_1100_1400_roof_018"
+    },
+    {
+      "points": [
+        [
+          128,
+          68
+        ],
+        [
+          141,
+          68
+        ],
+        [
+          142,
+          80
+        ],
+        [
+          129,
+          80
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris clara; separación visible con cubierta vecina.",
+      "id": "test_1100_1400_roof_019"
+    },
+    {
+      "points": [
+        [
+          114,
+          81
+        ],
+        [
+          142,
+          81
+        ],
+        [
+          141,
+          89
+        ],
+        [
+          114,
+          89
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta clara transversal.",
+      "id": "test_1100_1400_roof_020"
+    },
+    {
+      "points": [
+        [
+          113,
+          90
+        ],
+        [
+          140,
+          91
+        ],
+        [
+          139,
+          110
+        ],
+        [
+          112,
+          110
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Superficie gris continua con elementos en cubierta; no subdividida.",
+      "id": "test_1100_1400_roof_021"
+    },
+    {
+      "points": [
+        [
+          99,
+          76
+        ],
+        [
+          105,
+          73
+        ],
+        [
+          109,
+          85
+        ],
+        [
+          99,
+          86
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha; lindero occidental aproximado.",
+      "id": "test_1100_1400_roof_022"
+    },
+    {
+      "points": [
+        [
+          98,
+          87
+        ],
+        [
+          106,
+          87
+        ],
+        [
+          105,
+          92
+        ],
+        [
+          97,
+          91
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta pequeña azul grisácea.",
+      "id": "test_1100_1400_roof_023"
+    },
+    {
+      "points": [
+        [
+          71,
+          84
+        ],
+        [
+          76,
+          82
+        ],
+        [
+          79,
+          87
+        ],
+        [
+          77,
+          91
+        ],
+        [
+          81,
+          96
+        ],
+        [
+          92,
+          93
+        ],
+        [
+          94,
+          100
+        ],
+        [
+          77,
+          105
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta en L alrededor de vegetación; se excluye el centro arbolado.",
+      "id": "test_1100_1400_roof_024"
+    },
+    {
+      "points": [
+        [
+          97,
+          94
+        ],
+        [
+          105,
+          94
+        ],
+        [
+          106,
+          104
+        ],
+        [
+          101,
+          110
+        ],
+        [
+          96,
+          110
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha clara junto a sombra del bloque oriental.",
+      "id": "test_1100_1400_roof_025"
+    },
+    {
+      "points": [
+        [
+          76,
+          109
+        ],
+        [
+          93,
+          104
+        ],
+        [
+          95,
+          111
+        ],
+        [
+          83,
+          117
+        ],
+        [
+          78,
+          120
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara con escalonamiento; patio oriental excluido.",
+      "id": "test_1100_1400_roof_026"
+    },
+    {
+      "points": [
+        [
+          92,
+          113
+        ],
+        [
+          111,
+          113
+        ],
+        [
+          111,
+          128
+        ],
+        [
+          94,
+          130
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta gris con varios elementos claros.",
+      "id": "test_1100_1400_roof_027"
+    },
+    {
+      "points": [
+        [
+          113,
+          113
+        ],
+        [
+          129,
+          113
+        ],
+        [
+          129,
+          128
+        ],
+        [
+          113,
+          128
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris clara con parapeto visible.",
+      "id": "test_1100_1400_roof_028"
+    },
+    {
+      "points": [
+        [
+          131,
+          114
+        ],
+        [
+          141,
+          114
+        ],
+        [
+          141,
+          125
+        ],
+        [
+          132,
+          127
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta oriental estrecha; parte del borde en sombra.",
+      "id": "test_1100_1400_roof_029"
+    },
+    {
+      "points": [
+        [
+          91,
+          131
+        ],
+        [
+          110,
+          129
+        ],
+        [
+          110,
+          140
+        ],
+        [
+          95,
+          143
+        ],
+        [
+          91,
+          139
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta baja irregular; no incluye vacío oscuro occidental.",
+      "id": "test_1100_1400_roof_030"
+    },
+    {
+      "points": [
+        [
+          112,
+          130
+        ],
+        [
+          129,
+          130
+        ],
+        [
+          128,
+          141
+        ],
+        [
+          112,
+          143
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris continua.",
+      "id": "test_1100_1400_roof_031"
+    },
+    {
+      "points": [
+        [
+          132,
+          129
+        ],
+        [
+          140,
+          127
+        ],
+        [
+          140,
+          141
+        ],
+        [
+          129,
+          143
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha con escalonamiento.",
+      "id": "test_1100_1400_roof_032"
+    },
+    {
+      "points": [
+        [
+          92,
+          146
+        ],
+        [
+          101,
+          144
+        ],
+        [
+          102,
+          148
+        ],
+        [
+          94,
+          151
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña clara.",
+      "id": "test_1100_1400_roof_033"
+    },
+    {
+      "points": [
+        [
+          96,
+          151
+        ],
+        [
+          102,
+          149
+        ],
+        [
+          103,
+          156
+        ],
+        [
+          97,
+          158
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña gris.",
+      "id": "test_1100_1400_roof_034"
+    },
+    {
+      "points": [
+        [
+          104,
+          148
+        ],
+        [
+          110,
+          146
+        ],
+        [
+          112,
+          154
+        ],
+        [
+          105,
+          157
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta rectangular pequeña.",
+      "id": "test_1100_1400_roof_035"
+    },
+    {
+      "points": [
+        [
+          112,
+          146
+        ],
+        [
+          118,
+          145
+        ],
+        [
+          120,
+          153
+        ],
+        [
+          113,
+          154
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña clara.",
+      "id": "test_1100_1400_roof_036"
+    },
+    {
+      "points": [
+        [
+          121,
+          146
+        ],
+        [
+          127,
+          144
+        ],
+        [
+          129,
+          151
+        ],
+        [
+          122,
+          153
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta pequeña con parapeto.",
+      "id": "test_1100_1400_roof_037"
+    },
+    {
+      "points": [
+        [
+          100,
+          159
+        ],
+        [
+          105,
+          158
+        ],
+        [
+          108,
+          171
+        ],
+        [
+          103,
+          173
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha gris; el patio contiguo queda fuera.",
+      "id": "test_1100_1400_roof_038"
+    },
+    {
+      "points": [
+        [
+          110,
+          157
+        ],
+        [
+          128,
+          152
+        ],
+        [
+          131,
+          167
+        ],
+        [
+          113,
+          172
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta gris trapezoidal.",
+      "id": "test_1100_1400_roof_039"
+    },
+    {
+      "points": [
+        [
+          130,
+          151
+        ],
+        [
+          141,
+          147
+        ],
+        [
+          143,
+          160
+        ],
+        [
+          136,
+          162
+        ],
+        [
+          131,
+          159
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta clara al borde oriental.",
+      "id": "test_1100_1400_roof_040"
+    },
+    {
+      "points": [
+        [
+          131,
+          164
+        ],
+        [
+          142,
+          162
+        ],
+        [
+          144,
+          173
+        ],
+        [
+          132,
+          177
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta azul grisácea.",
+      "id": "test_1100_1400_roof_041"
+    },
+    {
+      "points": [
+        [
+          113,
+          173
+        ],
+        [
+          125,
+          169
+        ],
+        [
+          128,
+          176
+        ],
+        [
+          115,
+          179
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris clara; unidad visible sin división de propiedad.",
+      "id": "test_1100_1400_roof_042"
+    },
+    {
+      "points": [
+        [
+          102,
+          175
+        ],
+        [
+          108,
+          173
+        ],
+        [
+          110,
+          180
+        ],
+        [
+          104,
+          182
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Pequeña cubierta rojiza.",
+      "id": "test_1100_1400_roof_043"
+    },
+    {
+      "points": [
+        [
+          100,
+          184
+        ],
+        [
+          111,
+          181
+        ],
+        [
+          114,
+          192
+        ],
+        [
+          102,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris cortada por el borde inferior.",
+      "id": "test_1100_1400_roof_044"
+    },
+    {
+      "points": [
+        [
+          114,
+          181
+        ],
+        [
+          119,
+          180
+        ],
+        [
+          122,
+          192
+        ],
+        [
+          115,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha cortada por el borde inferior.",
+      "id": "test_1100_1400_roof_045"
+    },
+    {
+      "points": [
+        [
+          123,
+          181
+        ],
+        [
+          127,
+          180
+        ],
+        [
+          130,
+          192
+        ],
+        [
+          123,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta estrecha junto a vacío oscuro; truncada por borde inferior.",
+      "id": "test_1100_1400_roof_046"
+    },
+    {
+      "points": [
+        [
+          129,
+          181
+        ],
+        [
+          141,
+          178
+        ],
+        [
+          144,
+          187
+        ],
+        [
+          132,
+          190
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Cubierta clara rectangular.",
+      "id": "test_1100_1400_roof_047"
+    },
+    {
+      "points": [
+        [
+          132,
+          191
+        ],
+        [
+          144,
+          188
+        ],
+        [
+          145,
+          192
+        ],
+        [
+          132,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Fragmento de cubierta cortado por borde inferior.",
+      "id": "test_1100_1400_roof_048"
+    },
+    {
+      "points": [
+        [
+          176,
+          3
+        ],
+        [
+          192,
+          9
+        ],
+        [
+          192,
+          34
+        ],
+        [
+          173,
+          30
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris cortada por borde derecho; área sombreada occidental excluida.",
+      "id": "test_1100_1400_roof_049"
+    },
+    {
+      "points": [
+        [
+          180,
+          156
+        ],
+        [
+          192,
+          159
+        ],
+        [
+          192,
+          175
+        ],
+        [
+          176,
+          170
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta gris parcial en borde derecho; delimitación aproximada por sombras.",
+      "id": "test_1100_1400_roof_050"
+    },
+    {
+      "points": [
+        [
+          174,
+          187
+        ],
+        [
+          182,
+          190
+        ],
+        [
+          183,
+          192
+        ],
+        [
+          171,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Fragmento claro de cubierta en el borde inferior.",
+      "id": "test_1100_1400_roof_051"
+    }
+  ],
+  "ignore_polygons": [
+    {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          32,
+          0
+        ],
+        [
+          35,
+          28
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "reason": "Superficie muy oscura del extremo noroeste: cubierta o terreno indeterminados."
+    },
+    {
+      "points": [
+        [
+          82,
+          0
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          96,
+          27
+        ],
+        [
+          91,
+          34
+        ],
+        [
+          84,
+          32
+        ],
+        [
+          81,
+          31
+        ]
+      ],
+      "reason": "Franja con sombra y superficie curva; cubierta y vacío no separables con confianza."
+    },
+    {
+      "points": [
+        [
+          48,
+          32
+        ],
+        [
+          59,
+          31
+        ],
+        [
+          61,
+          46
+        ],
+        [
+          54,
+          52
+        ],
+        [
+          49,
+          46
+        ]
+      ],
+      "reason": "Vegetación y sombra ocultan pequeñas cubiertas o vacíos."
+    },
+    {
+      "points": [
+        [
+          90,
+          48
+        ],
+        [
+          97,
+          46
+        ],
+        [
+          99,
+          54
+        ],
+        [
+          91,
+          56
+        ]
+      ],
+      "reason": "Conjunto de pequeños elementos y sombras con límites de cubierta poco legibles."
+    },
+    {
+      "points": [
+        [
+          80,
+          116
+        ],
+        [
+          88,
+          115
+        ],
+        [
+          90,
+          134
+        ],
+        [
+          95,
+          139
+        ],
+        [
+          91,
+          145
+        ],
+        [
+          82,
+          139
+        ]
+      ],
+      "reason": "Patio y pequeños cobertizos mezclados; no se inventan cubiertas completas."
+    },
+    {
+      "points": [
+        [
+          81,
+          145
+        ],
+        [
+          92,
+          141
+        ],
+        [
+          96,
+          159
+        ],
+        [
+          91,
+          162
+        ],
+        [
+          86,
+          157
+        ]
+      ],
+      "reason": "Sector con estructuras estrechas y posibles patios; límites de cobertura inciertos."
+    },
+    {
+      "points": [
+        [
+          178,
+          175
+        ],
+        [
+          192,
+          174
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          183,
+          192
+        ],
+        [
+          171,
+          184
+        ]
+      ],
+      "reason": "Vegetación, sombra y posibles estructuras recortadas en extremo sureste."
+    }
+  ],
+  "review_notes": [
+    "Borrador visual del asistente, no revisión humana ni verdad de terreno oficial.",
+    "Coordenadas locales de píxel 0..192, x hacia derecha, y hacia abajo. Se miró detalle del JPEG fuente en la misma extensión; no se consultaron predicciones.",
+    "Se etiquetan cubiertas visibles, no uso residencial ni límites de parcelas. Superficies continuas sin límite inequívoco no se subdividen.",
+    "La ortorrectificación y la falta de fecha/verificación de campo limitan las etiquetas; bordes y pequeñas estructuras deben revisarse por una persona.",
+    "Vías, vegetación y vacíos sin cubierta reconocible son fondo; regiones ocultas o ambiguas se ignoran."
+  ]
+}

@@ -1,0 +1,1654 @@
+{
+  "scene_id": "train_1100_100",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "id": "r01",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r02",
+      "points": [
+        [
+          17,
+          0
+        ],
+        [
+          33,
+          0
+        ],
+        [
+          32,
+          31
+        ],
+        [
+          17,
+          31
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r03",
+      "points": [
+        [
+          34,
+          0
+        ],
+        [
+          48,
+          0
+        ],
+        [
+          48,
+          16
+        ],
+        [
+          34,
+          15
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r04",
+      "points": [
+        [
+          49,
+          0
+        ],
+        [
+          65,
+          0
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          48,
+          16
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r05",
+      "points": [
+        [
+          66,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          77,
+          16
+        ],
+        [
+          65,
+          16
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r06",
+      "points": [
+        [
+          34,
+          17
+        ],
+        [
+          47,
+          18
+        ],
+        [
+          47,
+          32
+        ],
+        [
+          33,
+          32
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r07",
+      "points": [
+        [
+          49,
+          18
+        ],
+        [
+          63,
+          18
+        ],
+        [
+          63,
+          32
+        ],
+        [
+          48,
+          32
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r08",
+      "points": [
+        [
+          65,
+          17
+        ],
+        [
+          77,
+          18
+        ],
+        [
+          74,
+          32
+        ],
+        [
+          63,
+          32
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r09",
+      "points": [
+        [
+          16,
+          33
+        ],
+        [
+          32,
+          34
+        ],
+        [
+          32,
+          46
+        ],
+        [
+          19,
+          45
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r10",
+      "points": [
+        [
+          35,
+          34
+        ],
+        [
+          47,
+          33
+        ],
+        [
+          47,
+          48
+        ],
+        [
+          34,
+          47
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r11",
+      "points": [
+        [
+          49,
+          34
+        ],
+        [
+          57,
+          34
+        ],
+        [
+          56,
+          47
+        ],
+        [
+          48,
+          47
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r12",
+      "points": [
+        [
+          58,
+          33
+        ],
+        [
+          73,
+          33
+        ],
+        [
+          70,
+          47
+        ],
+        [
+          58,
+          47
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r13",
+      "points": [
+        [
+          0,
+          37
+        ],
+        [
+          12,
+          39
+        ],
+        [
+          16,
+          57
+        ],
+        [
+          0,
+          62
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r14",
+      "points": [
+        [
+          1,
+          64
+        ],
+        [
+          15,
+          61
+        ],
+        [
+          18,
+          83
+        ],
+        [
+          13,
+          88
+        ],
+        [
+          0,
+          92
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r15",
+      "points": [
+        [
+          17,
+          60
+        ],
+        [
+          31,
+          61
+        ],
+        [
+          31,
+          78
+        ],
+        [
+          22,
+          84
+        ],
+        [
+          18,
+          85
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r16",
+      "points": [
+        [
+          34,
+          55
+        ],
+        [
+          42,
+          56
+        ],
+        [
+          47,
+          61
+        ],
+        [
+          47,
+          84
+        ],
+        [
+          34,
+          84
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r17",
+      "points": [
+        [
+          49,
+          49
+        ],
+        [
+          65,
+          49
+        ],
+        [
+          64,
+          63
+        ],
+        [
+          49,
+          64
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r18",
+      "points": [
+        [
+          49,
+          65
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          62,
+          73
+        ],
+        [
+          53,
+          73
+        ],
+        [
+          53,
+          78
+        ],
+        [
+          49,
+          78
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r19",
+      "points": [
+        [
+          85,
+          9
+        ],
+        [
+          96,
+          12
+        ],
+        [
+          95,
+          31
+        ],
+        [
+          81,
+          30
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r20",
+      "points": [
+        [
+          98,
+          13
+        ],
+        [
+          117,
+          13
+        ],
+        [
+          114,
+          32
+        ],
+        [
+          97,
+          32
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r21",
+      "points": [
+        [
+          83,
+          0
+        ],
+        [
+          93,
+          0
+        ],
+        [
+          96,
+          8
+        ],
+        [
+          85,
+          7
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r22",
+      "points": [
+        [
+          83,
+          32
+        ],
+        [
+          92,
+          32
+        ],
+        [
+          91,
+          42
+        ],
+        [
+          82,
+          42
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r23",
+      "points": [
+        [
+          94,
+          34
+        ],
+        [
+          105,
+          35
+        ],
+        [
+          105,
+          47
+        ],
+        [
+          93,
+          46
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r24",
+      "points": [
+        [
+          106,
+          34
+        ],
+        [
+          117,
+          34
+        ],
+        [
+          117,
+          50
+        ],
+        [
+          106,
+          49
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r25",
+      "points": [
+        [
+          76,
+          45
+        ],
+        [
+          83,
+          48
+        ],
+        [
+          96,
+          50
+        ],
+        [
+          92,
+          66
+        ],
+        [
+          74,
+          63
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r26",
+      "points": [
+        [
+          96,
+          50
+        ],
+        [
+          111,
+          51
+        ],
+        [
+          110,
+          63
+        ],
+        [
+          94,
+          62
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r27",
+      "points": [
+        [
+          76,
+          69
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          72,
+          79
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r28",
+      "points": [
+        [
+          94,
+          64
+        ],
+        [
+          111,
+          65
+        ],
+        [
+          110,
+          79
+        ],
+        [
+          91,
+          80
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r29",
+      "points": [
+        [
+          113,
+          58
+        ],
+        [
+          126,
+          60
+        ],
+        [
+          126,
+          66
+        ],
+        [
+          115,
+          66
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r30",
+      "points": [
+        [
+          115,
+          67
+        ],
+        [
+          127,
+          69
+        ],
+        [
+          125.5,
+          83
+        ],
+        [
+          112,
+          80
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r31",
+      "points": [
+        [
+          113,
+          82
+        ],
+        [
+          125,
+          84
+        ],
+        [
+          125,
+          94
+        ],
+        [
+          113,
+          93
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r32",
+      "points": [
+        [
+          128,
+          66
+        ],
+        [
+          135.5,
+          68
+        ],
+        [
+          133.5,
+          79
+        ],
+        [
+          126,
+          79
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r33",
+      "points": [
+        [
+          129,
+          82
+        ],
+        [
+          137,
+          83
+        ],
+        [
+          132,
+          88
+        ],
+        [
+          138,
+          94
+        ],
+        [
+          127,
+          96
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r34",
+      "points": [
+        [
+          138,
+          60
+        ],
+        [
+          144,
+          62
+        ],
+        [
+          145,
+          74
+        ],
+        [
+          139,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r35",
+      "points": [
+        [
+          147,
+          68
+        ],
+        [
+          152,
+          72
+        ],
+        [
+          148,
+          78
+        ],
+        [
+          156,
+          80
+        ],
+        [
+          162,
+          77
+        ],
+        [
+          165,
+          84
+        ],
+        [
+          160,
+          89
+        ],
+        [
+          151,
+          90
+        ],
+        [
+          145,
+          84
+        ],
+        [
+          140,
+          80
+        ],
+        [
+          146,
+          74
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r36",
+      "points": [
+        [
+          139,
+          82
+        ],
+        [
+          148,
+          93
+        ],
+        [
+          145,
+          100
+        ],
+        [
+          133,
+          88
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r37",
+      "points": [
+        [
+          150,
+          95
+        ],
+        [
+          158,
+          89
+        ],
+        [
+          166,
+          87
+        ],
+        [
+          166,
+          93
+        ],
+        [
+          157,
+          97
+        ],
+        [
+          149,
+          106
+        ],
+        [
+          144,
+          106
+        ],
+        [
+          143,
+          103
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r38",
+      "points": [
+        [
+          174,
+          74
+        ],
+        [
+          181,
+          72
+        ],
+        [
+          184,
+          91
+        ],
+        [
+          179,
+          95
+        ],
+        [
+          173,
+          88
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r39",
+      "points": [
+        [
+          161,
+          97
+        ],
+        [
+          176,
+          94
+        ],
+        [
+          178,
+          113
+        ],
+        [
+          161,
+          113
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r40",
+      "points": [
+        [
+          180,
+          94
+        ],
+        [
+          185,
+          92
+        ],
+        [
+          187,
+          110
+        ],
+        [
+          181,
+          112
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r41",
+      "points": [
+        [
+          147,
+          117
+        ],
+        [
+          159,
+          116
+        ],
+        [
+          160,
+          135
+        ],
+        [
+          147,
+          136
+        ],
+        [
+          145,
+          128
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r42",
+      "points": [
+        [
+          162,
+          116
+        ],
+        [
+          175,
+          116
+        ],
+        [
+          177,
+          129
+        ],
+        [
+          162,
+          130
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r43",
+      "points": [
+        [
+          177,
+          115
+        ],
+        [
+          187,
+          114
+        ],
+        [
+          190,
+          129
+        ],
+        [
+          179,
+          129
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r44",
+      "points": [
+        [
+          164,
+          132
+        ],
+        [
+          177,
+          131
+        ],
+        [
+          181,
+          145
+        ],
+        [
+          164,
+          146
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r45",
+      "points": [
+        [
+          179,
+          131
+        ],
+        [
+          190,
+          130
+        ],
+        [
+          192,
+          144
+        ],
+        [
+          182,
+          146
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r46",
+      "points": [
+        [
+          149,
+          138
+        ],
+        [
+          161,
+          138
+        ],
+        [
+          161,
+          153
+        ],
+        [
+          153,
+          153
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r47",
+      "points": [
+        [
+          161,
+          153
+        ],
+        [
+          173,
+          152
+        ],
+        [
+          175,
+          165
+        ],
+        [
+          163,
+          166
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r48",
+      "points": [
+        [
+          177,
+          147
+        ],
+        [
+          192,
+          146
+        ],
+        [
+          192,
+          160
+        ],
+        [
+          176,
+          160
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r49",
+      "points": [
+        [
+          175,
+          163
+        ],
+        [
+          189,
+          162
+        ],
+        [
+          192,
+          170
+        ],
+        [
+          187,
+          174
+        ],
+        [
+          175,
+          173
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r50",
+      "points": [
+        [
+          159,
+          168
+        ],
+        [
+          174,
+          168
+        ],
+        [
+          176,
+          184
+        ],
+        [
+          159,
+          186
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Second assistant visual QA against original detail: shared edge adjusted manually; no automatic geometry subtraction."
+    },
+    {
+      "id": "r51",
+      "points": [
+        [
+          177,
+          175
+        ],
+        [
+          187,
+          175
+        ],
+        [
+          192,
+          183
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          180,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r52",
+      "points": [
+        [
+          160,
+          187
+        ],
+        [
+          177,
+          185
+        ],
+        [
+          179,
+          192
+        ],
+        [
+          159,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r53",
+      "points": [
+        [
+          83,
+          116
+        ],
+        [
+          94,
+          116
+        ],
+        [
+          96,
+          143
+        ],
+        [
+          84,
+          141
+        ],
+        [
+          82,
+          130
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r54",
+      "points": [
+        [
+          97,
+          118
+        ],
+        [
+          108,
+          121
+        ],
+        [
+          119,
+          130
+        ],
+        [
+          123,
+          141
+        ],
+        [
+          113,
+          141
+        ],
+        [
+          105,
+          136
+        ],
+        [
+          97,
+          136
+        ]
+      ],
+      "confidence": "clear"
+    },
+    {
+      "id": "r55",
+      "points": [
+        [
+          84,
+          144
+        ],
+        [
+          96,
+          145
+        ],
+        [
+          98,
+          163
+        ],
+        [
+          86,
+          162
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r56",
+      "points": [
+        [
+          98,
+          144
+        ],
+        [
+          111,
+          144
+        ],
+        [
+          112,
+          160
+        ],
+        [
+          99,
+          161
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r57",
+      "points": [
+        [
+          113,
+          144
+        ],
+        [
+          123,
+          144
+        ],
+        [
+          125,
+          162
+        ],
+        [
+          113,
+          163
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r58",
+      "points": [
+        [
+          88,
+          165
+        ],
+        [
+          98,
+          164
+        ],
+        [
+          99,
+          176
+        ],
+        [
+          89,
+          177
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r59",
+      "points": [
+        [
+          100,
+          163
+        ],
+        [
+          112,
+          162
+        ],
+        [
+          113,
+          176
+        ],
+        [
+          99,
+          177
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r60",
+      "points": [
+        [
+          114,
+          165
+        ],
+        [
+          125,
+          164
+        ],
+        [
+          127,
+          180
+        ],
+        [
+          115,
+          181
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r61",
+      "points": [
+        [
+          91,
+          181
+        ],
+        [
+          113,
+          178
+        ],
+        [
+          115,
+          192
+        ],
+        [
+          94,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r62",
+      "points": [
+        [
+          116,
+          184
+        ],
+        [
+          127,
+          181
+        ],
+        [
+          129,
+          192
+        ],
+        [
+          117,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r63",
+      "points": [
+        [
+          18,
+          115
+        ],
+        [
+          47,
+          110
+        ],
+        [
+          55,
+          116
+        ],
+        [
+          64,
+          112
+        ],
+        [
+          79,
+          115
+        ],
+        [
+          80,
+          140
+        ],
+        [
+          85,
+          168
+        ],
+        [
+          87,
+          176
+        ],
+        [
+          73,
+          182
+        ],
+        [
+          34,
+          186
+        ],
+        [
+          24,
+          179
+        ],
+        [
+          17,
+          141
+        ]
+      ],
+      "holes": [
+        [
+          [
+            66,
+            121
+          ],
+          [
+            76,
+            120
+          ],
+          [
+            78,
+            129
+          ],
+          [
+            66,
+            130
+          ]
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Cubierta grande continua; excluir hueco visible, no dividir por tamaño."
+    },
+    {
+      "id": "r64",
+      "points": [
+        [
+          0,
+          141
+        ],
+        [
+          11,
+          143
+        ],
+        [
+          15,
+          158
+        ],
+        [
+          0,
+          163
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r65",
+      "points": [
+        [
+          0,
+          164
+        ],
+        [
+          13,
+          161
+        ],
+        [
+          16,
+          175
+        ],
+        [
+          0,
+          181
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r66",
+      "points": [
+        [
+          0,
+          182
+        ],
+        [
+          14,
+          178
+        ],
+        [
+          18,
+          192
+        ],
+        [
+          0,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    },
+    {
+      "id": "r67",
+      "points": [
+        [
+          39,
+          188
+        ],
+        [
+          73,
+          184
+        ],
+        [
+          75,
+          192
+        ],
+        [
+          39,
+          192
+        ]
+      ],
+      "confidence": "approximate"
+    }
+  ],
+  "ignore_polygons": [],
+  "review_notes": [
+    "Cubiertas delineadas visualmente sobre captura; límites aproximados, sin verificación de vivienda o propiedad.",
+    "Vegetación, patios descubiertos, vías y parcela vacante excluidos; bordes de captura conservan cubiertas parciales."
+  ]
+}

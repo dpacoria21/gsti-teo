@@ -242,3 +242,82 @@ def test_run_selects_on_validation_then_compares_same_test_scenes(tmp_path, monk
     assert comparison["baseline"]["images"] == comparison["candidate"]["images"] == 1
     with pytest.raises(FileExistsError):
         runner.run_training(manifest, output_dir, TrainingConfig(epochs=1), checkpoint)
+
+
+def add_ignore_regions(manifest_path, split, pixel_bounds):
+    """Reference-only synthetic exclusions; no production or annotation data."""
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    scene = next(scene for scene in manifest["scenes"] if scene["split"] == split)
+    with rasterio.open(manifest_path.parent / scene["image"]) as source:
+        left, top = source.transform * pixel_bounds[:2]
+        right, bottom = source.transform * pixel_bounds[2:]
+        regions = gpd.GeoDataFrame(geometry=[box(left, bottom, right, top)], crs=source.crs)
+    path = manifest_path.parent / f"{split}_ignore.geojson"
+    regions.to_crs("EPSG:4326").to_file(path, driver="GeoJSON")
+    scene["ignore_regions"] = path.name
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    return path
+
+
+def test_evaluation_ignore_regions_project_and_clip_references_but_keep_real_rgb(tmp_path):
+    path = write_dataset(tmp_path)
+    ignore = add_ignore_regions(path, "val", (0, 0, 5, 16))
+    manifest = read_manifest(path)
+    val_scene = next(scene for scene in manifest["scenes"] if scene["split"] == "val")
+    assert val_scene["ignore_regions"] == str(ignore.resolve())
+    image, target = BuildingDataset(manifest, "val")[0]
+    expected = torch.ones((16, 16), dtype=torch.bool)
+    expected[:, :5] = False
+    assert torch.equal(target["valid_mask"], expected)
+    assert torch.allclose(image, torch.full_like(image, 128 / 255)), "Evaluation exclusions must not alter RGB"
+    assert target["masks"].sum().item() == 18
+    assert not target["masks"][:, :, :5].any()
+    assert target["boxes"].tolist() == [[5, 2, 8, 8]]
+
+
+def test_evaluation_ignores_predictions_only_in_unknown_region_and_counts_known_false_positives(tmp_path):
+    from src.training.runner import evaluate_model
+
+    path = write_dataset(tmp_path)
+    add_ignore_regions(path, "test", (10, 0, 16, 16))
+    dataset = BuildingDataset(read_manifest(path), "test")
+
+    class SyntheticMaskPredictions:
+        def eval(self):
+            return self
+
+        def __call__(self, images):
+            predictions = torch.zeros((3, 1, 16, 16))
+            predictions[0, 0, 2:8, 2:8] = 1  # One correctly detected reference.
+            predictions[1, 0, 3:8, 11:15] = 1  # Excluded, not an FP.
+            predictions[2, 0, 11:14, 1:4] = 1  # Valid, unlabelled background: an FP.
+            return [{"scores": torch.ones(3), "labels": torch.ones(3, dtype=torch.int64), "masks": predictions}]
+
+    result = evaluate_model(SyntheticMaskPredictions(), dataset, "cpu", TrainingConfig())
+    assert result["summary"]["tp"] == 1
+    assert result["summary"]["fp"] == 1
+    assert result["summary"]["fn"] == 0
+    assert result["per_scene"][0]["predicted_instances"] == 2
+
+
+def test_training_rejects_declared_ignore_regions_instead_of_treating_unknown_roofs_as_background(tmp_path):
+    path = write_dataset(tmp_path)
+    add_ignore_regions(path, "train", (10, 0, 16, 16))
+    manifest = read_manifest(path)
+    with pytest.raises(ValueError, match="recortes completamente anotados"):
+        BuildingDataset(manifest, "train", augment=True)
+
+
+def test_evaluation_rejects_a_fully_excluded_scene(tmp_path):
+    path = write_dataset(tmp_path)
+    add_ignore_regions(path, "val", (0, 0, 16, 16))
+    with pytest.raises(ValueError, match="no deja píxeles"):
+        BuildingDataset(read_manifest(path), "val")[0]
+
+
+def test_manifest_rejects_missing_ignore_file(tmp_path):
+    path = write_dataset(tmp_path)
+    ignore = add_ignore_regions(path, "val", (10, 0, 16, 16))
+    ignore.unlink()
+    with pytest.raises(ValueError, match="No existe el archivo ignore_regions"):
+        read_manifest(path)

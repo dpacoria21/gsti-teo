@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "images": 2,
+    "tp": 6,
+    "fp": 11,
+    "fn": 114,
+    "precision": 0.35294117647058826,
+    "recall": 0.05,
+    "f1": 0.08759124087591241,
+    "mean_iou_true_positives": 0.656071936902395,
+    "merged_predictions": 6,
+    "references_affected_by_merges": 15
+  },
+  "candidate": {
+    "images": 2,
+    "tp": 27,
+    "fp": 70,
+    "fn": 93,
+    "precision": 0.27835051546391754,
+    "recall": 0.225,
+    "f1": 0.2488479262672811,
+    "mean_iou_true_positives": 0.630024692189717,
+    "merged_predictions": 12,
+    "references_affected_by_merges": 27
+  },
+  "paired_image_bootstrap": {
+    "metric": "candidate_f1_minus_baseline_f1",
+    "samples": 1000,
+    "seed": 42,
+    "delta": 0.1612566853913687,
+    "percentile_95_interval": [
+      0.1595419847328244,
+      0.1623827009383925
+    ],
+    "unit": "scene",
+    "caveat": "Exploratory paired image bootstrap; spatial dependence is not modelled."
+  },
+  "selection_used_test": false,
+  "interpretation": "Evaluación piloto de una sola captura de Chullo con referencias visuales provisionales del asistente, sin revisión humana. La separación espacial no establece independencia de adquisición ni estadística. Los resultados no representan exactitud en toda Chullo ni Arequipa."
+}

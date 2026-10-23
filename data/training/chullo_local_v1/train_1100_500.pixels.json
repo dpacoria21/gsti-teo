@@ -1,0 +1,2304 @@
+{
+  "scene_id": "train_1100_500",
+  "annotation_method": "assistant_visual_manual",
+  "human_reviewed": false,
+  "polygons": [
+    {
+      "id": "r01",
+      "points": [
+        [
+          0,
+          21
+        ],
+        [
+          7,
+          23
+        ],
+        [
+          9,
+          27
+        ],
+        [
+          0,
+          31
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r02",
+      "points": [
+        [
+          0,
+          34
+        ],
+        [
+          7,
+          30
+        ],
+        [
+          12,
+          39
+        ],
+        [
+          7,
+          46
+        ],
+        [
+          0,
+          48
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r03",
+      "points": [
+        [
+          0,
+          49
+        ],
+        [
+          15,
+          43
+        ],
+        [
+          21,
+          53
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r04",
+      "points": [
+        [
+          5,
+          65
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          29,
+          69
+        ],
+        [
+          21,
+          75
+        ],
+        [
+          15,
+          74
+        ],
+        [
+          11,
+          76
+        ],
+        [
+          5,
+          70
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r05",
+      "points": [
+        [
+          0,
+          77
+        ],
+        [
+          5,
+          74
+        ],
+        [
+          10,
+          80
+        ],
+        [
+          10,
+          82
+        ],
+        [
+          16,
+          86
+        ],
+        [
+          13,
+          90
+        ],
+        [
+          4,
+          87
+        ],
+        [
+          0,
+          81
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r06",
+      "points": [
+        [
+          18,
+          82
+        ],
+        [
+          29,
+          75
+        ],
+        [
+          39,
+          86
+        ],
+        [
+          34,
+          91
+        ],
+        [
+          26,
+          89
+        ],
+        [
+          22,
+          94
+        ],
+        [
+          17,
+          90
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r07",
+      "points": [
+        [
+          0,
+          87
+        ],
+        [
+          7,
+          88
+        ],
+        [
+          12,
+          96
+        ],
+        [
+          9,
+          101
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r08",
+      "points": [
+        [
+          26,
+          0
+        ],
+        [
+          35,
+          0
+        ],
+        [
+          45,
+          15
+        ],
+        [
+          39,
+          20
+        ],
+        [
+          35,
+          12
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r09",
+      "points": [
+        [
+          37,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          9
+        ],
+        [
+          48,
+          14
+        ],
+        [
+          43,
+          5
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r10",
+      "points": [
+        [
+          52,
+          13
+        ],
+        [
+          58,
+          9
+        ],
+        [
+          64,
+          20
+        ],
+        [
+          55,
+          25
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r11",
+      "points": [
+        [
+          39,
+          23
+        ],
+        [
+          48,
+          19
+        ],
+        [
+          53,
+          27
+        ],
+        [
+          48,
+          32
+        ],
+        [
+          43,
+          31
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r12",
+      "points": [
+        [
+          54,
+          27
+        ],
+        [
+          62,
+          22
+        ],
+        [
+          67,
+          29
+        ],
+        [
+          58,
+          34
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r13",
+      "points": [
+        [
+          58,
+          36
+        ],
+        [
+          69,
+          29
+        ],
+        [
+          76,
+          38
+        ],
+        [
+          66,
+          43
+        ],
+        [
+          62,
+          42
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r14",
+      "points": [
+        [
+          46,
+          35
+        ],
+        [
+          53,
+          32
+        ],
+        [
+          58,
+          38
+        ],
+        [
+          50,
+          42
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r15",
+      "points": [
+        [
+          50,
+          44
+        ],
+        [
+          59,
+          41
+        ],
+        [
+          64,
+          46
+        ],
+        [
+          73,
+          41
+        ],
+        [
+          79,
+          46
+        ],
+        [
+          82,
+          56
+        ],
+        [
+          71,
+          64
+        ],
+        [
+          65,
+          67
+        ],
+        [
+          55,
+          57
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r16",
+      "points": [
+        [
+          59,
+          0
+        ],
+        [
+          66,
+          0
+        ],
+        [
+          73,
+          10
+        ],
+        [
+          67,
+          17
+        ],
+        [
+          62,
+          14
+        ],
+        [
+          60,
+          8
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r17",
+      "points": [
+        [
+          70,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          92,
+          8
+        ],
+        [
+          81,
+          16
+        ],
+        [
+          76,
+          13
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r18",
+      "points": [
+        [
+          91,
+          0
+        ],
+        [
+          106,
+          0
+        ],
+        [
+          109,
+          7
+        ],
+        [
+          98,
+          13
+        ],
+        [
+          94,
+          11
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r19",
+      "points": [
+        [
+          71,
+          20
+        ],
+        [
+          80,
+          16
+        ],
+        [
+          85,
+          24
+        ],
+        [
+          77,
+          28
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r20",
+      "points": [
+        [
+          81,
+          27
+        ],
+        [
+          91,
+          22
+        ],
+        [
+          97,
+          31
+        ],
+        [
+          87,
+          35
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r21",
+      "points": [
+        [
+          88,
+          37
+        ],
+        [
+          97,
+          32
+        ],
+        [
+          103,
+          42
+        ],
+        [
+          95,
+          47
+        ],
+        [
+          90,
+          44
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r22",
+      "points": [
+        [
+          83,
+          47
+        ],
+        [
+          90,
+          44
+        ],
+        [
+          94,
+          51
+        ],
+        [
+          88,
+          56
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r24",
+      "points": [
+        [
+          107,
+          0
+        ],
+        [
+          117,
+          0
+        ],
+        [
+          120,
+          9
+        ],
+        [
+          113,
+          12
+        ],
+        [
+          109,
+          8
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r25",
+      "points": [
+        [
+          111,
+          16
+        ],
+        [
+          121,
+          11
+        ],
+        [
+          129,
+          22
+        ],
+        [
+          122,
+          27
+        ],
+        [
+          117,
+          29
+        ],
+        [
+          113,
+          25
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r26",
+      "points": [
+        [
+          128,
+          0
+        ],
+        [
+          145,
+          0
+        ],
+        [
+          151,
+          13
+        ],
+        [
+          148,
+          20
+        ],
+        [
+          140,
+          24
+        ],
+        [
+          131,
+          12
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r27",
+      "points": [
+        [
+          125,
+          28
+        ],
+        [
+          132,
+          25
+        ],
+        [
+          149,
+          50
+        ],
+        [
+          150,
+          56
+        ],
+        [
+          142,
+          63
+        ],
+        [
+          132,
+          61
+        ],
+        [
+          125,
+          51
+        ],
+        [
+          120,
+          45
+        ],
+        [
+          121,
+          35
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r28",
+      "points": [
+        [
+          102,
+          34
+        ],
+        [
+          108,
+          30
+        ],
+        [
+          114,
+          39
+        ],
+        [
+          108,
+          45
+        ],
+        [
+          105,
+          47
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r29",
+      "points": [
+        [
+          105,
+          52
+        ],
+        [
+          110,
+          49
+        ],
+        [
+          117,
+          59
+        ],
+        [
+          111,
+          63
+        ],
+        [
+          108,
+          59
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r30",
+      "points": [
+        [
+          117,
+          58
+        ],
+        [
+          122,
+          55
+        ],
+        [
+          128,
+          63
+        ],
+        [
+          122,
+          67
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r31",
+      "points": [
+        [
+          153,
+          0
+        ],
+        [
+          171,
+          0
+        ],
+        [
+          166,
+          8
+        ],
+        [
+          161,
+          10
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r32",
+      "points": [
+        [
+          87,
+          68
+        ],
+        [
+          103,
+          59
+        ],
+        [
+          113,
+          77
+        ],
+        [
+          97,
+          87
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r33",
+      "points": [
+        [
+          66,
+          76
+        ],
+        [
+          84,
+          66
+        ],
+        [
+          87,
+          70
+        ],
+        [
+          85,
+          73
+        ],
+        [
+          97,
+          90
+        ],
+        [
+          84,
+          98
+        ],
+        [
+          75,
+          96
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial. Extensión superior integrada por continuidad visible de la cubierta."
+    },
+    {
+      "id": "r35",
+      "points": [
+        [
+          29,
+          94
+        ],
+        [
+          42,
+          87
+        ],
+        [
+          58,
+          108
+        ],
+        [
+          44,
+          115
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r36",
+      "points": [
+        [
+          17,
+          102
+        ],
+        [
+          27,
+          95
+        ],
+        [
+          40,
+          112
+        ],
+        [
+          29,
+          119
+        ],
+        [
+          22,
+          113
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r37",
+      "points": [
+        [
+          3,
+          119
+        ],
+        [
+          19,
+          112
+        ],
+        [
+          28,
+          131
+        ],
+        [
+          18,
+          137
+        ],
+        [
+          11,
+          132
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r38",
+      "points": [
+        [
+          18,
+          139
+        ],
+        [
+          28,
+          133
+        ],
+        [
+          31,
+          139
+        ],
+        [
+          20,
+          144
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r39",
+      "points": [
+        [
+          0,
+          122
+        ],
+        [
+          4,
+          129
+        ],
+        [
+          11,
+          141
+        ],
+        [
+          17,
+          144
+        ],
+        [
+          14,
+          148
+        ],
+        [
+          6,
+          144
+        ],
+        [
+          0,
+          134
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r40",
+      "points": [
+        [
+          0,
+          138
+        ],
+        [
+          4,
+          143
+        ],
+        [
+          11,
+          150
+        ],
+        [
+          6,
+          154
+        ],
+        [
+          0,
+          151
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r43",
+      "points": [
+        [
+          13,
+          175
+        ],
+        [
+          18,
+          171
+        ],
+        [
+          22,
+          178
+        ],
+        [
+          19,
+          182
+        ],
+        [
+          24,
+          186
+        ],
+        [
+          22,
+          192
+        ],
+        [
+          15,
+          192
+        ],
+        [
+          14,
+          183
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r44",
+      "points": [
+        [
+          23,
+          171
+        ],
+        [
+          36,
+          163
+        ],
+        [
+          43,
+          175
+        ],
+        [
+          29,
+          185
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r45",
+      "points": [
+        [
+          30,
+          185
+        ],
+        [
+          44,
+          177
+        ],
+        [
+          48,
+          183
+        ],
+        [
+          35,
+          191
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r46",
+      "points": [
+        [
+          37,
+          192
+        ],
+        [
+          48,
+          184
+        ],
+        [
+          54,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r47",
+      "points": [
+        [
+          41,
+          165
+        ],
+        [
+          49,
+          160
+        ],
+        [
+          57,
+          171
+        ],
+        [
+          49,
+          178
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r48",
+      "points": [
+        [
+          49,
+          179
+        ],
+        [
+          60,
+          173
+        ],
+        [
+          69,
+          185
+        ],
+        [
+          59,
+          192
+        ],
+        [
+          53,
+          189
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r49",
+      "points": [
+        [
+          61,
+          192
+        ],
+        [
+          71,
+          187
+        ],
+        [
+          76,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r50",
+      "points": [
+        [
+          165,
+          13
+        ],
+        [
+          179,
+          7
+        ],
+        [
+          184,
+          16
+        ],
+        [
+          175,
+          23
+        ],
+        [
+          171,
+          19
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r51",
+      "points": [
+        [
+          178,
+          3
+        ],
+        [
+          192,
+          0
+        ],
+        [
+          192,
+          8
+        ],
+        [
+          184,
+          13
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r52",
+      "points": [
+        [
+          186,
+          16
+        ],
+        [
+          192,
+          12
+        ],
+        [
+          192,
+          27
+        ],
+        [
+          189,
+          26
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r53",
+      "points": [
+        [
+          167,
+          26
+        ],
+        [
+          175,
+          23
+        ],
+        [
+          188,
+          40
+        ],
+        [
+          178,
+          43
+        ],
+        [
+          174,
+          36
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r54",
+      "points": [
+        [
+          185,
+          29
+        ],
+        [
+          192,
+          26
+        ],
+        [
+          192,
+          37
+        ],
+        [
+          189,
+          39
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r55",
+      "points": [
+        [
+          157,
+          89
+        ],
+        [
+          173,
+          80
+        ],
+        [
+          182,
+          94
+        ],
+        [
+          185,
+          100
+        ],
+        [
+          170,
+          109
+        ],
+        [
+          165,
+          104
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r56",
+      "points": [
+        [
+          179,
+          79
+        ],
+        [
+          192,
+          72
+        ],
+        [
+          192,
+          89
+        ],
+        [
+          187,
+          92
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r57",
+      "points": [
+        [
+          184,
+          94
+        ],
+        [
+          192,
+          90
+        ],
+        [
+          192,
+          99
+        ],
+        [
+          188,
+          100
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r58",
+      "points": [
+        [
+          178,
+          105
+        ],
+        [
+          185,
+          101
+        ],
+        [
+          190,
+          109
+        ],
+        [
+          182,
+          114
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r59",
+      "points": [
+        [
+          182,
+          116
+        ],
+        [
+          192,
+          109
+        ],
+        [
+          192,
+          120
+        ],
+        [
+          188,
+          123
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r60",
+      "points": [
+        [
+          178,
+          128
+        ],
+        [
+          192,
+          121
+        ],
+        [
+          192,
+          140
+        ],
+        [
+          187,
+          143
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r61",
+      "points": [
+        [
+          144,
+          100
+        ],
+        [
+          152,
+          95
+        ],
+        [
+          159,
+          106
+        ],
+        [
+          151,
+          111
+        ],
+        [
+          148,
+          107
+        ],
+        [
+          144,
+          108
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r62",
+      "points": [
+        [
+          154,
+          114
+        ],
+        [
+          165,
+          108
+        ],
+        [
+          171,
+          118
+        ],
+        [
+          165,
+          122
+        ],
+        [
+          161,
+          118
+        ],
+        [
+          155,
+          120
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r63",
+      "points": [
+        [
+          134,
+          107
+        ],
+        [
+          140,
+          103
+        ],
+        [
+          149,
+          118
+        ],
+        [
+          145,
+          122
+        ],
+        [
+          140,
+          120
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r64",
+      "points": [
+        [
+          120,
+          116
+        ],
+        [
+          131,
+          110
+        ],
+        [
+          143,
+          129
+        ],
+        [
+          133,
+          135
+        ],
+        [
+          127,
+          133
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r66",
+      "points": [
+        [
+          87,
+          132
+        ],
+        [
+          98,
+          125
+        ],
+        [
+          114,
+          149
+        ],
+        [
+          104,
+          155
+        ],
+        [
+          96,
+          147
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r67",
+      "points": [
+        [
+          103,
+          128
+        ],
+        [
+          114,
+          122
+        ],
+        [
+          126,
+          140
+        ],
+        [
+          117,
+          148
+        ],
+        [
+          111,
+          142
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r68",
+      "points": [
+        [
+          101,
+          156
+        ],
+        [
+          107,
+          154
+        ],
+        [
+          113,
+          160
+        ],
+        [
+          107,
+          164
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r70",
+      "points": [
+        [
+          164,
+          125
+        ],
+        [
+          169,
+          122
+        ],
+        [
+          175,
+          131
+        ],
+        [
+          168,
+          135
+        ]
+      ],
+      "confidence": "clear",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r71",
+      "points": [
+        [
+          155,
+          130
+        ],
+        [
+          162,
+          126
+        ],
+        [
+          167,
+          136
+        ],
+        [
+          161,
+          140
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r72",
+      "points": [
+        [
+          155,
+          145
+        ],
+        [
+          167,
+          138
+        ],
+        [
+          179,
+          156
+        ],
+        [
+          167,
+          162
+        ],
+        [
+          160,
+          157
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r73",
+      "points": [
+        [
+          170,
+          140
+        ],
+        [
+          180,
+          134
+        ],
+        [
+          192,
+          151
+        ],
+        [
+          185,
+          157
+        ],
+        [
+          180,
+          152
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r74",
+      "points": [
+        [
+          134,
+          154
+        ],
+        [
+          144,
+          148
+        ],
+        [
+          155,
+          167
+        ],
+        [
+          146,
+          173
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r75",
+      "points": [
+        [
+          151,
+          153
+        ],
+        [
+          154,
+          150
+        ],
+        [
+          166,
+          166
+        ],
+        [
+          180,
+          158
+        ],
+        [
+          186,
+          166
+        ],
+        [
+          160,
+          180
+        ],
+        [
+          159,
+          175
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r76",
+      "points": [
+        [
+          105,
+          166
+        ],
+        [
+          115,
+          160
+        ],
+        [
+          121,
+          170
+        ],
+        [
+          112,
+          176
+        ],
+        [
+          108,
+          174
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r77",
+      "points": [
+        [
+          118,
+          165
+        ],
+        [
+          122,
+          162
+        ],
+        [
+          134,
+          181
+        ],
+        [
+          129,
+          184
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r78",
+      "points": [
+        [
+          124,
+          160
+        ],
+        [
+          132,
+          155
+        ],
+        [
+          145,
+          175
+        ],
+        [
+          136,
+          180
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r79",
+      "points": [
+        [
+          98,
+          180
+        ],
+        [
+          108,
+          175
+        ],
+        [
+          117,
+          187
+        ],
+        [
+          110,
+          192
+        ],
+        [
+          100,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r80",
+      "points": [
+        [
+          112,
+          191
+        ],
+        [
+          123,
+          183
+        ],
+        [
+          128,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r81",
+      "points": [
+        [
+          128,
+          188
+        ],
+        [
+          137,
+          182
+        ],
+        [
+          145,
+          192
+        ],
+        [
+          131,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r82",
+      "points": [
+        [
+          144,
+          185
+        ],
+        [
+          154,
+          179
+        ],
+        [
+          162,
+          190
+        ],
+        [
+          159,
+          192
+        ],
+        [
+          148,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r83",
+      "points": [
+        [
+          165,
+          180
+        ],
+        [
+          175,
+          174
+        ],
+        [
+          180,
+          181
+        ],
+        [
+          177,
+          185
+        ],
+        [
+          180,
+          189
+        ],
+        [
+          173,
+          192
+        ],
+        [
+          169,
+          187
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    },
+    {
+      "id": "r84",
+      "points": [
+        [
+          182,
+          190
+        ],
+        [
+          192,
+          184
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          185,
+          192
+        ]
+      ],
+      "confidence": "approximate",
+      "notes": "Contorno manual de cubierta visible; no representa lindero ni uso residencial."
+    }
+  ],
+  "ignore_polygons": [
+    {
+      "points": [
+        [
+          0,
+          100
+        ],
+        [
+          13,
+          96
+        ],
+        [
+          17,
+          104
+        ],
+        [
+          17,
+          114
+        ],
+        [
+          6,
+          119
+        ],
+        [
+          0,
+          112
+        ]
+      ],
+      "reason": "Vegetación, sombras y elementos pequeños impiden separar cubiertas, patios y bordes."
+    },
+    {
+      "points": [
+        [
+          28,
+          118
+        ],
+        [
+          39,
+          113
+        ],
+        [
+          48,
+          125
+        ],
+        [
+          41,
+          134
+        ],
+        [
+          34,
+          135
+        ]
+      ],
+      "reason": "Terraza/patio con elementos sobrepuestos: perímetro de cubierta incierto."
+    },
+    {
+      "points": [
+        [
+          173,
+          45
+        ],
+        [
+          192,
+          36
+        ],
+        [
+          192,
+          62
+        ],
+        [
+          180,
+          68
+        ],
+        [
+          169,
+          56
+        ]
+      ],
+      "reason": "Superficie gris en cruce: no se distingue con certeza entre cubierta y superficie abierta."
+    },
+    {
+      "points": [
+        [
+          116,
+          139
+        ],
+        [
+          131,
+          134
+        ],
+        [
+          141,
+          143
+        ],
+        [
+          139,
+          151
+        ],
+        [
+          123,
+          160
+        ],
+        [
+          116,
+          149
+        ]
+      ],
+      "reason": "Vegetación, patios y sombras impiden separar pequeñas cubiertas en esta región."
+    },
+    {
+      "points": [
+        [
+          118,
+          108
+        ],
+        [
+          122,
+          106
+        ],
+        [
+          128,
+          114
+        ],
+        [
+          123,
+          119
+        ],
+        [
+          118,
+          114
+        ]
+      ],
+      "reason": "Objeto blanco pequeño junto a la vía; no se distingue con certeza si es cubierta o vehículo."
+    },
+    {
+      "points": [
+        [
+          90,
+          56
+        ],
+        [
+          100,
+          50
+        ],
+        [
+          105,
+          57
+        ],
+        [
+          95,
+          62
+        ]
+      ],
+      "reason": "Sombra oscura: no se puede resolver cubierta frente a suelo."
+    },
+    {
+      "points": [
+        [
+          0,
+          174
+        ],
+        [
+          8,
+          169
+        ],
+        [
+          11,
+          174
+        ],
+        [
+          3,
+          180
+        ],
+        [
+          0,
+          180
+        ]
+      ],
+      "reason": "Objeto blanco junto a la via que puede ser un vehiculo; no se etiqueta como cubierta."
+    },
+    {
+      "points": [
+        [
+          0,
+          185
+        ],
+        [
+          10,
+          180
+        ],
+        [
+          14,
+          187
+        ],
+        [
+          6,
+          192
+        ],
+        [
+          0,
+          192
+        ]
+      ],
+      "reason": "Sombra oscura: no se puede resolver cubierta frente a suelo."
+    }
+  ],
+  "review_notes": [
+    "Anotación visual manual del RGB original, sin consultar predicciones del modelo.",
+    "Son cubiertas visibles, no parcelas catastrales ni identificación del uso como vivienda.",
+    "Contornos aproximados por resolución limitada y perspectiva; áreas ambiguas se mantienen explícitas para excluirlas del entrenamiento.",
+    "Pendiente de revisión humana. No es ground truth certificada.",
+    "Revisión de overlay: vértices corregidos sobre límites visibles; extensión de r33 mantenida como una cubierta. Se retiraron objetos ambiguos r65 y r69 y se marcaron áreas ignoradas.",
+    "Revision visual final: se retiraron r23 y r42 por sombras y r41 por posible vehiculo. Sus regiones quedan ignore; no se completan cubiertas por inferencia.",
+    "Contornos pequenos y adosados pueden tener error de varios pixeles. Esta anotacion asistida requiere revision humana antes de usarse como referencia cientifica o catastral."
+  ]
+}
