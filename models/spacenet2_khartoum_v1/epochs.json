@@ -1,0 +1,97 @@
+[
+  {
+    "epoch": 1,
+    "mean_training_loss": 1.8217555970000103,
+    "optimizer_updates": 200,
+    "skipped_amp_steps_total": 0,
+    "validation": {
+      "images": 40,
+      "tp": 622,
+      "fp": 560,
+      "fn": 590,
+      "precision": 0.5262267343485617,
+      "recall": 0.5132013201320133,
+      "f1": 0.5196324143692564,
+      "mean_iou_true_positives": 0.7127529036083725
+    },
+    "selected_as_best": true,
+    "backbone_frozen": true,
+    "seconds": 47.76854340000045
+  },
+  {
+    "epoch": 2,
+    "mean_training_loss": 1.6430909570027143,
+    "optimizer_updates": 200,
+    "skipped_amp_steps_total": 0,
+    "validation": {
+      "images": 40,
+      "tp": 695,
+      "fp": 667,
+      "fn": 517,
+      "precision": 0.5102790014684288,
+      "recall": 0.5734323432343235,
+      "f1": 0.54001554001554,
+      "mean_iou_true_positives": 0.7231307913246546
+    },
+    "selected_as_best": true,
+    "backbone_frozen": true,
+    "seconds": 32.1506629000005
+  },
+  {
+    "epoch": 3,
+    "mean_training_loss": 1.577530206386,
+    "optimizer_updates": 200,
+    "skipped_amp_steps_total": 0,
+    "validation": {
+      "images": 40,
+      "tp": 784,
+      "fp": 1023,
+      "fn": 428,
+      "precision": 0.4338682899833979,
+      "recall": 0.6468646864686468,
+      "f1": 0.5193772772441205,
+      "mean_iou_true_positives": 0.7333257340781174
+    },
+    "selected_as_best": false,
+    "backbone_frozen": true,
+    "seconds": 32.26521159999993
+  },
+  {
+    "epoch": 4,
+    "mean_training_loss": 1.5608011982997414,
+    "optimizer_updates": 200,
+    "skipped_amp_steps_total": 0,
+    "validation": {
+      "images": 40,
+      "tp": 726,
+      "fp": 866,
+      "fn": 486,
+      "precision": 0.45603015075376885,
+      "recall": 0.599009900990099,
+      "f1": 0.5178316690442225,
+      "mean_iou_true_positives": 0.7280511422802265
+    },
+    "selected_as_best": false,
+    "backbone_frozen": true,
+    "seconds": 31.660664400000314
+  },
+  {
+    "epoch": 5,
+    "mean_training_loss": 1.5336859251977877,
+    "optimizer_updates": 200,
+    "skipped_amp_steps_total": 0,
+    "validation": {
+      "images": 40,
+      "tp": 719,
+      "fp": 615,
+      "fn": 493,
+      "precision": 0.5389805097451275,
+      "recall": 0.5932343234323433,
+      "f1": 0.5648075412411626,
+      "mean_iou_true_positives": 0.7103785071226635
+    },
+    "selected_as_best": true,
+    "backbone_frozen": true,
+    "seconds": 29.954141499999423
+  }
+]

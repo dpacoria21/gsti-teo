@@ -8,7 +8,7 @@ El despliegue usa el mismo código modular, GeoTIFF y modelo verificado del prot
 
 La ruta directa permite usar el detector, las distancias, las exportaciones y el mapa interactivo con la imagen real. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) permanece en la pantalla de carga en Chrome; su causa no está confirmada. Se utiliza la ruta directa como acceso verificado mientras se resuelve esa limitación de la página principal.
 
-## Actualización del semáforo — 22 de octubre de 2026
+## Semáforo desplegado y comprobado — 23 de octubre de 2026
 
 El código incorpora un semáforo de proximidad con dos controles: **Límite de la zona roja (m)**, inicialmente 25 m, y **Ancho de la zona amarilla (m)**, inicialmente 25 m. El límite exterior es la suma de ambos valores y no supera los 100 m preparados para los sectores actuales. Modificarlos actualiza los colores, conteos, tabla y exportaciones sin volver a ejecutar la IA.
 
@@ -18,7 +18,16 @@ El color expresa proximidad. **No clasifica peligro real ni autoriza construir; 
 
 El CSV y GeoJSON registran `proximity_class`, `proximity_label`, `red_band_m`, `yellow_width_m` y `band_m` (límite exterior combinado). El ZIP conserva además reglas, parámetros y conteos por categoría. Así se puede interpretar un archivo aunque después se cambien los controles.
 
-**La comprobación alojada de esta actualización está pendiente.** Las pruebas y capturas del 21 de octubre documentadas abajo corresponden a la interfaz anterior de una sola banda; no acreditan el despliegue del semáforo ni sus conteos. Al publicar esta actualización, seguir el procedimiento de reinicio y la comprobación funcional indicados en este documento.
+La revisión **`5b726ef`** se publicó en GitHub y se comprobó en el alojamiento el **23 de octubre de 2026**. La ruta directa `/~/+/` cargó el mapa y los **237 contornos de la demo guardada de Chullo**. La prueba de los controles obtuvo:
+
+| Límite rojo | Ancho amarillo | Límite exterior | Rojos | Amarillos | Verdes |
+|---|---|---|---:|---:|---:|
+| 25 m | 25 m | 50 m | 27 | 29 | 181 |
+| 25 m | 26 m | 51 m | 27 | 30 | 180 |
+
+Cambiar el ancho amarillo de 25 a 26 m reclasificó los mismos contornos sin ejecutar otra inferencia. Se descargó realmente desde el navegador el archivo `chullo_deteccion_semaforo_rojo_25m_amarillo_hasta_51m.zip`, conservado en Descargas. Se verificó que contiene `resumen_edificaciones.csv`, `relaciones_cauces.csv`, `edificaciones.geojson`, `metadatos.json` y `LEEME.txt`; sus metadatos registran `red_band_m=25`, `yellow_width_m=26`, `band_m=51` y los conteos rojo 27, amarillo 30 y verde 180.
+
+La captura de evidencia local se conserva en `outputs/cloud_validation/semaforo.jpg`. Esta verificación acredita el semáforo alojado y su exportación sobre la demo guardada. Las pruebas de inferencia CPU y capturas del 21 de octubre documentadas abajo se mantienen como evidencia histórica de una ejecución distinta. La limitación de carga de la URL raíz continúa; el acceso comprobado usa la ruta directa.
 
 ## Streamlit Community Cloud
 

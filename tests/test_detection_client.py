@@ -142,3 +142,38 @@ def test_running_lock_blocks_reading_previous_completed_results(completed_run):
     (directory / ".running.lock").write_text("synthetic-unit-test-lock", encoding="utf-8")
     with pytest.raises(ValueError, match="ejecutándose"):
         load_detection(directory)
+
+
+def test_model_identity_must_agree_inside_manifest(completed_run):
+    directory, _ = completed_run(model_id="another_model")
+    with pytest.raises(ValueError, match="modelo"):
+        load_detection(directory)
+
+
+def test_valid_geojson_hash_cannot_hide_detections_from_a_different_model(completed_run, pilot_bounds):
+    west, south, east, north = pilot_bounds
+    feature = synthetic_feature("wrong_model", box(west, south, (west + east) / 2, (south + north) / 2))
+    feature["properties"]["model_id"] = "another_model"
+    directory, _ = completed_run([feature])
+    with pytest.raises(ValueError, match="modelo"):
+        load_detection(directory)
+
+
+def test_adjusted_model_keeps_actual_hash_and_training_provenance_in_export_metadata(completed_run):
+    from src.application.provenance import detection_metadata
+
+    model = {
+        "id": "synthetic_adjusted_model",
+        "trained_locally": True,
+        "sha256": "1" * 64,
+        "variant": "spacenet2_khartoum_v1",
+        "license": "test-only",
+    }
+    directory, manifest = completed_run(model=model, model_id=model["id"])
+    loaded = load_detection(directory)
+    metadata = detection_metadata({}, loaded)
+    assert metadata["building_mode"] == "finetuned_model_inference"
+    assert metadata["detection"] == manifest
+    source = next(source for source in metadata["sources"] if source.get("model_id") == model["id"])
+    assert source["model_sha256"] == model["sha256"]
+    assert "ajuste SpaceNet" in source["organization"]

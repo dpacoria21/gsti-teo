@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "images": 40,
+    "tp": 124,
+    "fp": 343,
+    "fn": 1151,
+    "precision": 0.26552462526766596,
+    "recall": 0.09725490196078432,
+    "f1": 0.1423650975889782,
+    "mean_iou_true_positives": 0.6595592629412074
+  },
+  "candidate": {
+    "images": 40,
+    "tp": 591,
+    "fp": 1076,
+    "fn": 684,
+    "precision": 0.35452909418116374,
+    "recall": 0.46352941176470586,
+    "f1": 0.4017675050985724,
+    "mean_iou_true_positives": 0.6933480512689807
+  },
+  "paired_image_bootstrap": {
+    "metric": "candidate_f1_minus_baseline_f1",
+    "samples": 1000,
+    "seed": 42,
+    "delta": 0.2594024075095942,
+    "percentile_95_interval": [
+      0.2186104238136044,
+      0.29763460135967557
+    ],
+    "unit": "scene",
+    "caveat": "Exploratory paired image bootstrap; spatial dependence is not modelled."
+  },
+  "selection_used_test": false,
+  "interpretation": "Held-out SpaceNet scenes only; this does not establish accuracy in Chullo."
+}

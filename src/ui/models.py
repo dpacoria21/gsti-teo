@@ -29,6 +29,7 @@ class SidebarSelection:
     session_id: str
     input_id: str
     chosen_red_band: float = 25
+    model_variant: str = "usa"
 
     @property
     def use_detection(self) -> bool:

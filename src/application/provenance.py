@@ -39,7 +39,11 @@ def detection_metadata(base: dict, detection: dict) -> dict:
         }.values()
     )
     metadata["detection"] = detection["manifest"]
-    metadata["building_mode"] = "pretrained_model_inference"
+    metadata["building_mode"] = (
+        "finetuned_model_inference"
+        if detection["manifest"].get("model", {}).get("trained_locally")
+        else "pretrained_model_inference"
+    )
     return metadata
 
 

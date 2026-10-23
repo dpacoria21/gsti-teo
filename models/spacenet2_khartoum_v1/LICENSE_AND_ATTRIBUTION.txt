@@ -1,0 +1,7 @@
+SpaceNet 2 Khartoum — reference imagery and building labels
+CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+https://spacenet.ai/spacenet-buildings-dataset-v2/
+SpaceNet Dataset by SpaceNet Partners; DigitalGlobe/Maxar.
+Modifications: selected spatial subset; 2/98 percentile RGB stretch; original raw data preserved.
+Redistributed adaptations of the dataset must retain attribution and the applicable share-alike terms.

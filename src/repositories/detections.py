@@ -27,6 +27,13 @@ def load_detection(output_dir: str | Path, area_id: str = "chullo") -> dict:
     raw = json.loads(building_bytes)
     if raw.get("type") != "FeatureCollection":
         raise ValueError("El detector debe devolver un GeoJSON FeatureCollection.")
+    model_id = manifest.get("model", {}).get("id") or manifest.get("model_id")
+    if manifest.get("model_id") and model_id != manifest["model_id"]:
+        raise ValueError("El identificador del modelo no coincide dentro del manifiesto.")
+    if model_id and any(
+        feature.get("properties", {}).get("model_id", model_id) != model_id for feature in raw.get("features", [])
+    ):
+        raise ValueError("Las detecciones no corresponden al modelo registrado en el manifiesto.")
     if raw.get("features"):
         buildings = gpd.read_file(building_path)
         validate_layer(
@@ -66,12 +73,18 @@ def load_detection(output_dir: str | Path, area_id: str = "chullo") -> dict:
         {
             "source_id": manifest.get("source_id", "geoai_building_inference"),
             "title": "Detecciones ejecutadas con Mask R-CNN",
-            "organization": "Proyecto Chullo; pesos de giswqs/GeoAI",
+            "organization": (
+                "Proyecto Chullo; ajuste SpaceNet sobre pesos de giswqs/GeoAI"
+                if model.get("trained_locally")
+                else "Proyecto Chullo; pesos de giswqs/GeoAI"
+            ),
             "url": "https://huggingface.co/giswqs/geoai",
             "observed_at": image.get("observed_at"),
             "license": model.get("license", "MIT (pesos)"),
             "review_status": "Detección automática; no validación de campo ni uso residencial confirmado.",
             "notes": "Inferencia real sobre la imagen documentada; fecha de procesamiento no equivale a captura.",
+            "model_id": model.get("id", manifest.get("model_id")),
+            "model_sha256": model.get("sha256"),
         }
     )
     metadata["analysis_mode"] = "image_inference"

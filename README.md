@@ -40,7 +40,9 @@ Los valores iniciales son **25 m de límite rojo** y **25 m de ancho amarillo**:
 
 El CSV y el GeoJSON incluyen `proximity_class`, `proximity_label`, `red_band_m`, `yellow_width_m` y `band_m`; este último registra el límite exterior combinado. El ZIP incorpora las reglas, los parámetros y los conteos por categoría para interpretar cada exportación. Las distancias sin redondear determinan la categoría; el redondeo es solo de presentación.
 
-La función se documenta aquí para la versión del código actual. **La comprobación alojada del semáforo está pendiente**; la evidencia de nube que sigue corresponde a la versión anterior con una sola banda.
+**Semáforo comprobado en la nube el 23 de octubre de 2026**, con la revisión `5b726ef` y la [ruta directa de la aplicación](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/). La demo guardada de 237 contornos mostró **27 rojos, 29 amarillos y 181 verdes** con límite rojo de 25 m y ancho amarillo de 25 m. Al aumentar únicamente el ancho amarillo a **26 m**, el límite exterior pasó a 51 m y los conteos cambiaron a **27 rojos, 30 amarillos y 180 verdes**, sin ejecutar nuevamente la IA.
+
+Se descargó desde el navegador el ZIP `chullo_deteccion_semaforo_rojo_25m_amarillo_hasta_51m.zip` y se comprobaron sus cinco archivos: los metadatos conservan los parámetros **25/26/51 m** y los conteos **27/30/180**. La evidencia visual local está en `outputs/cloud_validation/semaforo.jpg`. Esta comprobación del semáforo utiliza los contornos guardados; la prueba de inferencia CPU del 21 de octubre documentada a continuación es una ejecución distinta.
 
 ## Ejecutar en la nube
 
@@ -170,7 +172,21 @@ El motor de IA tiene responsabilidades pequeñas:
 
 Para modificar una pantalla, trabajar en `src/ui/`; para cambiar distancias o bandas, en `src/spatial_analysis.py`; para sustituir la red, en `src/inference/model.py` manteniendo o adaptando explícitamente el contrato de máscaras. Un cambio de modelo requiere volver a validar los resultados: compartir la interfaz no garantiza la misma calidad.
 
-Los archivos `data/` contienen entradas y procedencia, `models/` los pesos, `outputs/` los resultados y `tests/` las verificaciones. Las versiones de ejecución y desarrollo están fijadas por separado. No hay entrenamiento implementado: un futuro ajuste local necesita etiquetas revisadas y particiones geográficas independientes de entrenamiento, validación y prueba para evitar evaluar sobre imágenes usadas para entrenar.
+Los archivos `data/` contienen entradas y procedencia, `models/` los pesos, `outputs/` los resultados y `tests/` las verificaciones. Las versiones de ejecución y desarrollo están fijadas por separado. `src/training/` separa adquisición, dataset, métricas y entrenamiento; `scripts/train_buildings.py` ejecuta un ajuste reproducible sin sobrescribir el modelo original.
+
+## Modelo ajustado con más imágenes — 23 de octubre de 2026
+
+Se ajustó Mask R-CNN con **200 imágenes satelitales de SpaceNet 2 (Jartum)**, se seleccionó la mejor de cinco épocas usando otras 40 imágenes de validación y se comparó una sola vez sobre 40 imágenes de prueba separadas geográficamente. El conjunto contiene 8056 anotaciones originales; 8019 máscaras tienen al menos cuatro píxeles útiles. No se utilizaron predicciones como etiquetas ni la captura de Google Earth para entrenar.
+
+| Prueba SpaceNet, 40 imágenes | Original | Ajustado |
+|---|---:|---:|
+| Precisión de instancias | 26,6 % | 35,5 % |
+| Exhaustividad (recall) | 9,7 % | 46,4 % |
+| F1 de instancias | 14,2 % | 40,2 % |
+
+Se exige puntuación ≥0,5 y coincidencia de máscara IoU ≥0,5. No es AP COCO ni exactitud de Chullo. Persisten numerosos falsos positivos y el corpus de preentrenamiento original no está completamente identificado. Por eso el ajuste aparece como **«Ajustado · SpaceNet (experimental)»** en «Modelo de edificaciones» y el original sigue siendo la opción inicial. Cada modelo conserva su propia ejecución y procedencia. Seleccionar el ajuste muestra su demostración de Chullo; «Detectar en esta imagen» ejecuta el modelo seleccionado de nuevo. El semáforo opera sobre sus contornos, con los mismos cálculos de distancia.
+
+Datos, licencia y reproducción en [DATOS_ENTRENAMIENTO.md](docs/DATOS_ENTRENAMIENTO.md); protocolo, métricas y límites en [ENTRENAMIENTO_MODELO.md](docs/ENTRENAMIENTO_MODELO.md). El informe JSON y los pesos exactos evaluados están en `models/spacenet2_khartoum_v1/`.
 
 Para instalar las herramientas de desarrollo sin cambiar las dependencias de ejecución:
 
@@ -188,7 +204,7 @@ Cada nueva detección se escribe primero en una carpeta de tentativa. El CLI ver
 
 ### Clonar desde GitHub
 
-El repositorio privado incluye código, datos procesados, imágenes GeoTIFF de trabajo y las dos detecciones guardadas. No incluye entornos Python, pesos del modelo, capturas JPG originales ni descargas brutas. Después de clonar, ejecutar `PREPARAR.ps1` e `INICIAR.ps1` permite consultar la demostración. Para repetir la inferencia, `PREPARAR_IA.ps1` instala el motor y descarga los pesos con revisión y SHA256 fijados. La imagen Google Earth/Airbus conserva su atribución y condiciones; su inclusión no la convierte en un dataset abierto.
+El repositorio privado incluye código, datos procesados, imágenes GeoTIFF de trabajo, las detecciones guardadas y el modelo experimental ajustado (88 MB). No incluye entornos Python, pesos originales de GeoAI, capturas JPG originales ni descargas brutas de entrenamiento. Después de clonar, ejecutar `PREPARAR.ps1` e `INICIAR.ps1` permite consultar la demostración. Para repetir la inferencia, `PREPARAR_IA.ps1` instala el motor y descarga los pesos originales con revisión y SHA256 fijados. La imagen Google Earth/Airbus conserva su atribución y condiciones; su inclusión no la convierte en un dataset abierto.
 
 Las instrucciones completas, diferencias con el ZIP local y archivos excluidos están en [docs/INSTALACION_GITHUB.md](docs/INSTALACION_GITHUB.md).
 

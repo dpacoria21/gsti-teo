@@ -1,6 +1,6 @@
 # Instalar el prototipo desde GitHub
 
-El repositorio contiene el código modular, las dependencias fijadas, los datos procesados de dos sectores, los GeoTIFF de trabajo y dos ejecuciones reales guardadas. El repositorio privado es el medio de colaboración del proyecto; no constituye una licencia abierta de las imágenes de terceros.
+El repositorio contiene el código modular, las dependencias fijadas, los datos procesados de dos sectores, los GeoTIFF de trabajo, las ejecuciones reales guardadas y el modelo experimental ajustado con SpaceNet. El repositorio privado es el medio de colaboración del proyecto; no constituye una licencia abierta de las imágenes de terceros.
 
 ## Requisitos
 
@@ -51,7 +51,7 @@ La selección automática usa CUDA cuando encuentra `nvidia-smi`; para una compu
 powershell -NoProfile -ExecutionPolicy Bypass -File .\PREPARAR_IA.ps1 -Device cpu
 ```
 
-En la aplicación, elige **Chullo**, **Detección IA desde imagen** y pulsa **Detectar en esta imagen**. Se procesa el GeoTIFF incluido y se publica el resultado al terminar correctamente. Cambiar la banda y pulsar **Analizar sector** reutiliza los contornos; cambiar la puntuación requiere una nueva detección para aplicarla.
+En la aplicación, elige **Chullo**, **Detección IA desde imagen**, el **Modelo de edificaciones** y pulsa **Detectar en esta imagen**. Se procesa el GeoTIFF incluido y se publica el resultado al terminar correctamente. El original es la opción inicial; «Ajustado · SpaceNet (experimental)» usa los pesos incluidos de 88 MB, verificados por SHA256 antes de cargar. El ajuste mejoró la prueba externa SpaceNet; no hay exactitud cuantificada de Chullo. Cambiar los límites del semáforo reclasifica directamente los contornos; cambiar la puntuación requiere una nueva detección para aplicarla.
 
 ## Qué contiene Git y qué permanece local
 
@@ -63,10 +63,12 @@ En la aplicación, elige **Chullo**, **Detección IA desde imagen** y pulsa **De
 | GeoTIFF RGB y manifiesto de cada sector | Ejecutar la detección sobre los píxeles de la demostración. |
 | Puntos, residuos, informe de captura y evidencia de fecha de Chullo | Documentar cómo se georreferenció la captura. |
 | `outputs/inference/{chullo_demo,mariano_melgar_demo}/` | GeoJSON, manifiesto y vista previa de las dos corridas guardadas. |
+| `models/spacenet2_khartoum_v1/` | Checkpoint ajustado, hashes, manifiesto de datos y evaluación. |
+| `outputs/inference/chullo_spacenet2_khartoum_v1_demo/` | Detección real guardada de Chullo con el modelo experimental. |
 | `outputs/arquitectura/`, `outputs/presentacion/` y `outputs/google_earth/` | Diagramas, mapas, exportaciones ligeras y referencias de captura; se omiten los ZIP. |
 | `models/manifest.json` | Identificación exacta y procedencia del modelo descargable. |
 
-No se incluyen `.venv`, `.venv-ml`, los pesos, `data/raw/`, cargas de usuarios, los dos JPG originales de Google Earth de aproximadamente 21,8 MB cada uno, el ortomosaico fuente de Mariano Melgar, archivos temporales, registros, auditorías locales, respaldos ni entregas ZIP. Los originales de captura conservados en la computadora de preparación son necesarios para repetir la georreferenciación desde cero. El GeoTIFF preparado sí permite repetir la inferencia.
+No se incluyen `.venv`, `.venv-ml`, los pesos originales de GeoAI, `data/raw/`, las imágenes descargadas en `data/training/`, cargas de usuarios, los dos JPG originales de Google Earth de aproximadamente 21,8 MB cada uno, el ortomosaico fuente de Mariano Melgar, archivos temporales, registros, auditorías locales, respaldos ni entregas ZIP. Los originales de captura conservados en la computadora de preparación son necesarios para repetir la georreferenciación desde cero. El GeoTIFF preparado sí permite repetir la inferencia.
 
 El ZIP de entrega preparado en la computadora original es distinto del ZIP que genera GitHub: el primero puede contener pesos y originales adicionales; el de GitHub solo contiene los archivos versionados. Los entornos Python se crean en el equipo destino en ambos casos.
 

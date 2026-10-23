@@ -47,6 +47,7 @@ def main(argv: list[str] | None = None, *, detector=None) -> int:
     parser.add_argument("--overlap", type=int, default=128)
     parser.add_argument("--mask-threshold", type=float, default=0.5)
     parser.add_argument("--min-area-m2", type=float, default=10.0)
+    parser.add_argument("--model-variant", choices=("usa", "spacenet2_khartoum_v1"), default="usa")
     args = parser.parse_args(argv)
     output = Path(args.output_dir).resolve()
     lock, owns_lock, attempt = None, False, None
@@ -89,6 +90,7 @@ def main(argv: list[str] | None = None, *, detector=None) -> int:
             mask_threshold=args.mask_threshold,
             min_area_m2=args.min_area_m2,
             progress=progress,
+            **({"model_variant": args.model_variant} if args.model_variant != "usa" else {}),
         )
         manifest = publish_run(staging, output)
         emit(**(completed_event or {"stage": "completed", "progress": 1.0, "count": manifest["count"]}))

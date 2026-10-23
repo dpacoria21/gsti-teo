@@ -64,7 +64,9 @@ def candidates_from_masks(
     return candidates
 
 
-def detection_frame(candidates: list[dict], image_id: str, observed_at: str | None, native_crs) -> gpd.GeoDataFrame:
+def detection_frame(
+    candidates: list[dict], image_id: str, observed_at: str | None, native_crs, model_id: str = MODEL_ID
+) -> gpd.GeoDataFrame:
     """Give each footprint a stable identity and serialize coordinates as WGS84."""
     columns = [
         "building_id",
@@ -89,7 +91,7 @@ def detection_frame(candidates: list[dict], image_id: str, observed_at: str | No
                 "source_id": SOURCE_ID,
                 "observed_at": observed_at,
                 "review_status": "Sin revisión manual · inferencia IA",
-                "model_id": MODEL_ID,
+                "model_id": model_id,
                 "image_id": image_id,
                 **item,
             }

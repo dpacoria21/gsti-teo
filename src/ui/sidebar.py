@@ -4,6 +4,7 @@ import streamlit as st
 
 from src.application.images import bundled_image, stored_upload
 from src.application.session_workspace import selected_result, session_identifier, session_output_root
+from src.model_catalog import ORIGINAL_VARIANT, model_choices
 from src.settings import PROJECT_ROOT as ROOT
 from src.ui.engine import ml_status
 from src.ui.models import SidebarSelection
@@ -40,6 +41,7 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
             help="La detección ejecuta un modelo preentrenado. El inventario contiene contornos ya calculados por otra entidad.",
         )
         use_detection = building_mode == "Detección IA desde imagen"
+        model_variant = ORIGINAL_VARIANT
         detect_clicked = False
         threshold = 0.50
         raster_path = image_manifest_path = None
@@ -47,6 +49,16 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         input_id = f"{area_id}:bundled"
         detection_dir = ROOT / "outputs" / "inference" / f"{area_id}_demo"
         if use_detection:
+            choices = model_choices()
+            if len(choices) > 1:
+                model_variant = st.selectbox(
+                    "Modelo de edificaciones", list(choices), format_func=choices.get, key=f"model_{area_id}"
+                )
+                if model_variant != ORIGINAL_VARIANT:
+                    st.caption(
+                        "Ajustado con imágenes y etiquetas de SpaceNet (Jartum). Evaluación disponible en Fuentes y alcance; "
+                        "su exactitud en Chullo todavía no está cuantificada."
+                    )
             image_choice = st.selectbox(
                 "Imagen de entrada",
                 [f"{area_name} · imagen incluida", f"Subir GeoTIFF de {area_name}"],
@@ -75,6 +87,12 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
                 else:
                     input_id = f"{area_id}:awaiting_upload"
                     detection_dir = session_output_root(session_id) / f"{area_id}_awaiting_upload"
+            if model_variant != ORIGINAL_VARIANT:
+                input_id = f"{input_id}:{model_variant}"
+                if raster_path == included_raster:
+                    trained_demo = ROOT / "outputs" / "inference" / f"{area_id}_{model_variant}_demo"
+                    if (trained_demo / "manifest.json").is_file():
+                        detection_dir = trained_demo
             detection_dir = selected_result(st.session_state, input_id, detection_dir)
             threshold = st.slider(
                 "Puntuación mínima del detector",
@@ -168,6 +186,7 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         detect_clicked=detect_clicked,
         chosen_band=chosen_band,
         chosen_red_band=float(chosen_red_band),
+        model_variant=model_variant,
         analyze=analyze,
         basemap=basemap,
         show_imagery=show_imagery,

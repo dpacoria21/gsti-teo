@@ -1,0 +1,46 @@
+{
+  "id": "chullo/maskrcnn_spacenet2_khartoum_v1",
+  "variant": "spacenet2_khartoum_v1",
+  "name": "Mask R-CNN ajustado SpaceNet (experimental)",
+  "filename": "weights.pth",
+  "size_bytes": 88170873,
+  "sha256": "5e929fa3cf1f657b1fa9afd2cbdc48ea475629d8c78910c98c9a99c8fffb90c6",
+  "revision": "5e929fa3cf1f657b1fa9afd2cbdc48ea475629d8c78910c98c9a99c8fffb90c6",
+  "trained_locally": true,
+  "training_date": "2026-10-23",
+  "license": "Inicialización GeoAI MIT; datos SpaceNet CC BY-SA 4.0; véase LICENSE_AND_ATTRIBUTION.txt",
+  "url": "https://spacenet.ai/spacenet-buildings-dataset-v2/",
+  "geography": "Ajuste y prueba en Jartum; exactitud en Chullo no cuantificada.",
+  "evaluation_report": "models/spacenet2_khartoum_v1/comparison.json",
+  "evaluation_summary": {
+    "test_images": 40,
+    "reference_instances": 1275,
+    "score_threshold": 0.5,
+    "mask_iou_threshold": 0.5,
+    "baseline": {
+      "images": 40,
+      "tp": 124,
+      "fp": 343,
+      "fn": 1151,
+      "precision": 0.26552462526766596,
+      "recall": 0.09725490196078432,
+      "f1": 0.1423650975889782,
+      "mean_iou_true_positives": 0.6595592629412074
+    },
+    "candidate": {
+      "images": 40,
+      "tp": 591,
+      "fp": 1076,
+      "fn": 684,
+      "precision": 0.35452909418116374,
+      "recall": 0.46352941176470586,
+      "f1": 0.4017675050985724,
+      "mean_iou_true_positives": 0.6933480512689807
+    },
+    "interpretation": "Evaluación externa SpaceNet; F1 de instancias, no AP ni exactitud de Chullo."
+  },
+  "initial_model_id": "giswqs/geoai/building_footprints_usa",
+  "initial_model_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "storage_dtype": "float16",
+  "inference_dtype": "float32"
+}

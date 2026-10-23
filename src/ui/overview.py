@@ -26,9 +26,23 @@ def render_overview(selection: SidebarSelection, view: AnalysisView) -> None:
         st.caption(
             "Detecciones automáticas provisionales: pueden existir omisiones y falsos positivos. Revisa los contornos sobre la imagen antes de interpretar las distancias."
         )
-        st.caption(
-            f"Captura de imagen: {observed_at} · No se ha entrenado el modelo con estas edificaciones; se aplican pesos preentrenados."
+        model_info = detection["manifest"].get("model", {})
+        training_note = (
+            "Modelo ajustado con SpaceNet (Jartum), sin etiquetas de entrenamiento de Chullo."
+            if model_info.get("trained_locally")
+            else "No se ha entrenado el modelo con estas edificaciones; se aplican pesos preentrenados."
         )
+        st.caption(f"Captura de imagen: {observed_at} · {training_note}")
+        if model_info.get("trained_locally") and active_area == "chullo":
+            st.warning(
+                "Modelo experimental: en la revisión visual de Chullo se observaron varias cubiertas y patios "
+                "unidos en un solo contorno. Este resultado no permite contar viviendas individuales; "
+                "compara con el modelo original y revisa los polígonos."
+            )
+        if model_info.get("variant", "usa") != selection.model_variant:
+            st.info(
+                "Los contornos visibles corresponden al otro modelo. Pulsa «Detectar en esta imagen» para aplicar el modelo seleccionado."
+            )
         st.caption(
             f"{image_info.get('title') or 'Imagen georreferenciada del sector'} · {image_info.get('attribution') or 'Créditos en Fuentes y alcance'}"
         )

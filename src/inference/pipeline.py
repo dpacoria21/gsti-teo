@@ -13,7 +13,7 @@ import rasterio
 from pyproj import Transformer
 
 from .config import InferenceParameters
-from .model import MODEL_ID, MODEL_REVISION, MODEL_SHA256, MODEL_URL, ensure_model, load_model, sha256_file
+from .model import load_model, resolve_variant, sha256_file
 from .postprocess import SOURCE_ID, candidates_from_masks, detection_frame, suppress_duplicates
 from .provenance import inspect_image
 from .raster import read_tile, save_preview, tile_starts
@@ -31,6 +31,7 @@ def detect_buildings(
     min_area_m2: float = 10.0,
     analysis_crs: str = "EPSG:32719",
     progress: Callable | None = None,
+    model_variant: str = "usa",
 ) -> dict:
     parameters = InferenceParameters(
         confidence_threshold=threshold,
@@ -56,7 +57,7 @@ def detect_buildings(
     image = inspect_image(image_path, image_manifest)
     image_id = "img_" + image["sha256"][:16]
     report(stage="loading_model", message="Cargando Mask R-CNN preentrenado y verificando SHA256.", progress=0.05)
-    weights = ensure_model(progress=report)
+    weights, model_metadata = resolve_variant(model_variant, progress=report)
     model, selected_device = load_model(weights, device)
     candidates = []
     warnings = []
@@ -126,7 +127,7 @@ def detect_buildings(
         stage="vectorizing", message="Eliminando duplicados de mosaicos y georreferenciando contornos.", progress=0.88
     )
     kept = suppress_duplicates(candidates)
-    gdf = detection_frame(kept, image_id, image["observed_at"], native_crs)
+    gdf = detection_frame(kept, image_id, image["observed_at"], native_crs, model_id=model_metadata["id"])
     output_geojson = output_dir / "buildings.geojson"
     output_geojson.write_text(gdf.to_json(drop_id=True, na="null"), encoding="utf-8")
     preview_bounds = save_preview(image_path, output_dir / "preview.png")
@@ -137,27 +138,21 @@ def detect_buildings(
         "completed_at": datetime.now(timezone.utc).isoformat(),
         "elapsed_seconds": round(time.perf_counter() - start, 3),
         "count": len(gdf),
-        "model_id": MODEL_ID,
+        "model_id": model_metadata["id"],
         "image_id": image_id,
         "source_id": SOURCE_ID,
         "bounds_wgs84": image["bounds_wgs84"],
         "preview_bounds_wgs84": preview_bounds,
         "image": image,
         "model": {
-            "id": MODEL_ID,
+            **model_metadata,
             "architecture": "Mask R-CNN ResNet50-FPN",
             "pretrained": True,
-            "trained_locally": False,
             "path": str(weights),
-            "revision": MODEL_REVISION,
-            "sha256": MODEL_SHA256,
-            "url": MODEL_URL,
-            "license": "MIT (model repository)",
             "num_classes": 2,
             "min_size": 800,
             "max_size": 1333,
             "normalization": {"input": "RGB uint8 / 255", "mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]},
-            "geography": "Publicado como modelo USA; no validado cuantitativamente en Arequipa.",
         },
         "parameters": parameters.as_manifest(),
         "execution": {

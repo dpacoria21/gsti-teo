@@ -50,6 +50,7 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
                     image_manifest=image_manifest_path,
                     on_progress=on_progress,
                     area_id=area_id,
+                    **({"model_variant": selection.model_variant} if selection.model_variant != "usa" else {}),
                 )
                 remember_result(st.session_state, selection.input_id, detection_dir)
                 selection = replace(selection, detection_dir=detection_dir)

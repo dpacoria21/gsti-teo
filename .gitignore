@@ -23,6 +23,11 @@ Thumbs.db
 # Solo la identificación del modelo: PREPARAR_IA.ps1 descarga y verifica los pesos.
 /models/*
 !/models/manifest.json
+!/models/spacenet2_khartoum_v1/
+/models/spacenet2_khartoum_v1/*
+!/models/spacenet2_khartoum_v1/weights.pth
+!/models/spacenet2_khartoum_v1/*.json
+!/models/spacenet2_khartoum_v1/LICENSE_AND_ATTRIBUTION.txt
 
 # Datos mínimos del prototipo; originales y cargas de usuario permanecen locales.
 /data/*
@@ -57,6 +62,11 @@ Thumbs.db
 /outputs/inference/*
 !/outputs/inference/chullo_demo/
 !/outputs/inference/mariano_melgar_demo/
+!/outputs/inference/chullo_spacenet2_khartoum_v1_demo/
+/outputs/inference/chullo_spacenet2_khartoum_v1_demo/*
+!/outputs/inference/chullo_spacenet2_khartoum_v1_demo/buildings.geojson
+!/outputs/inference/chullo_spacenet2_khartoum_v1_demo/manifest.json
+!/outputs/inference/chullo_spacenet2_khartoum_v1_demo/preview.png
 /outputs/inference/chullo_demo/*
 !/outputs/inference/chullo_demo/buildings.geojson
 !/outputs/inference/chullo_demo/manifest.json

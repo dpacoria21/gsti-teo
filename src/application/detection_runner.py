@@ -111,6 +111,7 @@ def run_detection(
     on_progress: Callable[[dict], None] | None = None,
     device: str = "auto",
     area_id: str = "chullo",
+    model_variant: str = "usa",
 ) -> dict:
     status = ml_status()
     if not status["available"]:
@@ -139,6 +140,8 @@ def run_detection(
     ]
     if image_manifest:
         command.extend(["--image-manifest", str(Path(image_manifest).resolve())])
+    if model_variant != "usa":
+        command.extend(["--model-variant", model_variant])
     environment = dict(
         os.environ,
         PYTHONUTF8="1",

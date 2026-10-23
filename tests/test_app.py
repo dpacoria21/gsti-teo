@@ -239,3 +239,103 @@ def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_select
         for collection in collections
     ), "Selecting an identifier must add the exact building geometry as its highlight layer."
     assert ".fitBounds(" in selected_map
+
+
+def test_model_switch_keeps_actual_provenance_and_separates_completed_session_results(saved_app, monkeypatch, tmp_path):
+    """Candidate fixtures live in tmp_path; both the original demo and real weights remain untouched."""
+    from src.application.session_workspace import RESULTS_KEY, new_detection_output
+    from src.inference.model import MODEL_ID
+    from src.model_catalog import TRAINED_VARIANT
+    from src.ui import sidebar, workflow
+
+    app, downloads = saved_app
+    demo_copy = tmp_path / "outputs" / "inference" / "chullo_demo"
+    shutil.copytree(SAVED_RUN, demo_copy)
+    monkeypatch.setattr(sidebar, "ROOT", tmp_path)
+    monkeypatch.setattr(
+        sidebar,
+        "model_choices",
+        lambda: {
+            "usa": "Original · GeoAI USA",
+            TRAINED_VARIANT: "Ajustado · SpaceNet (experimental)",
+        },
+    )
+    monkeypatch.setattr(sidebar, "ml_status", lambda: {"available": True})
+    monkeypatch.setattr(workflow, "new_detection_output", lambda session: new_detection_output(session, tmp_path))
+    app.run()
+    widget(app.selectbox, "Modelo de edificaciones").set_value(TRAINED_VARIANT).run()
+    assert_rendered(app)
+    assert any("otro modelo" in element.value for element in app.info)
+    before_run = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert before_run.model_id.eq(MODEL_ID).all(), "Changing the selector must not relabel original detections"
+    with ZipFile(BytesIO(downloads["Descargar paquete completo"]["data"])) as archive:
+        before_metadata = json.loads(archive.read("metadatos.json"))["source_metadata"]["detection"]
+    assert before_metadata["model_id"] == MODEL_ID
+    assert before_metadata["model"]["trained_locally"] is False
+
+    candidate_id = "synthetic-test/candidate"
+    candidate_hash = "2" * 64
+    calls = []
+
+    def completed_candidate(raster_path, output_dir, **kwargs):
+        assert kwargs["model_variant"] == TRAINED_VARIANT
+        calls.append(output_dir)
+        shutil.copytree(SAVED_RUN, output_dir)
+        geojson_path = output_dir / "buildings.geojson"
+        features = json.loads(geojson_path.read_bytes())
+        for feature in features["features"]:
+            feature["properties"]["model_id"] = candidate_id
+        geojson_path.write_text(json.dumps(features), encoding="utf-8")
+        manifest_path = output_dir / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["model_id"] = candidate_id
+        manifest["model"].update(
+            {
+                "id": candidate_id,
+                "name": "Synthetic adjusted detector fixture",
+                "variant": TRAINED_VARIANT,
+                "trained_locally": True,
+                "sha256": candidate_hash,
+                "evaluation_summary": {"scope": "Synthetic test fixture, no real evaluation"},
+            }
+        )
+        manifest["outputs"]["buildings_sha256"] = sha256(geojson_path.read_bytes()).hexdigest()
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        return manifest
+
+    monkeypatch.setattr(workflow, "run_detection", completed_candidate)
+    widget(app.button, "Detectar en esta imagen").click().run()
+    assert_rendered(app)
+    assert not any("otro modelo" in element.value for element in app.info)
+    candidate_key = f"chullo:bundled:{TRAINED_VARIANT}"
+    assert Path(app.session_state[RESULTS_KEY][candidate_key]) == calls[0]
+    candidate = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert candidate.model_id.eq(candidate_id).all()
+    with ZipFile(BytesIO(downloads["Descargar paquete completo"]["data"])) as archive:
+        source_metadata = json.loads(archive.read("metadatos.json"))["source_metadata"]
+    assert source_metadata["building_mode"] == "finetuned_model_inference"
+    assert source_metadata["detection"]["model"]["sha256"] == candidate_hash
+    assert source_metadata["detection"]["model"]["trained_locally"] is True
+
+    widget(app.selectbox, "Modelo de edificaciones").set_value("usa").run()
+    assert_rendered(app)
+    original_again = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert original_again.model_id.eq(MODEL_ID).all()
+    assert Path(app.session_state[RESULTS_KEY][candidate_key]) == calls[0]
+
+    widget(app.selectbox, "Modelo de edificaciones").set_value(TRAINED_VARIANT).run()
+    assert_rendered(app)
+    candidate_again = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert candidate_again.model_id.eq(candidate_id).all()
+    assert len(calls) == 1, "Switching saved model results must not run inference"
+
+    def failing_candidate(*args, **kwargs):
+        assert kwargs["model_variant"] == TRAINED_VARIANT
+        raise RuntimeError("Synthetic candidate failure")
+
+    monkeypatch.setattr(workflow, "run_detection", failing_candidate)
+    widget(app.button, "Detectar en esta imagen").click().run()
+    assert not app.exception
+    assert any("Synthetic candidate failure" in element.value for element in app.error)
+    assert Path(app.session_state[RESULTS_KEY][candidate_key]) == calls[0]
+    assert pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"])).model_id.eq(candidate_id).all()

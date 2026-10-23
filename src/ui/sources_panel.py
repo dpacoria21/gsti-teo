@@ -91,6 +91,14 @@ def render_sources_panel(selection: SidebarSelection, view: AnalysisView) -> Non
                 )
                 with st.expander("Metadatos completos de la inferencia"):
                     st.json(manifest)
+                if manifest.get("model", {}).get("trained_locally"):
+                    st.write(
+                        "**Ajuste del modelo:** SpaceNet 2 · Jartum; evaluación de edificaciones, no uso residencial."
+                    )
+                    st.caption(
+                        "La evaluación externa no mide la exactitud en Chullo. Los límites del semáforo son independientes del modelo."
+                    )
+                    st.json(manifest["model"].get("evaluation_summary", {}))
                 georeferencing_evidence(image_info)
             with provenance_right:
                 if detection.get("preview_path") and Path(detection["preview_path"]).is_file():

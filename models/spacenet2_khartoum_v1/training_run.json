@@ -1,0 +1,80 @@
+{
+  "status": "completed",
+  "config": {
+    "epochs": 5,
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "freeze_backbone_epochs": 5,
+    "workers": 0,
+    "device": "cuda",
+    "amp": true,
+    "score_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "match_iou": 0.5,
+    "gradient_clip": 1.0,
+    "bootstrap_samples": 1000
+  },
+  "dataset_id": "spacenet2_khartoum_reference_subset_v1",
+  "dataset_manifest": "data/training/spacenet2_khartoum/manifest.json",
+  "dataset_manifest_sha256": "0f0c5746876f27612a56862560ca120dc65bbe9fb6ea04662ab15e75331bdede",
+  "annotation_type": "reference",
+  "initial_checkpoint": "models/building_footprints_usa.pth",
+  "initial_checkpoint_sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "architecture": "torchvision.maskrcnn_resnet50_fpn",
+  "num_classes": 2,
+  "resize": {
+    "min_size": 800,
+    "max_size": 1333
+  },
+  "training_images": "Whole scenes, no crops; random quarter rotations and horizontal/vertical flips",
+  "input_preprocessing": "uint8 RGB /255; raw uint16 fallback valid-pixel per-band percentiles 2/98",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "selection": "Highest validation instance F1; earliest epoch wins ties; test unused until final comparison",
+  "checkpoint_storage_dtype": "float16 for floating tensors; original dtype for integer tensors",
+  "inference_dtype": "float32 after strict state-dict loading",
+  "evaluation_protocol": {
+    "images": "Whole scenes, torchvision resize 800/1333, no tiling or area filtering",
+    "nodata": "Reference and prediction masks clipped to identical valid-pixel mask; empty predictions ignored",
+    "max_detections_per_image": 100,
+    "min_reference_pixels": 4,
+    "deployment_difference": "Production uses 512px overlapping tiles and area/duplicate filtering"
+  },
+  "trainable_components": "FPN, RPN and ROI box/mask heads; ResNet body frozen for freeze_backbone_epochs",
+  "batch_normalization": "Running statistics frozen throughout training because the default batch size is one",
+  "metric": "Instance-mask precision/recall/F1 at fixed score and IoU thresholds; not COCO AP",
+  "split_counts": {
+    "train": 200,
+    "val": 40,
+    "test": 40
+  },
+  "reproducibility": "Seeded RNGs; deterministic algorithms warn_only; cross-device bitwise equality not promised",
+  "execution": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "best_epoch": 5,
+  "best_validation_f1": 0.5648075412411626,
+  "baseline_validation_f1": 0.1676190476190476,
+  "stored_checkpoint_validation_f1": 0.5648075412411626,
+  "validation_improved": true,
+  "checkpoint": "models/spacenet2_khartoum_v1/weights.pth",
+  "checkpoint_sha256": "5e929fa3cf1f657b1fa9afd2cbdc48ea475629d8c78910c98c9a99c8fffb90c6",
+  "elapsed_seconds": 206.1394435000002,
+  "peak_cuda_memory_allocated_mib": 1267.59130859375,
+  "production_model_modified": false,
+  "skipped_amp_steps": 0
+}

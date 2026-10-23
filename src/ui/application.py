@@ -56,9 +56,13 @@ def main() -> None:
     with sources_tab:
         render_sources_panel(selection, view)
 
-    building_credit = (
-        "Edificaciones: inferencia de modelo preentrenado" if view.detection else "Edificaciones: Microsoft"
-    )
+    building_credit = "Edificaciones: Microsoft"
+    if view.detection:
+        building_credit = (
+            "Edificaciones: modelo ajustado SpaceNet (experimental)"
+            if view.detection["manifest"].get("model", {}).get("trained_locally")
+            else "Edificaciones: inferencia de modelo preentrenado"
+        )
     st.markdown(
         f'<div class="foot">{html.escape(selection.area_name.upper())} · Prototipo académico de análisis territorial · {building_credit} · Procedencia de las capas en «Fuentes y alcance» · La proximidad es un indicador espacial.</div>',
         unsafe_allow_html=True,

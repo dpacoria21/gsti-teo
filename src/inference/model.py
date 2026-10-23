@@ -86,3 +86,27 @@ def load_model(path: Path, device: str = "auto"):
         selected = "cpu"
         model.to(selected)
     return model, selected
+
+
+def resolve_variant(variant: str = "usa", progress: Callable | None = None) -> tuple[Path, dict]:
+    """Only serve registered checkpoints whose bytes match their provenance."""
+    from src.model_catalog import ORIGINAL_VARIANT, TRAINED_VARIANT, trained_metadata
+
+    if variant == ORIGINAL_VARIANT:
+        return ensure_model(progress=progress), {
+            "id": MODEL_ID,
+            "variant": ORIGINAL_VARIANT,
+            "revision": MODEL_REVISION,
+            "sha256": MODEL_SHA256,
+            "url": MODEL_URL,
+            "license": "MIT (model repository)",
+            "trained_locally": False,
+            "geography": "Publicado como modelo USA; no validado cuantitativamente en Arequipa.",
+        }
+    if variant != TRAINED_VARIANT:
+        raise ValueError("Modelo desconocido; seleccione un modelo del catálogo registrado.")
+    metadata = trained_metadata()
+    path = Path(metadata["path"])
+    if path.stat().st_size != metadata["size_bytes"] or sha256_file(path) != metadata["sha256"]:
+        raise ValueError("Los pesos ajustados no coinciden con el tamaño y SHA256 registrados.")
+    return path, metadata
