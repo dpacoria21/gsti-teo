@@ -31,6 +31,18 @@ La captura de evidencia local se conserva en `outputs/cloud_validation/semaforo.
 
 ## Streamlit Community Cloud
 
+### Modelo ajustado: comprobación alojada del 23 de octubre de 2026
+
+La revisión `ffe2411` incorpora el selector «Modelo de edificaciones», conservando «Original · GeoAI USA» como valor inicial y ofreciendo «Ajustado · SpaceNet (experimental)». Tras actualizar GitHub se reinició la aplicación para cargar los módulos nuevos. Los pesos ajustados, de 88170873 bytes, se incluyen en el repositorio; no hay una descarga pública adicional de este checkpoint.
+
+Se seleccionó el ajuste y se pulsó **Detectar en esta imagen** sobre Chullo en Community Cloud. La inferencia CPU terminó el **2026-10-23T06:09:24.347564+00:00** y el manifiesto registra **89.095 segundos**, 35 mosaicos, 1141 candidatos antes de depuración y **545 contornos finales**. De ellos, **136** intersectan el sector. Con límite rojo 25 m y ancho amarillo 25 m se obtuvieron **25 rojos, 14 amarillos y 97 verdes**.
+
+Se descargó el paquete ZIP desde el navegador y se verificaron las 136 filas del CSV, los parámetros del semáforo, sus conteos y el modelo `chullo/maskrcnn_spacenet2_khartoum_v1`. El hash registrado coincide con el artefacto entrenado y evaluado: `5e929fa3cf1f657b1fa9afd2cbdc48ea475629d8c78910c98c9a99c8fffb90c6`. Evidencias locales: `outputs/cloud_validation/modelo_ajustado.jpg`, `modelo_ajustado_export.json` y `modelo_ajustado_cloud.zip`.
+
+Esta comprobación acredita ejecución y exportación alojadas. No demuestra una mejora de exactitud en Chullo: el ajuste fusiona algunas cubiertas y patios, y la aplicación muestra un aviso específico. La mejora cuantitativa se limita al test externo de SpaceNet, documentado en [ENTRENAMIENTO_MODELO.md](ENTRENAMIENTO_MODELO.md). No se midió memoria del servidor en esta corrida. Se conserva la ruta directa de acceso y la limitación de la URL raíz.
+
+### Configuración del alojamiento
+
 La aplicación se desplegó desde la cuenta conectada a GitHub con estos valores:
 
 | Campo | Valor |

@@ -188,3 +188,52 @@ def test_application_preserves_variant_across_worker_boundary(tmp_path, monkeypa
     else:
         assert "--model-variant" not in commands[0] or commands[0][commands[0].index("--model-variant") + 1] == variant
     assert not (output / ".running.lock").exists()
+
+
+def test_cli_forwards_adjusted_variant_and_publishes_matching_provenance(tmp_path):
+    from PIL import Image
+
+    from scripts.run_detection import main
+
+    requested = []
+    model_id = "synthetic-test/cli-candidate"
+    output = tmp_path / "published"
+
+    def test_detector(**kwargs):
+        requested.append(kwargs["model_variant"])
+        staging = kwargs["output_dir"]
+        geojson = b'{"type": "FeatureCollection", "features": []}'
+        (staging / "buildings.geojson").write_bytes(geojson)
+        Image.new("RGB", (2, 2), "black").save(staging / "preview.png")
+        (staging / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "status": "completed",
+                    "count": 0,
+                    "model_id": model_id,
+                    "model": {"id": model_id, "variant": kwargs["model_variant"], "trained_locally": True},
+                    "outputs": {"buildings_sha256": hashlib.sha256(geojson).hexdigest()},
+                }
+            ),
+            encoding="utf-8",
+        )
+
+    code = main(
+        [
+            "--image",
+            str(tmp_path / "test_input.tif"),
+            "--output-dir",
+            str(output),
+            "--device",
+            "cpu",
+            "--model-variant",
+            model_catalog.TRAINED_VARIANT,
+        ],
+        detector=test_detector,
+    )
+    assert code == 0 and requested == [model_catalog.TRAINED_VARIANT]
+    manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["model_id"] == model_id
+    assert manifest["model"]["variant"] == model_catalog.TRAINED_VARIANT
+    assert manifest["model"]["trained_locally"] is True
+    assert not (output / ".running.lock").exists()
