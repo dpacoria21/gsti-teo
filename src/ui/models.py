@@ -28,6 +28,7 @@ class SidebarSelection:
     show_imagery: bool
     session_id: str
     input_id: str
+    chosen_red_band: float = 25
 
     @property
     def use_detection(self) -> bool:
@@ -49,6 +50,14 @@ class AnalysisView:
     detection_version: tuple
     detection_failed: bool
     description: DetectionDescription | None
+    red_band_m: float = 25
+
+    @property
+    def yellow_width_m(self) -> float:
+        return self.band_m - self.red_band_m
+
+    def color_count(self, color: str) -> int:
+        return int(self.summary["proximity_class"].eq(color).sum())
 
     @property
     def summary(self):

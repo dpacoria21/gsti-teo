@@ -16,9 +16,11 @@ def cached_load(area_id, fingerprint):
 
 
 @st.cache_data(show_spinner=False, max_entries=32, ttl=3600)
-def cached_analysis(area_id, fingerprint, band_m, analysis_crs):
+def cached_analysis(area_id, fingerprint, band_m, analysis_crs, red_band_m=None):
     data = cached_load(area_id, fingerprint)
-    return analyze_proximity(data["buildings"], data["rivers"], band_m=band_m, analysis_crs=analysis_crs)
+    return analyze_proximity(
+        data["buildings"], data["rivers"], band_m=band_m, analysis_crs=analysis_crs, red_band_m=red_band_m
+    )
 
 
 @st.cache_data(show_spinner=False, max_entries=8, ttl=1800)
@@ -27,7 +29,11 @@ def cached_detection(output_dir, fingerprint, area_id):
 
 
 @st.cache_data(show_spinner=False, max_entries=24, ttl=1800)
-def cached_detection_analysis(output_dir, detection_fingerprint, area_id, data_fingerprint, band_m, analysis_crs):
+def cached_detection_analysis(
+    output_dir, detection_fingerprint, area_id, data_fingerprint, band_m, analysis_crs, red_band_m=None
+):
     detection = cached_detection(output_dir, detection_fingerprint, area_id)
     data = cached_load(area_id, data_fingerprint)
-    return analyze_proximity(detection["buildings"], data["rivers"], band_m=band_m, analysis_crs=analysis_crs)
+    return analyze_proximity(
+        detection["buildings"], data["rivers"], band_m=band_m, analysis_crs=analysis_crs, red_band_m=red_band_m
+    )

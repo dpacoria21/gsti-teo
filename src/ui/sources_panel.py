@@ -128,9 +128,9 @@ def render_sources_panel(selection: SidebarSelection, view: AnalysisView) -> Non
                         st.caption(" · ".join(str(item) for item in value) if isinstance(value, list) else str(value))
         st.markdown("### Alcance de esta primera versión")
         st.markdown("""
-    - **Qué se calcula:** la menor distancia entre cada contorno de edificación y los cauces incluidos. La pertenencia a la banda usa la distancia sin redondear.
-    - **Qué significa el límite:** una banda analítica configurable. No equivale a una distancia segura, una zona de peligro ni una faja marginal oficial.
-    - **Qué queda sin evaluar:** peligro y faja marginal, porque aún no se incorporaron capas oficiales verificadas. Tampoco se identifica el uso residencial o la ocupación de cada edificio.
+    - **Qué se calcula:** la menor distancia entre cada contorno de edificación y los cauces incluidos. El semáforo usa la distancia sin redondear: rojo hasta el primer límite, amarillo hasta ese límite más el ancho amarillo, y verde más allá.
+    - **Qué significan los colores:** proximidad configurable, con límites elegidos para explorar el sector. Verde no significa seguridad ni autorización para construir; rojo tampoco demuestra por sí solo peligro real.
+    - **Qué queda sin evaluar:** peligro, faja marginal y autorización de construcción, porque aún no se incorporaron capas oficiales verificadas ni estudios hidráulicos. Tampoco se identifica el uso residencial o la ocupación de cada edificio.
     - **Fechas y exactitud:** la fecha de descarga o publicación no acredita la fecha de captura de la imagen. Los decimales del cálculo no mejoran la exactitud de sus fuentes.
     - **Cobertura:** el análisis se limita al sector preparado y a los cauces disponibles. La arquitectura permite añadir áreas con sus propios datos y coordenadas métricas.
     """)

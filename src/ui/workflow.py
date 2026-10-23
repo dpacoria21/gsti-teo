@@ -14,12 +14,8 @@ from src.ui.models import AnalysisView, SidebarSelection
 
 
 def applied_band(selection: SidebarSelection) -> float:
-    """Apply new controls only on Analyze, an area change, or a mode change."""
-    previous = st.session_state.get("applied_analysis")
-    identity = (selection.area_id, selection.building_mode)
-    if previous is None or len(previous) != 3 or previous[:2] != identity or selection.analyze:
-        st.session_state.applied_analysis = (*identity, selection.chosen_band)
-    return st.session_state.applied_analysis[2]
+    """Apply spatial thresholds on each rerun; inference remains an explicit action."""
+    return selection.chosen_band
 
 
 def execute_requested_detection(selection: SidebarSelection, band_m: float) -> tuple[SidebarSelection, float, bool]:
@@ -29,7 +25,6 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
     threshold = selection.threshold
     image_manifest_path = selection.image_manifest_path
     area_id = selection.area_id
-    building_mode = selection.building_mode
     chosen_band = selection.chosen_band
     detection_failed = False
     if use_detection and detect_clicked:
@@ -60,7 +55,6 @@ def execute_requested_detection(selection: SidebarSelection, band_m: float) -> t
                 selection = replace(selection, detection_dir=detection_dir)
                 progress.progress(1.0)
                 status.update(label="Detección completada · resultados guardados", state="complete", expanded=False)
-                st.session_state.applied_analysis = (area_id, building_mode, chosen_band)
                 band_m = chosen_band
             except Exception as error:
                 detection_failed = True
@@ -123,10 +117,15 @@ def prepare_analysis(selection: SidebarSelection, band_m: float, detection_faile
                     fingerprint,
                     float(band_m),
                     area_config.get("analysis_crs", "EPSG:32719"),
+                    red_band_m=selection.chosen_red_band,
                 )
             else:
                 analysis = cached_analysis(
-                    active_area, fingerprint, float(band_m), area_config.get("analysis_crs", "EPSG:32719")
+                    active_area,
+                    fingerprint,
+                    float(band_m),
+                    area_config.get("analysis_crs", "EPSG:32719"),
+                    red_band_m=selection.chosen_red_band,
                 )
         metadata = (
             detection_metadata(payload.get("metadata", {}), detection) if detection else payload.get("metadata", {})
@@ -149,4 +148,5 @@ def prepare_analysis(selection: SidebarSelection, band_m: float, detection_faile
         detection_version=detection_version,
         detection_failed=detection_failed,
         description=describe_detection(detection["manifest"]) if detection else None,
+        red_band_m=selection.chosen_red_band,
     )

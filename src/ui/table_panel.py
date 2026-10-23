@@ -13,6 +13,7 @@ def render_table_panel(selection: SidebarSelection, view: AnalysisView) -> None:
     detection = view.detection
     active_area = selection.area_id
     band_m = view.band_m
+    red_band_m = view.red_band_m
     analysis = view.analysis
     metadata = view.metadata
     st.markdown("### Resultados por edificación")
@@ -22,27 +23,26 @@ def render_table_panel(selection: SidebarSelection, view: AnalysisView) -> None:
     filter_col, search_col = st.columns([1, 2])
     with filter_col:
         table_filter = st.selectbox(
-            "Mostrar", ["Todas las edificaciones", "Dentro de la banda", "Fuera de la banda", "Sin evaluación"]
+            "Mostrar", ["Todas las edificaciones", "Rojo", "Amarillo", "Verde", "Sin evaluación"]
         )
     with search_col:
         query = st.text_input("Buscar identificador", placeholder="Escribe parte del identificador…")
     filtered = summary.copy()
-    if table_filter == "Dentro de la banda":
-        filtered = filtered.loc[filtered["within_band"].fillna(False)]
-    elif table_filter == "Fuera de la banda":
-        filtered = filtered.loc[filtered["within_band"].eq(False).fillna(False)]
+    color_filters = {"Rojo": "red", "Amarillo": "yellow", "Verde": "green"}
+    if table_filter in color_filters:
+        filtered = filtered.loc[filtered["proximity_class"].eq(color_filters[table_filter]).fillna(False)]
     elif table_filter == "Sin evaluación":
         filtered = filtered.loc[filtered["distance_m"].isna()]
     if query:
         filtered = filtered.loc[filtered["building_id"].astype(str).str.contains(query, case=False, regex=False)]
-    table_columns = ["building_id", "distance_m", "within_band", "nearest_river_name"]
+    table_columns = ["building_id", "distance_m", "proximity_label", "nearest_river_name"]
     if detection and "confidence" in filtered.columns:
         table_columns.append("confidence")
     visible = pd.DataFrame(filtered[table_columns]).rename(
         columns={
             "building_id": "Edificación",
             "distance_m": "Distancia al eje (m)",
-            "within_band": "Dentro de banda",
+            "proximity_label": "Semáforo de proximidad",
             "nearest_river_name": "Cauce más cercano",
             "confidence": "Puntuación del detector",
         }
@@ -54,7 +54,6 @@ def render_table_panel(selection: SidebarSelection, view: AnalysisView) -> None:
         height=430,
         column_config={
             "Distancia al eje (m)": st.column_config.NumberColumn(format="%.1f m"),
-            "Dentro de banda": st.column_config.CheckboxColumn(),
             "Puntuación del detector": st.column_config.NumberColumn(format="%.3f"),
         },
     )
@@ -63,7 +62,9 @@ def render_table_panel(selection: SidebarSelection, view: AnalysisView) -> None:
     )
     st.markdown("### Descargar el análisis")
     download_cols = st.columns(3)
-    basename = f"{active_area}_{'deteccion_' if detection else ''}banda_{band_m}m"
+    basename = (
+        f"{active_area}_{'deteccion_' if detection else ''}semaforo_rojo_{red_band_m:g}m_amarillo_hasta_{band_m:g}m"
+    )
     with download_cols[0]:
         st.download_button(
             "Descargar tabla CSV",

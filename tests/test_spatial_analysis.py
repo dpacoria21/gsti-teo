@@ -11,6 +11,7 @@ from shapely.geometry import LineString, Polygon, box
 
 from src.data_loader import load_study_area
 from src.export import analysis_bundle, csv_bytes, geojson_bytes
+from src.proximity import PROXIMITY_LABELS, classify_distances
 from src.spatial_analysis import analyze_proximity
 
 CRS = "EPSG:32719"
@@ -155,6 +156,76 @@ def test_empty_river_coverage_does_not_mean_outside_band():
         analyze_proximity(buildings(), rivers().iloc[:0])
 
 
+def test_traffic_light_exact_boundaries_and_geographic_round_trip():
+    distances = [0, 25, 25.001, 50, 50.001]
+    shapes = [box(X + 90 - distance, Y, X + 100 - distance, Y + 10) for distance in distances]
+    result = analyze_proximity(buildings(shapes).to_crs(4326), rivers().to_crs(4326), 50, CRS, red_band_m=25)
+    summary = result["summary"]
+    assert summary.distance_m.tolist() == pytest.approx(distances, abs=1e-6)
+    assert summary.proximity_class.tolist() == ["red", "red", "yellow", "yellow", "green"]
+    assert summary.within_band.tolist() == [True, True, True, True, False]
+    assert summary.proximity_label.tolist() == [PROXIMITY_LABELS[value] for value in summary.proximity_class]
+    assert summary.status.equals(summary.proximity_label)
+    assert summary.red_band_m.eq(25).all()
+    assert summary.yellow_width_m.eq(25).all()
+    assert summary.hazard_status.eq("No evaluado").all()
+    assert summary.margin_status.eq("No evaluado").all()
+    assert summary.construction_status.eq("No evaluado").all()
+    assert result["relations"].proximity_class.tolist() == summary.proximity_class.tolist()
+
+
+def test_traffic_light_uses_nearest_river_and_nonoverlapping_global_zones():
+    river_shapes = [
+        LineString([(X + 100, Y - 100), (X + 100, Y + 100)]),
+        LineString([(X + 40, Y - 100), (X + 40, Y + 100)]),
+    ]
+    result = analyze_proximity(buildings(), rivers(river_shapes), band_m=100, red_band_m=25)
+    assert result["summary"].proximity_class.tolist() == ["red"]
+    assert result["summary"].nearest_river_id.tolist() == ["r1"]
+    assert result["relations"].proximity_class.tolist() == ["yellow", "red"]
+    zones = result["traffic_zones"].to_crs(CRS).set_index("proximity_class")
+    red, yellow = zones.loc["red"].geometry, zones.loc["yellow"].geometry
+    assert red.intersection(yellow).area < 1e-6
+    expected_red = rivers(river_shapes).geometry.buffer(25).union_all()
+    expected_outer = rivers(river_shapes).geometry.buffer(100).union_all()
+    assert red.symmetric_difference(expected_red).area < 1e-5
+    assert red.union(yellow).symmetric_difference(expected_outer).area < 1e-5
+
+
+def test_changing_yellow_width_preserves_distance_and_red_class():
+    shapes = [box(X + 65, Y, X + 75, Y + 10), box(X + 10, Y, X + 20, Y + 10)]
+    narrow = analyze_proximity(buildings(shapes), rivers(), band_m=50, red_band_m=25)
+    wide = analyze_proximity(buildings(shapes), rivers(), band_m=100, red_band_m=25)
+    assert narrow["summary"].distance_m.equals(wide["summary"].distance_m)
+    assert narrow["relations"].distance_m.equals(wide["relations"].distance_m)
+    assert narrow["summary"].proximity_class.tolist() == ["red", "green"]
+    assert wide["summary"].proximity_class.tolist() == ["red", "yellow"]
+    assert narrow["summary"].yellow_width_m.eq(25).all()
+    assert wide["summary"].yellow_width_m.eq(75).all()
+
+
+@pytest.mark.parametrize(
+    "red,outer",
+    [(-1, 50), (50, 50), (60, 50), (0, 0), (25, 1001), (float("nan"), 50), (float("inf"), 50), (True, 50), ("25", 50)],
+)
+def test_traffic_light_invalid_thresholds_rejected(red, outer):
+    with pytest.raises(ValueError):
+        analyze_proximity(buildings(), rivers(), band_m=outer, red_band_m=red)
+
+
+@pytest.mark.parametrize("distance", [float("nan"), float("inf"), -1])
+def test_unknown_or_invalid_distance_never_classified_green(distance):
+    with pytest.raises(ValueError, match="distancias"):
+        classify_distances([distance], 25, 50)
+
+
+def test_zero_red_line_buffer_still_classifies_intersections_red():
+    layer = buildings([box(X + 95, Y, X + 105, Y + 10)])
+    result = analyze_proximity(layer, rivers(), band_m=10, red_band_m=0)
+    assert result["summary"].proximity_class.tolist() == ["red"]
+    assert result["traffic_zones"].proximity_class.tolist() == ["yellow"]
+
+
 def test_export_preserves_values_sources_geometries_and_all_relations():
     result = analyze_proximity(buildings(), rivers(), band_m=80)
     source_metadata = {"sources": [{"source_id": "test_buildings", "observed_at": None}]}
@@ -190,6 +261,59 @@ def test_bundle_rejects_inconsistent_band_parameter():
     result = analyze_proximity(buildings(), rivers(), 25)
     with pytest.raises(ValueError, match="banda"):
         analysis_bundle(result["summary"], result["relations"], {}, 50)
+
+
+def test_traffic_light_csv_geojson_zip_share_classes_and_parameters():
+    shapes = [box(X + 65, Y, X + 75, Y + 10), box(X + 40, Y, X + 50, Y + 10), box(X, Y, X + 10, Y + 10)]
+    result = analyze_proximity(buildings(shapes), rivers(), 50, red_band_m=25)
+    standalone_csv = pd.read_csv(BytesIO(csv_bytes(result["summary"])))
+    standalone_features = json.loads(geojson_bytes(result["summary"]))["features"]
+    blob = analysis_bundle(result["summary"], result["relations"], {}, 50)
+    with ZipFile(BytesIO(blob)) as archive:
+        bundled_csv = pd.read_csv(BytesIO(archive.read("resumen_edificaciones.csv")))
+        bundled_detail = pd.read_csv(BytesIO(archive.read("relaciones_cauces.csv")))
+        bundled_features = json.loads(archive.read("edificaciones.geojson"))["features"]
+        manifest = json.loads(archive.read("metadatos.json"))
+        readme = archive.read("LEEME.txt").decode("utf-8")
+    assert standalone_csv.equals(bundled_csv)
+    assert standalone_features == bundled_features
+    assert bundled_csv.proximity_class.tolist() == bundled_detail.proximity_class.tolist() == ["red", "yellow", "green"]
+    assert [item["properties"]["proximity_class"] for item in bundled_features] == ["red", "yellow", "green"]
+    assert manifest["schema_version"] == 2
+    assert manifest["proximity_parameters"] == {"red_band_m": 25, "yellow_width_m": 25, "band_m": 50}
+    assert manifest["proximity_counts"] == {"red": 1, "yellow": 1, "green": 1}
+    assert manifest["relation_proximity_counts"] == manifest["proximity_counts"]
+    assert manifest["construction_status"] == "No evaluado"
+    assert "Verde NO significa seguro ni permiso de construir" in readme
+    assert any("Verde NO significa seguro ni permiso de construir" in value for value in manifest["limitations"])
+
+
+def test_bundle_rejects_different_valid_red_thresholds_between_summary_and_relations():
+    first = analyze_proximity(buildings(), rivers(), 100, red_band_m=25)
+    second = analyze_proximity(buildings(), rivers(), 100, red_band_m=30)
+    with pytest.raises(ValueError, match="resumen y del detalle"):
+        analysis_bundle(first["summary"], second["relations"], {}, 100)
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("yellow_width_m", 999),
+        ("proximity_class", "red"),
+        ("proximity_label", "Seguro"),
+        ("within_band", False),
+        ("distance_m", float("nan")),
+    ],
+)
+def test_stale_or_incomplete_traffic_results_rejected_before_export(field, value):
+    result = analyze_proximity(buildings(), rivers(), 100, red_band_m=25)
+    result["summary"][field] = value
+    with pytest.raises(ValueError):
+        analysis_bundle(result["summary"], result["relations"], {}, 100)
+    with pytest.raises(ValueError):
+        csv_bytes(result["summary"])
+    with pytest.raises(ValueError):
+        geojson_bytes(result["summary"])
 
 
 def test_geojson_needs_declared_crs():

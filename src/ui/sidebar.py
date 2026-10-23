@@ -98,16 +98,46 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
                 "Los nuevos resultados se mantienen separados por sesión; descárgalos antes de cerrar la aplicación."
             )
             st.divider()
-        maximum_band = float(area_lookup[area_id].get("max_band_m", 100))
-        band_options = [value for value in [10, 25, 50, 75, 100] if value <= maximum_band]
-        if not band_options:
-            band_options = [maximum_band]
-        chosen_band = st.select_slider(
-            "Banda de proximidad",
-            options=band_options,
-            value=25 if 25 in band_options else band_options[0],
-            format_func=lambda value: f"{value:g} m",
+        st.markdown("### Semáforo de proximidad")
+        maximum_band = int(area_lookup[area_id].get("max_band_m", 100))
+        if maximum_band < 2:
+            st.error("La cobertura del sector debe admitir al menos 2 metros para configurar ambas zonas.")
+            st.stop()
+        chosen_red_band = st.slider(
+            "Límite de la zona roja (m)",
+            min_value=1,
+            max_value=maximum_band - 1,
+            value=min(25, maximum_band - 1),
+            step=1,
+            key=f"red_band_{area_id}",
+            help="Distancia desde el contorno al cauce más cercano. Hasta este límite la edificación se colorea de rojo.",
         )
+        maximum_width = maximum_band - chosen_red_band
+        width_key = f"yellow_width_{area_id}"
+        if width_key in st.session_state:
+            st.session_state[width_key] = max(1, min(int(st.session_state[width_key]), maximum_width))
+        yellow_width = (
+            st.slider(
+                "Ancho de la zona amarilla (m)",
+                min_value=1,
+                max_value=maximum_width,
+                value=min(25, maximum_width),
+                step=1,
+                key=width_key,
+                disabled=maximum_width == 1,
+                help="Metros adicionales a partir del límite rojo, a cada lado del cauce. El exterior es rojo + ancho amarillo.",
+            )
+            if maximum_width > 1
+            else 1
+        )
+        if maximum_width == 1:
+            st.caption("Ancho de la zona amarilla: 1 m (máximo disponible en este sector).")
+        chosen_band = float(chosen_red_band + yellow_width)
+        st.caption(
+            f"Rojo: hasta {chosen_red_band:g} m · Amarillo: más de {chosen_red_band:g} y hasta {chosen_band:g} m · "
+            f"Verde: más de {chosen_band:g} m."
+        )
+        st.caption("Los colores se actualizan al mover los controles; no es necesario volver a ejecutar el detector.")
         st.caption("Distancia mínima desde el contorno de cada edificación al eje cartografiado de la torrentera.")
         analyze = st.button("Analizar sector", type="primary", width="stretch")
         st.divider()
@@ -120,7 +150,7 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         show_imagery = st.toggle("Mostrar imagen analizada", value=True) if use_detection else False
         st.caption("Abre el control de capas del mapa para mostrar u ocultar cada capa.")
         st.markdown(
-            '<div class="note"><strong>Cómo leer el resultado</strong><br>La banda es un criterio de proximidad. No representa una faja marginal oficial ni determina si una construcción es segura.</div>',
+            '<div class="note"><strong>Cómo leer el semáforo</strong><br>Los colores indican proximidad. Verde no significa que sea seguro ni que se pueda construir. El peligro, la faja marginal y la autorización de construcción no están evaluados.</div>',
             unsafe_allow_html=True,
         )
 
@@ -137,6 +167,7 @@ def render_sidebar(areas: list[dict]) -> SidebarSelection:
         threshold=threshold,
         detect_clicked=detect_clicked,
         chosen_band=chosen_band,
+        chosen_red_band=float(chosen_red_band),
         analyze=analyze,
         basemap=basemap,
         show_imagery=show_imagery,

@@ -1,6 +1,5 @@
 """Render provenance notices and the overview metrics."""
 
-import pandas as pd
 import streamlit as st
 
 from src.application.provenance import approximate_georeferencing
@@ -13,8 +12,8 @@ def render_overview(selection: SidebarSelection, view: AnalysisView) -> None:
     detection_failed = view.detection_failed
     summary = view.summary
     threshold = selection.threshold
-    chosen_band = selection.chosen_band
     band_m = view.band_m
+    red_band_m = view.red_band_m
     area_config = selection.area_config
     active_area = selection.area_id
     if detection:
@@ -42,7 +41,7 @@ def render_overview(selection: SidebarSelection, view: AnalysisView) -> None:
             )
         if applied_threshold is not None:
             st.caption(
-                f"Puntuación mínima aplicada: {float(applied_threshold):.2f}. Cambiarla requiere volver a pulsar «Detectar en esta imagen»; cambiar la banda sólo recalcula distancias."
+                f"Puntuación mínima aplicada: {float(applied_threshold):.2f}. Cambiarla requiere volver a pulsar «Detectar en esta imagen»; ajustar el semáforo reclasifica las distancias sin repetir la IA."
             )
             if abs(float(applied_threshold) - threshold) > 1e-6:
                 st.info(
@@ -57,20 +56,21 @@ def render_overview(selection: SidebarSelection, view: AnalysisView) -> None:
             "Modo inventario: se utilizan contornos existentes de Microsoft. Este análisis no ejecuta detección sobre una imagen."
         )
 
-    if chosen_band != band_m:
-        st.info(
-            f"Se muestran los resultados de {band_m} m. Pulsa «Analizar sector» para aplicar la banda de {chosen_band} m."
-        )
-
-    inside = int(summary["within_band"].fillna(False).sum())
-    evaluated = int(summary["distance_m"].notna().sum())
-    outside = evaluated - inside
-    minimum = summary["distance_m"].min() if len(summary) else float("nan")
     metrics = st.columns(4)
-    metrics[0].metric("Contornos detectados" if detection else "Edificaciones analizadas", number(evaluated))
-    metrics[1].metric(f"Dentro de la banda · {band_m} m", number(inside))
-    metrics[2].metric("Fuera de la banda", number(outside))
-    metrics[3].metric("Distancia mínima al eje", f"{minimum:.1f} m" if pd.notna(minimum) else "Sin datos")
+    metrics[0].metric("Contornos detectados" if detection else "Edificaciones analizadas", number(len(summary)))
+    metrics[1].metric(f"🔴 Rojo · 0–{red_band_m:g} m", number(view.color_count("red")))
+    metrics[2].metric(f"🟡 Amarillo · >{red_band_m:g}–{band_m:g} m", number(view.color_count("yellow")))
+    metrics[3].metric(f"🟢 Verde · >{band_m:g} m", number(view.color_count("green")))
     st.caption(
-        f"{area_config.get('name', active_area)} · Banda aplicada: {band_m} m · {number(len(summary))} contornos en el área de estudio"
+        f"{area_config.get('name', active_area)} · Límite rojo: {red_band_m:g} m · "
+        f"Ancho amarillo: {view.yellow_width_m:g} m · Distancias mínimas desde el contorno al eje de la torrentera"
+    )
+    unknown_count = len(summary) - view.evaluated_count
+    if unknown_count:
+        st.caption(
+            f"Sin evaluación: {number(unknown_count)} contornos; aparecen en gris y no reciben un color del semáforo."
+        )
+    st.info(
+        "Semáforo de proximidad con límites ajustables. No determina peligro ni permiso para construir; "
+        "verde no implica seguridad. Para esas decisiones se requieren estudios y delimitaciones oficiales."
     )

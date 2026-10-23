@@ -9,7 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_folium import st_folium
 
-from src.map_view import build_map
+from src.map_view import PROXIMITY_NOTICE, build_map
 from src.ui.models import AnalysisView, SidebarSelection
 
 
@@ -23,15 +23,26 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
     inside = view.inside_count
     evaluated = view.evaluated_count
     band_m = view.band_m
+    red_band_m = view.red_band_m
     payload = view.payload
     analysis = view.analysis
     basemap = selection.basemap
     show_imagery = selection.show_imagery
     image_overlay = view.image_overlay
     detection_fingerprint = view.detection_version
+    st.markdown("**Semáforo de proximidad**")
     st.markdown(
-        '<div class="legend"><span><i class="dot" style="background:#07838a"></i>Eje de la torrentera</span><span><i class="dot" style="background:#d79024"></i>Edificación dentro de la banda</span><span><i class="dot" style="background:#66788b"></i>Edificación fuera de la banda</span><span><i class="dot" style="background:#f0d3a0"></i>Banda analítica</span></div>',
+        '<div class="legend">'
+        f'<span><i class="dot" style="background:#dc2626"></i>Rojo: 0 a {red_band_m:g} m</span>'
+        f'<span><i class="dot" style="background:#eab308"></i>Amarillo: más de {red_band_m:g} a {band_m:g} m</span>'
+        f'<span><i class="dot" style="background:#16a34a"></i>Verde: más de {band_m:g} m</span>'
+        '<span><i class="dot" style="background:#66788b"></i>Sin evaluación</span>'
+        '<span><i class="dot" style="background:#07838a"></i>Eje de la torrentera</span></div>',
         unsafe_allow_html=True,
+    )
+    st.caption(
+        f"Ancho amarillo: {view.yellow_width_m:g} m, desde el límite rojo hasta {band_m:g} m del eje. "
+        "Las zonas transparentes muestran los dos intervalos sobre el terreno."
     )
     map_column, detail_column = st.columns([3.65, 1], gap="large")
     with detail_column:
@@ -48,8 +59,13 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
         if selected_id:
             selected = summary.loc[summary["building_id"].astype(str) == selected_id].iloc[0]
             distance = selected["distance_m"]
-            within = bool(selected["within_band"]) if pd.notna(selected["within_band"]) else None
-            label = "Dentro de la banda" if within else "Fuera de la banda" if within is False else "Sin evaluación"
+            classification = selected.get("proximity_class")
+            if not isinstance(classification, str):
+                classification = "unknown"
+            label = selected.get("proximity_label")
+            if pd.isna(label):
+                label = "Sin evaluación"
+            chip_class = f"chip-{classification}" if classification in ("red", "yellow", "green") else ""
             st.markdown(
                 f'<div class="distance">{distance:.1f} m</div>'
                 if pd.notna(distance)
@@ -57,7 +73,8 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
                 unsafe_allow_html=True,
             )
             st.caption("Distancia mínima al eje del cauce")
-            st.markdown(f'<span class="chip {"chip-amber" if within else ""}">{label}</span>', unsafe_allow_html=True)
+            st.markdown(f'<span class="chip {chip_class}">{html.escape(str(label))}</span>', unsafe_allow_html=True)
+            st.caption(PROXIMITY_NOTICE)
             st.markdown(
                 f'<div class="fact">Cauce más cercano</div><div class="fact-value">{html.escape(str(selected.get("nearest_river_name", "Cauce cartografiado")))}</div>',
                 unsafe_allow_html=True,
@@ -91,8 +108,10 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
             st.markdown("**Lectura del sector**")
             ratio = 100 * inside / evaluated if evaluated else 0
             st.write(
-                f"El {ratio:.1f} % de las edificaciones evaluadas se encuentra a {band_m} m o menos del eje cartografiado."
+                f"El {ratio:.1f} % de las edificaciones evaluadas está en rojo o amarillo: "
+                f"a {band_m:g} m o menos del eje cartografiado."
             )
+            st.caption(PROXIMITY_NOTICE)
             st.caption(
                 "Los contornos pueden representar viviendas, comercios u otros usos. El conjunto no identifica su ocupación actual."
             )
@@ -107,6 +126,8 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
             basemap=basemap,
             image_overlay=image_overlay,
             buildings_label="Edificaciones · detector preentrenado" if detection else "Edificaciones · Microsoft",
+            traffic_zones=analysis.get("traffic_zones"),
+            red_band_m=red_band_m,
         )
         if os.environ.get("CHULLO_DEPLOYMENT") == "cloud":
             # Embed inline to avoid the observed Cloud component-loading timeout.
@@ -119,7 +140,7 @@ def render_map_panel(selection: SidebarSelection, view: AnalysisView) -> None:
                 height=590,
                 use_container_width=True,
                 returned_objects=[],
-                key=f"map_{active_area}_{band_m}_{selected_id}_{basemap}_{show_imagery}_{hashlib.sha256(map_identity.encode()).hexdigest()[:12]}",
+                key=f"map_{active_area}_{red_band_m}_{band_m}_{selected_id}_{basemap}_{show_imagery}_{hashlib.sha256(map_identity.encode()).hexdigest()[:12]}",
             )
         st.caption(
             "Datos vectoriales locales · El mapa base y los recursos del visor requieren Internet. Las distancias se calculan en metros sobre las geometrías originales."

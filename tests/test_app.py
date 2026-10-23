@@ -36,11 +36,16 @@ def widget(elements, label):
     return next(element for element in elements if element.label == label)
 
 
-def assert_rendered(app, total, inside, band):
+def assert_rendered(app, total=237, red=27, yellow=29, outer=50):
     assert not app.exception, [element.value for element in app.exception]
     assert not app.error, [element.value for element in app.error]
-    assert [element.value for element in app.metric[:3]] == [str(total), str(inside), str(total - inside)]
-    assert f"{band} m" in app.metric[1].label
+    assert [element.value for element in app.metric[:4]] == [
+        str(total),
+        str(red),
+        str(yellow),
+        str(total - red - yellow),
+    ]
+    assert f"{outer:g} m" in app.metric[2].label
     assert len(app.dataframe[0].value) == total
 
 
@@ -67,50 +72,54 @@ def saved_app(monkeypatch):
     } == fingerprints, "Viewing saved results must leave the inference run unchanged."
 
 
-def test_band_changes_require_apply_and_mode_changes_keep_correct_results(saved_app):
-    app, _ = saved_app
-    assert_rendered(app, total=237, inside=27, band=25)
+def test_traffic_width_updates_immediately_without_inference_and_mode_changes_keep_results(saved_app):
+    app, downloads = saved_app
+    assert_rendered(app)
+    original = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
 
-    widget(app.select_slider, "Banda de proximidad").set_value(50).run()
-    assert_rendered(app, total=237, inside=27, band=25)
-    assert any("50 m" in element.value for element in app.info)
-    widget(app.button, "Analizar sector").click().run()
-    assert_rendered(app, total=237, inside=56, band=50)
+    widget(app.slider, "Ancho de la zona amarilla (m)").set_value(50).run()
+    assert_rendered(app, yellow=66, outer=75)
+    updated = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    pd.testing.assert_series_equal(original.distance_m, updated.distance_m)
+    assert updated.yellow_width_m.eq(50).all()
 
     mode = widget(app.radio, "Origen de las edificaciones")
     mode.set_value("Inventario Microsoft").run()
-    assert_rendered(app, total=177, inside=60, band=50)
+    assert_rendered(app, total=177, red=31, yellow=48, outer=75)
     assert app.metric[0].label == "Edificaciones analizadas"
     assert any("no ejecuta detección" in element.value for element in app.info)
 
     widget(app.radio, "Origen de las edificaciones").set_value("Detección IA desde imagen").run()
-    assert_rendered(app, total=237, inside=56, band=50)
+    assert_rendered(app, yellow=66, outer=75)
     assert app.metric[0].label == "Contornos detectados"
 
 
 def test_sources_and_full_downloads_follow_applied_analysis_not_table_filter(saved_app):
     app, downloads = saved_app
-    assert_rendered(app, total=237, inside=27, band=25)
+    assert_rendered(app)
     captions = "\n".join(element.value for element in app.caption)
     assert "2026-03-04" in captions
     assert "Google Earth" in captions and "Airbus" in captions
     assert any("Georreferenciación aproximada" in element.value for element in app.warning)
 
     widget(app.slider, "Puntuación mínima del detector").set_value(0.60).run()
-    assert_rendered(app, total=237, inside=27, band=25)
+    assert_rendered(app)
     assert any("0.50" in element.value and "0.60" in element.value for element in app.info)
 
-    widget(app.selectbox, "Mostrar").set_value("Dentro de la banda").run()
+    red_option = next(option for option in widget(app.selectbox, "Mostrar").options if "Rojo" in option)
+    widget(app.selectbox, "Mostrar").set_value(red_option).run()
     assert not app.exception
     assert len(app.dataframe[0].value) == 27
-    assert app.dataframe[0].value["Dentro de banda"].all()
 
     csv_download = downloads["Descargar tabla CSV"]
     table = pd.read_csv(BytesIO(csv_download["data"]))
-    assert csv_download["file_name"] == "chullo_deteccion_banda_25m.csv"
+    assert "25" in csv_download["file_name"] and "50" in csv_download["file_name"]
     assert len(table) == 237
-    assert table["within_band"].sum() == 27
-    assert table["band_m"].eq(25).all()
+    assert table["within_band"].sum() == 56
+    assert table["band_m"].eq(50).all()
+    assert table["red_band_m"].eq(25).all()
+    assert table["yellow_width_m"].eq(25).all()
+    assert table["proximity_class"].value_counts().to_dict() == {"green": 181, "yellow": 29, "red": 27}
     assert table["source_id"].eq("geoai_building_inference").all()
     assert table["observed_at"].eq("2026-03-04").all()
 
@@ -119,12 +128,29 @@ def test_sources_and_full_downloads_follow_applied_analysis_not_table_filter(sav
     assert {feature["properties"]["building_id"] for feature in features} == set(table["building_id"])
     with ZipFile(BytesIO(downloads["Descargar paquete completo"]["data"])) as archive:
         manifest = json.loads(archive.read("metadatos.json"))
-        assert manifest["band_m"] == 25
+        assert manifest["band_m"] == 50
         assert manifest["building_count"] == 237
-        assert manifest["within_band_count"] == 27
+        assert manifest["within_band_count"] == 56
         assert manifest["source_metadata"]["analysis_mode"] == "image_inference"
         assert manifest["analysis_crs"] == ["EPSG:32719"]
         assert len(pd.read_csv(archive.open("resumen_edificaciones.csv"))) == 237
+
+
+def test_red_control_keeps_valid_yellow_width_at_sector_limit(saved_app):
+    app, downloads = saved_app
+    widget(app.slider, "Límite de la zona roja (m)").set_value(50).run()
+    assert_rendered(app, red=56, yellow=37, outer=75)
+    widget(app.slider, "Límite de la zona roja (m)").set_value(99).run()
+    assert_rendered(app, red=111, yellow=0, outer=100)
+    table = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert table.red_band_m.eq(99).all() and table.yellow_width_m.eq(1).all()
+    assert table.band_m.le(100).all()
+    widget(app.slider, "Límite de la zona roja (m)").set_value(25).run()
+    assert not app.exception and not app.error
+    width = widget(app.slider, "Ancho de la zona amarilla (m)").value
+    table = pd.read_csv(BytesIO(downloads["Descargar tabla CSV"]["data"]))
+    assert table.yellow_width_m.eq(width).all()
+    assert table.band_m.eq(25 + width).all()
 
 
 def test_session_run_is_selected_after_success_and_retained_after_failure(saved_app, monkeypatch, tmp_path):
@@ -146,7 +172,7 @@ def test_session_run_is_selected_after_success_and_retained_after_failure(saved_
     monkeypatch.setattr(workflow, "run_detection", completed_worker)
     app.run()
     widget(app.button, "Detectar en esta imagen").click().run()
-    assert_rendered(app, total=237, inside=27, band=25)
+    assert_rendered(app)
     selected = app.session_state[RESULTS_KEY]["chullo:bundled"]
     assert Path(selected) == calls[0]
     assert app.session_state[SESSION_KEY] in Path(selected).parts
@@ -163,7 +189,7 @@ def test_session_run_is_selected_after_success_and_retained_after_failure(saved_
     assert not app.exception
     assert any("Fallo simulado de prueba" in element.value for element in app.error)
     assert app.session_state[RESULTS_KEY]["chullo:bundled"] == selected
-    assert [element.value for element in app.metric[:3]] == ["237", "27", "210"]
+    assert [element.value for element in app.metric[:4]] == ["237", "27", "29", "181"]
     assert any("Última detección completa conservada" in element.value for element in app.success)
 
 
@@ -179,7 +205,7 @@ def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_select
 
     monkeypatch.setattr(map_panel, "st_folium", reject_custom_component)
     app.run()
-    assert_rendered(app, total=237, inside=27, band=25)
+    assert_rendered(app)
     frames = app.get("iframe")
     assert len(frames) == 1
     rendered_map = frames[0].proto.srcdoc
@@ -187,11 +213,13 @@ def test_cloud_map_contains_interactive_geometry_and_preserves_identifier_select
     assert "building_id" in rendered_map and "bindPopup" in rendered_map
     assert "L.control.layers" in rendered_map
     assert "L.imageOverlay" in rendered_map and "data:image/png;base64," in rendered_map
+    assert all(color in rendered_map for color in ("#dc2626", "#eab308", "#16a34a"))
+    assert "proximity_class" in rendered_map
 
     selector = widget(app.selectbox, "Identificador")
     selected_id = selector.options[1]
     selector.set_value(selected_id).run()
-    assert_rendered(app, total=237, inside=27, band=25)
+    assert_rendered(app)
     selected_map = app.get("iframe")[0].proto.srcdoc
     assert selected_id in selected_map
     collections = [

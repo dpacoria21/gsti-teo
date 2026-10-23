@@ -21,6 +21,9 @@ h3 {font-size: 1.05rem !important;}
 .distance {font-size: 2.1rem; font-weight: 700; letter-spacing: -.055rem; color: #182d43; margin-top: 8px;}
 .chip {display: inline-block; padding: 5px 9px; font-size: .72rem; font-weight: 650; border-radius: 5px; background: #e9eff3; color: #40586b;}
 .chip-amber {background: #fff0d4; color: #865707;}
+.chip-red {background: #fee2e2; color: #991b1b;}
+.chip-yellow {background: #fef9c3; color: #854d0e;}
+.chip-green {background: #dcfce7; color: #166534;}
 .note {font-size: .79rem; line-height: 1.55; color: #607582; background: #edf2f5; border-left: 3px solid #b5c6d0; padding: 11px 13px; margin-top: 16px;}
 .foot {font-size: .73rem; color: #738591; padding-top: 15px; border-top: 1px solid #dce4e9; margin-top: 28px;}
 iframe {border-radius: 9px;}

@@ -9,12 +9,17 @@ import numpy as np
 import pandas as pd
 
 from .data_loader import metric_crs, validate_layer, validate_rivers
+from .proximity import BOUNDARY_TOLERANCE_M as BOUNDARY_TOLERANCE_M
+from .proximity import (
+    PROXIMITY_LABELS,
+    classify_distances,
+    validate_thresholds,
+    within_threshold,
+)
 
 DISTANCE_REFERENCES = {"axis": "eje cartografiado", "channel_polygon": "polígono del cauce"}
 INSIDE_STATUS = "Dentro de banda analítica"
 OUTSIDE_STATUS = "Fuera de banda analítica"
-# One micrometre absorbs floating-point noise from CRS round trips at an exact boundary.
-BOUNDARY_TOLERANCE_M = 1e-6
 
 
 def analyze_proximity(
@@ -22,15 +27,21 @@ def analyze_proximity(
     rivers: gpd.GeoDataFrame,
     band_m: float = 25,
     analysis_crs: str = "EPSG:32719",
+    red_band_m: float | None = None,
 ) -> dict:
     """Return summary (one building), relations (all pairs), and display buffers.
 
     Distances use original full geometries after projection. A line represents the
     cartographed axis. A channel polygon measures separation, zero on intersection.
-    Proximity alone does not assess hazard or an official marginal strip.
+    With red_band_m, band_m is the OUTER yellow limit; yellow width is their
+    difference. The nearest river determines the most restrictive proximity class.
+    Proximity alone does not assess hazard, permission to build, or an official
+    marginal strip.
     """
     if isinstance(band_m, bool) or not isinstance(band_m, Real) or not np.isfinite(band_m) or not 0 <= band_m <= 1000:
         raise ValueError("La banda analítica debe ser un número entre 0 y 1000 metros.")
+    if red_band_m is not None:
+        red_band_m, band_m = validate_thresholds(red_band_m, band_m)
     validate_layer(buildings, "Edificaciones", "building_id", {"Polygon", "MultiPolygon"}, ("source_id",))
     validate_rivers(rivers)
     crs = metric_crs(analysis_crs)
@@ -43,12 +54,7 @@ def analyze_proximity(
     )
     if not np.isfinite(distances).all():
         raise ValueError("No se pudieron calcular todas las distancias. Revise las geometrías y el CRS.")
-    within = (distances <= float(band_m)) | np.isclose(
-        distances,
-        float(band_m),
-        atol=BOUNDARY_TOLERANCE_M,
-        rtol=0,
-    )
+    within = within_threshold(distances, float(band_m))
     closest = distances.argmin(axis=1)
     nearest_rivers = projected_rivers.iloc[closest].reset_index(drop=True)
     summary = buildings.to_crs("EPSG:4326").reset_index(drop=True).copy()
@@ -84,9 +90,36 @@ def analyze_proximity(
             )
         )
     relations = pd.concat(detail, ignore_index=True)
+    if red_band_m is not None:
+        for table in (summary, relations):
+            table["proximity_class"] = classify_distances(table["distance_m"], red_band_m, band_m)
+            table["proximity_label"] = table["proximity_class"].map(PROXIMITY_LABELS)
+            table["status"] = table["proximity_label"]
+            table["red_band_m"] = red_band_m
+            table["yellow_width_m"] = band_m - red_band_m
+            table["hazard_status"] = "No evaluado"
+            table["margin_status"] = "No evaluado"
+            table["construction_status"] = "No evaluado"
     bands = projected_rivers.copy()
     bands["distance_reference"] = bands["geometry_role"].map(DISTANCE_REFERENCES)
     bands["band_m"] = float(band_m)
     bands.geometry = bands.geometry.buffer(float(band_m))
     bands = bands.loc[~bands.geometry.is_empty].to_crs("EPSG:4326")
-    return {"summary": summary, "relations": relations, "bands": bands}
+    result = {"summary": summary, "relations": relations, "bands": bands}
+    if red_band_m is not None:
+        # Subtract ALL red buffers, so yellow cannot cover another river's red zone.
+        red_geometry = projected_rivers.geometry.buffer(red_band_m).union_all()
+        outer_geometry = projected_rivers.geometry.buffer(band_m).union_all()
+        zones = gpd.GeoDataFrame(
+            {
+                "proximity_class": ["red", "yellow"],
+                "proximity_label": [PROXIMITY_LABELS["red"], PROXIMITY_LABELS["yellow"]],
+                "red_band_m": [red_band_m, red_band_m],
+                "yellow_width_m": [band_m - red_band_m] * 2,
+                "band_m": [band_m, band_m],
+            },
+            geometry=[red_geometry, outer_geometry.difference(red_geometry)],
+            crs=crs,
+        )
+        result["traffic_zones"] = zones.loc[~zones.geometry.is_empty].to_crs("EPSG:4326")
+    return result

@@ -13,22 +13,40 @@ El detector es **Mask R-CNN ResNet50-FPN**, pesos preentrenados `building_footpr
 1. Elegir **Chullo** en Área de estudio y **Detección IA desde imagen**. Es la selección inicial con los datos incluidos.
 2. La captura original es de 8192 × 6390 píxeles. El GeoTIFF de trabajo es RGB, 2621 × 2045 píxeles a 0,5 m/píxel, EPSG:32719. La resolución de trabajo no acredita resolución nativa del sensor ni exactitud topográfica.
 3. Pulsar **Detectar en esta imagen** para ejecutar de nuevo la red. Se muestra progreso, se guardan máscaras vectorizadas y se calculan sus distancias al cauce cartografiado.
-4. Cambiar la puntuación mínima para ejecutar otra inferencia; cambiar la banda y pulsar **Analizar sector** para recalcular distancias sin ejecutar de nuevo la red.
+4. Cambiar la puntuación mínima para ejecutar otra inferencia. Los controles **Límite de la zona roja (m)** y **Ancho de la zona amarilla (m)** actualizan directamente el semáforo de proximidad sobre los contornos disponibles, sin ejecutar de nuevo la red.
 5. Consultar un contorno, su puntuación y su distancia; descargar CSV, GeoJSON o ZIP desde Resultados y descargas. Fuentes y alcance contiene la procedencia completa de imagen y modelo.
 
 La corrida guardada permite mostrar resultados sin repetir la inferencia; el botón sí ejecuta el modelo. Hay omisiones y falsos positivos visibles: las puntuaciones no son probabilidades calibradas. El ejemplo demuestra un flujo funcional, no precisión validada ni un censo de viviendas.
 
-Con puntuación mínima 0,50, en **Chullo** se obtuvieron **237 contornos en el sector piloto**: **27** a 25 m o menos del eje y **56** a 50 m o menos. La imagen completa abarca un margen más amplio y produjo 1006 contornos; la aplicación selecciona los que intersectan el sector. El motor tardó aproximadamente 13 s en la GPU de esta computadora, además del arranque del proceso. En Mariano Melgar se conservan 180 contornos, 19 dentro de 25 m y 43 dentro de 50 m.
+Como evidencia de la corrida guardada anterior al semáforo, con puntuación mínima 0,50, en **Chullo** se obtuvieron **237 contornos en el sector piloto**: **27** a 25 m o menos del eje y **56** a 50 m o menos. La imagen completa abarca un margen más amplio y produjo 1006 contornos; la aplicación selecciona los que intersectan el sector. El motor tardó aproximadamente 13 s en la GPU de esta computadora, además del arranque del proceso. En Mariano Melgar se conservan 180 contornos, 19 dentro de 25 m y 43 dentro de 50 m. Son conteos históricos acumulados por distancia, no una comprobación de las tres categorías nuevas.
 
 La comprobación de georreferenciación de Chullo obtuvo RMSE interno de 0,227 m en dos puntos reservados del mismo visor. **No es exactitud absoluta** de Google Earth, del eje OSM ni de las distancias; no hay control topográfico independiente. Los detalles están en `data/imagery/chullo/capture_report.json`, `manifest.json`, `georeferencing_points.csv` y `georeferencing_residuals.csv`. Los JPG originales y la evidencia de fecha se conservan en esa carpeta. Es una captura para esta demostración educativa, sujeta a [las condiciones de Google](https://about.google/brand-resource-center/products-and-services/geo-guidelines/); no es un banco de imágenes abierto ni se utilizó para entrenar.
 
 La carga de un GeoTIFF RGB permite analizar otra imagen que intersecte el sector elegido. La aplicación selecciona los contornos que intersectan ese sector y conserva su geometría completa; otros lugares necesitan sus propias capas de cauces. No admite fotos sin coordenadas ni imágenes Sentinel-2 de 10 m para edificios individuales.
 
+## Semáforo de proximidad
+
+La actualización del 22 de octubre añade tres categorías sobre la distancia mínima del contorno completo de cada edificación al cauce cartografiado más cercano. La distancia se calcula en UTM 19S, en metros. El color no procede de una predicción del modelo de IA: el detector genera los contornos y el motor espacial aplica los umbrales elegidos.
+
+| Color | Regla sobre la distancia `d` | Lectura del resultado |
+|---|---|---|
+| Rojo | `d <= límite rojo` | Edificación en la zona de mayor proximidad definida para el análisis. |
+| Amarillo | `límite rojo < d <= límite rojo + ancho amarillo` | Edificación dentro de la franja adicional de proximidad. |
+| Verde | `d > límite rojo + ancho amarillo` | Edificación fuera de las dos franjas elegidas. |
+
+Los valores iniciales son **25 m de límite rojo** y **25 m de ancho amarillo**: la franja amarilla se extiende desde después de 25 m hasta 50 m, inclusive. Su ancho se mide hacia fuera desde el límite rojo, a cada lado del eje. Ambos controles se pueden ajustar; el límite exterior combinado no supera los **100 m** preparados para los sectores actuales. El mapa, los conteos, la tabla y las exportaciones se actualizan al cambiar los controles, sin repetir la inferencia.
+
+**El semáforo expresa proximidad, no peligro real ni autorización para construir. Verde no significa seguro ni edificable.** Para evaluar peligro o aptitud de construcción harían falta, entre otros datos, análisis hidráulicos, información del terreno y capas oficiales pertinentes. La aplicación todavía no incorpora esa evaluación.
+
+El CSV y el GeoJSON incluyen `proximity_class`, `proximity_label`, `red_band_m`, `yellow_width_m` y `band_m`; este último registra el límite exterior combinado. El ZIP incorpora las reglas, los parámetros y los conteos por categoría para interpretar cada exportación. Las distancias sin redondear determinan la categoría; el redondeo es solo de presentación.
+
+La función se documenta aquí para la versión del código actual. **La comprobación alojada del semáforo está pendiente**; la evidencia de nube que sigue corresponde a la versión anterior con una sola banda.
+
 ## Ejecutar en la nube
 
 **[Abrir la aplicación en nube: acceso verificado](https://chullo-arequipa-dpacoria21.streamlit.app/~/+/).** La aplicación es pública y puede usarse sin iniciar sesión. El repositorio continúa privado; sus permisos se administran por separado. Se comprobaron la inferencia, las distancias, las descargas y la visualización del mapa con imagen real, contornos y fichas interactivas. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) sigue detenida en la pantalla de carga en Chrome; por ahora se utiliza la ruta directa indicada.
 
-La inferencia real en el servidor CPU terminó en **125,064 segundos** y produjo **1 004 contornos en la imagen, 235 en el sector piloto y 27 dentro de 25 m**. Al aplicar 50 m, se obtuvieron 55 contornos dentro y 180 fuera, conservando las mismas distancias. Se descargaron y comprobaron el CSV y GeoJSON con 235 registros cada uno y el ZIP con sus cinco archivos. Esta ejecución es distinta de la demo GPU guardada de 237 contornos.
+En la comprobación alojada del 21 de octubre, anterior al semáforo, la inferencia real en el servidor CPU terminó en **125,064 segundos** y produjo **1 004 contornos en la imagen, 235 en el sector piloto y 27 dentro de 25 m**. Al aplicar 50 m, se obtuvieron 55 contornos dentro y 180 fuera, conservando las mismas distancias. Se descargaron y comprobaron el CSV y GeoJSON con 235 registros cada uno y el ZIP con sus cinco archivos. Esta ejecución es distinta de la demo GPU guardada de 237 contornos.
 
 El punto de entrada `cloud/app.py` prepara el modelo verificado y utiliza dependencias CPU de `cloud/requirements.txt` para Python 3.12. PyArrow se fija en 24.0.0 para coincidir con la versión de compatibilidad aplicada por Community Cloud. Se incluye un Dockerfile para servidores Linux. Las instrucciones, requisitos y evidencia separada de las pruebas locales y alojadas están en [docs/DESPLIEGUE_NUBE.md](docs/DESPLIEGUE_NUBE.md).
 
@@ -56,16 +74,16 @@ No hay que descargar nuevamente los datos ni abrir una cuenta. Se recomienda Int
 
 Elegir **Chullo** y **Inventario Microsoft**.
 
-1. Mostrar **Mapa del sector**, con 177 contornos y una banda inicial de 25 m: 31 dentro y 146 fuera.
-2. Explicar el eje turquesa, los contornos ámbar dentro de la banda y los grises fuera. Cada distancia parte del punto más próximo del contorno, no de su centro.
+1. Mostrar **Mapa del sector** y los controles iniciales de 25 m de límite rojo y 25 m de ancho amarillo.
+2. Explicar el eje y los contornos rojos, amarillos y verdes según su proximidad. Cada distancia parte del punto más próximo del contorno, no de su centro.
 3. Pulsar una edificación para ver su ficha. El selector **Identificador** permite acercar el mapa a un objeto concreto.
-4. Cambiar a 50 m y pulsar **Analizar sector**. El conteo dentro de la banda cambia a 60. Cambiar el control sin pulsar el botón conserva el resultado aplicado y muestra un aviso.
+4. Cambiar **Ancho de la zona amarilla (m)** y observar la actualización de la franja, los colores y los conteos. Las distancias de los mismos contornos se conservan y no se ejecuta el detector.
 5. Abrir **Resultados y descargas**, filtrar la tabla y descargar CSV, GeoJSON o ZIP. Los botones de descarga del análisis incluyen las 177 filas; el filtro solo modifica la tabla visible.
-6. Mostrar **Fuentes y alcance** y explicar la procedencia y limitaciones. Volver a 25 m para terminar.
+6. Mostrar **Fuentes y alcance** y explicar la procedencia y limitaciones. Volver a 25 m de límite rojo y 25 m de ancho amarillo para terminar.
 
-**Cómo presentar el resultado:** «El prototipo identifica 31 contornos a 25 metros o menos del eje cartografiado de Chullo en este sector piloto. Es una medida de proximidad que ayuda a priorizar una revisión territorial».
+**Cómo presentar el resultado:** «El prototipo detecta o carga contornos de edificaciones, calcula su distancia a la torrentera y los colorea en tres categorías de proximidad configurables. Eso ayuda a priorizar una revisión territorial; no determina dónde se puede construir».
 
-La banda no es una faja marginal legal ni una predicción de inundación. Fuera de la banda no significa seguro. Un contorno puede agrupar varias cubiertas o corresponder a otro uso; 177 contornos no equivalen a 177 viviendas verificadas. **En el modo inventario** no se ejecuta un detector: la IA se encuentra en el otro modo.
+Las franjas no son una faja marginal legal ni una predicción de inundación. Verde no significa seguro. Un contorno puede agrupar varias cubiertas o corresponder a otro uso; los 177 contornos del inventario no equivalen a 177 viviendas verificadas. **En el modo inventario** no se ejecuta un detector: la IA se encuentra en el otro modo.
 
 ## Datos y resultados reproducibles de Chullo
 
@@ -78,7 +96,9 @@ La banda no es una faja marginal legal ni una predicción de inundación. Fuera 
 | Mapa y exportación | Coordenadas WGS 84, EPSG:4326. |
 | Peligro / faja marginal | No evaluados: no se incorporaron polígonos oficiales de estas zonas. |
 
-| Banda analítica | Contornos dentro | Contornos fuera |
+La siguiente tabla conserva la validación histórica del inventario por una sola banda; no presenta conteos nuevos del semáforo.
+
+| Banda analítica histórica | Contornos dentro | Contornos fuera |
 |---|---:|---:|
 | 10 m | 21 | 156 |
 | 25 m | 31 | 146 |
@@ -99,9 +119,9 @@ flowchart LR
     V --> L
     D[GeoJSON locales + fuentes JSON] --> L[Validación de capas]
     L --> M[Motor espacial en Python\nproyección UTM y distancias]
-    U[Usuario: sector y banda] --> S[Streamlit]
+    U[Usuario: sector, límite rojo y ancho amarillo] --> S[Streamlit]
     S --> M
-    M --> R[Resultados por contorno\ny por relación con cauce]
+    M --> R[Distancias y semáforo de proximidad\npor contorno y relación con cauce]
     R --> F[Mapa Folium y tabla]
     R --> E[CSV / GeoJSON / ZIP]
     F --> S
@@ -120,7 +140,7 @@ En la ejecución local, el procesamiento ocurre en la laptop y el navegador se c
 | `src/repositories/detections.py` | Lee una corrida completa; verifica estado, SHA256, conteos, coordenadas e intersección con el sector. |
 | `src/repositories/run_publication.py` | Publica una corrida terminada con respaldo y recuperación de los archivos anteriores ante errores de escritura manejados. |
 | `src/data_loader.py` | Carga, validación de geometrías, CRS, IDs y fuentes. |
-| `src/spatial_analysis.py` | Distancias métricas, bandas y relación edificio–cauce. |
+| `src/spatial_analysis.py` | Distancias métricas, franjas del semáforo y relación edificio–cauce. |
 | `src/map_view.py` | Capas, leyenda, selección y fichas del mapa. |
 | `src/export.py` | CSV, GeoJSON y ZIP con procedencia, parámetros y versiones. |
 | `src/inference/` | Motor IA dividido en configuración, modelo, raster, posprocesamiento, procedencia y pipeline. |
@@ -199,7 +219,7 @@ La preparación `--offline` exige los originales en `data/raw`; están disponibl
 
 Las pruebas de interfaz usan la corrida guardada, bloquean el lanzamiento de procesos IA y verifican que no se modifique. Las del motor comprueban raster, parámetros, máscaras y georreferencia sin descargar pesos ni ejecutar toda la red. La comprobación de inferencia real se realiza aparte con el comando indicado; vuelve a procesar la imagen y sustituye la corrida seleccionada al completarse.
 
-Chullo IA conserva 237 contornos, 27 dentro de 25 m y 56 dentro de 50 m. Mariano Melgar IA: 180 contornos, 19 dentro de 25 m y 43 dentro de 50 m. El modo inventario de Chullo conserva 177 contornos, 31 dentro de 25 m y 60 dentro de 50 m. Tras reorganizar el motor, una nueva ejecución real en GPU generó un GeoJSON y una vista previa idénticos byte por byte a la demostración original. Evidencia local en `outputs/refactor/comparacion_ia.json`; detalle de verificaciones en `docs/VALIDACION_IA.md`.
+La validación anterior al semáforo conserva estos conteos acumulados: Chullo IA, 237 contornos, 27 dentro de 25 m y 56 dentro de 50 m; Mariano Melgar IA, 180 contornos, 19 dentro de 25 m y 43 dentro de 50 m; inventario de Chullo, 177 contornos, 31 dentro de 25 m y 60 dentro de 50 m. Tras reorganizar el motor, una nueva ejecución real en GPU generó un GeoJSON y una vista previa idénticos byte por byte a la demostración original. Evidencia local en `outputs/refactor/comparacion_ia.json`; detalle de verificaciones en `docs/VALIDACION_IA.md`. Esta evidencia no sustituye las comprobaciones de límites y exportaciones del nuevo semáforo.
 
 ## Cuando vuelva a responder el servicio IGN de Chullo
 

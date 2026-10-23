@@ -8,6 +8,18 @@ El despliegue usa el mismo código modular, GeoTIFF y modelo verificado del prot
 
 La ruta directa permite usar el detector, las distancias, las exportaciones y el mapa interactivo con la imagen real. La [URL principal de Community Cloud](https://chullo-arequipa-dpacoria21.streamlit.app/) permanece en la pantalla de carga en Chrome; su causa no está confirmada. Se utiliza la ruta directa como acceso verificado mientras se resuelve esa limitación de la página principal.
 
+## Actualización del semáforo — 22 de octubre de 2026
+
+El código incorpora un semáforo de proximidad con dos controles: **Límite de la zona roja (m)**, inicialmente 25 m, y **Ancho de la zona amarilla (m)**, inicialmente 25 m. El límite exterior es la suma de ambos valores y no supera los 100 m preparados para los sectores actuales. Modificarlos actualiza los colores, conteos, tabla y exportaciones sin volver a ejecutar la IA.
+
+Se utiliza la distancia mínima, sin redondear, entre el contorno completo de la edificación y el cauce cartografiado más cercano, calculada en UTM 19S. Rojo corresponde a `d <= límite rojo`; amarillo a `límite rojo < d <= límite rojo + ancho amarillo`; verde a distancias mayores que el límite exterior. La franja amarilla se mide desde el límite rojo hacia fuera, a cada lado del eje.
+
+El color expresa proximidad. **No clasifica peligro real ni autoriza construir; verde no significa seguro ni edificable.** Una evaluación de esos aspectos necesita análisis hidráulico, datos del terreno y capas oficiales pertinentes que el prototipo no incorpora.
+
+El CSV y GeoJSON registran `proximity_class`, `proximity_label`, `red_band_m`, `yellow_width_m` y `band_m` (límite exterior combinado). El ZIP conserva además reglas, parámetros y conteos por categoría. Así se puede interpretar un archivo aunque después se cambien los controles.
+
+**La comprobación alojada de esta actualización está pendiente.** Las pruebas y capturas del 21 de octubre documentadas abajo corresponden a la interfaz anterior de una sola banda; no acreditan el despliegue del semáforo ni sus conteos. Al publicar esta actualización, seguir el procedimiento de reinicio y la comprobación funcional indicados en este documento.
+
 ## Streamlit Community Cloud
 
 La aplicación se desplegó desde la cuenta conectada a GitHub con estos valores:
@@ -77,13 +89,15 @@ Ejecuta la interfaz, solicita una detección real, valida distancias y exportaci
 
 1. Abrir la URL HTTPS, comprobar que el mapa muestra la demo y las fuentes.
 2. Pulsar **Detectar en esta imagen** con Chullo y esperar a **Detección completada**. Verificar en la procedencia la nueva ejecución y el dispositivo CPU.
-3. Cambiar la banda de 25 a 50 m, aplicar el análisis y comprobar que las distancias se conservan mientras cambia la clasificación.
-4. Descargar CSV y GeoJSON y verificar que contienen todas las filas del resultado aplicado.
+3. Comprobar los valores iniciales de 25 m de límite rojo y 25 m de ancho amarillo. Cambiar el ancho amarillo y comprobar que las distancias y los contornos se conservan mientras se actualizan directamente la franja, los colores y los conteos; no debe iniciarse otra inferencia. Verificar también el ajuste del límite rojo y el máximo exterior de 100 m.
+4. Descargar CSV, GeoJSON y ZIP. Verificar que contienen todas las filas del resultado aplicado, los parámetros elegidos y las categorías correspondientes. Comprobar los límites exactos con las distancias sin redondear: igualdad con el límite rojo pertenece a rojo; igualdad con el límite exterior pertenece a amarillo. Contrastar los conteos del ZIP con las filas exportadas.
 5. Abrir otra sesión y comprobar que sigue mostrando su propia selección. No debe reemplazarse la demo almacenada.
 
-La evaluación sigue siendo de proximidad al eje cartografiado. El despliegue no incorpora simulación hidráulica, delimitación legal ni una validación independiente de exactitud.
+La evaluación sigue siendo de proximidad al eje cartografiado. El despliegue no incorpora simulación hidráulica, delimitación legal ni una validación independiente de exactitud. El semáforo no permite concluir que una edificación esté en peligro o que un terreno admita construcción.
 
 ## Validación local del entorno cloud — 21 de octubre de 2026
+
+Esta sección conserva evidencia histórica de la versión anterior al semáforo.
 
 La imagen Docker Linux con Python 3.12 y PyTorch CPU completó las 106 pruebas. La comprobación de interfaz con una inferencia real de Chullo, limitada a 2 CPU y 4 GB, terminó en 53,64 segundos y alcanzó un pico de memoria del contenedor de 1 457,5 MiB. Produjo 235 contornos dentro del sector, 27 a 25 m o menos; se verificaron CSV y GeoJSON y la integridad de la demo original.
 
@@ -92,6 +106,8 @@ La demo guardada de GPU conserva 237 contornos. La ejecución CPU no es idéntic
 Las comprobaciones aisladas Linux de Streamlit 1.66.0 y PyArrow 24.0.0 pasaron la resolución de dependencias, `pip check`, importación y asignación Arrow entre hilos, las tres pruebas de interfaz y las exportaciones de la demo. No repitieron la inferencia completa ni modifican las mediciones locales anteriores. La revisión visual alojada se registra por separado a continuación.
 
 ## Validación en Community Cloud — 21 de octubre de 2026
+
+Esta sección conserva evidencia histórica de la versión anterior al semáforo. Los conteos por una sola banda no se presentan como categorías verificadas de la nueva interfaz.
 
 La verificación se realizó desde la ruta directa indicada arriba, usando la imagen incluida de Chullo y una nueva ejecución del detector CPU con puntuación mínima 0,50. El manifiesto registra su finalización en **2026-10-21T16:23:56.531507-05:00** (hora de Lima).
 

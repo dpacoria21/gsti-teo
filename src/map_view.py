@@ -6,7 +6,15 @@ import json
 
 import folium
 
-COLORS = {"river": "#07838a", "inside": "#d79024", "outside": "#66788b", "selected": "#182d43"}
+COLORS = {
+    "river": "#07838a",
+    "red": "#dc2626",
+    "yellow": "#eab308",
+    "green": "#16a34a",
+    "unknown": "#66788b",
+    "selected": "#182d43",
+}
+PROXIMITY_NOTICE = "No determina peligro ni permiso para construir; verde no implica seguridad."
 
 
 def build_map(
@@ -19,6 +27,8 @@ def build_map(
     basemap=True,
     image_overlay=None,
     buildings_label="Edificaciones · Microsoft",
+    traffic_zones=None,
+    red_band_m=25,
 ):
     """Build a map in WGS84 from already evaluated, full-resolution geometries."""
     bounds = area.total_bounds if len(area) else summary.total_bounds
@@ -60,11 +70,34 @@ def build_map(
             interactive=False,
         ).add_to(map_view)
 
-    if len(bands):
+    if traffic_zones is not None and len(traffic_zones):
+        for color, name in (
+            ("red", f"Zona roja · 0 a {red_band_m:g} m"),
+            ("yellow", f"Zona amarilla · más de {red_band_m:g} a {band_m:g} m"),
+        ):
+            zone = traffic_zones.loc[traffic_zones["proximity_class"].eq(color)]
+            if len(zone):
+                folium.GeoJson(
+                    json.loads(zone[["geometry"]].to_json()),
+                    name=name,
+                    style_function=lambda _, zone_color=COLORS[color]: {
+                        "color": zone_color,
+                        "weight": 0.8,
+                        "fillColor": zone_color,
+                        "fillOpacity": 0.18,
+                    },
+                    interactive=False,
+                ).add_to(map_view)
+    elif len(bands):
         folium.GeoJson(
             json.loads(bands[["geometry"]].to_json()),
-            name=f"Banda analítica · {band_m:g} m",
-            style_function=lambda _: {"color": "#ddb267", "weight": 0.6, "fillColor": "#f0bb62", "fillOpacity": 0.22},
+            name=f"Límite exterior amarillo · {band_m:g} m",
+            style_function=lambda _: {
+                "color": COLORS["yellow"],
+                "weight": 0.6,
+                "fillColor": COLORS["yellow"],
+                "fillOpacity": 0.18,
+            },
             interactive=False,
         ).add_to(map_view)
 
@@ -73,6 +106,8 @@ def build_map(
             "building_id",
             "distance_m",
             "within_band",
+            "proximity_class",
+            "proximity_label",
             "nearest_river_name",
             "distance_reference",
             "confidence",
@@ -82,14 +117,15 @@ def build_map(
         display["Distancia"] = display["distance_m"].map(
             lambda value: f"{value:.1f} m" if value is not None and value == value else "Sin evaluación"
         )
-        display["Resultado"] = (
-            display["within_band"]
-            .map({True: "Dentro de la banda", False: "Fuera de la banda"})
-            .fillna("Sin evaluación")
+        display["Resultado"] = display["proximity_label"].fillna("Sin evaluación")
+        display["Referencia"] = (
+            display["distance_reference"].map(_reference_label)
+            if "distance_reference" in display.columns
+            else _reference_label("axis")
         )
-        display["Referencia"] = display.get("distance_reference", "axis").map(_reference_label)
-        popup_fields = ["building_id", "Distancia", "Resultado", "Referencia"]
-        popup_aliases = ["Edificación", "Distancia mínima", "Banda analítica", "Medición"]
+        display["Alcance"] = PROXIMITY_NOTICE
+        popup_fields = ["building_id", "Distancia", "Resultado", "Referencia", "Alcance"]
+        popup_aliases = ["Edificación", "Distancia mínima", "Semáforo de proximidad", "Medición", "Interpretación"]
         if "confidence" in display.columns:
             display["Puntuación IA"] = display["confidence"].map(
                 lambda value: f"{float(value):.3f}" if value is not None and value == value else "No disponible"
@@ -98,13 +134,13 @@ def build_map(
             popup_aliases.append("Puntuación del detector")
 
         def building_style(feature):
-            within = feature["properties"].get("within_band")
-            color = COLORS["inside"] if within is True else COLORS["outside"]
+            classification = feature["properties"].get("proximity_class")
+            color = COLORS.get(classification, COLORS["unknown"])
             return {
                 "color": color,
                 "weight": 1.5 if image_overlay else 0.75,
                 "fillColor": color,
-                "fillOpacity": 0.22 if image_overlay else 0.68 if within is True else 0.38,
+                "fillOpacity": 0.24 if image_overlay else 0.58,
             }
 
         folium.GeoJson(
@@ -113,12 +149,12 @@ def build_map(
             style_function=building_style,
             highlight_function=lambda _: {"weight": 2.5, "color": COLORS["selected"], "fillOpacity": 0.85},
             tooltip=folium.GeoJsonTooltip(
-                fields=["building_id", "Distancia", "Resultado"],
-                aliases=["Edificación", "Distancia", "Resultado"],
+                fields=["building_id", "Distancia", "Resultado", "Alcance"],
+                aliases=["Edificación", "Distancia", "Semáforo de proximidad", "Interpretación"],
                 sticky=False,
                 localize=False,
             ),
-            popup=folium.GeoJsonPopup(fields=popup_fields, aliases=popup_aliases, max_width=330, localize=False),
+            popup=folium.GeoJsonPopup(fields=popup_fields, aliases=popup_aliases, max_width=380, localize=False),
             smooth_factor=0,
         ).add_to(map_view)
 
