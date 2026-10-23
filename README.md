@@ -16,6 +16,8 @@ En dos áreas reservadas de prueba, el F1 de máscaras pasó de **8,8 % a 24,9 %
 
 La nueva demo GPU contiene **527 contornos en el sector**: **86 rojos, 51 amarillos y 390 verdes** con límite rojo de 25 m y ancho amarillo de 25 m. Estos conteos son predicciones para explorar, no viviendas verificadas; la imagen completa incluye las áreas usadas para entrenar.
 
+El piloto también completó una **inferencia CPU real en Community Cloud** en 112.191 s: 2 161 contornos en toda la imagen y 527 en el sector. Se verificaron el ZIP, las explicaciones por edificio y el cambio de ancho amarillo sin repetir la IA. La evidencia de esta ejecución está separada de la demo GPU en [DESPLIEGUE_NUBE.md](docs/DESPLIEGUE_NUBE.md#piloto-chullo-y-mapa-interactivo--23-de-octubre-de-2026).
+
 1. Elegir **Chullo** en Área de estudio y **Detección IA desde imagen**. Es la selección inicial con los datos incluidos.
 2. La captura original es de 8192 × 6390 píxeles. El GeoTIFF de trabajo es RGB, 2621 × 2045 píxeles a 0,5 m/píxel, EPSG:32719. La resolución de trabajo no acredita resolución nativa del sensor ni exactitud topográfica.
 3. Pulsar **Detectar en esta imagen** para ejecutar de nuevo la red. Se muestra progreso, se guardan máscaras vectorizadas y se calculan sus distancias al cauce cartografiado.

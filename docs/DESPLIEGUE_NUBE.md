@@ -150,6 +150,25 @@ La comprobación visual final, después del reinicio con el visor HTML de Folium
 
 Esta comprobación visual utilizó la demo restaurada tras el reinicio y no ejecutó nuevamente el detector. La corrida CPU de **235 contornos** y sus exportaciones corresponden a la prueba alojada descrita en la tabla. El mapa funciona mediante la ruta directa; la pantalla de carga de la URL principal permanece como limitación pendiente.
 
+## Piloto Chullo y mapa interactivo — 23 de octubre de 2026
+
+La revisión `ca35b2a` se publicó y se reinició Community Cloud. Se verificó desde la ruta pública directa la selección **Ajustado · Chullo (piloto)** y una inferencia CPU nueva sobre la imagen incluida. El modelo original sigue como selección inicial; el piloto conserva su aviso de anotaciones provisionales sin revisión humana y de falsos positivos/uniones pendientes.
+
+La ejecución terminó en **2026-10-23T07:13:31.282769+00:00**, tras **112.191 s**. Generó **2 161 contornos** en toda la imagen y **527** dentro del sector. Los pesos utilizados tienen SHA256 `dcc985d4b57ec6ab0c6dbc36bf48f8b6433bfe61e9d89faf2445bb7b05d5f61c`. Esta corrida CPU se distingue de la demo GPU versionada, que produjo 2 164 contornos en toda la imagen; ambas tienen 527 en el sector, sin que ello implique geometrías idénticas.
+
+| Límite rojo / ancho amarillo | Rojos | Amarillos | Verdes | Filas exportadas |
+| --- | ---: | ---: | ---: | ---: |
+| 25 / 25 m | 86 | 51 | 390 | 527 |
+| 25 / 26 m | 86 | 52 | 389 | 527 |
+
+Se descargaron ambos ZIP desde el navegador y se comprobaron sus cinco archivos, el hash del modelo, las reglas `2026.10.demo.1` y las categorías calculadas con distancias sin redondear. Al cambiar solo el ancho amarillo, los identificadores, distancias y metadatos de inferencia permanecieron idénticos. Ocultar los verdes dejó 138 contornos visibles con ancho amarillo de 26 m; las descargas conservaron los 527 registros del análisis completo. Las explicaciones también están presentes en el resumen, GeoJSON y relaciones por cauce.
+
+La ficha de `ai_fe73a347c0fe8083` acercó y resaltó el contorno en el mapa. Mostró **18.29 m**, color rojo por distancia ≤ 25 m y los factores pendientes de terreno, caudal/arrastre y delimitaciones oficiales. Se comprobó la atribución **Inferencia propia · Ajustado · Chullo (piloto)**. Se restauraron las tres categorías visibles y los límites iniciales 25/25 m.
+
+Evidencia local: `outputs/cloud_validation/chullo_local_v1/verification.json`, `analysis_25_25.zip`, `analysis_25_26.zip` y `mapa_ficha.png`. No se confunden estos resultados de funcionamiento con métricas de exactitud; la evaluación de máscaras y sus límites están en [ENTRENAMIENTO_MODELO.md](ENTRENAMIENTO_MODELO.md). Las franjas siguen siendo reglas demostrativas de proximidad, sin datos oficiales de peligro ni aptitud de construcción.
+
+La comprobación final de código incluyó 75 pruebas ML y 69 de interfaz/catálogo/registro; cinco pruebas omitidas en el entorno de interfaz por falta de Torch/rasterio pasaron en el entorno ML. Las pruebas de explicaciones y mapa, registro, preparación de etiquetas y escala del entrenamiento se ejecutaron por separado. Los informes y el manifiesto congelado conservan sus hashes al guardarse en Git.
+
 ## Referencias del proveedor
 
 - [Desplegar en Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
